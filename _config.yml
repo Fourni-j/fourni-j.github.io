@@ -64,7 +64,6 @@ sass:
   sass_dir: _sass
   style: compressed
 
-plugins_dir: ./_plugins
 
 gems:
   - jekyll-seo-tag

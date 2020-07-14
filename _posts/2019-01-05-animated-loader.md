@@ -24,7 +24,7 @@ First, we need to create the shape of our loader. For this example, we want a ci
 
 Let’s create the track layer, used to display the shape of the loader.
 
-{% splash %}
+{% highlight swift %}
     let trackLayer = CAShapeLayer()
 
     trackLayer.position = CGPoint(x: 50, y: 50)
@@ -33,25 +33,25 @@ Let’s create the track layer, used to display the shape of the loader.
     trackLayer.fillColor = UIColor.clear.cgColor
     trackLayer.strokeColor = UIColor(red: 80 / 255, green: 80 / 255, blue: 80 / 255, alpha: 0.5).cgColor 
     trackLayer.anchorPoint = CGPoint(x: 0.5, y: 0.5)
-{% endsplash %}
+{% endhighlight %}
 
 Now that our layer is created, we want to define the circular shape.
 
-{% splash %}
+{% highlight swift %}
     trackLayer.path = UIBezierPath(arcCenter: .zero, radius: 10, startAngle: 0, endAngle: 2 * CGFloat.pi, clockwise: true).cgPath
-{% endsplash %}
+{% endhighlight %}
 
 In order to display the track layer we have to add it to the view.
 
-{% splash %}
+{% highlight swift %}
     view.layer.addSublayer(trackLayer)
-{% endsplash %}
+{% endhighlight %}
 
 If you run your playground, you will see a circular shape on the top left corner.
 
 Well done, we have our track layer ready. Now we need to create a new layer that will superpose with the track layer and fill it depending on the loading progress.
 
-{% splash %}
+{% highlight swift %}
     let shapeLayer = CAShapeLayer()
 
     shapeLayer.position = CGPoint(x: 50, y: 50)
@@ -63,42 +63,42 @@ Well done, we have our track layer ready. Now we need to create a new layer that
     shapeLayer.path = UIBezierPath(arcCenter: .zero, radius: 10, startAngle: 0, endAngle: 2 * CGFloat.pi, clockwise: true).cgPath
 
     view.layer.addSublayer(shapeLayer)
-{% endsplash %}
+{% endhighlight %}
 
 We are almost done, we just need to change the orientation of the shape layer. Currently our shape layer stroke start on the center right and we need the stroke to start on the top center like a regular loader.
 
-{% splash %}
+{% highlight swift %}
     shapeLayer.transform = CATransform3DMakeRotation(-CGFloat.pi / 2, 0, 0, 1)
-{% endsplash %}
+{% endhighlight %}
 
 Add this line before adding the shapeLayer to the view layers.
 
 And voila, we are done. To animate your progress loader you need to change the strokeEnd property of the layer. Keep in mind that the value must be between 0 and 1 (convert in percentage).
 
-{% splash %}
+{% highlight swift %}
     shapeLayer.strokeEnd = 0.5 // 50% loading progress
-{% endsplash %}
+{% endhighlight %}
 
 If you want to see the animation inside your playground you will need a bit more work.
 
 First, let’s add the infinite execution for the playground, otherwise you will not be able to see any animation because the playground will stop right after the last statement in your function, asynchronous code will not work.
 
-{% splash %}
+{% highlight swift %}
     import PlaygroundSupport
 
     PlaygroundPage.current.needsIndefiniteExecution = true
-{% endsplash %}
+{% endhighlight %}
 
 To simulate loading progress we will use a Timer , every period of time the timer will execute a block of code. In our case the block of code changes the strokeEnd property of our layer.
 
-{% splash %}
+{% highlight swift %}
     Timer.scheduledTimer(withTimeInterval: 0.2, repeats: true, block: { (timer) in
         shapeLayer.strokeEnd += 0.1
         if shapeLayer.strokeEnd > 1 {
             timer.invalidate()
         }
     })
-{% endsplash %}
+{% endhighlight %}
 
 If you play your playground you will see the loader animating during 2 seconds.
 
