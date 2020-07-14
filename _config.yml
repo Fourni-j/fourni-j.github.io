@@ -1,0 +1,74 @@
+# Site setings
+name: 'Charles-Adrien Fournier'
+description: 'Charles-adrien Fournier - iOS developer based in Paris'
+meta_description: 'Jekyll template, minimal style, perfect for bloggers.'
+favicon: 'assets/images/favicon.ico'
+production_url: https://cafournier.com/
+url: https://cafournier.com
+convert_kit_id: 7460c819be
+cover_image: bc_1.jpg
+
+# Author
+author:
+  name: 'Charles-Adrien Fournier'
+  image: 'authorimage.jpg'
+  greetings: 'Hi there!'
+  description: "My name is Charles-Adrien Fournier. I'm an iOS developer based in Paris, France."
+
+# Contact form setings
+email: charladfr@me.com
+contact_page_description: "If you want to discuss, don't hesitate to reach me out."
+thankyou_page_description: "Your message has been successfully sent. We will contact you very soon!"
+
+# Social links
+github: 'fourni-j'
+medium: '@charlesfournier'
+instagram: 'charlesadrienf'
+linkedin: 'charlesadrienfournier'
+producthunt: '@charles_fournier1'
+
+# Navigation
+navigation:
+
+# Required Plugins
+plugins_dir:
+  - jekyll-paginate
+  - jekyll-tagsgenerator
+  - jekyll-seo-tag
+  - jekyll-sitemap
+
+# Pagination
+paginate: 5
+paginate_path: /page:num/
+
+# Permalinks
+permalink: /:title
+
+exclude:
+- .sass-cache/
+- .jekyll-cache/
+- gemfiles/
+- Gemfile
+- Gemfile.lock
+- node_modules/
+- vendor/bundle/
+- vendor/cache/
+- vendor/gems/
+- vendor/ruby/
+
+# Other
+markdown: kramdown
+
+# Sass
+sass:
+  sass_dir: _sass
+  style: compressed
+
+plugins_dir: ./_plugins
+
+gems:
+  - jekyll-seo-tag
+
+twitter:
+  username: CharladFournier
+  card: summary
