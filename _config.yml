@@ -59,12 +59,12 @@ exclude:
 # Other
 markdown: kramdown
 
+highlighter: rouge
+
 # Sass
 sass:
   sass_dir: _sass
   style: compressed
-
-plugins_dir: ./_plugins
 
 gems:
   - jekyll-seo-tag

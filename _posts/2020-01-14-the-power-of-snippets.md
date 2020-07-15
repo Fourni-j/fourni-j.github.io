@@ -25,7 +25,7 @@ As explained at the beginning of this article, I does all my UI related stuff pr
 
 This is how I initialize a label : 
 
-{% splash %}
+{% highlight swift %}
     var nameLabel: UILabel = {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
@@ -34,7 +34,7 @@ This is how I initialize a label :
         label.font = UIFont.preferredFont(forTextStyle: .body)
         return label
     }()
-{% endsplash %}
+{% endhighlight %}
 
 The goal is to strip the initialisation code of all our app specific values, then you will have the perfect candidate for a snippet. Now that we know the idea, we can create our first snippet by simply selecting a part of your code, right click and select <mark>create code snippet</mark>.
 
@@ -48,7 +48,7 @@ A this point the snippet is ok but we can improve it. We will add some placehold
 
 Update the code in the snippet with the declaration below.
 
-{% splash %}
+{% highlight swift %}
     var <#varName#>Label: UILabel = {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
@@ -57,7 +57,7 @@ Update the code in the snippet with the declaration below.
         label.font = UIFont.preferredFont(forTextStyle: .<#textStyle#>)
         return label
     }()
-{% endsplash %}
+{% endhighlight %}
 
 We also want to add a completion shortcut, we will go with “customLabel”.
 
@@ -71,7 +71,7 @@ Thanks for reading ! 😊
 
 ### UILabel
 
-{% splash %}
+{% highlight swift %}
     var <#varName#>Label: UILabel = {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
@@ -80,31 +80,31 @@ Thanks for reading ! 😊
         label.font = UIFont.preferredFont(forTextStyle: .<#textStyle#>)
         return label
     }()
-{% endsplash %}
+{% endhighlight %}
 
 ### UIButton
 
-{% splash %}
+{% highlight swift %}
     var <#buttonName#>Button: UIButton = {
         let button = UIButton()
         button.translatesAutoresizingMaskIntoConstraints = false
         return button
     }()
-{% endsplash %}
+{% endhighlight %}
 
 ### UIImageView
 
-{% splash %}
+{% highlight swift %}
     var <#name#>ImageView: UIImageView = {
         let imageView = UIImageView()
         imageView.translatesAutoresizingMaskIntoConstraints = false
         return imageView
     }()
-{% endsplash %}
+{% endhighlight %}
 
 ### UIStackView
 
-{% splash %}
+{% highlight swift %}
     var stackView: UIStackView = {
         let stackView = UIStackView()
         stackView.axis = .<#axis#>
@@ -113,11 +113,11 @@ Thanks for reading ! 😊
         stackView.translatesAutoresizingMaskIntoConstraints = false
         return stackView
     }()
-{% endsplash %}
+{% endhighlight %}
 
 ### Custom UIView
 
-{% splash %}
+{% highlight swift %}
 class <#viewName#>View: UIView {
     
     override init(frame: CGRect) {
@@ -135,4 +135,4 @@ class <#viewName#>View: UIView {
     }
     
 }
-{% endsplash %}
+{% endhighlight %}
