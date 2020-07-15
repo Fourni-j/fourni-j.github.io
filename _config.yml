@@ -59,6 +59,8 @@ exclude:
 # Other
 markdown: kramdown
 
+highlighter: rouge
+
 # Sass
 sass:
   sass_dir: _sass
