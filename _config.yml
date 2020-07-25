@@ -30,6 +30,14 @@ producthunt: '@charles_fournier1'
 # Navigation
 navigation:
 
+collections:
+  posts:
+    output: true
+    permalink: /:title
+  apps-pages:
+    output: true
+    permalink: /:path
+
 # Required Plugins
 plugins_dir:
   - jekyll-paginate
@@ -68,6 +76,9 @@ sass:
 
 plugins:
   - jekyll-seo-tag
+  - jekyll-paginate
+  - jekyll-tagsgenerator
+  - jekyll-sitemap
 
 twitter:
   username: CharladFournier
