@@ -1,0 +1,14 @@
+<footer>
+	<p class="footerText">Made by {% if site.name %}<a href="/">{% endif %}{{ site.name }}{% if site.name %}</a>{% endif %}{% if site.your_city %} in {{ site.your_city }}{% endif %}</p>
+	<div class="footerLinks">
+		{% if page.privacypolicy %}
+			<a href="privacypolicy.html" target="_self">Privacy Policy</a>
+		{% endif %}
+		{% if page.presskit_path %}
+			<a href="{{ page.presskit_path }}" target="_self">Press Kit</a>
+		{% endif %}
+		{% if page.changelog %}
+			<a href="changelog.html" target="_self">Changelog</a>
+		{% endif %}
+	</div>
+</footer>
