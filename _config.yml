@@ -63,6 +63,9 @@ exclude:
 - vendor/cache/
 - vendor/gems/
 - vendor/ruby/
+- _template/
+- README.md
+- Makefile
 
 # Other
 markdown: kramdown
