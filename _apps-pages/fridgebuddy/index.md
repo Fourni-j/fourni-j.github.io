@@ -6,7 +6,7 @@ ios_app_id: 1500190823
 include_in_header: false
 preview_file: /assets/app-pages/screenshots/fridgebuddy-screenshot.png
 # presskit_path: /assets/app-pages/presskit/
-app_description: 
+app_description: Keep track of all your food expiry date and reduce your food waste.
 features:
   - title                                 : Unlimited tracked products
     description                           : Scan and keep track of an unlimited number of products.

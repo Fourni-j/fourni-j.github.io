@@ -1,15 +1,15 @@
 ---
 layout: app-page
 title: Privacy Policy
-ios_app_id: 1524857800
+ios_app_id: 727669174
 include_in_header: false
 ---
 
 **Last updated**  
-July 24 2020
+January 3 2020
 
 # Privacy Policy
-Please read these terms and conditions ("terms", "terms and conditions") carefully before using Findr app (the "service") operated by Charles-Adrien Fournier ("us", 'we", "our").
+Please read these terms and conditions ("terms", "terms and conditions") carefully before using FeedMe application (the "service") operated by Charles-Adrien Fournier ("us", 'we", "our").
 
 <br>
 
