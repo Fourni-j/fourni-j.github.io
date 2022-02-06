@@ -45,6 +45,19 @@ We reserve all rights (but not the obligation) to remove and/or edit such conten
 
 <br>
 
+## Premium version
+
+The App offers the in-app purchase of a Premium version that includes the following Features:
+
+- Custom list creation, you can create an personnalize the product lists displayed. 
+- Share lists with other users
+- Expiry date scan with the camera
+- Unlock app icons variations
+- CSV export of all your lists
+- Better item sorting
+
+<br>
+
 ## User Account
 If you are an owner of an account on this website, you are solely responsible for maintaining the confidentiality of your private user details (username and password). You are responsible for all activities that occur under your account or password.
 
