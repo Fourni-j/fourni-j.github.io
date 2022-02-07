@@ -13,22 +13,26 @@ features:
     fontawesome_icon_name                 : infinity
 
   - title                                 : iCloud sync
-    description                           : Your products/list synced across all your devices
+    description                           : Your products/list synced across all your devices.
     fontawesome_icon_name                 : sync
 
+  - title                                 : Shared lists
+    description                           : Share your lists with other app users.
+    fontawesome_icon_name                 : users
+
   - title                                 : Custom products lists
-    description                           : Create custom lists of product in addition to the defaults ones
+    description                           : Create custom lists of product in addition to the defaults ones.
     fontawesome_icon_name                 : list
   
   - title                                 : Food waste ratio
-    description                           : Charts summarizing products consumed/trashed for each month
+    description                           : Charts summarizing products consumed/trashed for each month.
     fontawesome_icon_name                 : chart-pie
 
   - title                                 : Export your lists
-    description                           : Export all your products/lists into a CSV file
+    description                           : Export all your products/lists into a CSV file.
     fontawesome_icon_name                 : file-export
 
   - title                                 : Dark mode
-    description                           : Support both light and dark mode and will follow your device settings
+    description                           : Support both light and dark mode and will follow your device settings.
     fontawesome_icon_name                 : adjust
 ---
