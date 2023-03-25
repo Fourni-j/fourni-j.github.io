@@ -1,7 +1,7 @@
 ---
 layout: app-page
 title: Privacy Policy
-ios_app_id: 1524857800
+ios_app_id: 6445907634
 include_in_header: false
 ---
 
