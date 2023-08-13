@@ -5,49 +5,38 @@ ios_app_id: 6459477182
 include_in_header: false
 ---
 
-THIS IS THE TERMS OF THE APP
+**Last Updated:** August 13, 2023
 
-**Last updated**  
-January 3 2020
+## Introduction
 
-# Privacy Policy
-Please read these terms and conditions ("terms", "terms and conditions") carefully before using Showcase.me website (the "service") operated by Charles-Adrien Fournier ("us", 'we", "our").
+Welcome to the Randomizer App ("app", "we", "our", or "us"). By downloading, accessing, or using our app, you agree to abide by the following terms and conditions. If you do not agree with any part of these terms, please refrain from using the app.
 
-<br>
+## Acceptance of Terms
 
-## Conditions of Use
-We will provide their services to you, which are subject to the conditions stated below in this document. Every time you use its services or make a purchase, you accept the following conditions. This is why we urge you to read them carefully.
+By using our app, you confirm that you have read, understood, and agreed to be bound by these terms. We may modify these terms at any time, and such modifications will be effective immediately upon posting the modified terms within the app or on our website. Your continued use of the app signifies your acceptance of the updated terms.
 
-<br>
+## Use of the App
 
-## Copyright
-Content published on this website (digital downloads, images, texts, graphics, logos) is the property its content creators and protected by international copyright laws.
+This app is designed to generate random for personal, non-commercial use. You agree not to misuse the app or use it for any illegal or unauthorized purposes.
 
-<br>
+## Subscription & Payments
 
-## Communications
-The entire communication with us is electronic. Every time you send us an email or use our application, you are going to be communicating with us. You hereby consent to receive communications from us. You also agree that all notices, disclosures, agreements and other communications we provide to you electronically meet the legal requirements that such communications be in writing.
+While the basic version of the app is free, additional features and customization options can be unlocked through a subscription model. All payments, subscriptions, and related transactions are handled by the Apple App Store, not by us. 
 
-<br>
+## Termination
 
-## Applicable Law
-By using this application, you agree that the laws of France, without regard to principles of conflict laws, will govern these terms and conditions, or any dispute of any sort that might come between Charles-Adrien Fournier and you, or its business partners and associates.
+We reserve the right to terminate or suspend access to our app for any reason, including breaches of these terms. If you wish to terminate your account or usage, simply uninstall the app from your device.
 
-<br>
+## Limitation of Liability
 
-## Disputes
-Any dispute related in any way to your use of this application or to products you purchase from us shall be arbitrated by state or federal court in France and you consent to exclusive jurisdiction and venue of such courts.
+To the extent permitted by law, we will not be liable for any direct, indirect, special, consequential, or exemplary damages arising from or relating to the use or inability to use the app.
 
-<br>
+## Changes to Terms
 
-## Comments, Reviews, and Emails
-Users may post content as long as it is not obscene, illegal, defamatory, threatening, infringing of intellectual property rights, invasive of privacy or injurious in any other way to third parties.
+We reserve the right to update or modify these terms at any time without prior notice. Any changes will be effective immediately upon posting the updated terms within the app or on our official channels. Your continued use of the app after any such changes constitutes your acceptance of the new terms.
 
-We reserve all rights (but not the obligation) to remove and/or edit such content.
+## Contact Us
 
-<br>
+For questions or concerns regarding these terms, please contact us through the support section within the app or by email at [feedback@cafournier.com](mailto:feedback@cafournier.com).
 
-## User Account
-If you are an owner of an account on this website, you are solely responsible for maintaining the confidentiality of your private user details (username and password). You are responsible for all activities that occur under your account or password.
-
-We reserve all rights to terminate accounts, edit or remove content and cancel orders in their sole discretion.
+Thank you for choosing Randomizer.
