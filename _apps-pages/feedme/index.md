@@ -15,20 +15,4 @@ features:
   - title                                 : Discover new venues
     description                           : You feed curious ? FeedMe can help you find new venues
     fontawesome_icon_name                 : map
-
-  - title                                 : Machine learning
-    description                           : The app algorithm will learn from your taste and improve over the time
-    fontawesome_icon_name                 : brain
-
-  - title                                 : Detailed analytics
-    description                           : You will find analytics of your past lunches and favorites places
-    fontawesome_icon_name                 : chart-pie
-
-  - title                                 : Dark mode
-    description                           : Support both light and dark mode and will follow your device settings
-    fontawesome_icon_name                 : adjust
-
-  - title                                 : Any Size
-    description                           : All devices and orientations are fully supported.
-    fontawesome_icon_name                 : share  
 ---
