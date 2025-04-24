@@ -9,7 +9,7 @@ include_in_header: false
 January 3 2020
 
 # Privacy Policy
-Please read these terms and conditions ("terms", "terms and conditions") carefully before using Showcase.me website (the "service") operated by Charles-Adrien Fournier ("us", 'we", "our").
+Please read these terms and conditions ("terms", "terms and conditions") carefully before using StarterPack Creator app (the "service") operated by Charles-Adrien Fournier ("us", 'we", "our").
 
 <br>
 
@@ -19,7 +19,7 @@ We will provide their services to you, which are subject to the conditions state
 <br>
 
 ## Copyright
-Content published on this website (digital downloads, images, texts, graphics, logos) is the property its content creators and protected by international copyright laws.
+Content published on this app (digital downloads, images, texts, graphics, logos) is the property its content creators and protected by international copyright laws.
 
 <br>
 
