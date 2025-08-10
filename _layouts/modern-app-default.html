@@ -18,14 +18,8 @@ layout_style: modern
                 </div>
                 <div class="modern-nav-right">
                     <div class="modern-nav-links">
-                        {% if page.show_about_link %}
-                        <a href="/about" class="modern-nav-link">About</a>
-                        {% endif %}
                         {% if page.show_blog_link %}
                         <a href="/blog" class="modern-nav-link">Blog</a>
-                        {% endif %}
-                        {% if page.show_support_link %}
-                        <a href="/support" class="modern-nav-link">Support</a>
                         {% endif %}
                     </div>
                     <div class="modern-nav-cta">
@@ -170,10 +164,37 @@ layout_style: modern
             </div>
         </section>
         {% endif %}
+        
+        {% if page.faq and page.show_faq != false %}
+        <section class="modern-faq">
+            <div class="modern-container">
+                {% if page.faq_title %}
+                <h2 class="modern-section-title">{{ page.faq_title }}</h2>
+                {% endif %}
+                <div class="modern-faq-list">
+                    {% for item in page.faq %}
+                        <div class="modern-faq-item">
+                            <button class="modern-faq-question" type="button">
+                                <span class="modern-faq-question-text">{{ item.question }}</span>
+                                <span class="modern-faq-icon">
+                                    <i class="fas fa-chevron-down"></i>
+                                </span>
+                            </button>
+                            <div class="modern-faq-answer">
+                                <div class="modern-faq-answer-content">
+                                    <p>{{ item.answer }}</p>
+                                </div>
+                            </div>
+                        </div>
+                    {% endfor %}
+                </div>
+            </div>
+        </section>
+        {% endif %}
+        
+        {% capture preview_file %}{{ page.preview_file }}{% endcapture %}
+        {% include modern-screencontent.html filepath=preview_file %}
     </main>
-
-    {% capture preview_file %}{{ page.preview_file }}{% endcapture %}
-    {% include modern-screencontent.html filepath=preview_file %}
 
     <footer class="modern-footer">
         <div class="modern-container">
@@ -300,6 +321,130 @@ layout_style: modern
             updateHeader();
             initDarkMode();
         })();
+        
+        // FAQ Accordion functionality
+        (function() {
+            const faqItems = document.querySelectorAll('.modern-faq-item');
+            
+            faqItems.forEach(function(item) {
+                const question = item.querySelector('.modern-faq-question');
+                const answer = item.querySelector('.modern-faq-answer');
+                const icon = item.querySelector('.modern-faq-icon i');
+                
+                question.addEventListener('click', function() {
+                    const isOpen = item.classList.contains('modern-faq-open');
+                    
+                    // Close all other items
+                    faqItems.forEach(function(otherItem) {
+                        if (otherItem !== item) {
+                            otherItem.classList.remove('modern-faq-open');
+                            const otherAnswer = otherItem.querySelector('.modern-faq-answer');
+                            const otherIcon = otherItem.querySelector('.modern-faq-icon i');
+                            otherAnswer.style.maxHeight = '0px';
+                            otherIcon.style.transform = 'rotate(0deg)';
+                        }
+                    });
+                    
+                    // Toggle current item
+                    if (isOpen) {
+                        item.classList.remove('modern-faq-open');
+                        answer.style.maxHeight = '0px';
+                        icon.style.transform = 'rotate(0deg)';
+                    } else {
+                        item.classList.add('modern-faq-open');
+                        answer.style.maxHeight = answer.scrollHeight + 'px';
+                        icon.style.transform = 'rotate(180deg)';
+                    }
+                });
+            });
+        })();
     </script>
+    
+    <style>
+        /* FAQ Styles */
+        .modern-faq {
+            padding: 80px 0;
+            background: var(--modern-bg-secondary);
+        }
+        
+        .modern-faq-list {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .modern-faq-item {
+            background: var(--modern-bg);
+            border-radius: 12px;
+            margin-bottom: 16px;
+            box-shadow: var(--modern-shadow-sm);
+            border: 1px solid var(--modern-border);
+            overflow: hidden;
+            transition: all 0.3s ease;
+        }
+        
+        .modern-faq-item:hover {
+            box-shadow: var(--modern-shadow-md);
+            transform: translateY(-1px);
+        }
+        
+        .modern-faq-question {
+            width: 100%;
+            background: none;
+            border: none;
+            padding: 24px;
+            text-align: left;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 18px;
+            font-weight: 600;
+            color: var(--modern-text-primary);
+            transition: all 0.2s ease;
+        }
+        
+        .modern-faq-item:not(.modern-faq-open) .modern-faq-question:hover {
+            background: var(--modern-bg-secondary);
+        }
+        
+        .modern-faq-open .modern-faq-question {
+            background: none;
+        }
+        
+        .modern-faq-question-text {
+            flex: 1;
+            margin-right: 16px;
+        }
+        
+        .modern-faq-icon {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 24px;
+            height: 24px;
+        }
+        
+        .modern-faq-icon i {
+            transition: transform 0.3s ease;
+            color: var(--modern-primary);
+        }
+        
+        .modern-faq-answer {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease;
+        }
+        
+        .modern-faq-answer-content {
+            padding: 0 24px 16px 24px;
+        }
+        
+        .modern-faq-answer-content p {
+            margin: 0;
+            font-size: 16px;
+            line-height: 1.5;
+            color: var(--modern-text-tertiary);
+        }
+    </style>
 </body>
 </html>

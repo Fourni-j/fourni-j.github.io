@@ -14,6 +14,9 @@
 		</div>
 		
 		<div class="app-footer-right">
+			{% if page.show_support_link %}
+				<a href="mailto:feedback@cafournier.com" class="app-footer-link">Support</a>
+			{% endif %}
 			{% if page.presskit_path %}
 				<a href="{{ page.presskit_path }}" class="app-footer-link" target="_blank">Press Kit</a>
 			{% endif %}

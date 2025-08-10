@@ -17,7 +17,9 @@
       "WebFetch(domain:www.gymhero.app)",
       "Bash(find:*)",
       "Bash(cp:*)",
-      "Bash(ls:*)"
+      "Bash(ls:*)",
+      "Bash(mkdir:*)",
+      "WebFetch(domain:apps.apple.com)"
     ],
     "deny": []
   }
