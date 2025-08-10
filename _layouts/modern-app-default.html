@@ -1,0 +1,218 @@
+---
+layout_style: modern
+---
+<!DOCTYPE html>
+<html lang="en-us">
+
+{% include app-head.html %}
+
+<body class="modern-layout">
+    <header class="modern-header">
+        <div class="modern-container">
+            <nav class="modern-nav">
+                <div class="modern-logo">
+                    <a href="/" class="modern-logo-link">{{ site.title | default: "Apps" }}</a>
+                </div>
+                <div class="modern-nav-links">
+                    {% if page.show_about_link %}
+                    <a href="/about" class="modern-nav-link">About</a>
+                    {% endif %}
+                    {% if page.show_blog_link %}
+                    <a href="/blog" class="modern-nav-link">Blog</a>
+                    {% endif %}
+                    {% if page.show_support_link %}
+                    <a href="/support" class="modern-nav-link">Support</a>
+                    {% endif %}
+                </div>
+                <div class="modern-nav-cta">
+                    <a class="modern-appstore-header-btn" href="{{page.appstore_link}}">
+                        <img src="/assets/app-pages/appstore-header.svg" alt="Download on App Store">
+                    </a>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <main class="modern-main">
+        {% if page.show_hero != false %}
+        <div class="modern-hero">
+            <div class="modern-container">
+                <div class="modern-app-showcase">
+                    <div class="modern-app-info">
+                        {% if page.hero_title %}
+                        <h1 class="modern-hero-title">{{ page.hero_title }}</h1>
+                        {% else %}
+                        <div class="modern-app-header">
+                            <div class="modern-app-badge">
+                                <img class="modern-app-icon" src="{{ page.app_icon }}" alt="{{ page.app_name }}">
+                            </div>
+                            <div class="modern-app-meta">
+                                <h1 class="modern-app-title">{{ page.app_name }}</h1>
+                                <p class="modern-app-price">{{ page.app_price }}</p>
+                            </div>
+                        </div>
+                        {% endif %}
+                        
+                        {% if page.hero_subtitle %}
+                        <p class="modern-hero-subtitle">{{ page.hero_subtitle }}</p>
+                        {% else %}
+                        <p class="modern-app-description">{{ page.app_description }}</p>
+                        {% endif %}
+                        
+                        <div class="modern-download-buttons">
+                            {% if page.playstore_link %}
+                                <a class="modern-download-btn" href="{{page.playstore_link}}">
+                                    <img src="/assets/app-pages/playstore.png" alt="Download on Google Play">
+                                </a>
+                            {% endif %}
+                            <a class="modern-download-btn" href="{{page.appstore_link}}">
+                                <img src="/assets/app-pages/appstore.svg" alt="Download on App Store">
+                            </a>
+                            {% if page.macstore_link %}
+                                <a class="modern-download-btn" href="{{page.macstore_link}}">
+                                    <img src="/assets/app-pages/macstore.svg" alt="Download on Mac App Store">
+                                </a>
+                            {% endif %}
+                        </div>
+                    </div>
+                    
+                    {% if page.show_preview != false %}
+                    <div class="modern-app-preview">
+                        <div class="modern-phone-mockup">
+                            <div class="modern-phone-frame">
+                                <div class="modern-phone-screen">
+                                    <div class="modern-video-container hidden">
+                                        <video class="modern-screen-video" autoplay muted loop playsinline preload="auto">
+                                        </video>
+                                    </div>
+                                    <img class="modern-screen-image hidden" src="" alt="{{ page.app_name }} Screenshot">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    {% endif %}
+                </div>
+            </div>
+        </div>
+        {% endif %}
+
+        {% if page.features and page.show_features != false %}
+        <section class="modern-features">
+            <div class="modern-container">
+                {% if page.features_title %}
+                <h2 class="modern-section-title">{{ page.features_title }}</h2>
+                {% endif %}
+                <div class="modern-features-grid">
+                    {% for feature in page.features %}
+                        {% if feature.title %}
+                            <div class="modern-feature">
+                                <div class="modern-feature-icon">
+                                    <i class="fas fa-{{ feature.fontawesome_icon_name }}"></i>
+                                </div>
+                                <div class="modern-feature-content">
+                                    <h3 class="modern-feature-title">{{ feature.title }}</h3>
+                                    <p class="modern-feature-description">{{ feature.description }}</p>
+                                </div>
+                            </div>
+                        {% endif %}
+                    {% endfor %}
+                </div>
+            </div>
+        </section>
+        {% endif %}
+        
+        {% if page.testimonials and page.show_testimonials != false %}
+        <section class="modern-testimonials">
+            <div class="modern-container">
+                {% if page.testimonials_title %}
+                <h2 class="modern-section-title">{{ page.testimonials_title }}</h2>
+                {% endif %}
+                <div class="modern-testimonials-grid">
+                    {% for testimonial in page.testimonials %}
+                        <div class="modern-testimonial">
+                            <div class="modern-testimonial-content">
+                                <p class="modern-testimonial-text">"{{ testimonial.text }}"</p>
+                                <div class="modern-testimonial-author">
+                                    <strong>{{ testimonial.author }}</strong>
+                                    {% if testimonial.role %}
+                                    <span class="modern-testimonial-role">{{ testimonial.role }}</span>
+                                    {% endif %}
+                                </div>
+                            </div>
+                        </div>
+                    {% endfor %}
+                </div>
+            </div>
+        </section>
+        {% endif %}
+        
+        {% if page.screenshots and page.show_screenshots != false %}
+        <section class="modern-screenshots">
+            <div class="modern-container">
+                {% if page.screenshots_title %}
+                <h2 class="modern-section-title">{{ page.screenshots_title }}</h2>
+                {% endif %}
+                <div class="modern-screenshots-grid">
+                    {% for screenshot in page.screenshots %}
+                        <div class="modern-screenshot">
+                            <img src="{{ screenshot.image }}" alt="{{ screenshot.alt | default: page.app_name }} Screenshot" class="modern-screenshot-image">
+                            {% if screenshot.caption %}
+                            <p class="modern-screenshot-caption">{{ screenshot.caption }}</p>
+                            {% endif %}
+                        </div>
+                    {% endfor %}
+                </div>
+            </div>
+        </section>
+        {% endif %}
+    </main>
+
+    {% capture preview_file %}{{ page.preview_file }}{% endcapture %}
+    {% include modern-screencontent.html filepath=preview_file %}
+
+    <footer class="modern-footer">
+        <div class="modern-container">
+            {% include app-footer.html %}
+        </div>
+    </footer>
+
+    {% capture app_id %}{{page.ios_app_id}}{% endcapture %}
+    {% include app-appstoreimages.html appid=app_id %}
+
+    <script>
+        // Modern header scroll animation
+        (function() {
+            const header = document.querySelector('.modern-header');
+            let isScrolling = false;
+
+            function updateHeader() {
+                const scrollY = window.scrollY;
+                
+                // Add/remove scrolled class based on scroll position
+                if (scrollY > 20) {
+                    header.classList.add('modern-header-scrolled');
+                } else {
+                    header.classList.remove('modern-header-scrolled');
+                }
+            }
+
+            // Throttle scroll events for better performance
+            function throttleScroll() {
+                if (!isScrolling) {
+                    window.requestAnimationFrame(function() {
+                        updateHeader();
+                        isScrolling = false;
+                    });
+                    isScrolling = true;
+                }
+            }
+
+            // Listen to scroll events
+            window.addEventListener('scroll', throttleScroll, { passive: true });
+            
+            // Initial call
+            updateHeader();
+        })();
+    </script>
+</body>
+</html>

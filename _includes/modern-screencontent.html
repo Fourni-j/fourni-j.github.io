@@ -1,0 +1,51 @@
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+
+{% if include.filepath contains 'assets/app-pages/screenshots/' %}
+    <script>
+        $(function() {
+            $(".modern-screen-image").attr('src', '{{ site.github.baseurl }}{{ include.filepath }}');
+            $(".modern-screen-image").removeClass("hidden");
+            console.log("Modern layout screenshot: {{ include.filepath }}");
+        });
+    </script>
+{% elsif include.filepath contains 'assets/app-pages/videos/' %}
+    {% if include.filepath contains '.mov' or include.filepath contains '.mp4' %}
+        <script>
+            $(function() {
+                $(".modern-video-container").removeClass("hidden");
+                var video = $(".modern-screen-video")[0];
+                video.src = "{{ site.github.baseurl }}{{ include.filepath }}";
+                video.load(); // Force reload after setting src
+                
+                // Ensure video plays when ready
+                video.addEventListener('loadeddata', function() {
+                    video.play().catch(function(error) {
+                        console.log("Video autoplay prevented:", error);
+                    });
+                });
+                
+                console.log("Modern layout video: {{ include.filepath }}");
+            });
+        </script>
+    {% elsif include.filepath contains '.ogg' %}
+        <script>
+            $(function() {
+                $(".modern-video-container").removeClass("hidden");
+                var video = $(".modern-screen-video")[0];
+                video.innerHTML = '<source src="{{ site.github.baseurl }}{{ include.filepath }}" type="video/ogg">';
+                video.load();
+                console.log("Modern layout video: {{ include.filepath }}");
+            });
+        </script>
+    {% elsif include.filepath contains '.webm' %}
+        <script>
+            $(function() {
+                $(".modern-video-container").removeClass("hidden");
+                var video = $(".modern-screen-video")[0];
+                video.innerHTML = '<source src="{{ site.github.baseurl }}{{ include.filepath }}" type="video/webm">';
+                video.load();
+                console.log("Modern layout video: {{ include.filepath }}");
+            });
+        </script>
+    {% endif %}
+{% endif %}

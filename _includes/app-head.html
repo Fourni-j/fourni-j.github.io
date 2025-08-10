@@ -15,5 +15,11 @@
 	{% endif %}
 
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
-    <link href="{{ site.baseurl }}/assets/css/appstyle.css" rel="stylesheet">
+    
+    {% if layout.layout_style == 'modern' %}
+        <link href="{{ site.baseurl }}/assets/css/modern-style.css" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    {% else %}
+        <link href="{{ site.baseurl }}/assets/css/appstyle.css" rel="stylesheet">
+    {% endif %}
 </head>
