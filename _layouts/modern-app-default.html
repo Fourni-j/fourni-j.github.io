@@ -10,24 +10,29 @@ layout_style: modern
     <header class="modern-header">
         <div class="modern-container">
             <nav class="modern-nav">
-                <div class="modern-logo">
-                    <a href="/" class="modern-logo-link">{{ site.title | default: "Apps" }}</a>
+                <div class="modern-nav-left">
+                    <div class="modern-app-branding">
+                        <img class="modern-header-app-icon" src="{{ page.app_icon }}" alt="{{ page.app_name }}">
+                        <span class="modern-header-app-name">{{ page.app_name }}</span>
+                    </div>
                 </div>
-                <div class="modern-nav-links">
-                    {% if page.show_about_link %}
-                    <a href="/about" class="modern-nav-link">About</a>
-                    {% endif %}
-                    {% if page.show_blog_link %}
-                    <a href="/blog" class="modern-nav-link">Blog</a>
-                    {% endif %}
-                    {% if page.show_support_link %}
-                    <a href="/support" class="modern-nav-link">Support</a>
-                    {% endif %}
-                </div>
-                <div class="modern-nav-cta">
-                    <a class="modern-appstore-header-btn" href="{{page.appstore_link}}">
-                        <img src="/assets/app-pages/appstore-header.svg" alt="Download on App Store">
-                    </a>
+                <div class="modern-nav-right">
+                    <div class="modern-nav-links">
+                        {% if page.show_about_link %}
+                        <a href="/about" class="modern-nav-link">About</a>
+                        {% endif %}
+                        {% if page.show_blog_link %}
+                        <a href="/blog" class="modern-nav-link">Blog</a>
+                        {% endif %}
+                        {% if page.show_support_link %}
+                        <a href="/support" class="modern-nav-link">Support</a>
+                        {% endif %}
+                    </div>
+                    <div class="modern-nav-cta">
+                        <a class="modern-appstore-header-btn" href="{{page.appstore_link}}">
+                            <img src="/assets/app-pages/appstore-header.svg" alt="Download on App Store">
+                        </a>
+                    </div>
                 </div>
             </nav>
         </div>
@@ -180,10 +185,91 @@ layout_style: modern
     {% include app-appstoreimages.html appid=app_id %}
 
     <script>
-        // Modern header scroll animation
+        // Modern header scroll animation and dark mode
         (function() {
             const header = document.querySelector('.modern-header');
             let isScrolling = false;
+            
+            // Dark mode functionality
+            const isDevelopment = window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1';
+            
+            function initDarkMode() {
+                if (isDevelopment) {
+                    // Debug mode: Add toggle button
+                    const toggleBtn = document.createElement('button');
+                    let currentTheme = 'system'; // 'system', 'light', 'dark'
+                    
+                    // Function to update theme
+                    function updateTheme() {
+                        document.body.classList.remove('light-theme', 'dark-theme');
+                        
+                        if (currentTheme === 'light') {
+                            document.body.classList.add('light-theme');
+                            toggleBtn.innerHTML = '🌙';
+                        } else if (currentTheme === 'dark') {
+                            document.body.classList.add('dark-theme');
+                            toggleBtn.innerHTML = '☀️';
+                        } else {
+                            // System theme - no class, relies on CSS media query
+                            const isSystemDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+                            toggleBtn.innerHTML = isSystemDark ? '🔄' : '🔄';
+                        }
+                    }
+                    
+                    toggleBtn.style.cssText = `
+                        position: fixed;
+                        top: 20px;
+                        right: 20px;
+                        z-index: 1000;
+                        background: rgba(0, 0, 0, 0.8);
+                        color: white;
+                        border: none;
+                        border-radius: 50%;
+                        width: 50px;
+                        height: 50px;
+                        font-size: 20px;
+                        cursor: pointer;
+                        transition: all 0.3s ease;
+                    `;
+                    
+                    toggleBtn.addEventListener('click', function() {
+                        if (currentTheme === 'system') {
+                            currentTheme = 'light';
+                        } else if (currentTheme === 'light') {
+                            currentTheme = 'dark';
+                        } else {
+                            currentTheme = 'system';
+                        }
+                        updateTheme();
+                    });
+                    
+                    // Initialize
+                    updateTheme();
+                    document.body.appendChild(toggleBtn);
+                    
+                    // Listen for system theme changes to update the system indicator
+                    if (window.matchMedia) {
+                        window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', function() {
+                            if (currentTheme === 'system') {
+                                updateTheme();
+                            }
+                        });
+                    }
+                } else {
+                    // Production mode: Follow system preference
+                    if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+                        // System is in dark mode, but we rely on CSS media query
+                        console.log('Dark mode detected via system preferences');
+                    }
+                    
+                    // Listen for system theme changes
+                    if (window.matchMedia) {
+                        window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', function(e) {
+                            console.log('System theme changed to:', e.matches ? 'dark' : 'light');
+                        });
+                    }
+                }
+            }
 
             function updateHeader() {
                 const scrollY = window.scrollY;
@@ -210,8 +296,9 @@ layout_style: modern
             // Listen to scroll events
             window.addEventListener('scroll', throttleScroll, { passive: true });
             
-            // Initial call
+            // Initialize
             updateHeader();
+            initDarkMode();
         })();
     </script>
 </body>

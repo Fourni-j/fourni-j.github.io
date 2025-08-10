@@ -33,6 +33,18 @@ $(function() {
                 $($appIconHeader).attr("src", appInfo.artworkUrl512);
             }
 
+            // Set modern header app icon using the iOS app ID if it is not set manually in _config.yml
+            var $modernAppIconHeader = $(".modern-header-app-icon");
+            if (!$modernAppIconHeader.attr('src') || $modernAppIconHeader.attr('src').includes('squircle')) {
+                $($modernAppIconHeader).attr("src", appInfo.artworkUrl512);
+            }
+
+            // Set modern app icon using the iOS app ID if it is not set manually in _config.yml
+            var $modernAppIcon = $(".modern-app-icon");
+            if (!$modernAppIcon.attr('src') || $modernAppIcon.attr('src').includes('squircle')) {
+                $($modernAppIcon).attr("src", appInfo.artworkUrl512);
+            }
+
             // Set app name using the iOS app ID if it is not set manually in _config.yml
             var $appName = $(".appName");
             var $headerName = $(".headerName");
