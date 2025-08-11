@@ -39,6 +39,10 @@ layout_style: modern
                 <div class="modern-app-showcase">
                     <div class="modern-app-info">
                         {% if page.hero_title %}
+                        <!-- App icon for hero title layout -->
+                        <div class="modern-app-badge-hero">
+                            <img class="modern-app-icon" src="{{ page.app_icon }}" alt="{{ page.app_name }}">
+                        </div>
                         <h1 class="modern-hero-title">{{ page.hero_title }}</h1>
                         {% else %}
                         <div class="modern-app-header">
@@ -73,6 +77,9 @@ layout_style: modern
                                 </a>
                             {% endif %}
                         </div>
+                        
+                        <!-- App Store Rating Display -->
+                        <div class="modern-app-rating-container"></div>
                     </div>
                     
                     {% if page.show_preview != false %}
@@ -444,6 +451,44 @@ layout_style: modern
             font-size: 16px;
             line-height: 1.5;
             color: var(--modern-text-tertiary);
+        }
+        
+        /* App Store Rating Styles */
+        .modern-app-rating-container {
+            margin-top: 16px;
+        }
+        
+        .modern-app-rating {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+        
+        .modern-rating-stars {
+            display: flex;
+            gap: 2px;
+        }
+        
+        .modern-rating-stars i {
+            color: #ffcc00;
+            font-size: 16px;
+        }
+        
+        .modern-rating-text {
+            font-size: 14px;
+            color: var(--modern-text-secondary);
+            font-weight: 500;
+        }
+        
+        /* Hero layout app icon */
+        .modern-app-badge-hero {
+            width: 100px;
+            height: 100px;
+            border-radius: 22px;
+            overflow: hidden;
+            box-shadow: var(--modern-shadow-lg);
+            margin-bottom: 24px;
+            border: 1px solid var(--modern-border);
         }
     </style>
 </body>
