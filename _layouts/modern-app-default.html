@@ -84,16 +84,12 @@ layout_style: modern
                     
                     {% if page.show_preview != false %}
                     <div class="modern-app-preview">
-                        <div class="modern-phone-mockup">
-                            <div class="modern-phone-frame">
-                                <div class="modern-phone-screen">
-                                    <div class="modern-video-container hidden">
-                                        <video class="modern-screen-video" autoplay muted loop playsinline preload="auto">
-                                        </video>
-                                    </div>
-                                    <img class="modern-screen-image hidden" src="" alt="{{ page.app_name }} Screenshot">
-                                </div>
+                        <div class="modern-screen-container">
+                            <div class="modern-video-container hidden">
+                                <video class="modern-screen-video" autoplay muted loop playsinline preload="auto">
+                                </video>
                             </div>
+                            <img class="modern-screen-image hidden" src="" alt="{{ page.app_name }} Screenshot">
                         </div>
                     </div>
                     {% endif %}
