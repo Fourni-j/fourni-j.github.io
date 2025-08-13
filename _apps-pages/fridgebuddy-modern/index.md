@@ -1,15 +1,17 @@
 ---
 layout: modern-app-default
 privacypolicy: true
+terms: true
 changelog: false
 ios_app_id: 1500190823
 include_in_header: false
-preview_file: /assets/app-pages/screenshots/fridgebuddy-screenshot.png
+preview_file: /assets/app-pages/screenshots/fridgebuddy_inventory.png
 app_name: FridgeBuddy
 app_price: Free
 app_icon: /assets/app-pages/squircle120.svg
 appstore_link: https://apps.apple.com/us/app/fridgebuddy/id1500190823
 show_rating: true
+show_support_link: true
 
 # Hero section
 show_hero: true
@@ -57,22 +59,18 @@ testimonials:
 show_screenshots: true
 screenshots_title: "See It In Action"
 screenshots:
-  - image: "/assets/app-pages/screenshots/fridgebuddy-screenshot.png"
+  - image: "/assets/app-pages/screenshots/fridgebuddy_inventory.png"
     alt: "FridgeBuddy main dashboard"
     caption: "Track all your food items"
     
-  - image: "/assets/app-pages/screenshots/fridgebuddy-screenshot.png"
+  - image: "/assets/app-pages/screenshots/fridgebuddy_product.png"
     alt: "FridgeBuddy expiration alerts"
     caption: "Smart expiration reminders"
     
-  - image: "/assets/app-pages/screenshots/fridgebuddy-screenshot.png"
+  - image: "/assets/app-pages/screenshots/fridgebuddy_insights.png"
     alt: "FridgeBuddy food waste analytics"
     caption: "Monitor your food waste trends"
     
-  - image: "/assets/app-pages/screenshots/fridgebuddy-screenshot.png"
-    alt: "FridgeBuddy dark mode"
-    caption: "Beautiful dark mode support"
-
 # FAQ section
 show_faq: true
 faq_title: "Frequently Asked Questions"

@@ -778,6 +778,7 @@ $modern-breakpoint-xl: 1280px;
     display: grid;
     grid-template-columns: 1fr;
     gap: $modern-spacing-8;
+    justify-items: center;
     
     @media (min-width: $modern-breakpoint-sm) {
         grid-template-columns: repeat(2, 1fr);
@@ -785,12 +786,15 @@ $modern-breakpoint-xl: 1280px;
     }
     
     @media (min-width: $modern-breakpoint-md) {
-        grid-template-columns: repeat(3, 1fr);
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
         gap: $modern-spacing-12;
+        justify-content: center;
     }
     
     @media (min-width: $modern-breakpoint-lg) {
-        grid-template-columns: repeat(4, 1fr);
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        max-width: 1200px;
+        margin: 0 auto;
     }
 }
 
