@@ -12,7 +12,7 @@ layout_style: modern
         <div class="modern-container">
             <nav class="modern-nav">
                 <div class="modern-nav-left">
-                    <div class="modern-app-branding">
+                    <div class="modern-app-branding" onclick="navigateBack()">
                         <img class="modern-header-app-icon" src="{{ page.app_icon }}" alt="{{ page.app_name }}">
                         <span class="modern-header-app-name">{{ page.app_name }}</span>
                     </div>
@@ -171,6 +171,27 @@ layout_style: modern
             updateHeader();
             initDarkMode();
         })();
+        
+        // Navigation function for header icon
+        function navigateBack() {
+            // From privacy policy or other subpage, go back to main app page
+            // Remove the current page filename to get the app directory
+            const currentPath = window.location.pathname;
+            const appPath = currentPath.substring(0, currentPath.lastIndexOf('/')) + '/';
+            window.location.href = appPath;
+        }
     </script>
+    
+    <style>
+        /* Clickable header branding */
+        .modern-app-branding {
+            cursor: pointer;
+            transition: opacity 0.2s ease;
+        }
+        
+        .modern-app-branding:hover {
+            opacity: 0.8;
+        }
+    </style>
 </body>
 </html>
