@@ -9,7 +9,6 @@ preview_file: /assets/app-pages/screenshots/fridgebuddy_inventory.png
 app_name: FridgeBuddy
 app_price: Free
 app_icon: /assets/app-pages/squircle120.svg
-appstore_link: https://apps.apple.com/us/app/fridgebuddy/id1500190823
 show_rating: true
 show_support_link: true
 
