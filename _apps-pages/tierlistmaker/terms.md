@@ -1,5 +1,5 @@
 ---
-layout: app-page
+layout: modern-app-page
 title: Terms
 ios_app_id: 6742540298
 include_in_header: false
