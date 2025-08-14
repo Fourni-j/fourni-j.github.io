@@ -1,5 +1,5 @@
 ---
-layout: app-page
+layout: modern-app-page
 title: What's New
 ios_app_id: 
 include_in_header: false

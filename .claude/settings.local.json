@@ -21,6 +21,7 @@
       "Bash(mkdir:*)",
       "WebFetch(domain:apps.apple.com)"
     ],
-    "deny": []
+    "deny": [],
+    "defaultMode": "acceptEdits"
   }
 }
