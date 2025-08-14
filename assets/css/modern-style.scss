@@ -1,0 +1,1085 @@
+---
+# Only the essential Sass file needs front matter. The dashes are enough.
+---
+
+// Modern Layout Variables - Luna-inspired design with dark mode support
+$modern-primary-color: #1d63ea;
+$modern-primary-hover: #1557db;
+
+// Light mode colors
+$modern-secondary-color: #f8fafc;
+$modern-text-dark: #0f172a;
+$modern-text-medium: #334155;
+$modern-text-light: #64748b;
+$modern-text-muted: #94a3b8;
+$modern-background: #ffffff;
+$modern-border-light: #e2e8f0;
+$modern-border-medium: #cbd5e1;
+$modern-shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+$modern-shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+$modern-shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+$modern-shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+
+// CSS Custom Properties for theme switching
+:root {
+  // Light theme (default)
+  --modern-primary: #{$modern-primary-color};
+  --modern-primary-hover: #{$modern-primary-hover};
+  --modern-bg: #{$modern-background};
+  --modern-bg-secondary: #{$modern-secondary-color};
+  --modern-text-primary: #{$modern-text-dark};
+  --modern-text-secondary: #{$modern-text-medium};
+  --modern-text-tertiary: #{$modern-text-light};
+  --modern-text-muted: #{$modern-text-muted};
+  --modern-border: #{$modern-border-light};
+  --modern-border-medium: #{$modern-border-medium};
+  --modern-shadow-sm: #{$modern-shadow-sm};
+  --modern-shadow-md: #{$modern-shadow-md};
+  --modern-shadow-lg: #{$modern-shadow-lg};
+  --modern-hero-bg: linear-gradient(135deg, #f8fafc 0%, #ffffff 100%);
+}
+
+// Dark theme
+@media (prefers-color-scheme: dark) {
+  :root {
+    --modern-bg: #000000;
+    --modern-bg-secondary: #111111;
+    --modern-text-primary: #ffffff;
+    --modern-text-secondary: #e5e5e5;
+    --modern-text-tertiary: #a3a3a3;
+    --modern-text-muted: #737373;
+    --modern-border: #333333;
+    --modern-border-medium: #525252;
+    --modern-shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.3);
+    --modern-shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.4), 0 2px 4px -1px rgba(0, 0, 0, 0.3);
+    --modern-shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.5), 0 4px 6px -2px rgba(0, 0, 0, 0.4);
+    --modern-hero-bg: linear-gradient(135deg, #111111 0%, #000000 100%);
+  }
+}
+
+// Manual theme classes (for debug toggle) - these override system preferences
+.light-theme {
+  --modern-bg: #ffffff !important;
+  --modern-bg-secondary: #f8fafc !important;
+  --modern-text-primary: #0f172a !important;
+  --modern-text-secondary: #334155 !important;
+  --modern-text-tertiary: #64748b !important;
+  --modern-text-muted: #94a3b8 !important;
+  --modern-border: #e2e8f0 !important;
+  --modern-border-medium: #cbd5e1 !important;
+  --modern-shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05) !important;
+  --modern-shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06) !important;
+  --modern-shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05) !important;
+  --modern-hero-bg: linear-gradient(135deg, #f8fafc 0%, #ffffff 100%) !important;
+}
+
+.dark-theme {
+  --modern-bg: #000000 !important;
+  --modern-bg-secondary: #111111 !important;
+  --modern-text-primary: #ffffff !important;
+  --modern-text-secondary: #e5e5e5 !important;
+  --modern-text-tertiary: #a3a3a3 !important;
+  --modern-text-muted: #737373 !important;
+  --modern-border: #333333 !important;
+  --modern-border-medium: #525252 !important;
+  --modern-shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.3) !important;
+  --modern-shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.4), 0 2px 4px -1px rgba(0, 0, 0, 0.3) !important;
+  --modern-shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.5), 0 4px 6px -2px rgba(0, 0, 0, 0.4) !important;
+  --modern-hero-bg: linear-gradient(135deg, #111111 0%, #000000 100%) !important;
+}
+
+// Typography
+$modern-font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+$modern-font-size-xs: 0.75rem;    // 12px
+$modern-font-size-sm: 0.875rem;   // 14px
+$modern-font-size-base: 1rem;     // 16px
+$modern-font-size-lg: 1.125rem;   // 18px
+$modern-font-size-xl: 1.25rem;    // 20px
+$modern-font-size-2xl: 1.5rem;    // 24px
+$modern-font-size-3xl: 1.875rem;  // 30px
+$modern-font-size-4xl: 2.25rem;   // 36px
+$modern-font-size-5xl: 3rem;      // 48px
+
+// Spacing
+$modern-spacing-1: 0.25rem;   // 4px
+$modern-spacing-2: 0.5rem;    // 8px
+$modern-spacing-3: 0.75rem;   // 12px
+$modern-spacing-4: 1rem;      // 16px
+$modern-spacing-5: 1.25rem;   // 20px
+$modern-spacing-6: 1.5rem;    // 24px
+$modern-spacing-8: 2rem;      // 32px
+$modern-spacing-10: 2.5rem;   // 40px
+$modern-spacing-12: 3rem;     // 48px
+$modern-spacing-16: 4rem;     // 64px
+$modern-spacing-20: 5rem;     // 80px
+$modern-spacing-24: 6rem;     // 96px
+
+// Breakpoints
+$modern-breakpoint-sm: 640px;
+$modern-breakpoint-md: 768px;
+$modern-breakpoint-lg: 1024px;
+$modern-breakpoint-xl: 1280px;
+
+// Base styles for modern layout
+.modern-layout {
+    font-family: $modern-font-family;
+    font-size: $modern-font-size-base;
+    line-height: 1.6;
+    color: var(--modern-text-primary);
+    background-color: var(--modern-bg);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    margin: 0;
+    padding: 0;
+}
+
+.modern-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 $modern-spacing-4;
+    
+    @media (min-width: $modern-breakpoint-sm) {
+        padding: 0 $modern-spacing-6;
+    }
+    
+    @media (min-width: $modern-breakpoint-lg) {
+        padding: 0 $modern-spacing-8;
+    }
+}
+
+// Header
+.modern-header {
+    position: sticky;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    z-index: 50;
+    padding: $modern-spacing-4 0;
+    background: transparent;
+    border: none;
+    transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    
+    &.modern-header-scrolled {
+        padding: $modern-spacing-3 0;
+        
+        .modern-nav {
+            background-color: rgba(255, 255, 255, 0.7);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border-radius: 50px;
+            padding: $modern-spacing-3 $modern-spacing-6;
+            margin: 0 $modern-spacing-4;
+            box-shadow: var(--modern-shadow-lg);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            
+            @media (min-width: $modern-breakpoint-md) {
+                margin: 0 $modern-spacing-8;
+                padding: $modern-spacing-3 $modern-spacing-8;
+            }
+            
+            @media (prefers-color-scheme: dark) {
+                background-color: rgba(17, 17, 17, 0.8);
+                border-color: rgba(51, 51, 51, 0.3);
+            }
+        }
+        
+        .dark-theme & .modern-nav,
+        .light-theme & .modern-nav {
+            background-color: rgba(17, 17, 17, 0.8);
+            border-color: rgba(51, 51, 51, 0.3);
+        }
+        
+        .light-theme & .modern-nav {
+            background-color: rgba(255, 255, 255, 0.7);
+            border-color: rgba(255, 255, 255, 0.2);
+        }
+        
+        .modern-logo-link {
+            font-size: $modern-font-size-base;
+        }
+        
+        .modern-header-app-icon {
+            width: 28px;
+            height: 28px;
+            border-radius: 7px;
+            
+            @media (min-width: $modern-breakpoint-md) {
+                width: 32px;
+                height: 32px;
+                border-radius: 8px;
+            }
+        }
+        
+        .modern-header-app-name {
+            font-size: $modern-font-size-base;
+            
+            @media (min-width: $modern-breakpoint-md) {
+                font-size: $modern-font-size-lg;
+            }
+        }
+        
+        .modern-appstore-header-btn img {
+            height: 28px;
+            
+            @media (min-width: $modern-breakpoint-md) {
+                height: 32px;
+            }
+        }
+    }
+}
+
+.modern-nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: $modern-spacing-4 0;
+    gap: $modern-spacing-6;
+    transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    background: transparent;
+    border-radius: 0;
+    margin: 0;
+    box-shadow: none;
+    border: none;
+}
+
+.modern-nav-left {
+    display: flex;
+    align-items: center;
+}
+
+.modern-nav-right {
+    display: flex;
+    align-items: center;
+    gap: $modern-spacing-6;
+}
+
+.modern-app-branding {
+    display: flex;
+    align-items: center;
+    gap: $modern-spacing-3;
+    text-decoration: none;
+    transition: opacity 0.2s ease;
+    
+    &:hover {
+        opacity: 0.8;
+    }
+}
+
+.modern-header-app-icon {
+    width: 32px;
+    height: 32px;
+    border-radius: 8px;
+    transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    
+    @media (min-width: $modern-breakpoint-md) {
+        width: 36px;
+        height: 36px;
+        border-radius: 10px;
+    }
+}
+
+.modern-header-app-name {
+    font-size: $modern-font-size-lg;
+    font-weight: 600;
+    color: var(--modern-text-primary);
+    transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    
+    @media (min-width: $modern-breakpoint-md) {
+        font-size: $modern-font-size-xl;
+        font-weight: 700;
+    }
+}
+
+
+.modern-nav-links {
+    display: none;
+    align-items: center;
+    gap: $modern-spacing-5;
+    
+    @media (min-width: $modern-breakpoint-md) {
+        display: flex;
+    }
+}
+
+.modern-nav-link {
+    font-size: $modern-font-size-base;
+    font-weight: 500;
+    color: var(--modern-text-secondary);
+    text-decoration: none;
+    transition: color 0.2s ease;
+    
+    &:hover {
+        color: var(--modern-primary);
+    }
+}
+
+.modern-nav-cta {
+    display: flex;
+    align-items: center;
+}
+
+.modern-appstore-header-btn {
+    display: inline-block;
+    transition: transform 0.2s ease, opacity 0.2s ease;
+    
+    &:hover {
+        transform: translateY(-1px);
+        opacity: 0.9;
+    }
+    
+    img {
+        height: 32px;
+        width: auto;
+        transition: height 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+        
+        @media (min-width: $modern-breakpoint-md) {
+            height: 36px;
+        }
+    }
+}
+
+.modern-breadcrumb {
+    display: flex;
+    align-items: center;
+    font-size: $modern-font-size-sm;
+    color: $modern-text-light;
+}
+
+.modern-breadcrumb-link {
+    color: $modern-primary-color;
+    text-decoration: none;
+    transition: color 0.2s ease;
+    
+    &:hover {
+        color: $modern-primary-hover;
+    }
+}
+
+.modern-breadcrumb-separator {
+    margin: 0 $modern-spacing-2;
+    color: $modern-text-muted;
+}
+
+.modern-breadcrumb-current {
+    color: $modern-text-dark;
+}
+
+// Main content
+.modern-main {
+    flex: 1;
+}
+
+// Hero section - Luna-inspired layout
+.modern-hero {
+    background: var(--modern-hero-bg);
+    padding: $modern-spacing-16 0 $modern-spacing-20 0;
+    
+    @media (min-width: $modern-breakpoint-md) {
+        padding: $modern-spacing-20 0 $modern-spacing-24 0;
+    }
+}
+
+.modern-app-showcase {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: $modern-spacing-12;
+    align-items: center;
+    
+    @media (min-width: $modern-breakpoint-lg) {
+        grid-template-columns: 1fr 1fr;
+        gap: $modern-spacing-16;
+        align-items: center;
+        min-height: 500px;
+    }
+}
+
+// App info section (left side on desktop)
+.modern-app-info {
+    order: 2;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    
+    @media (min-width: $modern-breakpoint-lg) {
+        order: 1;
+        padding-right: $modern-spacing-8;
+    }
+}
+
+.modern-app-header {
+    display: flex;
+    align-items: center;
+    gap: $modern-spacing-4;
+    margin-bottom: $modern-spacing-6;
+}
+
+.modern-app-badge {
+    width: 80px;
+    height: 80px;
+    border-radius: 18px;
+    overflow: hidden;
+    box-shadow: $modern-shadow-md;
+    flex-shrink: 0;
+    background-color: $modern-background;
+    
+    @media (min-width: $modern-breakpoint-md) {
+        width: 96px;
+        height: 96px;
+        border-radius: 22px;
+    }
+}
+
+.modern-app-icon {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.modern-app-meta {
+    flex: 1;
+}
+
+.modern-app-title {
+    font-size: $modern-font-size-3xl;
+    font-weight: 800;
+    color: var(--modern-text-primary);
+    margin: 0 0 $modern-spacing-1 0;
+    line-height: 1.2;
+    
+    @media (min-width: $modern-breakpoint-md) {
+        font-size: $modern-font-size-4xl;
+    }
+}
+
+.modern-hero-title {
+    font-size: $modern-font-size-4xl;
+    font-weight: 800;
+    color: var(--modern-text-primary);
+    margin: 0 0 $modern-spacing-6 0;
+    line-height: 1.1;
+    max-width: 600px;
+    
+    @media (min-width: $modern-breakpoint-md) {
+        font-size: $modern-font-size-5xl;
+    }
+}
+
+.modern-hero-subtitle {
+    font-size: $modern-font-size-xl;
+    color: var(--modern-text-secondary);
+    line-height: 1.6;
+    margin-bottom: $modern-spacing-8;
+    max-width: 500px;
+}
+
+.modern-app-price {
+    font-size: $modern-font-size-lg;
+    font-weight: 600;
+    color: var(--modern-primary);
+    margin: 0;
+}
+
+.modern-app-description {
+    font-size: $modern-font-size-lg;
+    color: var(--modern-text-secondary);
+    line-height: 1.7;
+    margin-bottom: $modern-spacing-8;
+    max-width: 500px;
+}
+
+.modern-download-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: $modern-spacing-3;
+    
+    @media (min-width: $modern-breakpoint-sm) {
+        flex-direction: row;
+        gap: $modern-spacing-4;
+    }
+}
+
+.modern-download-btn {
+    display: inline-block;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    
+    &:hover {
+        transform: translateY(-2px);
+        box-shadow: $modern-shadow-lg;
+    }
+    
+    img {
+        height: 50px;
+        width: auto;
+        
+        @media (min-width: $modern-breakpoint-md) {
+            height: 60px;
+        }
+    }
+}
+
+// App preview section (right side on desktop)
+.modern-app-preview {
+    order: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    @media (min-width: $modern-breakpoint-lg) {
+        order: 2;
+        justify-content: center;
+    }
+}
+
+.modern-phone-mockup {
+    max-width: 280px;
+    width: 100%;
+    
+    @media (min-width: $modern-breakpoint-md) {
+        max-width: 320px;
+    }
+    
+    @media (min-width: $modern-breakpoint-lg) {
+        max-width: 350px;
+    }
+}
+
+.modern-screen-container {
+    max-width: 280px;
+    width: 100%;
+    aspect-ratio: 9 / 19.5;
+    border-radius: 28px;
+    overflow: hidden;
+    
+    @media (min-width: $modern-breakpoint-md) {
+        max-width: 320px;
+    }
+    
+    @media (min-width: $modern-breakpoint-lg) {
+        max-width: 350px;
+    }
+}
+
+.modern-phone-frame {
+    position: relative;
+    aspect-ratio: 9 / 19.5;
+    background: linear-gradient(145deg, #1a1a1a, #2a2a2a);
+    border-radius: 36px;
+    padding: 12px;
+    box-shadow: $modern-shadow-xl;
+    
+    &::before {
+        content: '';
+        position: absolute;
+        top: 18px;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 100px;
+        height: 4px;
+        background: #333;
+        border-radius: 2px;
+        z-index: 10;
+    }
+}
+
+.modern-phone-screen {
+    width: 100%;
+    height: 100%;
+    border-radius: 28px;
+    overflow: hidden;
+    background: $modern-background;
+    position: relative;
+}
+
+.modern-video-container {
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+.modern-screen-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 28px;
+}
+
+.modern-screen-video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 28px;
+}
+
+.hidden {
+    display: none !important;
+}
+
+// Features section
+.modern-features {
+    padding: $modern-spacing-20 0;
+    background-color: var(--modern-bg);
+}
+
+// Feature color variants - can be customized
+.modern-feature:nth-child(1) .modern-feature-icon { --feature-color: 29, 99, 234; }   // Blue
+.modern-feature:nth-child(2) .modern-feature-icon { --feature-color: 16, 185, 129; }  // Green  
+.modern-feature:nth-child(3) .modern-feature-icon { --feature-color: 245, 101, 101; } // Red
+.modern-feature:nth-child(4) .modern-feature-icon { --feature-color: 139, 92, 246; }  // Purple
+.modern-feature:nth-child(5) .modern-feature-icon { --feature-color: 245, 158, 11; }  // Orange
+.modern-feature:nth-child(6) .modern-feature-icon { --feature-color: 236, 72, 153; }  // Pink
+.modern-feature:nth-child(7) .modern-feature-icon { --feature-color: 14, 165, 233; }  // Sky blue
+.modern-feature:nth-child(8) .modern-feature-icon { --feature-color: 34, 197, 94; }   // Emerald
+
+.modern-features-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: $modern-spacing-8;
+    
+    @media (min-width: $modern-breakpoint-sm) {
+        grid-template-columns: repeat(2, 1fr);
+        gap: $modern-spacing-10;
+    }
+    
+    @media (min-width: $modern-breakpoint-lg) {
+        grid-template-columns: repeat(2, 1fr);
+        gap: $modern-spacing-12;
+    }
+}
+
+.modern-feature {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    padding: $modern-spacing-6;
+    border-radius: 16px;
+    transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    
+    @media (min-width: $modern-breakpoint-md) {
+        flex-direction: row;
+        text-align: left;
+        gap: $modern-spacing-5;
+    }
+    
+    &:hover {
+        transform: translateY(-4px) scale(1.02);
+        background: rgba(255, 255, 255, 0.05);
+    }
+}
+
+.modern-feature-icon {
+    --feature-color: 29, 99, 234; // Default primary color RGB
+    width: 56px;
+    height: 56px;
+    background: rgba(var(--feature-color), 0.1);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(var(--feature-color), 0.15);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto $modern-spacing-4 auto;
+    flex-shrink: 0;
+    transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    
+    @media (min-width: $modern-breakpoint-md) {
+        margin: 0;
+    }
+    
+    i {
+        color: rgb(var(--feature-color));
+        font-size: $modern-font-size-xl;
+        font-weight: 600;
+    }
+}
+
+.modern-feature-content {
+    flex: 1;
+    transition: transform 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.modern-feature-title {
+    font-size: $modern-font-size-xl;
+    font-weight: 700;
+    color: var(--modern-text-primary);
+    margin: 0 0 $modern-spacing-3 0;
+    line-height: 1.3;
+    letter-spacing: -0.025em;
+}
+
+.modern-feature-description {
+    font-size: $modern-font-size-base;
+    color: var(--modern-text-tertiary);
+    line-height: 1.7;
+    margin: 0;
+    font-weight: 400;
+}
+
+// Section titles
+.modern-section-title {
+    font-size: $modern-font-size-3xl;
+    font-weight: 700;
+    color: var(--modern-text-primary);
+    text-align: center;
+    margin: 0 0 $modern-spacing-12 0;
+    line-height: 1.2;
+    
+    @media (min-width: $modern-breakpoint-md) {
+        font-size: $modern-font-size-4xl;
+    }
+}
+
+// Testimonials section
+.modern-testimonials {
+    padding: $modern-spacing-20 0;
+    background-color: var(--modern-bg-secondary);
+}
+
+.modern-testimonials-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: $modern-spacing-8;
+    
+    @media (min-width: $modern-breakpoint-md) {
+        grid-template-columns: repeat(2, 1fr);
+        gap: $modern-spacing-10;
+    }
+    
+    @media (min-width: $modern-breakpoint-lg) {
+        grid-template-columns: repeat(3, 1fr);
+        gap: $modern-spacing-12;
+    }
+}
+
+.modern-testimonial {
+    background: var(--modern-bg);
+    padding: $modern-spacing-6;
+    border-radius: 16px;
+    box-shadow: var(--modern-shadow-sm);
+    border: 1px solid var(--modern-border);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    
+    &:hover {
+        transform: translateY(-2px);
+        box-shadow: var(--modern-shadow-md);
+    }
+}
+
+.modern-testimonial-text {
+    font-size: $modern-font-size-base;
+    color: var(--modern-text-primary);
+    line-height: 1.6;
+    margin: 0 0 $modern-spacing-4 0;
+    font-style: italic;
+}
+
+.modern-testimonial-author {
+    font-size: $modern-font-size-sm;
+    
+    strong {
+        color: var(--modern-text-primary);
+        font-weight: 600;
+    }
+}
+
+.modern-testimonial-role {
+    color: var(--modern-text-tertiary);
+    display: block;
+    margin-top: $modern-spacing-1;
+}
+
+// Screenshots section
+.modern-screenshots {
+    padding: $modern-spacing-20 0;
+    background-color: var(--modern-bg);
+}
+
+.modern-screenshots-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: $modern-spacing-8;
+    justify-items: center;
+    
+    @media (min-width: $modern-breakpoint-sm) {
+        grid-template-columns: repeat(2, 1fr);
+        gap: $modern-spacing-10;
+    }
+    
+    @media (min-width: $modern-breakpoint-md) {
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        gap: $modern-spacing-12;
+        justify-content: center;
+    }
+    
+    @media (min-width: $modern-breakpoint-lg) {
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+}
+
+.modern-screenshot {
+    text-align: center;
+    transition: transform 0.2s ease;
+    
+    &:hover {
+        transform: translateY(-4px);
+        
+        .modern-screenshot-image {
+            transform: scale(1.02);
+        }
+        
+        .modern-screenshot-caption {
+            color: var(--modern-text-primary);
+        }
+    }
+}
+
+.modern-screenshot-image {
+    width: 100%;
+    max-width: 200px;
+    height: auto;
+    border-radius: 16px;
+    transition: transform 0.2s ease;
+}
+
+.modern-screenshot-caption {
+    font-size: $modern-font-size-sm;
+    color: var(--modern-text-secondary);
+    margin-top: $modern-spacing-3;
+    margin-bottom: 0;
+    transition: color 0.2s ease;
+}
+
+// Page content (for subpages)
+.modern-page-content {
+    padding: $modern-spacing-12 0;
+}
+
+.modern-page-title {
+    font-size: $modern-font-size-3xl;
+    font-weight: 700;
+    color: var(--modern-text-primary);
+    margin: 0 0 $modern-spacing-8 0;
+    line-height: 1.3;
+    
+    @media (min-width: $modern-breakpoint-md) {
+        font-size: $modern-font-size-4xl;
+    }
+}
+
+.modern-article {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.modern-content {
+    font-size: $modern-font-size-base;
+    line-height: 1.8;
+    color: var(--modern-text-primary);
+    
+    h1, h2, h3, h4, h5, h6 {
+        color: var(--modern-text-primary);
+        font-weight: 600;
+        margin-top: $modern-spacing-8;
+        margin-bottom: $modern-spacing-4;
+        line-height: 1.3;
+    }
+    
+    h1 { font-size: $modern-font-size-2xl; }
+    h2 { font-size: $modern-font-size-xl; }
+    h3 { font-size: $modern-font-size-lg; }
+    
+    p {
+        margin-bottom: $modern-spacing-4;
+    }
+    
+    a {
+        color: var(--modern-primary);
+        text-decoration: none;
+        
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+    
+    ul, ol {
+        margin-bottom: $modern-spacing-4;
+        padding-left: $modern-spacing-6;
+    }
+    
+    li {
+        margin-bottom: $modern-spacing-2;
+    }
+}
+
+// Footer
+.modern-footer {
+    background-color: var(--modern-bg-secondary);
+    border-top: 1px solid var(--modern-border);
+    padding: $modern-spacing-12 0;
+    margin-top: 0;
+}
+
+// App footer styles (for both modern and classic layouts)
+.app-footer {
+    padding: $modern-spacing-8 0;
+    margin-top: $modern-spacing-12;
+    
+    // For non-modern layouts, add background and border
+    background-color: var(--modern-bg-secondary, #f8fafc);
+    border-top: 1px solid var(--modern-border, #e2e8f0);
+    
+    // For modern layouts, remove duplicate styling since modern-footer handles it
+    .modern-layout & {
+        background-color: transparent;
+        border-top: none;
+        margin-top: 0;
+    }
+}
+
+.app-footer-content {
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
+    align-items: center;
+    gap: $modern-spacing-6;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 $modern-spacing-4;
+    
+    @media (min-width: $modern-breakpoint-sm) {
+        padding: 0 $modern-spacing-6;
+    }
+    
+    @media (min-width: $modern-breakpoint-lg) {
+        padding: 0 $modern-spacing-8;
+    }
+    
+    @media (max-width: #{$modern-breakpoint-sm - 1px}) {
+        grid-template-columns: 1fr;
+        text-align: center;
+        gap: $modern-spacing-4;
+    }
+}
+
+.app-footer-left {
+    display: flex;
+    gap: $modern-spacing-4;
+    
+    @media (max-width: #{$modern-breakpoint-sm - 1px}) {
+        justify-content: center;
+        order: 2;
+    }
+}
+
+.app-footer-center {
+    text-align: center;
+    
+    @media (max-width: #{$modern-breakpoint-sm - 1px}) {
+        order: 1;
+    }
+}
+
+.app-footer-right {
+    display: flex;
+    gap: $modern-spacing-4;
+    justify-content: flex-end;
+    
+    @media (max-width: #{$modern-breakpoint-sm - 1px}) {
+        justify-content: center;
+        order: 3;
+    }
+}
+
+.app-footer-text {
+    font-size: $modern-font-size-sm;
+    color: var(--modern-text-tertiary);
+    margin: 0;
+    font-weight: 400;
+}
+
+.app-footer-author-link {
+    color: var(--modern-primary);
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.2s ease;
+    
+    &:hover {
+        color: var(--modern-primary-hover);
+        text-decoration: underline;
+    }
+}
+
+.app-footer-link {
+    font-size: $modern-font-size-sm;
+    color: var(--modern-text-tertiary);
+    text-decoration: none;
+    font-weight: 400;
+    transition: color 0.2s ease;
+    
+    &:hover {
+        color: var(--modern-text-primary);
+        text-decoration: underline;
+    }
+}
+
+// Responsive utilities
+@media (max-width: #{$modern-breakpoint-sm - 1px}) {
+    .modern-container {
+        padding: 0 $modern-spacing-4;
+    }
+    
+    .modern-app-showcase {
+        gap: $modern-spacing-8;
+    }
+    
+    .modern-hero {
+        padding: $modern-spacing-12 0 $modern-spacing-16 0;
+    }
+    
+    .modern-features {
+        padding: $modern-spacing-16 0;
+    }
+    
+    .modern-testimonials {
+        padding: $modern-spacing-16 0;
+    }
+    
+    .modern-screenshots {
+        padding: $modern-spacing-16 0;
+    }
+    
+    .modern-app-header {
+        flex-direction: column;
+        text-align: center;
+        gap: $modern-spacing-3;
+    }
+    
+    .modern-app-description {
+        text-align: center;
+    }
+    
+    .modern-hero-title {
+        text-align: center;
+        font-size: $modern-font-size-3xl;
+    }
+    
+    .modern-hero-subtitle {
+        text-align: center;
+    }
+    
+    .modern-download-buttons {
+        justify-content: center;
+    }
+    
+    .modern-nav {
+        gap: $modern-spacing-4;
+    }
+    
+    .modern-nav-cta {
+        .modern-appstore-header-btn img {
+            height: 28px;
+        }
+    }
+}

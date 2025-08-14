@@ -1,14 +1,28 @@
-<footer>
-	<p class="footerText">Made by {% if site.name %}<a href="/">{% endif %}{{ site.name }}{% if site.name %}</a>{% endif %}{% if site.your_city %} in {{ site.your_city }}{% endif %}</p>
-	<div class="footerLinks">
-		{% if page.privacypolicy %}
-			<a href="privacypolicy.html" target="_self">Privacy Policy</a>
-		{% endif %}
-		{% if page.presskit_path %}
-			<a href="{{ page.presskit_path }}" target="_self">Press Kit</a>
-		{% endif %}
-		{% if page.changelog %}
-			<a href="changelog.html" target="_self">Changelog</a>
-		{% endif %}
+<footer class="app-footer">
+	<div class="app-footer-content">
+		<div class="app-footer-left">
+			{% if page.privacypolicy %}
+				<a href="privacypolicy.html" class="app-footer-link">Privacy Policy</a>
+			{% endif %}
+			{% if page.terms %}
+				<a href="terms.html" class="app-footer-link">Terms</a>
+			{% endif %}
+		</div>
+		
+		<div class="app-footer-center">
+			<p class="app-footer-text">Made by <a href="https://cafournier.com" class="app-footer-author-link" target="_blank" rel="noopener">Charles-Adrien Fournier</a></p>
+		</div>
+		
+		<div class="app-footer-right">
+			{% if page.show_support_link %}
+				<a href="mailto:feedback@cafournier.com" class="app-footer-link">Support</a>
+			{% endif %}
+			{% if page.presskit_path %}
+				<a href="{{ page.presskit_path }}" class="app-footer-link" target="_blank">Press Kit</a>
+			{% endif %}
+			{% if page.changelog %}
+				<a href="changelog.html" class="app-footer-link">Changelog</a>
+			{% endif %}
+		</div>
 	</div>
 </footer>

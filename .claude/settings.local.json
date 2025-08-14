@@ -1,0 +1,27 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(bundle install:*)",
+      "Bash(bundle exec:*)",
+      "Bash(jekyll build)",
+      "Bash(gem install:*)",
+      "Bash(gem which:*)",
+      "Bash(~/.rbenv/versions/3.2.0/bin/bundle install)",
+      "Bash(~/.rbenv/versions/3.2.0/bin/bundle exec jekyll build)",
+      "Bash(jekyll build:*)",
+      "Bash(rm:*)",
+      "Bash(BUNDLE_GEMFILE= jekyll build)",
+      "Bash(BUNDLE_GEMFILE=/dev/null /Users/charlesfournier/.rbenv/versions/3.2.0/lib/ruby/gems/3.2.0/gems/jekyll-3.6.3/exe/jekyll build)",
+      "Bash(lsof:*)",
+      "WebFetch(domain:lunabudgeting.com)",
+      "WebFetch(domain:www.gymhero.app)",
+      "Bash(find:*)",
+      "Bash(cp:*)",
+      "Bash(ls:*)",
+      "Bash(mkdir:*)",
+      "WebFetch(domain:apps.apple.com)"
+    ],
+    "deny": [],
+    "defaultMode": "acceptEdits"
+  }
+}

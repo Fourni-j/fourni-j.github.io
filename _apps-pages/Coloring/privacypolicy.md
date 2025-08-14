@@ -1,5 +1,5 @@
 ---
-layout: app-page
+layout: modern-app-page
 title: Privacy Policy
 ios_app_id: 6657988450
 include_in_header: false

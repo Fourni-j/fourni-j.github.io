@@ -33,6 +33,15 @@ $(function() {
                 $($appIconHeader).attr("src", appInfo.artworkUrl512);
             }
 
+            // Set modern header app icon using the iOS app ID if it is not set manually in _config.yml
+            var $modernAppIconHeader = $(".modern-header-app-icon");
+                $($modernAppIconHeader).attr("src", appInfo.artworkUrl512);
+
+            // Set all modern app icons using the iOS app ID (including hero layout)
+            $(".modern-app-icon").each(function() {
+                $(this).attr("src", appInfo.artworkUrl512);
+            });
+
             // Set app name using the iOS app ID if it is not set manually in _config.yml
             var $appName = $(".appName");
             var $headerName = $(".headerName");
@@ -40,6 +49,10 @@ $(function() {
                 $($appName).html(appInfo.trackName);
                 $($headerName).html(appInfo.trackName);
             }
+
+            // Set modern layout app names using the fetched title (always override)
+            $(".modern-header-app-name").html(appInfo.trackName);
+            $(".modern-app-title").html(appInfo.trackName);
 
             // Set price using the iOS app ID if it is not set manually in _config.yml
             var $appPrice = $(".appPrice");
@@ -51,6 +64,33 @@ $(function() {
             var $appStoreLink = $(".appStoreLink");
             if ($.trim($appStoreLink.attr('href')).length == 0) {
                 $($appStoreLink).attr("href", appInfo.trackViewUrl);
+            }
+
+            // Set app rating display if enabled
+            var showRating = {% if page.show_rating %}true{% else %}false{% endif %};
+            
+            if (showRating && appInfo.averageUserRating && appInfo.userRatingCount) {
+                var rating = parseFloat(appInfo.averageUserRating);
+                var ratingCount = parseInt(appInfo.userRatingCount);
+                
+                // Generate star rating HTML
+                var starsHtml = '';
+                for (var i = 1; i <= 5; i++) {
+                    if (i <= Math.floor(rating)) {
+                        starsHtml += '<i class="fas fa-star"></i>';
+                    } else if (i - 0.5 <= rating) {
+                        starsHtml += '<i class="fas fa-star-half-alt"></i>';
+                    } else {
+                        starsHtml += '<i class="far fa-star"></i>';
+                    }
+                }
+                
+                var ratingHtml = '<div class="modern-app-rating">' +
+                    '<div class="modern-rating-stars">' + starsHtml + '</div>' +
+                    '<span class="modern-rating-text">' + rating.toFixed(1) + ' (' + ratingCount.toLocaleString() + ' reviews)</span>' +
+                    '</div>';
+                
+                $(".modern-app-rating-container").html(ratingHtml);
             }
 
             console.info(appInfo);
