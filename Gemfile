@@ -1,7 +1,7 @@
 source "https://rubygems.org"
 
 # This will help ensure the proper Jekyll version is running.
-gem "jekyll", "~> 3.8.0"
+gem "jekyll", "~> 4.3.0"
 gem "rexml", "~> 3.4.0"
 gem "webrick", "~> 1.7"
 

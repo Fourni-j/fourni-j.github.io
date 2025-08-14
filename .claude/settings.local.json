@@ -19,7 +19,13 @@
       "Bash(cp:*)",
       "Bash(ls:*)",
       "Bash(mkdir:*)",
-      "WebFetch(domain:apps.apple.com)"
+      "WebFetch(domain:apps.apple.com)",
+      "Bash(bundle list:*)",
+      "Bash(bundle update:*)",
+      "Bash(npm install:*)",
+      "Bash(sass-migrator module:*)",
+      "Bash(grep:*)",
+      "Bash(bundle:*)"
     ],
     "deny": [],
     "defaultMode": "acceptEdits"
