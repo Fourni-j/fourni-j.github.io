@@ -1,8 +1,10 @@
 ---
-layout: app-page
+layout: modern-app-page
 title: Terms
 ios_app_id: 1500190823
 include_in_header: false
+app_name: FridgeBuddy
+app_icon: /assets/app-pages/squircle120.svg
 ---
 
 **Last Updated:** August 13, 2023
