@@ -1,8 +1,7 @@
 ---
 layout: modern-app-page
 include_in_header: false
-app_name: ShowcaseMe
-app_url: /showcaseme-modern
+ios_app_id: 1355919671
 title: Privacy Policy
 ---
 
