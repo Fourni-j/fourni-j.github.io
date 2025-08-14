@@ -47,6 +47,9 @@ new-app:
 		if [ "$$show_faq" = "y" ]; then \
 			sed -i '' "s/show_faq: false/show_faq: true/" "$$app_dir/index.md"; \
 		fi; \
+	else \
+		cp _template/app-page/redirect-index.md "$$app_dir/index.md"; \
+		sed -i '' "s/APP_NAME/$$app_name/g" "$$app_dir/index.md"; \
 	fi; \
 	if [ "$$create_privacy" = "y" ]; then \
 		cp _template/app-page/privacypolicy.md "$$app_dir/privacypolicy.md"; \
