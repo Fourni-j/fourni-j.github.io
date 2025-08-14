@@ -14,24 +14,24 @@ show_support_link: true
 
 # Hero section
 show_hero: true
-hero_title: "Never Let Food Go to Waste Again"
-hero_subtitle: "Keep track of all your food expiry dates and reduce your food waste with smart notifications and intuitive organization."
+hero_title: "Stop Wasting Food Organize Your Kitchen"
+hero_subtitle: "Track expiration dates, manage pantry, fridge, and freezer items, and get alerts before food goes bad."
 show_preview: true
 
 # Features section
 show_features: true
 features_title: "Key Features"
 features:
-  - title: Smart Food Tracking with Photos
-    description: Upload photos of your favorite foods and scan products to keep track of everything in your kitchen. Never forget what you have or when it expires again.
+  - title: Fast Input with Barcode & Date Scan
+    description: Quickly add items by scanning barcodes or expiration dates. FridgeBuddy auto-fills product details and sorts your inventory.
     fontawesome_icon_name: camera
 
   - title: iCloud Sync Across All Devices
-    description: Your complete food inventory syncs seamlessly across your iPhone, iPad, and Mac. Start tracking on one device and continue on another without missing a beat.
+    description: Your inventory syncs instantly across iPhone, iPad via iCloud, so your lists are always up to date.
     fontawesome_icon_name: sync
 
   - title: Food Waste Analytics
-    description: Understand your consumption patterns with detailed charts that show what you've consumed versus what you've thrown away each month. Make informed decisions to reduce waste and save money.
+    description: See monthly charts showing what you’ve used vs. wasted, top consumed and top wasted items, and track your progress in reducing waste.
     fontawesome_icon_name: chart-pie
 
   - title: Shared Family Lists
@@ -60,15 +60,15 @@ screenshots_title: "See It In Action"
 screenshots:
   - image: "/assets/app-pages/screenshots/fridgebuddy_inventory.png"
     alt: "FridgeBuddy main dashboard"
-    caption: "Track all your food items"
+    caption: "Inventory overview with expiry alerts"
     
   - image: "/assets/app-pages/screenshots/fridgebuddy_product.png"
     alt: "FridgeBuddy expiration alerts"
-    caption: "Smart expiration reminders"
+    caption: "Barcode and date scanning for fast entry"
     
   - image: "/assets/app-pages/screenshots/fridgebuddy_insights.png"
     alt: "FridgeBuddy food waste analytics"
-    caption: "Monitor your food waste trends"
+    caption: "Waste vs. used stats and trends"
     
 # FAQ section
 show_faq: true
@@ -81,11 +81,11 @@ faq:
     answer: "Yes! FridgeBuddy supports shared lists that sync across multiple users. Your family members can see what's available, add new items, and help prevent duplicate purchases. Everyone stays on the same page about what's in the kitchen."
     
   - question: "Does my data sync across all my devices?"
-    answer: "Absolutely. FridgeBuddy uses iCloud to seamlessly sync your complete food inventory across your iPhone, iPad, and Mac. Start tracking on one device and continue on another without missing a beat."
+    answer: "Absolutely. FridgeBuddy uses iCloud to seamlessly sync your complete food inventory across your iPhone, iPad. Start tracking on one device and continue on another without missing a beat."
     
   - question: "How do I add items to track?"
     answer: "You can add items by scanning product barcodes, manually entering details, or uploading photos of your favorite foods. The app makes it easy to build your inventory however works best for you."
     
   - question: "Is FridgeBuddy free to use?"
-    answer: "Yes, FridgeBuddy is free to download and use. You can track unlimited products and access all core features without any subscription fees. There's also a lifetime premium option available for users who want to support ongoing development."
+    answer: "Yes, FridgeBuddy is free to download with unlimited tracking and core features. Premium options like lifetime or subscription unlock additional themes and help support development."
 ---
