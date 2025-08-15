@@ -7,8 +7,6 @@ ios_app_id: 1500190823
 include_in_header: false
 preview_file: /assets/app-pages/screenshots/fridgebuddy_inventory.png
 app_name: FridgeBuddy
-app_price: Free
-app_icon: /assets/app-pages/squircle120.svg
 show_rating: true
 show_support_link: true
 

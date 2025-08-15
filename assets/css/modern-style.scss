@@ -1050,6 +1050,19 @@ $modern-breakpoint-xl: 1280px;
         padding: $modern-spacing-16 0;
     }
     
+    .modern-nav {
+        gap: $modern-spacing-4;
+    }
+    
+    .modern-nav-cta {
+        .modern-appstore-header-btn img {
+            height: 28px;
+        }
+    }
+}
+
+// Center hero content when it's below the screenshot (single-column layout)
+@media (max-width: #{$modern-breakpoint-lg - 1px}) {
     .modern-app-header {
         flex-direction: column;
         text-align: center;
@@ -1061,25 +1074,42 @@ $modern-breakpoint-xl: 1280px;
     }
     
     .modern-hero-title {
-        text-align: center;
+        text-align: center !important;
         font-size: $modern-font-size-3xl;
+        margin-left: auto !important;
+        margin-right: auto !important;
     }
     
     .modern-hero-subtitle {
-        text-align: center;
+        text-align: center !important;
+        margin-left: auto !important;
+        margin-right: auto !important;
     }
     
     .modern-download-buttons {
         justify-content: center;
     }
     
-    .modern-nav {
-        gap: $modern-spacing-4;
+    // Center all hero content when below screenshot
+    .modern-app-info {
+        text-align: center;
     }
     
-    .modern-nav-cta {
-        .modern-appstore-header-btn img {
-            height: 28px;
-        }
+    .modern-app-title {
+        text-align: center;
+    }
+    
+    .modern-app-price {
+        text-align: center;
+    }
+    
+    .modern-app-rating-container {
+        display: flex;
+        justify-content: center;
+    }
+    
+    .modern-app-badge-hero {
+        margin-left: auto;
+        margin-right: auto;
     }
 }
