@@ -12,7 +12,7 @@ nav_links:
 ---
 
 <figure class="modern-article-hero">
-  <img src="/assets/app-pages/screenshots/latermark-about.png" alt="LaterMark overview">
+  <img src="/assets/app-pages/screenshots/latermark-about.jpg" alt="LaterMark overview">
 </figure>
 
 LaterMark was built for one simple job: make it effortless to save links now and return to them later without losing focus. The app stays out of your way when you are collecting, and helps you quickly decide what to read when you come back.
