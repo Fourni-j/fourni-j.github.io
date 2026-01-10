@@ -914,6 +914,18 @@ $modern-breakpoint-xl: 1280px;
     }
 }
 
+.modern-article-hero {
+    margin: 0 0 $modern-spacing-8 0;
+}
+
+.modern-article-hero img {
+    display: block;
+    width: 100%;
+    height: auto;
+    border-radius: 20px;
+    box-shadow: 0 18px 40px rgba(0, 0, 0, 0.18);
+}
+
 // Footer
 .modern-footer {
     background-color: var(--modern-bg-secondary);

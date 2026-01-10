@@ -11,6 +11,10 @@ nav_links:
     url: "quick-action.html"
 ---
 
+<figure class="modern-article-hero">
+  <img src="/assets/app-pages/screenshots/latermark-quick-action.png" alt="LaterMark Quick Action">
+</figure>
+
 LaterMark includes a Home Screen Quick Action so you can save a link without opening the full app. It is the fastest way to capture something when you are on the move.
 
 ## What the Quick Action does
