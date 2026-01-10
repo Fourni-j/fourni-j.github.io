@@ -9,6 +9,11 @@ preview_file: /assets/app-pages/screenshots/
 app_name: LaterMark
 show_rating: true
 show_support_link: true
+nav_links:
+  - title: "About"
+    url: "goal-and-features.html"
+  - title: "Quick Action"
+    url: "quick-action.html"
 
 # Hero section
 show_hero: true
@@ -68,19 +73,19 @@ testimonials:
 show_screenshots: true
 screenshots_title: "See It In Action"
 screenshots:
-  - image: "/assets/app-pages/screenshots/discover.png"
+  - image: "/assets/app-pages/screenshots/latermark-discover.png"
     alt: "Discover tab with smart sections"
     caption: "Discover: Continue Reading, Up Next, Already Read"
 
-  - image: "/assets/app-pages/screenshots/library.png"
+  - image: "/assets/app-pages/screenshots/latermark-library.png"
     alt: "Library view with tags and collections"
     caption: "Library: tags and collections at a glance"
 
-  - image: "/assets/app-pages/screenshots/link-detail.png"
+  - image: "/assets/app-pages/screenshots/latermark-link-detail.png"
     alt: "Link details showing summary, read status, and read time"
     caption: "Summaries, read status, and read time"
 
-  - image: "/assets/app-pages/screenshots/search.png"
+  - image: "/assets/app-pages/screenshots/latermark-search.png"
     alt: "Search by title or URL"
     caption: "Search across your entire library"
 

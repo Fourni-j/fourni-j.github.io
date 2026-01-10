@@ -18,6 +18,11 @@ layout_style: modern
                 </div>
                 <div class="modern-nav-right">
                     <div class="modern-nav-links">
+                        {% if page.nav_links %}
+                        {% for link in page.nav_links %}
+                        <a href="{{ link.url }}" class="modern-nav-link">{{ link.title }}</a>
+                        {% endfor %}
+                        {% endif %}
                         {% if page.show_blog_link %}
                         <a href="/blog" class="modern-nav-link">Blog</a>
                         {% endif %}
