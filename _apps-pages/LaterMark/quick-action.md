@@ -7,7 +7,7 @@ app_name: LaterMark
 nav_links:
   - title: "About"
     url: "goal-and-features.html"
-  - title: "Share Sheet"
+  - title: "Saving Links"
     url: "quick-action.html"
 ---
 
