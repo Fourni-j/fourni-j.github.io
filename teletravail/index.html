@@ -1,0 +1,181 @@
+---
+layout: null
+title: Optimiseur de télétravail
+description: Planifiez vos journées de télétravail au plus près de 50 %, en tenant compte des jours fériés, des congés et de vos préférences.
+permalink: /teletravail/
+---
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#11211b">
+    <meta name="description" content="{{ page.description }}">
+    <title>{{ page.title }} | Charles-Adrien Fournier</title>
+    <link rel="canonical" href="{{ site.url }}{{ page.url }}">
+    <link rel="icon" href="{{ '/assets/images/favicon.ico' | relative_url }}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{{ '/assets/css/teletravail.css' | relative_url }}">
+</head>
+<body>
+    <div class="page-shell">
+        <header class="app-header">
+            <a class="brand-link" href="{{ '/' | relative_url }}" aria-label="Retour à cafournier.com">
+                <span class="brand-mark" aria-hidden="true">CF</span>
+                <span>cafournier.com</span>
+            </a>
+
+            <div class="header-copy">
+                <p class="eyebrow">PLANIFICATEUR MENSUEL</p>
+                <h1>Ton télétravail, au plus près de 50&nbsp;%.</h1>
+                <p class="header-intro">Choisis un mois, indique tes congés et laisse le planificateur placer les journées qui correspondent le mieux à tes préférences.</p>
+            </div>
+
+            <div class="month-navigation" role="group" aria-label="Sélection du mois">
+                <button class="icon-button" id="previous-month" type="button" aria-label="Mois précédent">‹</button>
+                <label class="month-picker-label">
+                    <span>Mois à planifier</span>
+                    <input id="month-picker" type="month" min="2020-01" max="2099-12">
+                </label>
+                <button class="icon-button" id="next-month" type="button" aria-label="Mois suivant">›</button>
+            </div>
+        </header>
+
+        <main class="app-main">
+            <noscript>
+                <div class="notice">Cette page a besoin de JavaScript pour calculer et afficher le planning.</div>
+            </noscript>
+
+            <section class="summary-grid" aria-label="Résumé du mois">
+                <article class="summary-card summary-card-accent">
+                    <span class="summary-label">Télétravail proposé</span>
+                    <strong><span id="remote-days">0</span> jours</strong>
+                    <span class="summary-detail" id="remote-rate">0 % du temps travaillé</span>
+                </article>
+                <article class="summary-card">
+                    <span class="summary-label">Jours travaillés</span>
+                    <strong id="worked-days">0</strong>
+                    <span class="summary-detail">Base du calcul</span>
+                </article>
+                <article class="summary-card">
+                    <span class="summary-label">Congés posés</span>
+                    <strong id="leave-days">0</strong>
+                    <span class="summary-detail">Cliquables dans le calendrier</span>
+                </article>
+                <article class="summary-card">
+                    <span class="summary-label">Jours fériés</span>
+                    <strong id="holiday-days">0</strong>
+                    <span class="summary-detail">France métropolitaine</span>
+                </article>
+            </section>
+
+            <div class="workspace-grid">
+                <aside class="settings-panel panel">
+                    <div class="panel-heading">
+                        <div>
+                            <p class="section-kicker">TES PRÉFÉRENCES</p>
+                            <h2>Quels jours préfères-tu&nbsp;?</h2>
+                        </div>
+                        <button class="text-button" id="reset-preferences" type="button">Réinitialiser</button>
+                    </div>
+                    <p class="panel-description">Les jours les mieux notés seront sélectionnés en premier. Le quota reste toujours inférieur ou égal à 50&nbsp;%.</p>
+
+                    <div class="preference-list" id="preference-list">
+                        <div class="preference-row">
+                            <div class="preference-name"><strong>Lundi</strong><output for="preference-1" id="preference-label-1"></output></div>
+                            <input class="preference-slider" id="preference-1" data-weekday="1" type="range" min="1" max="5" step="1">
+                        </div>
+                        <div class="preference-row">
+                            <div class="preference-name"><strong>Mardi</strong><output for="preference-2" id="preference-label-2"></output></div>
+                            <input class="preference-slider" id="preference-2" data-weekday="2" type="range" min="1" max="5" step="1">
+                        </div>
+                        <div class="preference-row">
+                            <div class="preference-name"><strong>Mercredi</strong><output for="preference-3" id="preference-label-3"></output></div>
+                            <input class="preference-slider" id="preference-3" data-weekday="3" type="range" min="1" max="5" step="1">
+                        </div>
+                        <div class="preference-row">
+                            <div class="preference-name"><strong>Jeudi</strong><output for="preference-4" id="preference-label-4"></output></div>
+                            <input class="preference-slider" id="preference-4" data-weekday="4" type="range" min="1" max="5" step="1">
+                        </div>
+                        <div class="preference-row">
+                            <div class="preference-name"><strong>Vendredi</strong><output for="preference-5" id="preference-label-5"></output></div>
+                            <input class="preference-slider" id="preference-5" data-weekday="5" type="range" min="1" max="5" step="1">
+                        </div>
+                    </div>
+
+                    <div class="scale-labels" aria-hidden="true">
+                        <span>Plutôt bureau</span>
+                        <span>Plutôt télétravail</span>
+                    </div>
+
+                    <div class="calculation-note">
+                        <span class="note-icon" aria-hidden="true">½</span>
+                        <div>
+                            <strong>Comment le quota est calculé</strong>
+                            <p id="calculation-explanation">Les congés et jours fériés sont retirés avant de calculer 50 %.</p>
+                        </div>
+                    </div>
+                </aside>
+
+                <section class="calendar-panel panel" aria-labelledby="calendar-title">
+                    <div class="panel-heading calendar-heading">
+                        <div>
+                            <p class="section-kicker">TON MOIS</p>
+                            <h2 id="calendar-title">Calendrier</h2>
+                        </div>
+                        <button class="text-button" id="clear-leave" type="button">Effacer les congés</button>
+                    </div>
+                    <p class="panel-description">Clique sur un jour travaillé pour l’ajouter à tes congés ou le retirer.</p>
+
+                    <div class="calendar-legend">
+                        <span><i class="legend-dot legend-remote" aria-hidden="true"></i>Télétravail</span>
+                        <span><i class="legend-dot legend-office" aria-hidden="true"></i>Bureau</span>
+                        <span><i class="legend-dot legend-leave" aria-hidden="true"></i>Congé</span>
+                        <span><i class="legend-dot legend-holiday" aria-hidden="true"></i>Férié</span>
+                    </div>
+
+                    <div class="weekday-header" aria-hidden="true">
+                        <span>Lun.</span>
+                        <span>Mar.</span>
+                        <span>Mer.</span>
+                        <span>Jeu.</span>
+                        <span>Ven.</span>
+                    </div>
+                    <div class="calendar-grid" id="calendar-grid" role="grid" aria-labelledby="calendar-title"></div>
+                    <p class="sr-only" id="calendar-status" aria-live="polite"></p>
+                </section>
+            </div>
+
+            <section class="result-panel panel" aria-labelledby="result-title">
+                <div class="result-copy">
+                    <p class="section-kicker">PROPOSITION OPTIMISÉE</p>
+                    <h2 id="result-title">Tes jours de télétravail</h2>
+                    <p id="result-summary">Le planning se met à jour automatiquement.</p>
+                </div>
+                <div class="result-actions">
+                    <button class="primary-button" id="copy-planning" type="button">
+                        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 7V5a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2h-2M6 7h8a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V9a2 2 0 0 1 2-2Z"/></svg>
+                        <span>Copier le planning</span>
+                    </button>
+                </div>
+                <ul class="remote-date-list" id="remote-date-list" aria-label="Jours de télétravail proposés"></ul>
+            </section>
+
+            <details class="method-details">
+                <summary>À propos des règles utilisées</summary>
+                <p>Le calcul est mensuel. Il prend les jours du lundi au vendredi, retire les jours fériés nationaux de France métropolitaine et les congés, puis applique un maximum de 50&nbsp;%. Le résultat est arrondi à l’entier inférieur puisqu’aucune demi-journée n’est autorisée. Le lundi de Pentecôte est compté comme férié.</p>
+            </details>
+        </main>
+
+        <footer class="app-footer">
+            <span>Un outil de <a href="{{ '/' | relative_url }}">Charles-Adrien Fournier</a></span>
+            <span>Les réglages restent uniquement dans ton navigateur.</span>
+        </footer>
+    </div>
+
+    <script src="{{ '/assets/js/teletravail-core.js' | relative_url }}"></script>
+    <script src="{{ '/assets/js/teletravail.js' | relative_url }}"></script>
+</body>
+</html>
