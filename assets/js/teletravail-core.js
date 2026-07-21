@@ -103,6 +103,7 @@
         const monthIndex = Number(options.month);
         const preferences = options.preferences || {};
         const requestedLeave = new Set(options.leaveDates || []);
+        const requestedRemote = new Set(options.forcedRemoteDates || []);
         const holidays = getFrenchHolidays(year);
         const weekdays = monthWeekdays(year, monthIndex);
         const holidaysInMonth = weekdays.filter((date) => holidays[toISO(date)]);
@@ -119,7 +120,7 @@
         const selected = [];
         const selectedByWeek = {};
         const workedByWeek = {};
-        const remaining = available.map((date) => {
+        const candidates = available.map((date) => {
             const weekday = date.getUTCDay();
             const week = toISO(mondayOfWeek(date));
             workedByWeek[week] = (workedByWeek[week] || 0) + 1;
@@ -131,6 +132,14 @@
                 week,
                 preference: Number(preferences[weekday] || 3)
             };
+        });
+        const forcedRemote = candidates.filter((candidate) => requestedRemote.has(candidate.isoDate));
+        const forcedRemoteSet = new Set(forcedRemote.map((candidate) => candidate.isoDate));
+        const remaining = candidates.filter((candidate) => !forcedRemoteSet.has(candidate.isoDate));
+
+        forcedRemote.forEach((candidate) => {
+            selected.push(candidate);
+            selectedByWeek[candidate.week] = (selectedByWeek[candidate.week] || 0) + 1;
         });
 
         while (selected.length < quota && remaining.length > 0) {
@@ -159,6 +168,7 @@
         }
 
         const remoteDates = selected.map((candidate) => candidate.isoDate).sort();
+        const forcedRemoteDates = forcedRemote.map((candidate) => candidate.isoDate).sort();
 
         return {
             year,
@@ -169,9 +179,13 @@
             leaveDays: validLeave.length,
             leaveDates: validLeave.map(toISO).sort(),
             workDays: available.length,
+            maximumRemoteDays: quota,
             remoteDays: remoteDates.length,
             remoteRate: available.length === 0 ? 0 : (remoteDates.length / available.length) * 100,
-            remoteDates
+            remoteDates,
+            forcedRemoteDays: forcedRemoteDates.length,
+            forcedRemoteDates,
+            overQuota: remoteDates.length > quota
         };
     }
 

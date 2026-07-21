@@ -49,7 +49,7 @@ permalink: /teletravail/
             </noscript>
 
             <section class="summary-grid" aria-label="Résumé du mois">
-                <article class="summary-card summary-card-accent">
+                <article class="summary-card summary-card-accent" id="remote-summary-card">
                     <span class="summary-label">Télétravail proposé</span>
                     <strong><span id="remote-days">0</span> jours</strong>
                     <span class="summary-detail" id="remote-rate">0 % du temps travaillé</span>
@@ -125,12 +125,13 @@ permalink: /teletravail/
                             <p class="section-kicker">TON MOIS</p>
                             <h2 id="calendar-title">Calendrier</h2>
                         </div>
-                        <button class="text-button" id="clear-leave" type="button">Effacer les congés</button>
+                        <button class="text-button" id="clear-overrides" type="button">Réinitialiser les jours</button>
                     </div>
-                    <p class="panel-description">Clique sur un jour travaillé pour l’ajouter à tes congés ou le retirer.</p>
+                    <p class="panel-description">Clique plusieurs fois sur une journée pour alterner entre télétravail choisi, congé et planification automatique.</p>
 
                     <div class="calendar-legend">
-                        <span><i class="legend-dot legend-remote" aria-hidden="true"></i>Télétravail</span>
+                        <span><i class="legend-dot legend-forced-remote" aria-hidden="true"></i>Télétravail choisi</span>
+                        <span><i class="legend-dot legend-remote" aria-hidden="true"></i>Télétravail proposé</span>
                         <span><i class="legend-dot legend-office" aria-hidden="true"></i>Bureau</span>
                         <span><i class="legend-dot legend-leave" aria-hidden="true"></i>Congé</span>
                         <span><i class="legend-dot legend-holiday" aria-hidden="true"></i>Férié</span>

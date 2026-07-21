@@ -257,6 +257,11 @@ a {
     background: var(--forest);
 }
 
+.summary-card-accent.is-over-limit {
+    border-color: #6f2d23;
+    background: #6f2d23;
+}
+
 .summary-label,
 .summary-detail {
     color: var(--ink-soft);
@@ -449,7 +454,8 @@ a {
     border-radius: 50%;
 }
 
-.legend-remote { background: var(--green-dark); }
+.legend-forced-remote { background: var(--green-dark); }
+.legend-remote { background: #7bcfa1; }
 .legend-office { background: var(--blue); }
 .legend-leave { background: var(--sand-dark); }
 .legend-holiday { background: #a4aaa6; }
@@ -530,6 +536,11 @@ a {
 .day-card.is-remote {
     color: var(--green-dark);
     background: var(--green-soft);
+}
+
+.day-card.is-forced-remote {
+    color: var(--white);
+    background: var(--green-dark);
 }
 
 .day-card.is-office {

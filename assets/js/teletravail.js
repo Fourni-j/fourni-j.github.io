@@ -3,7 +3,8 @@
 
     const planner = window.TeleworkPlanner;
     const preferenceStorageKey = "telework-planner.preferences.v1";
-    const leaveStoragePrefix = "telework-planner.leave.v1.";
+    const overrideStoragePrefix = "telework-planner.day-overrides.v2.";
+    const legacyLeaveStoragePrefix = "telework-planner.leave.v1.";
     const defaultPreferences = { 1: 2, 2: 2, 3: 2, 4: 5, 5: 5 };
     const preferenceLabels = {
         1: "Bureau souhaité",
@@ -22,7 +23,8 @@
         previousMonth: document.getElementById("previous-month"),
         nextMonth: document.getElementById("next-month"),
         resetPreferences: document.getElementById("reset-preferences"),
-        clearLeave: document.getElementById("clear-leave"),
+        clearOverrides: document.getElementById("clear-overrides"),
+        remoteSummaryCard: document.getElementById("remote-summary-card"),
         calendarTitle: document.getElementById("calendar-title"),
         calendarGrid: document.getElementById("calendar-grid"),
         calendarStatus: document.getElementById("calendar-status"),
@@ -39,6 +41,7 @@
 
     let preferences = loadPreferences();
     let currentPlanning = null;
+    let currentOverrides = {};
 
     function currentMonthValue() {
         const now = new Date();
@@ -75,25 +78,42 @@
         }
     }
 
-    function leaveStorageKey() {
-        return `${leaveStoragePrefix}${elements.monthPicker.value}`;
+    function overrideStorageKey() {
+        return `${overrideStoragePrefix}${elements.monthPicker.value}`;
     }
 
-    function loadLeaveDates() {
-        const storedValue = safeLocalStorageGet(leaveStorageKey());
-        if (!storedValue) {
-            return [];
+    function loadDayOverrides() {
+        const storedValue = safeLocalStorageGet(overrideStorageKey());
+        if (storedValue) {
+            try {
+                const parsed = JSON.parse(storedValue);
+                return Object.fromEntries(Object.entries(parsed).filter(([, value]) => value === "remote" || value === "leave"));
+            } catch (error) {
+                return {};
+            }
         }
+
+        const legacyValue = safeLocalStorageGet(`${legacyLeaveStoragePrefix}${elements.monthPicker.value}`);
+        if (!legacyValue) return {};
 
         try {
-            return JSON.parse(storedValue);
+            const migrated = Object.fromEntries(JSON.parse(legacyValue).map((date) => [date, "leave"]));
+            saveDayOverrides(migrated);
+            return migrated;
         } catch (error) {
-            return [];
+            return {};
         }
     }
 
-    function saveLeaveDates(dates) {
-        safeLocalStorageSet(leaveStorageKey(), JSON.stringify([...dates].sort()));
+    function saveDayOverrides(overrides) {
+        safeLocalStorageSet(overrideStorageKey(), JSON.stringify(overrides));
+    }
+
+    function datesForOverride(overrides, type) {
+        return Object.entries(overrides)
+            .filter(([, value]) => value === type)
+            .map(([date]) => date)
+            .sort();
     }
 
     function partsFromMonthPicker() {
@@ -143,9 +163,10 @@
         return dates;
     }
 
-    function statusForDate(isoDate, holidayName, leaveSet, remoteSet) {
+    function statusForDate(isoDate, holidayName, leaveSet, forcedRemoteSet, remoteSet) {
         if (holidayName) return { className: "is-holiday", label: holidayName };
         if (leaveSet.has(isoDate)) return { className: "is-leave", label: "Congé" };
+        if (forcedRemoteSet.has(isoDate)) return { className: "is-forced-remote", label: "Télétravail choisi" };
         if (remoteSet.has(isoDate)) return { className: "is-remote", label: "Télétravail" };
         return { className: "is-office", label: "Bureau" };
     }
@@ -153,6 +174,7 @@
     function renderCalendar(year, monthIndex, planning) {
         const fragment = document.createDocumentFragment();
         const leaveSet = new Set(planning.leaveDates);
+        const forcedRemoteSet = new Set(planning.forcedRemoteDates);
         const remoteSet = new Set(planning.remoteDates);
         const today = new Date();
         const todayISO = planner.isoFromParts(today.getFullYear(), today.getMonth() + 1, today.getDate());
@@ -170,7 +192,7 @@
 
             const isoDate = planner.toISO(date);
             const holidayName = planning.holidays[isoDate];
-            const status = statusForDate(isoDate, holidayName, leaveSet, remoteSet);
+            const status = statusForDate(isoDate, holidayName, leaveSet, forcedRemoteSet, remoteSet);
             const button = document.createElement("button");
             const dateLabel = longDateFormatter.format(date);
 
@@ -199,7 +221,10 @@
 
     function renderSummary(planning) {
         elements.remoteDays.textContent = planning.remoteDays;
-        elements.remoteRate.textContent = `${numberFormatter.format(planning.remoteRate)} % du temps travaillé`;
+        elements.remoteRate.textContent = planning.overQuota
+            ? `${numberFormatter.format(planning.remoteRate)} % : maximum dépassé`
+            : `${numberFormatter.format(planning.remoteRate)} % du temps travaillé`;
+        elements.remoteSummaryCard.classList.toggle("is-over-limit", planning.overQuota);
         elements.workedDays.textContent = planning.workDays;
         elements.leaveDays.textContent = planning.leaveDays;
         elements.holidayDays.textContent = planning.holidayDays;
@@ -207,7 +232,10 @@
         const halfDayReason = planning.workDays % 2 === 1
             ? ` Le jour restant ne peut pas être divisé, le taux atteint donc ${numberFormatter.format(planning.remoteRate)} %.`
             : "";
-        elements.calculationExplanation.textContent = `${planning.monthWeekdays} jours du lundi au vendredi, moins ${planning.holidayDays} férié${planning.holidayDays > 1 ? "s" : ""} et ${planning.leaveDays} congé${planning.leaveDays > 1 ? "s" : ""} : ${planning.workDays} jours travaillés.${halfDayReason}`;
+        const quotaWarning = planning.overQuota
+            ? ` Tes ${planning.forcedRemoteDays} jours choisis dépassent le maximum autorisé de ${planning.maximumRemoteDays}.`
+            : "";
+        elements.calculationExplanation.textContent = `${planning.monthWeekdays} jours du lundi au vendredi, moins ${planning.holidayDays} férié${planning.holidayDays > 1 ? "s" : ""} et ${planning.leaveDays} congé${planning.leaveDays > 1 ? "s" : ""} : ${planning.workDays} jours travaillés.${halfDayReason}${quotaWarning}`;
     }
 
     function renderResults(year, monthIndex, planning) {
@@ -215,8 +243,10 @@
         const monthName = monthFormatter.format(new Date(Date.UTC(year, monthIndex, 1)));
 
         elements.remoteDateList.replaceChildren();
-        elements.resultSummary.textContent = planning.remoteDays > 0
-            ? `${planning.remoteDays} jours sur ${planning.workDays} en ${monthName}, soit ${numberFormatter.format(planning.remoteRate)} %. Les jours les mieux notés sont prioritaires.`
+        elements.resultSummary.textContent = planning.overQuota
+            ? `${planning.remoteDays} jours sur ${planning.workDays} en ${monthName}, soit ${numberFormatter.format(planning.remoteRate)} %. Retire au moins ${planning.remoteDays - planning.maximumRemoteDays} jour${planning.remoteDays - planning.maximumRemoteDays > 1 ? "s" : ""} choisi${planning.remoteDays - planning.maximumRemoteDays > 1 ? "s" : ""} pour respecter la limite.`
+            : planning.remoteDays > 0
+            ? `${planning.remoteDays} jours sur ${planning.workDays} en ${monthName}, soit ${numberFormatter.format(planning.remoteRate)} %. Les jours choisis sont prioritaires, puis les préférences complètent le planning.`
             : `Aucun jour de télétravail ne peut être proposé pour ${monthName} avec les réglages actuels.`;
 
         if (planning.remoteDates.length === 0) {
@@ -237,10 +267,12 @@
 
     function render() {
         const { year, monthIndex } = partsFromMonthPicker();
+        currentOverrides = loadDayOverrides();
         currentPlanning = planner.calculatePlanning({
             year,
             month: monthIndex,
-            leaveDates: loadLeaveDates(),
+            leaveDates: datesForOverride(currentOverrides, "leave"),
+            forcedRemoteDates: datesForOverride(currentOverrides, "remote"),
             preferences
         });
 
@@ -257,6 +289,7 @@
         const lines = [
             `Planning télétravail - ${monthName}`,
             `${currentPlanning.remoteDays} jours sur ${currentPlanning.workDays} (${numberFormatter.format(currentPlanning.remoteRate)} %)`,
+            ...(currentPlanning.overQuota ? [`Attention : maximum de ${currentPlanning.maximumRemoteDays} jours dépassé.`] : []),
             "",
             ...currentPlanning.remoteDates.map((isoDate) => `• ${longDateFormatter.format(planner.dateFromISO(isoDate))}`)
         ];
@@ -309,21 +342,24 @@
         const button = event.target.closest(".day-card");
         if (!button || button.disabled) return;
 
-        const leaveDates = new Set(loadLeaveDates());
-        if (leaveDates.has(button.dataset.date)) {
-            leaveDates.delete(button.dataset.date);
-            elements.calendarStatus.textContent = `${button.dataset.date} retiré des congés.`;
+        const currentState = currentOverrides[button.dataset.date];
+        if (!currentState) {
+            currentOverrides[button.dataset.date] = "remote";
+            elements.calendarStatus.textContent = `${button.dataset.date} choisi en télétravail.`;
+        } else if (currentState === "remote") {
+            currentOverrides[button.dataset.date] = "leave";
+            elements.calendarStatus.textContent = `${button.dataset.date} défini comme congé.`;
         } else {
-            leaveDates.add(button.dataset.date);
-            elements.calendarStatus.textContent = `${button.dataset.date} ajouté aux congés.`;
+            delete currentOverrides[button.dataset.date];
+            elements.calendarStatus.textContent = `${button.dataset.date} rendu à la planification automatique.`;
         }
-        saveLeaveDates(leaveDates);
+        saveDayOverrides(currentOverrides);
         render();
     });
 
-    elements.clearLeave.addEventListener("click", () => {
-        saveLeaveDates([]);
-        elements.calendarStatus.textContent = "Tous les congés du mois ont été effacés.";
+    elements.clearOverrides.addEventListener("click", () => {
+        saveDayOverrides({});
+        elements.calendarStatus.textContent = "Tous les choix manuels du mois ont été effacés.";
         render();
     });
 
