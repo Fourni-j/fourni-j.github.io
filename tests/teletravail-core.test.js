@@ -22,6 +22,15 @@ function planWithChosenRemote(year, month, forcedRemoteDates, leaveDates = []) {
     });
 }
 
+function planWithChosenOffice(year, month, forcedOfficeDates) {
+    return planner.calculatePlanning({
+        year,
+        month,
+        forcedOfficeDates,
+        preferences: officeFirstPreferences
+    });
+}
+
 const holidays2026 = planner.getFrenchHolidays(2026);
 assert.equal(holidays2026["2026-04-06"], "Lundi de Pâques");
 assert.equal(holidays2026["2026-05-14"], "Ascension");
@@ -71,5 +80,13 @@ assert.equal(tooManyChosenDays.overQuota, true);
 
 const holidayCannotBeChosen = planWithChosenRemote(2026, 4, ["2026-05-01"]);
 assert.equal(holidayCannotBeChosen.forcedRemoteDays, 0);
+
+const chosenThursdayAtOffice = planWithChosenOffice(2026, 8, ["2026-09-03"]);
+assert.ok(chosenThursdayAtOffice.forcedOfficeDates.includes("2026-09-03"));
+assert.ok(!chosenThursdayAtOffice.remoteDates.includes("2026-09-03"));
+assert.equal(chosenThursdayAtOffice.remoteDays, chosenThursdayAtOffice.maximumRemoteDays);
+
+const holidayCannotBeChosenAtOffice = planWithChosenOffice(2026, 4, ["2026-05-01"]);
+assert.equal(holidayCannotBeChosenAtOffice.forcedOfficeDays, 0);
 
 console.log("Telework planner tests passed.");

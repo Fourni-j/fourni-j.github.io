@@ -104,6 +104,7 @@
         const preferences = options.preferences || {};
         const requestedLeave = new Set(options.leaveDates || []);
         const requestedRemote = new Set(options.forcedRemoteDates || []);
+        const requestedOffice = new Set(options.forcedOfficeDates || []);
         const holidays = getFrenchHolidays(year);
         const weekdays = monthWeekdays(year, monthIndex);
         const holidaysInMonth = weekdays.filter((date) => holidays[toISO(date)]);
@@ -133,9 +134,11 @@
                 preference: Number(preferences[weekday] || 3)
             };
         });
-        const forcedRemote = candidates.filter((candidate) => requestedRemote.has(candidate.isoDate));
+        const forcedOffice = candidates.filter((candidate) => requestedOffice.has(candidate.isoDate));
+        const forcedOfficeSet = new Set(forcedOffice.map((candidate) => candidate.isoDate));
+        const forcedRemote = candidates.filter((candidate) => requestedRemote.has(candidate.isoDate) && !forcedOfficeSet.has(candidate.isoDate));
         const forcedRemoteSet = new Set(forcedRemote.map((candidate) => candidate.isoDate));
-        const remaining = candidates.filter((candidate) => !forcedRemoteSet.has(candidate.isoDate));
+        const remaining = candidates.filter((candidate) => !forcedRemoteSet.has(candidate.isoDate) && !forcedOfficeSet.has(candidate.isoDate));
 
         forcedRemote.forEach((candidate) => {
             selected.push(candidate);
@@ -169,6 +172,7 @@
 
         const remoteDates = selected.map((candidate) => candidate.isoDate).sort();
         const forcedRemoteDates = forcedRemote.map((candidate) => candidate.isoDate).sort();
+        const forcedOfficeDates = forcedOffice.map((candidate) => candidate.isoDate).sort();
 
         return {
             year,
@@ -185,6 +189,8 @@
             remoteDates,
             forcedRemoteDays: forcedRemoteDates.length,
             forcedRemoteDates,
+            forcedOfficeDays: forcedOfficeDates.length,
+            forcedOfficeDates,
             overQuota: remoteDates.length > quota
         };
     }

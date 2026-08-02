@@ -456,6 +456,7 @@ a {
 
 .legend-forced-remote { background: var(--green-dark); }
 .legend-remote { background: #7bcfa1; }
+.legend-forced-office { background: #284a60; }
 .legend-office { background: var(--blue); }
 .legend-leave { background: var(--sand-dark); }
 .legend-holiday { background: #a4aaa6; }
@@ -546,6 +547,11 @@ a {
 .day-card.is-office {
     color: var(--blue);
     background: var(--blue-soft);
+}
+
+.day-card.is-forced-office {
+    color: var(--white);
+    background: #284a60;
 }
 
 .day-card.is-leave {

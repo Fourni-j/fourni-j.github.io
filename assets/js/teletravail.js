@@ -87,7 +87,7 @@
         if (storedValue) {
             try {
                 const parsed = JSON.parse(storedValue);
-                return Object.fromEntries(Object.entries(parsed).filter(([, value]) => value === "remote" || value === "leave"));
+                return Object.fromEntries(Object.entries(parsed).filter(([, value]) => value === "remote" || value === "office" || value === "leave"));
             } catch (error) {
                 return {};
             }
@@ -163,10 +163,11 @@
         return dates;
     }
 
-    function statusForDate(isoDate, holidayName, leaveSet, forcedRemoteSet, remoteSet) {
+    function statusForDate(isoDate, holidayName, leaveSet, forcedRemoteSet, forcedOfficeSet, remoteSet) {
         if (holidayName) return { className: "is-holiday", label: holidayName };
         if (leaveSet.has(isoDate)) return { className: "is-leave", label: "Congé" };
         if (forcedRemoteSet.has(isoDate)) return { className: "is-forced-remote", label: "Télétravail choisi" };
+        if (forcedOfficeSet.has(isoDate)) return { className: "is-forced-office", label: "Bureau choisi" };
         if (remoteSet.has(isoDate)) return { className: "is-remote", label: "Télétravail" };
         return { className: "is-office", label: "Bureau" };
     }
@@ -175,6 +176,7 @@
         const fragment = document.createDocumentFragment();
         const leaveSet = new Set(planning.leaveDates);
         const forcedRemoteSet = new Set(planning.forcedRemoteDates);
+        const forcedOfficeSet = new Set(planning.forcedOfficeDates);
         const remoteSet = new Set(planning.remoteDates);
         const today = new Date();
         const todayISO = planner.isoFromParts(today.getFullYear(), today.getMonth() + 1, today.getDate());
@@ -192,7 +194,7 @@
 
             const isoDate = planner.toISO(date);
             const holidayName = planning.holidays[isoDate];
-            const status = statusForDate(isoDate, holidayName, leaveSet, forcedRemoteSet, remoteSet);
+            const status = statusForDate(isoDate, holidayName, leaveSet, forcedRemoteSet, forcedOfficeSet, remoteSet);
             const button = document.createElement("button");
             const dateLabel = longDateFormatter.format(date);
 
@@ -273,6 +275,7 @@
             month: monthIndex,
             leaveDates: datesForOverride(currentOverrides, "leave"),
             forcedRemoteDates: datesForOverride(currentOverrides, "remote"),
+            forcedOfficeDates: datesForOverride(currentOverrides, "office"),
             preferences
         });
 
@@ -347,6 +350,9 @@
             currentOverrides[button.dataset.date] = "remote";
             elements.calendarStatus.textContent = `${button.dataset.date} choisi en télétravail.`;
         } else if (currentState === "remote") {
+            currentOverrides[button.dataset.date] = "office";
+            elements.calendarStatus.textContent = `${button.dataset.date} choisi en présence au bureau.`;
+        } else if (currentState === "office") {
             currentOverrides[button.dataset.date] = "leave";
             elements.calendarStatus.textContent = `${button.dataset.date} défini comme congé.`;
         } else {
