@@ -1,0 +1,30 @@
+# Bike rides shown on /rides/
+#
+# To add a ride:
+#   1. Drop the GPX file in assets/rides/ (e.g. assets/rides/2026-09-01-my-ride.gpx)
+#   2. Add an entry below. Distance and elevation gain are computed from the GPX
+#      in the browser, so you only need to fill the fields here.
+#
+# Fields:
+#   name        – title of the ride
+#   gpx         – path to the GPX file (relative to the site root)
+#   date        – YYYY-MM-DD
+#   type        – road | gravel
+#   rating      – 0 to 5 (half points allowed, e.g. 4.5)
+#   description – short text
+#   color       – (optional) hex color for the trace on the map; otherwise auto-assigned
+#   link        – (optional) URL to the ride on Komoot / Strava
+
+- name: "Étang de la Geneste par Saint-Cloud et la forêt de Meudon"
+  gpx: /assets/rides/2026-08-22-etang-de-la-geneste.gpx
+  date: 2026-08-22
+  type: gravel
+  rating: 4.5
+  description: "Sortie de Paris par les boulevards extérieurs : l'accès au domaine de Saint-Cloud est simple et on croise peu de voitures. La partie gravel, entre Saint-Cloud, la forêt de Versailles et celle de Meudon, est vraiment sympa — roulante et presque entièrement sous les arbres. Retour par les quais de Seine."
+
+- name: "Bords de Marne jusqu'au barrage de Chelles"
+  gpx: /assets/rides/2026-07-19-lac-daumesnil-barrage-de-chelles.gpx
+  date: 2026-07-19
+  type: road
+  rating: 4
+  description: "Départ par le bois de Vincennes (lac Daumesnil, lac de Gravelle), puis on rejoint la Marne à Nogent et on la longe jusqu'au barrage de Chelles. À faire de préférence le dimanche pour profiter des bords de Marne sans voitures. Quasiment plat et très roulant."

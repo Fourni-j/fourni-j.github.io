@@ -1,0 +1,231 @@
+---
+---
+@use "variables";
+
+.rides-page {
+  .rides-intro {
+    color: variables.$gray-dark;
+    margin-top: 0.5em;
+  }
+}
+
+.rides-map {
+  width: 100%;
+  height: 520px;
+  border-radius: 8px;
+  background: variables.$gray-lighter;
+  margin-bottom: 1.5em;
+  z-index: 0;
+
+  @media only screen and (max-width: 768px) {
+    height: 380px;
+  }
+}
+
+.rides-filters {
+  display: flex;
+  gap: 0.5em;
+  margin-bottom: 1.5em;
+
+  button {
+    background: #fff;
+    border: 1px solid variables.$gray-light;
+    border-radius: 999px;
+    color: variables.$gray-dark;
+    cursor: pointer;
+    font: inherit;
+    font-size: 0.85em;
+    padding: 0.35em 1em;
+    transition: all 0.15s ease;
+
+    &:hover { border-color: variables.$gray; }
+    &.is-active {
+      background: variables.$gray-darkest;
+      border-color: variables.$gray-darkest;
+      color: #fff;
+    }
+  }
+}
+
+.rides-list {
+  border-top: 1px solid variables.$gray-lighter;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.ride-row {
+  border-bottom: 1px solid variables.$gray-lighter;
+  cursor: pointer;
+  margin: 0;
+  padding: 1em 1em;
+  transition: background-color 0.15s ease;
+
+  &:hover,
+  &.is-hover { background: variables.$gray-lightest; }
+
+  &.is-active {
+    background: variables.$gray-lightest;
+    box-shadow: inset 3px 0 0 var(--ride-color, variables.$color-accent);
+  }
+
+  &.is-hidden { display: none; }
+
+  p { margin: 0; }
+}
+
+.ride-row-main {
+  align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5em 1.5em;
+  justify-content: space-between;
+}
+
+.ride-title {
+  align-items: center;
+  display: flex;
+  flex: 1 1 320px;
+  gap: 0.6em;
+  min-width: 0;
+}
+
+.ride-swatch {
+  background: var(--ride-color);
+  border-radius: 50%;
+  display: inline-block;
+  flex: none;
+  height: 12px;
+  width: 12px;
+}
+
+.ride-name {
+  flex: 0 1 auto;
+  font-size: 1.05em;
+  line-height: 1.3;
+  margin: 0;
+  min-width: 0;
+}
+
+.ride-type {
+  border-radius: 4px;
+  flex: none;
+  font-size: 0.7em;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  padding: 0.25em 0;
+  text-align: center;
+  text-transform: uppercase;
+  width: 6.5em;
+
+  &.ride-type-road   { background: #e0ecff; color: #1d4ed8; }
+  &.ride-type-gravel { background: #e7f4e4; color: #3f6b2b; }
+}
+
+.ride-facts {
+  align-items: center;
+  color: variables.$gray-dark;
+  display: flex;
+  flex: none;
+  flex-wrap: wrap;
+  font-size: 0.9em;
+  gap: 0.25em 1em;
+  white-space: nowrap;
+}
+
+.ride-rating {
+  align-items: center;
+  display: inline-flex;
+  gap: 0.4em;
+}
+
+.ride-rating-value {
+  color: variables.$gray;
+  font-size: 0.9em;
+  min-width: 2em;
+}
+
+.ride-stat {
+  font-variant-numeric: tabular-nums;
+  min-width: 4.75em;
+  text-align: right;
+
+  strong { color: variables.$gray-darkest; }
+}
+
+.ride-gpx {
+  align-items: center;
+  border: 1px solid variables.$gray-light;
+  border-radius: 999px;
+  color: variables.$gray-dark;
+  display: inline-flex;
+  font-size: 0.75em;
+  font-weight: 700;
+  gap: 0.35em;
+  letter-spacing: 0.05em;
+  line-height: 1;
+  padding: 0.45em 0.75em;
+  text-decoration: none;
+  transition: all 0.15s ease;
+
+  &:hover {
+    background: #fff;
+    border-color: variables.$gray-dark;
+    color: variables.$gray-darkest;
+  }
+}
+
+// Star rating: overlays 5 filled stars over 5 empty ones, clipped to --rating/5
+.ride-stars {
+  --rating: 0;
+  display: inline-block;
+  font-size: 1.1em;
+  line-height: 1;
+  position: relative;
+
+  &::before {
+    color: variables.$gray-light;
+    content: "★★★★★";
+    letter-spacing: 2px;
+  }
+
+  &::after {
+    color: #f5a623;
+    content: "★★★★★";
+    left: 0;
+    letter-spacing: 2px;
+    overflow: hidden;
+    position: absolute;
+    top: 0;
+    white-space: nowrap;
+    width: calc(var(--rating) / 5 * 100%);
+  }
+}
+
+.ride-row-details {
+  align-items: baseline;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.25em 1.5em;
+  justify-content: space-between;
+  margin-top: 0.5em;
+  padding-left: calc(12px + 0.6em); // align with the name, after the swatch
+}
+
+.ride-description {
+  color: variables.$gray-dark;
+  flex: 1 1 400px;
+  font-size: 0.95em;
+  line-height: 1.5;
+}
+
+.ride-links {
+  flex: none;
+  font-size: 0.85em;
+}
+
+@media only screen and (max-width: 768px) {
+  .ride-facts { width: 100%; justify-content: flex-start; }
+  .ride-stat { min-width: 0; text-align: left; }
+  .ride-row-details { padding-left: 0; }
+}
