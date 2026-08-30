@@ -1,0 +1,143 @@
+/* FridgeBuddy content components, styled to match modern-style.css */
+
+/* --- Comparison table (alternatives page) --- */
+.modern-content table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 24px 0;
+    font-size: 15px;
+}
+
+.modern-content th,
+.modern-content td {
+    padding: 12px 14px;
+    text-align: left;
+    border-bottom: 1px solid var(--modern-border);
+    vertical-align: top;
+}
+
+.modern-content th {
+    color: var(--modern-text-primary);
+    font-weight: 600;
+    background: var(--modern-bg-secondary);
+}
+
+.modern-content td {
+    color: var(--modern-text-secondary);
+}
+
+/* --- Choice cards (alternatives page) --- */
+.fb-choice-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 16px;
+    margin: 24px 0;
+}
+
+.fb-choice-card {
+    border: 1px solid var(--modern-border);
+    border-radius: 12px;
+    padding: 20px;
+    background: var(--modern-bg);
+    box-shadow: var(--modern-shadow-sm);
+}
+
+.fb-choice-card h3 {
+    margin-top: 0;
+}
+
+.fb-choice-card p {
+    font-size: 15px;
+    margin: 8px 0;
+}
+
+.fb-methodology {
+    margin-top: 32px;
+    padding: 16px 20px;
+    border-left: 4px solid var(--modern-primary);
+    background: var(--modern-bg-secondary);
+    border-radius: 0 12px 12px 0;
+    font-size: 15px;
+}
+
+/* --- Food-waste calculator --- */
+.fb-calculator {
+    border: 1px solid var(--modern-border);
+    border-radius: 16px;
+    padding: 24px;
+    background: var(--modern-bg-secondary);
+    margin: 24px 0 32px 0;
+}
+
+.fb-calculator-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 16px;
+}
+
+.fb-field {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.fb-field label {
+    font-weight: 600;
+    font-size: 14px;
+    color: var(--modern-text-primary);
+}
+
+.fb-field input,
+.fb-field select {
+    padding: 10px 12px;
+    border: 1px solid var(--modern-border-medium);
+    border-radius: 8px;
+    font-size: 16px;
+    font-family: inherit;
+    background: var(--modern-bg);
+    color: var(--modern-text-primary);
+}
+
+.fb-field input:focus,
+.fb-field select:focus {
+    outline: 2px solid var(--modern-primary);
+    outline-offset: 1px;
+}
+
+.fb-field small {
+    font-size: 13px;
+    color: var(--modern-text-tertiary);
+}
+
+.fb-calculator-results {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 12px;
+    margin-top: 24px;
+}
+
+.fb-result {
+    background: var(--modern-bg);
+    border: 1px solid var(--modern-border);
+    border-radius: 12px;
+    padding: 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.fb-result span {
+    font-size: 13px;
+    color: var(--modern-text-tertiary);
+}
+
+.fb-result strong {
+    font-size: 22px;
+    color: var(--modern-text-primary);
+}
+
+.fb-calculator-summary {
+    margin: 20px 0 0 0;
+    font-weight: 600;
+    color: var(--modern-primary);
+}

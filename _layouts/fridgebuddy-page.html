@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="{{ page.lang | default: 'en-US' }}">
+{% include fridgebuddy-head.html %}
+
+<body class="modern-layout modern-subpage">
+    <header class="modern-header">
+        <div class="modern-container">
+            <nav class="modern-nav">
+                <div class="modern-nav-left">
+                    <a class="modern-app-branding" href="/fridgebuddy/" aria-label="FridgeBuddy home">
+                        <img class="modern-header-app-icon" src="{{ page.app_icon }}" width="32" height="32" alt="">
+                        <span class="modern-header-app-name">{{ page.app_name }}</span>
+                    </a>
+                </div>
+                <div class="modern-nav-right">
+                    <div class="modern-nav-links">
+                        <a href="/fridgebuddy/#features" class="modern-nav-link">Features</a>
+                        <a href="/fridgebuddy/pantry-inventory-app/" class="modern-nav-link">Pantry guide</a>
+                        <a href="/fridgebuddy/alternatives/" class="modern-nav-link">Compare apps</a>
+                        <a href="/fridgebuddy/food-waste-calculator/" class="modern-nav-link">Calculator</a>
+                    </div>
+                    <div class="modern-nav-cta">
+                        <a class="modern-appstore-header-btn" href="https://apps.apple.com/app/id{{ page.ios_app_id | default: 1500190823 }}" target="_blank" rel="noopener noreferrer">
+                            <img src="/assets/app-pages/appstore-header.svg" alt="Download FridgeBuddy on the App Store">
+                        </a>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <main class="modern-main">
+        <div class="modern-page-content">
+            <div class="modern-container">
+                <article class="modern-article">
+                    {% if page.breadcrumbs %}
+                    <nav class="modern-breadcrumb" aria-label="Breadcrumb">
+                        {% for crumb in page.breadcrumbs %}{% if forloop.last %}<span class="modern-breadcrumb-current" aria-current="page">{{ crumb.name }}</span>{% else %}<a class="modern-breadcrumb-link" href="{{ crumb.url }}">{{ crumb.name }}</a><span class="modern-breadcrumb-separator" aria-hidden="true">/</span>{% endif %}{% endfor %}
+                    </nav>
+                    {% endif %}
+                    <h1 class="modern-page-title">{{ page.title }}</h1>
+                    <div class="modern-content">
+                        {% if page.intro %}<p class="fb-page-intro">{{ page.intro }}</p>{% endif %}
+                        {{ content }}
+
+                        {% if page.related_links %}
+                        <h2>Related FridgeBuddy guides</h2>
+                        <ul>
+                            {% for related in page.related_links %}
+                            <li><a href="{{ related.url }}">{{ related.title }}</a> — {{ related.description }}</li>
+                            {% endfor %}
+                        </ul>
+                        {% endif %}
+                    </div>
+
+                    {% unless page.hide_hero_cta %}
+                    <div class="fb-page-cta">
+                        <p>Use your food before it becomes waste.</p>
+                        <a class="modern-download-btn" href="https://apps.apple.com/app/id{{ page.ios_app_id | default: 1500190823 }}" target="_blank" rel="noopener noreferrer">
+                            <img src="/assets/app-pages/appstore.svg" alt="Download FridgeBuddy on the App Store">
+                        </a>
+                    </div>
+                    {% endunless %}
+                </article>
+            </div>
+        </div>
+    </main>
+
+    <footer class="modern-footer">
+        <div class="modern-container">
+            {% include fridgebuddy-app-footer.html %}
+        </div>
+    </footer>
+
+    <script>
+        // Modern header scroll animation
+        (function() {
+            const header = document.querySelector('.modern-header');
+            let isScrolling = false;
+
+            function updateHeader() {
+                if (window.scrollY > 20) {
+                    header.classList.add('modern-header-scrolled');
+                } else {
+                    header.classList.remove('modern-header-scrolled');
+                }
+            }
+
+            function throttleScroll() {
+                if (!isScrolling) {
+                    window.requestAnimationFrame(function() {
+                        updateHeader();
+                        isScrolling = false;
+                    });
+                    isScrolling = true;
+                }
+            }
+
+            window.addEventListener('scroll', throttleScroll, { passive: true });
+            updateHeader();
+        })();
+    </script>
+
+    <style>
+        .modern-app-branding {
+            text-decoration: none;
+        }
+
+        .modern-breadcrumb {
+            margin-bottom: 16px;
+        }
+
+        .fb-page-intro {
+            font-size: 18px;
+            color: var(--modern-text-secondary);
+        }
+
+        .fb-page-cta {
+            margin-top: 48px;
+            padding: 32px 24px;
+            border: 1px solid var(--modern-border);
+            border-radius: 16px;
+            background: var(--modern-bg-secondary);
+            text-align: center;
+        }
+
+        .fb-page-cta p {
+            margin: 0 0 16px 0;
+            font-size: 18px;
+            font-weight: 600;
+            color: var(--modern-text-primary);
+        }
+    </style>
+    {% if page.calculator_script %}<script src="{{ page.calculator_script }}" defer></script>{% endif %}
+</body>
+</html>

@@ -1,10 +1,19 @@
 ---
-layout: modern-app-page
+layout: fridgebuddy-page
 title: Terms
+page_title: "FridgeBuddy Terms of Use"
+meta_description: "Read the terms of use for the FridgeBuddy pantry inventory and food expiration tracking app."
+schema_type: web_page
 ios_app_id: 1500190823
 include_in_header: false
 app_name: FridgeBuddy
-app_icon: /assets/app-pages/squircle120.svg
+app_icon: /assets/app-pages/fridgebuddy-icon.png
+hide_hero_cta: true
+breadcrumbs:
+  - name: FridgeBuddy
+    url: /fridgebuddy/
+  - name: Terms
+    url: /fridgebuddy/terms
 ---
 
 **Last Updated:** August 13, 2023

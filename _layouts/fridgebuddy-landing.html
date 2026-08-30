@@ -1,0 +1,459 @@
+<!DOCTYPE html>
+<html lang="{{ page.lang | default: 'en-US' }}">
+{% include fridgebuddy-head.html %}
+
+<body class="modern-layout">
+    <header class="modern-header">
+        <div class="modern-container">
+            <nav class="modern-nav">
+                <div class="modern-nav-left">
+                    <a class="modern-app-branding" href="/fridgebuddy/" aria-label="FridgeBuddy home">
+                        <img class="modern-header-app-icon" src="{{ page.app_icon }}" width="32" height="32" alt="">
+                        <span class="modern-header-app-name">{{ page.app_name }}</span>
+                    </a>
+                </div>
+                <div class="modern-nav-right">
+                    <div class="modern-nav-links">
+                        <a href="/fridgebuddy/#features" class="modern-nav-link">Features</a>
+                        <a href="/fridgebuddy/pantry-inventory-app/" class="modern-nav-link">Pantry guide</a>
+                        <a href="/fridgebuddy/alternatives/" class="modern-nav-link">Compare apps</a>
+                        <a href="/fridgebuddy/food-waste-calculator/" class="modern-nav-link">Calculator</a>
+                    </div>
+                    <div class="modern-nav-cta">
+                        <a class="modern-appstore-header-btn" href="{{ page.app_store_url }}" target="_blank" rel="noopener noreferrer">
+                            <img src="/assets/app-pages/appstore-header.svg" alt="Download FridgeBuddy on the App Store">
+                        </a>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <main class="modern-main">
+        <div class="modern-hero">
+            <div class="modern-container">
+                <div class="modern-app-showcase">
+                    <div class="modern-app-info">
+                        <div class="modern-app-badge-hero">
+                            <img class="modern-app-icon" src="{{ page.app_icon }}" width="100" height="100" alt="{{ page.app_name }} app icon">
+                        </div>
+                        <h1 class="modern-hero-title">{{ page.hero_title }}</h1>
+                        <p class="modern-hero-subtitle">{{ page.hero_subtitle }}</p>
+
+                        <div class="modern-download-buttons">
+                            <a class="modern-download-btn" href="{{ page.app_store_url }}" target="_blank" rel="noopener noreferrer">
+                                <img src="/assets/app-pages/appstore.svg" alt="Download FridgeBuddy on the App Store">
+                            </a>
+                        </div>
+
+                        {% if page.rating_value %}
+                        <div class="modern-app-rating-container">
+                            <a class="modern-app-rating" href="{{ page.app_store_url }}" target="_blank" rel="noopener noreferrer" aria-label="FridgeBuddy has a {{ page.rating_value }} out of 5 rating from {{ page.rating_count }} App Store ratings">
+                                <div class="modern-rating-stars" aria-hidden="true">
+                                    {% assign rating_floor = page.rating_value | floor %}
+                                    {% assign rating_half = page.rating_value | minus: rating_floor %}
+                                    {% assign half_star_index = rating_floor | plus: 1 %}
+                                    {% for i in (1..5) %}{% if i <= rating_floor %}<i class="fas fa-star"></i>{% elsif rating_half >= 0.5 and i == half_star_index %}<i class="fas fa-star-half-alt"></i>{% else %}<i class="far fa-star"></i>{% endif %}{% endfor %}
+                                </div>
+                                <span class="modern-rating-text">{{ page.rating_value }} ({{ page.rating_count }} reviews)</span>
+                            </a>
+                        </div>
+                        {% endif %}
+                    </div>
+
+                    <div class="modern-app-preview">
+                        <div class="modern-screen-container">
+                            <img class="modern-screen-image" src="{{ page.preview_file }}" width="765" height="1518" fetchpriority="high" decoding="async" alt="FridgeBuddy inventory dashboard showing food that expires soon">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        {% if page.features %}
+        <section class="modern-features" id="features">
+            <div class="modern-container">
+                <h2 class="modern-section-title">{{ page.features_title | default: "Key Features" }}</h2>
+                <div class="modern-features-grid">
+                    {% for feature in page.features %}
+                    <div class="modern-feature">
+                        <div class="modern-feature-icon">
+                            <i class="fas fa-{{ feature.fontawesome_icon_name }}" aria-hidden="true"></i>
+                        </div>
+                        <div class="modern-feature-content">
+                            <h3 class="modern-feature-title">{{ feature.title }}</h3>
+                            <p class="modern-feature-description">{{ feature.description }}</p>
+                        </div>
+                    </div>
+                    {% endfor %}
+                </div>
+            </div>
+        </section>
+        {% endif %}
+
+        {% if page.steps %}
+        <section class="modern-features fb-steps-section">
+            <div class="modern-container">
+                <h2 class="modern-section-title">{{ page.steps_title | default: "Start in three small steps" }}</h2>
+                <div class="modern-features-grid">
+                    {% for step in page.steps %}
+                    <div class="modern-feature">
+                        <div class="modern-feature-icon"><span class="fb-step-number">{{ forloop.index }}</span></div>
+                        <div class="modern-feature-content">
+                            <h3 class="modern-feature-title">{{ step.title }}</h3>
+                            <p class="modern-feature-description">{{ step.description }}</p>
+                        </div>
+                    </div>
+                    {% endfor %}
+                </div>
+            </div>
+        </section>
+        {% endif %}
+
+        {% if page.testimonials %}
+        <section class="modern-testimonials">
+            <div class="modern-container">
+                <h2 class="modern-section-title">{{ page.testimonials_title | default: "Real Reviews from the App Store" }}</h2>
+                <div class="modern-testimonials-grid">
+                    {% for testimonial in page.testimonials %}
+                    <div class="modern-testimonial">
+                        <div class="modern-testimonial-content">
+                            <p class="modern-testimonial-text">"{{ testimonial.text }}"</p>
+                            <div class="modern-testimonial-author">
+                                <strong>{{ testimonial.author }}</strong>
+                                <span class="modern-testimonial-role">{{ testimonial.role | default: "App Store Review" }}</span>
+                            </div>
+                        </div>
+                    </div>
+                    {% endfor %}
+                </div>
+            </div>
+        </section>
+        {% endif %}
+
+        {% if page.screenshots %}
+        <section class="modern-screenshots">
+            <div class="modern-container">
+                <h2 class="modern-section-title">{{ page.screenshots_title | default: "See It In Action" }}</h2>
+                <div class="modern-screenshots-grid">
+                    {% for screenshot in page.screenshots %}
+                    <div class="modern-screenshot">
+                        <img src="{{ screenshot.image }}" width="765" height="1518" loading="lazy" decoding="async" alt="{{ screenshot.alt | default: page.app_name }}" class="modern-screenshot-image">
+                        {% if screenshot.caption %}
+                        <p class="modern-screenshot-caption">{{ screenshot.caption }}</p>
+                        {% endif %}
+                    </div>
+                    {% endfor %}
+                </div>
+            </div>
+        </section>
+        {% endif %}
+
+        {% if page.resources %}
+        <section class="modern-features fb-resources-section">
+            <div class="modern-container">
+                <h2 class="modern-section-title">{{ page.resources_title | default: "Guides & Resources" }}</h2>
+                <div class="modern-features-grid">
+                    {% for resource in page.resources %}
+                    <div class="modern-feature">
+                        <div class="modern-feature-icon">
+                            <i class="fas fa-{{ resource.fontawesome_icon_name | default: 'book-open' }}" aria-hidden="true"></i>
+                        </div>
+                        <div class="modern-feature-content">
+                            <h3 class="modern-feature-title"><a href="{{ resource.url }}">{{ resource.title }}</a></h3>
+                            <p class="modern-feature-description">{{ resource.description }}</p>
+                        </div>
+                    </div>
+                    {% endfor %}
+                </div>
+            </div>
+        </section>
+        {% endif %}
+
+        {% if page.faq %}
+        <section class="modern-faq">
+            <div class="modern-container">
+                <h2 class="modern-section-title">{{ page.faq_title | default: "Frequently Asked Questions" }}</h2>
+                <div class="modern-faq-list">
+                    {% for item in page.faq %}
+                    <div class="modern-faq-item">
+                        <button class="modern-faq-question" type="button">
+                            <span class="modern-faq-question-text">{{ item.question }}</span>
+                            <span class="modern-faq-icon">
+                                <i class="fas fa-chevron-down" aria-hidden="true"></i>
+                            </span>
+                        </button>
+                        <div class="modern-faq-answer">
+                            <div class="modern-faq-answer-content">
+                                <p>{{ item.answer }}</p>
+                            </div>
+                        </div>
+                    </div>
+                    {% endfor %}
+                </div>
+            </div>
+        </section>
+        {% endif %}
+    </main>
+
+    <footer class="modern-footer">
+        <div class="modern-container">
+            {% include fridgebuddy-app-footer.html %}
+        </div>
+    </footer>
+
+    <script>
+        // Modern header scroll animation and dark mode
+        (function() {
+            const header = document.querySelector('.modern-header');
+            let isScrolling = false;
+
+            const isDevelopment = window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1';
+
+            function initDarkMode() {
+                if (isDevelopment) {
+                    const toggleBtn = document.createElement('button');
+                    let currentTheme = 'system';
+
+                    function updateTheme() {
+                        document.body.classList.remove('light-theme', 'dark-theme');
+
+                        if (currentTheme === 'light') {
+                            document.body.classList.add('light-theme');
+                            toggleBtn.innerHTML = '🌙';
+                        } else if (currentTheme === 'dark') {
+                            document.body.classList.add('dark-theme');
+                            toggleBtn.innerHTML = '☀️';
+                        } else {
+                            toggleBtn.innerHTML = '🔄';
+                        }
+                    }
+
+                    toggleBtn.style.cssText = 'position: fixed; top: 20px; right: 20px; z-index: 1000; background: rgba(0, 0, 0, 0.8); color: white; border: none; border-radius: 50%; width: 50px; height: 50px; font-size: 20px; cursor: pointer; transition: all 0.3s ease;';
+
+                    toggleBtn.addEventListener('click', function() {
+                        if (currentTheme === 'system') {
+                            currentTheme = 'light';
+                        } else if (currentTheme === 'light') {
+                            currentTheme = 'dark';
+                        } else {
+                            currentTheme = 'system';
+                        }
+                        updateTheme();
+                    });
+
+                    updateTheme();
+                    document.body.appendChild(toggleBtn);
+
+                    if (window.matchMedia) {
+                        window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', function() {
+                            if (currentTheme === 'system') {
+                                updateTheme();
+                            }
+                        });
+                    }
+                }
+            }
+
+            function updateHeader() {
+                if (window.scrollY > 20) {
+                    header.classList.add('modern-header-scrolled');
+                } else {
+                    header.classList.remove('modern-header-scrolled');
+                }
+            }
+
+            function throttleScroll() {
+                if (!isScrolling) {
+                    window.requestAnimationFrame(function() {
+                        updateHeader();
+                        isScrolling = false;
+                    });
+                    isScrolling = true;
+                }
+            }
+
+            window.addEventListener('scroll', throttleScroll, { passive: true });
+
+            updateHeader();
+            initDarkMode();
+        })();
+
+        // FAQ Accordion functionality
+        (function() {
+            const faqItems = document.querySelectorAll('.modern-faq-item');
+
+            faqItems.forEach(function(item) {
+                const question = item.querySelector('.modern-faq-question');
+                const answer = item.querySelector('.modern-faq-answer');
+                const icon = item.querySelector('.modern-faq-icon i');
+
+                question.addEventListener('click', function() {
+                    const isOpen = item.classList.contains('modern-faq-open');
+
+                    faqItems.forEach(function(otherItem) {
+                        if (otherItem !== item) {
+                            otherItem.classList.remove('modern-faq-open');
+                            otherItem.querySelector('.modern-faq-answer').style.maxHeight = '0px';
+                            otherItem.querySelector('.modern-faq-icon i').style.transform = 'rotate(0deg)';
+                        }
+                    });
+
+                    if (isOpen) {
+                        item.classList.remove('modern-faq-open');
+                        answer.style.maxHeight = '0px';
+                        icon.style.transform = 'rotate(0deg)';
+                    } else {
+                        item.classList.add('modern-faq-open');
+                        answer.style.maxHeight = answer.scrollHeight + 'px';
+                        icon.style.transform = 'rotate(180deg)';
+                    }
+                });
+            });
+        })();
+    </script>
+
+    <style>
+        /* FAQ Styles */
+        .modern-faq {
+            padding: 80px 0;
+            background: var(--modern-bg-secondary);
+        }
+
+        .modern-faq-list {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .modern-faq-item {
+            background: var(--modern-bg);
+            border-radius: 12px;
+            margin-bottom: 16px;
+            box-shadow: var(--modern-shadow-sm);
+            border: 1px solid var(--modern-border);
+            overflow: hidden;
+            transition: all 0.3s ease;
+        }
+
+        .modern-faq-item:hover {
+            box-shadow: var(--modern-shadow-md);
+            transform: translateY(-1px);
+        }
+
+        .modern-faq-question {
+            width: 100%;
+            background: none;
+            border: none;
+            padding: 24px;
+            text-align: left;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 18px;
+            font-weight: 600;
+            color: var(--modern-text-primary);
+            transition: all 0.2s ease;
+        }
+
+        .modern-faq-item:not(.modern-faq-open) .modern-faq-question:hover {
+            background: var(--modern-bg-secondary);
+        }
+
+        .modern-faq-question-text {
+            flex: 1;
+            margin-right: 16px;
+        }
+
+        .modern-faq-icon {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 24px;
+            height: 24px;
+        }
+
+        .modern-faq-icon i {
+            transition: transform 0.3s ease;
+            color: var(--modern-primary);
+        }
+
+        .modern-faq-answer {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease;
+        }
+
+        .modern-faq-answer-content {
+            padding: 0 24px 16px 24px;
+        }
+
+        .modern-faq-answer-content p {
+            margin: 0;
+            font-size: 16px;
+            line-height: 1.5;
+            color: var(--modern-text-tertiary);
+        }
+
+        /* App Store Rating Styles */
+        .modern-app-rating-container {
+            margin-top: 16px;
+        }
+
+        .modern-app-rating {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            text-decoration: none;
+        }
+
+        .modern-rating-stars {
+            display: flex;
+            gap: 2px;
+        }
+
+        .modern-rating-stars i {
+            color: #ffcc00;
+            font-size: 16px;
+        }
+
+        .modern-rating-text {
+            font-size: 14px;
+            color: var(--modern-text-secondary);
+            font-weight: 500;
+        }
+
+        /* Hero layout app icon */
+        .modern-app-badge-hero {
+            width: 100px;
+            height: 100px;
+            border-radius: 22px;
+            overflow: hidden;
+            box-shadow: var(--modern-shadow-lg);
+            margin-bottom: 24px;
+            border: 1px solid var(--modern-border);
+        }
+
+        /* Steps + resources sections reuse the feature grid */
+        .fb-steps-section .fb-step-number {
+            font-size: 20px;
+            font-weight: 700;
+            color: var(--modern-primary);
+        }
+
+        .fb-resources-section .modern-feature-title a {
+            color: inherit;
+            text-decoration: none;
+        }
+
+        .fb-resources-section .modern-feature-title a:hover {
+            color: var(--modern-primary);
+            text-decoration: underline;
+        }
+
+        .modern-app-branding {
+            text-decoration: none;
+        }
+    </style>
+</body>
+</html>

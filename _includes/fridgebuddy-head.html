@@ -1,0 +1,44 @@
+{% assign meta_title = page.page_title | default: page.title | default: "FridgeBuddy — Pantry inventory and food expiration tracker" %}
+{% assign meta_description = page.meta_description | default: page.hero_subtitle | default: "Track pantry, fridge, and freezer inventory, scan expiration dates, and get reminders before food goes to waste." %}
+{% assign canonical_path = page.canonical_path | default: page.url %}
+{% assign canonical_url = canonical_path | absolute_url %}
+{% assign social_image_path = page.social_image | default: "/assets/app-pages/fridgebuddy-og.png" %}
+{% assign social_image_url = social_image_path | absolute_url %}
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="color-scheme" content="light dark">
+
+    <title>{{ meta_title | escape }}</title>
+    <meta name="description" content="{{ meta_description | strip_html | strip_newlines | escape }}">
+    <meta name="robots" content="{{ page.robots | default: 'index,follow,max-image-preview:large' }}">
+    <link rel="canonical" href="{{ canonical_url }}">
+
+    <meta property="og:site_name" content="FridgeBuddy">
+    <meta property="og:type" content="{{ page.og_type | default: 'website' }}">
+    <meta property="og:title" content="{{ meta_title | escape }}">
+    <meta property="og:description" content="{{ meta_description | strip_html | strip_newlines | escape }}">
+    <meta property="og:url" content="{{ canonical_url }}">
+    <meta property="og:image" content="{{ social_image_url }}">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:alt" content="FridgeBuddy food inventory and expiration tracker for iPhone and iPad">
+    <meta property="og:locale" content="en_US">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="{{ meta_title | escape }}">
+    <meta name="twitter:description" content="{{ meta_description | strip_html | strip_newlines | escape }}">
+    <meta name="twitter:image" content="{{ social_image_url }}">
+    <meta name="twitter:image:alt" content="FridgeBuddy food inventory and expiration tracker for iPhone and iPad">
+
+    <meta name="apple-itunes-app" content="app-id={{ page.ios_app_id | default: 1500190823 }}">
+    <link rel="icon" type="image/png" sizes="256x256" href="/assets/app-pages/fridgebuddy-icon.png">
+    <link rel="apple-touch-icon" href="/assets/app-pages/fridgebuddy-icon.png">
+
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+    <link rel="stylesheet" href="{{ '/assets/css/modern-style.css' | relative_url }}">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{{ '/assets/css/fridgebuddy-components.css' | relative_url }}">
+
+    {% include fridgebuddy-schema.html canonical_url=canonical_url meta_title=meta_title meta_description=meta_description social_image_url=social_image_url %}
+</head>

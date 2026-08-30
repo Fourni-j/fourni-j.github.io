@@ -1,0 +1,97 @@
+{% assign app_store_url = page.app_store_url | default: "https://apps.apple.com/app/id1500190823" %}
+{% if page.schema_type == "app" %}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "MobileApplication",
+      "@id": "{{ include.canonical_url }}#app",
+      "name": {{ page.app_name | default: "FridgeBuddy" | jsonify }},
+      "alternateName": "Pantry & Fridge: FridgeBuddy",
+      "description": {{ include.meta_description | strip_html | strip_newlines | jsonify }},
+      "url": "{{ include.canonical_url }}",
+      "downloadUrl": "{{ app_store_url }}",
+      "installUrl": "{{ app_store_url }}",
+      "image": "{{ '/assets/app-pages/fridgebuddy-icon.png' | absolute_url }}",
+      "screenshot": [
+        "{{ '/assets/app-pages/screenshots/fridgebuddy-inventory.webp' | absolute_url }}",
+        "{{ '/assets/app-pages/screenshots/fridgebuddy-product.webp' | absolute_url }}",
+        "{{ '/assets/app-pages/screenshots/fridgebuddy-insights.webp' | absolute_url }}"
+      ],
+      "applicationCategory": "LifestyleApplication",
+      "operatingSystem": "iOS 18.0 or later; iPadOS 18.0 or later",
+      "author": {
+        "@type": "Person",
+        "name": "Charles-Adrien Fournier",
+        "url": "{{ '/' | absolute_url }}"
+      },
+      "offers": {
+        "@type": "Offer",
+        "url": "{{ app_store_url }}",
+        "price": 0,
+        "priceCurrency": "USD"
+      },
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": {{ page.rating_value | default: 4.5 }},
+        "ratingCount": {{ page.rating_count | default: 203 }},
+        "bestRating": 5,
+        "worstRating": 1
+      }
+    }{% if page.faq %},
+    {
+      "@type": "FAQPage",
+      "@id": "{{ include.canonical_url }}#faq",
+      "mainEntity": [
+        {% for item in page.faq %}{
+          "@type": "Question",
+          "name": {{ item.question | jsonify }},
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": {{ item.answer | strip_html | jsonify }}
+          }
+        }{% unless forloop.last %},{% endunless %}{% endfor %}
+      ]
+    }{% endif %}
+  ]
+}
+</script>
+{% elsif page.schema_type == "calculator" %}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebApplication",
+      "@id": "{{ include.canonical_url }}#calculator",
+      "name": {{ page.title | jsonify }},
+      "description": {{ include.meta_description | strip_html | strip_newlines | jsonify }},
+      "url": "{{ include.canonical_url }}",
+      "applicationCategory": "UtilitiesApplication",
+      "operatingSystem": "Any",
+      "browserRequirements": "Requires JavaScript",
+      "isAccessibleForFree": true,
+      "offers": {
+        "@type": "Offer",
+        "price": 0,
+        "priceCurrency": "USD"
+      },
+      "about": {
+        "@id": "{{ '/fridgebuddy/' | absolute_url }}#app"
+      }
+    },
+    {% include fridgebuddy-webpage-schema.json canonical_url=include.canonical_url meta_description=include.meta_description %}
+  ]
+}
+</script>
+{% elsif page.schema_type == "web_page" %}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {% include fridgebuddy-webpage-schema.json canonical_url=include.canonical_url meta_description=include.meta_description %}
+  ]
+}
+</script>
+{% endif %}

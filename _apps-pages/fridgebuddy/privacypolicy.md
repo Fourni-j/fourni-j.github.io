@@ -1,14 +1,24 @@
 ---
-layout: modern-app-page
+layout: fridgebuddy-page
 title: Privacy Policy
+page_title: "FridgeBuddy Privacy Policy"
+meta_description: "Read the privacy policy for the FridgeBuddy pantry inventory and food expiration tracking app."
+schema_type: web_page
 ios_app_id: 1500190823
 include_in_header: false
+app_name: FridgeBuddy
+app_icon: /assets/app-pages/fridgebuddy-icon.png
+hide_hero_cta: true
+breadcrumbs:
+  - name: FridgeBuddy
+    url: /fridgebuddy/
+  - name: Privacy Policy
+    url: /fridgebuddy/privacypolicy
 ---
 
 **Last updated**  
 January 3 2020
 
-# Privacy Policy
 Please read these terms and conditions ("terms", "terms and conditions") carefully before using Fridge Buddy application (the "service") operated by Charles-Adrien Fournier ("us", 'we", "our").
 
 <br>
