@@ -1,0 +1,21 @@
+# cafournier.com
+
+> Personal site of Charles-Adrien Fournier, indie iOS developer in Paris, France. Home of FridgeBuddy (pantry inventory and food expiration tracker for iPhone and iPad) and other iOS apps, plus articles about iOS development.
+
+## FridgeBuddy — food expiration tracker & pantry inventory app
+
+- [FridgeBuddy overview](https://cafournier.com/fridgebuddy/): Features, screenshots, App Store rating, and FAQ for the iPhone/iPad app that tracks pantry, fridge, and freezer inventory with barcode and expiration-date scanning, household sharing via iCloud, and food-waste insights. Free with optional in-app purchases, requires iOS/iPadOS 18+.
+- [Food expiration tracker guide](https://cafournier.com/fridgebuddy/food-expiration-tracker/): How FridgeBuddy turns printed dates into reminders and a use-first list.
+- [Pantry inventory app guide](https://cafournier.com/fridgebuddy/pantry-inventory-app/): Organizing fridge, freezer, and pantry stock in one searchable inventory.
+- [Shared pantry app guide](https://cafournier.com/fridgebuddy/shared-pantry-app/): One shared household inventory and shopping lists for families and roommates.
+- [Pantry app comparison](https://cafournier.com/fridgebuddy/alternatives/): FridgeBuddy, NoWaste, Pantry, What The Fridge?!, and ExpiresBy compared by platform, input method, sharing, and ideal use case, with a stated research date.
+- [Food-waste cost calculator](https://cafournier.com/fridgebuddy/food-waste-calculator/): Free client-side calculator estimating the annual cost of avoidable household food waste.
+- [FridgeBuddy privacy policy](https://cafournier.com/fridgebuddy/privacypolicy): No accounts, no ads, no tracking; inventory stored in the user's private iCloud.
+
+## Apps
+
+- [All apps](https://cafournier.com/apps/): Current iOS apps on the App Store, including Steed (bike maintenance log), LaterMark (bookmark manager), Clashly (bracket maker), Tierly (tier list maker), and NoExif (photo compressor).
+
+## Articles
+
+- [Blog](https://cafournier.com/): Articles about iOS development, Swift, and indie app projects.

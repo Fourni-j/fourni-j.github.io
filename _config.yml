@@ -29,6 +29,10 @@ producthunt: '@charles_fournier1'
 
 # Navigation
 navigation:
+  - url: '/apps/'
+    text: 'Apps'
+  - url: '/rides/'
+    text: 'Rides'
 
 collections:
   posts:
@@ -67,6 +71,10 @@ exclude:
 - _template/
 - README.md
 - Makefile
+- notes.md
+- task_plan.md
+- fridgebuddy-seo-deliverable.md
+- tests/
 
 # Other
 markdown: kramdown

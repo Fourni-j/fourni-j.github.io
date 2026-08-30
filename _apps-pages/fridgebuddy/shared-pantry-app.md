@@ -27,6 +27,13 @@ related_links:
   - title: "Compare pantry apps"
     description: "See when shared, offline, or cross-platform tools fit best."
     url: /fridgebuddy/alternatives/
+date_published: 2026-08-30
+date_modified: 2026-08-30
+faq:
+  - question: "How do I share my pantry inventory with my family or roommates?"
+    answer: "Send a household invite from FridgeBuddy. Once accepted, the shared storage locations and shopping lists stay in sync for everyone through iCloud."
+  - question: "Do household members need to pay for the app?"
+    answer: "FridgeBuddy is free to download for everyone. Optional in-app purchases may also be shareable with your family group when Apple Family Sharing is enabled."
 ---
 
 ## The problem is not the list—it is keeping everyone on the same list

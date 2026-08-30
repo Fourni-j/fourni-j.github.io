@@ -14,6 +14,7 @@ app_icon: /assets/app-pages/fridgebuddy-icon.png
 preview_file: /assets/app-pages/screenshots/fridgebuddy-inventory.webp
 rating_value: 4.5
 rating_count: 203
+featured_note: "Featured in Apple's App Store story “The Best Apps for Parents”"
 hero_title: "Know what’s in your kitchen before it expires."
 hero_subtitle: "Scan barcodes and expiration dates, organize your pantry, fridge, and freezer, and get reminders while there is still time to use what you bought."
 features_title: "Key Features"

@@ -9,6 +9,8 @@ featured_image: '/assets/images/posts/2020/project-2-fridge-buddy.jpg'
 
 >Fridge Buddy helps you reduce your food waste by alerting you when one of your products is nearing its expiration date.
 
+**Update 2026:** FridgeBuddy has grown a lot since this post — household sharing, expiration-date scanning, widgets, and waste insights. See the current [FridgeBuddy page](/fridgebuddy/) for what it does today.
+
 Fridge Buddy is the second project of my [12 startup challenge](https://cafournier.com/12-startups-challenge). The blog post's is a bit late, I worked on this project for the whole month of february.
 
 ## Story behind this project 
@@ -28,6 +30,8 @@ I choosed a freemium business model, the core feature of the app is 100% free. Y
 Since the app already got some users, I manage to get some feedback and to get an idea of the next features the users wants. I will implement them during the next months when I found a bit of time between the other projects.
 
 ## Useful links
+
+[FridgeBuddy website](/fridgebuddy/)
 
 [FridgeBuddy on the iOS AppStore](https://apps.apple.com/us/app/fridge-buddy-expiry-tracker/id1500190823?ign-mpt=uo%3D4)
 

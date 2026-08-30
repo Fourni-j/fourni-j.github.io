@@ -29,6 +29,8 @@ related_links:
   - title: "Compare pantry apps"
     description: "Find the tracking approach that fits your routine."
     url: /fridgebuddy/alternatives/
+date_published: 2026-08-30
+date_modified: 2026-08-30
 ---
 
 <div class="fb-calculator" id="food-waste-calculator">
@@ -86,6 +88,8 @@ The calculator uses only the values you enter:
 3. **Potential savings** = estimated annual food waste × realistic reduction percentage
 
 It does not use a national average, inspect your purchases, or send your inputs to a server. The result is a planning estimate, not a guarantee or financial assessment.
+
+For context on the scale of the problem: according to the [UN Environment Programme's Food Waste Index Report 2024](https://www.unep.org/resources/publication/food-waste-index-report-2024), households worldwide wasted an estimated 631 million tonnes of food in 2022 — about 79 kg per person per year, or roughly 60% of all food wasted across retail, food service, and homes.
 
 ## Turn the estimate into a smaller experiment
 

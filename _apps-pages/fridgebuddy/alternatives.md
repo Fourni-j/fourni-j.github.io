@@ -27,6 +27,9 @@ related_links:
   - title: "Food-waste calculator"
     description: "Estimate the budget impact using your own numbers."
     url: /fridgebuddy/food-waste-calculator/
+date_published: 2026-08-30
+date_modified: 2026-08-30
+competitor_itemlist: true
 ---
 
 ## The short answer

@@ -39,9 +39,20 @@
                     </nav>
                     {% endif %}
                     <h1 class="modern-page-title">{{ page.title }}</h1>
+                    {% if page.date_modified %}
+                    <p class="fb-page-byline">By <a href="https://cafournier.com">Charles-Adrien Fournier</a>, iOS developer and creator of FridgeBuddy · Updated <time datetime="{{ page.date_modified }}">{{ page.date_modified | date: "%B %-d, %Y" }}</time></p>
+                    {% endif %}
                     <div class="modern-content">
                         {% if page.intro %}<p class="fb-page-intro">{{ page.intro }}</p>{% endif %}
                         {{ content }}
+
+                        {% if page.faq %}
+                        <h2>Frequently asked questions</h2>
+                        {% for item in page.faq %}
+                        <h3>{{ item.question }}</h3>
+                        <p>{{ item.answer }}</p>
+                        {% endfor %}
+                        {% endif %}
 
                         {% if page.related_links %}
                         <h2>Related FridgeBuddy guides</h2>
@@ -108,6 +119,16 @@
 
         .modern-breadcrumb {
             margin-bottom: 16px;
+        }
+
+        .fb-page-byline {
+            margin: -8px 0 24px 0;
+            font-size: 14px;
+            color: var(--modern-text-tertiary);
+        }
+
+        .fb-page-byline a {
+            color: inherit;
         }
 
         .fb-page-intro {

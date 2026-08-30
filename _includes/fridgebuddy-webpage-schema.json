@@ -5,6 +5,18 @@
   "name": {{ page.title | jsonify }},
   "description": {{ include.meta_description | strip_html | strip_newlines | jsonify }},
   "inLanguage": "en-US",
+  {% if page.date_published %}"datePublished": "{{ page.date_published }}",{% endif %}
+  {% if page.date_modified %}"dateModified": "{{ page.date_modified }}",{% endif %}
+  "author": {
+    "@type": "Person",
+    "name": "Charles-Adrien Fournier",
+    "url": "{{ '/' | absolute_url }}",
+    "jobTitle": "iOS developer",
+    "sameAs": [
+      "https://github.com/fourni-j",
+      "https://www.linkedin.com/in/charlesadrienfournier"
+    ]
+  },
   "isPartOf": {
     "@id": "{{ '/fridgebuddy/' | absolute_url }}"
   },
@@ -21,6 +33,39 @@
       "position": {{ forloop.index }},
       "name": {{ crumb.name | jsonify }},
       "item": "{{ crumb.url | absolute_url }}"
+    }{% unless forloop.last %},{% endunless %}{% endfor %}
+  ]
+}{% endif %}{% if page.faq %},
+{
+  "@type": "FAQPage",
+  "@id": "{{ include.canonical_url }}#faq",
+  "mainEntity": [
+    {% for item in page.faq %}{
+      "@type": "Question",
+      "name": {{ item.question | jsonify }},
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": {{ item.answer | strip_html | jsonify }}
+      }
+    }{% unless forloop.last %},{% endunless %}{% endfor %}
+  ]
+}{% endif %}{% if page.competitor_itemlist %},
+{
+  "@type": "ItemList",
+  "@id": "{{ include.canonical_url }}#itemlist",
+  "name": "Pantry inventory and food expiration apps compared",
+  "numberOfItems": {{ site.data.fridgebuddy_competitors.products | size }},
+  "itemListElement": [
+    {% for product in site.data.fridgebuddy_competitors.products %}{
+      "@type": "ListItem",
+      "position": {{ forloop.index }},
+      "item": {
+        "@type": "SoftwareApplication",
+        "name": {{ product.name | jsonify }},
+        "url": "{{ product.website }}",
+        "operatingSystem": {{ product.platforms | jsonify }},
+        "description": {{ product.strongest_for | jsonify }}
+      }
     }{% unless forloop.last %},{% endunless %}{% endfor %}
   ]
 }{% endif %}

@@ -57,6 +57,9 @@
                                 </div>
                                 <span class="modern-rating-text">{{ page.rating_value }} ({{ page.rating_count }} reviews)</span>
                             </a>
+                            {% if page.featured_note %}
+                            <p class="fb-featured-note"><i class="fas fa-award" aria-hidden="true"></i> {{ page.featured_note }}</p>
+                            {% endif %}
                         </div>
                         {% endif %}
                     </div>
@@ -453,6 +456,18 @@
 
         .modern-app-branding {
             text-decoration: none;
+        }
+
+        .fb-featured-note {
+            margin: 12px 0 0 0;
+            font-size: 14px;
+            font-weight: 500;
+            color: var(--modern-text-secondary);
+        }
+
+        .fb-featured-note i {
+            color: var(--modern-primary);
+            margin-right: 6px;
         }
     </style>
 </body>

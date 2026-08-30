@@ -27,6 +27,15 @@ related_links:
   - title: "Food-waste calculator"
     description: "Estimate what reducing avoidable waste could save."
     url: /fridgebuddy/food-waste-calculator/
+date_published: 2026-08-30
+date_modified: 2026-08-30
+faq:
+  - question: "Can FridgeBuddy read the expiration date automatically?"
+    answer: "Yes. You can scan the printed date with the camera instead of typing it, and when a GS1 Data Matrix barcode already contains the expiration date, a single scan can capture both the product and its date."
+  - question: "What happens when a product has no barcode or is not found online?"
+    answer: "You can enter it manually once. FridgeBuddy saves the product details on your device so the next time you add the same item, its information can be reused."
+  - question: "Does FridgeBuddy tell me whether food is still safe to eat?"
+    answer: "No. FridgeBuddy tracks the dates you provide and reminds you in time, but food-safety decisions should always follow the product label and official local guidance."
 ---
 
 ## The useful reminder starts when you add the item

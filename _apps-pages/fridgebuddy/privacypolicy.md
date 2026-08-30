@@ -2,13 +2,14 @@
 layout: fridgebuddy-page
 title: Privacy Policy
 page_title: "FridgeBuddy Privacy Policy"
-meta_description: "Read the privacy policy for the FridgeBuddy pantry inventory and food expiration tracking app."
+meta_description: "How FridgeBuddy handles your data: inventory stored in your private iCloud, no account required, no ads, no tracking, and no sale of personal data."
 schema_type: web_page
 ios_app_id: 1500190823
 include_in_header: false
 app_name: FridgeBuddy
 app_icon: /assets/app-pages/fridgebuddy-icon.png
 hide_hero_cta: true
+date_modified: 2026-08-30
 breadcrumbs:
   - name: FridgeBuddy
     url: /fridgebuddy/
@@ -16,59 +17,51 @@ breadcrumbs:
     url: /fridgebuddy/privacypolicy
 ---
 
-**Last updated**  
-January 3 2020
+**Last updated:** August 30, 2026
 
-Please read these terms and conditions ("terms", "terms and conditions") carefully before using Fridge Buddy application (the "service") operated by Charles-Adrien Fournier ("us", 'we", "our").
+This privacy policy describes how the FridgeBuddy app ("FridgeBuddy", "the app", "we") handles your information. FridgeBuddy is developed by Charles-Adrien Fournier, an independent developer based in Paris, France.
 
-<br>
+The short version: your food inventory belongs to you. It is stored on your device and in your private iCloud space. FridgeBuddy has no user accounts, shows no ads, does not sell personal data, and does not use third-party advertising or cross-app tracking.
 
-## Conditions of Use
-We will provide their services to you, which are subject to the conditions stated below in this document. Every time you use its services or make a purchase, you accept the following conditions. This is why we urge you to read them carefully.
+## Data you add to the app
 
-<br>
+The items you track — products, expiration dates, storage locations, photos, notes, shopping lists, and consumption or waste history — are stored:
 
-## Copyright
-Content published on this website (digital downloads, images, texts, graphics, logos) is the property its content creators and protected by international copyright laws.
+- **On your device**, so the app works offline.
+- **In your private iCloud database (Apple CloudKit)**, so your inventory syncs across your Apple devices and stays available if you change devices. This data is tied to your Apple Account and is not accessible to the developer.
 
-<br>
+If you invite family members or roommates to your household, the storage locations and shopping lists you share become visible to the people you invited, through iCloud sharing. You can stop sharing at any time from the app or from iCloud settings.
 
-## Communications
-The entire communication with us is electronic. Every time you send us an email or use our application, you are going to be communicating with us. You hereby consent to receive communications from us. You also agree that all notices, disclosures, agreements and other communications we provide to you electronically meet the legal requirements that such communications be in writing.
+## Barcode and product lookups
 
-<br>
+When you scan a product barcode, the app sends the barcode to an online product database ([Open Food Facts](https://world.openfoodfacts.org)) to retrieve product details such as the name, image, and nutrition information (including Nutri-Score and Green-Score when available). The barcode itself is the only product information transmitted for the lookup; it is not tied to your identity by FridgeBuddy. Products not found online can be saved on your device and reused locally.
 
-## Applicable Law
-By using this application, you agree that the laws of France, without regard to principles of conflict laws, will govern these terms and conditions, or any dispute of any sort that might come between Charles-Adrien Fournier and you, or its business partners and associates.
+## Purchases
 
-<br>
+FridgeBuddy is free to download and offers optional in-app purchases handled entirely by Apple's App Store. As reflected in the app's App Store privacy label, purchase information may be collected in a form that is **not linked to your identity**, to understand which offers work. Payment details never reach the developer; Apple processes all transactions.
 
-## Disputes
-Any dispute related in any way to your use of this application or to products you purchase from us shall be arbitrated by state or federal court in France and you consent to exclusive jurisdiction and venue of such courts.
+## Notifications
 
-<br>
+Expiration reminders are scheduled locally on your device. They do not require sending your data to a server.
 
-## Comments, Reviews, and Emails
-Users may post content as long as it is not obscene, illegal, defamatory, threatening, infringing of intellectual property rights, invasive of privacy or injurious in any other way to third parties.
+## Data export and deletion
 
-We reserve all rights (but not the obligation) to remove and/or edit such content.
+You can export your inventory to a CSV file at any time from the app; the export is created on your device and shared only where you choose to send it. Deleting an item, a storage location, or the app's iCloud data removes it from your private database. You can also disable iCloud sync for FridgeBuddy in iOS Settings.
 
-<br>
+## What we do not do
 
-## Premium version
+- No user account is required, and none is created.
+- No advertising networks, no ad identifiers, no cross-app tracking.
+- No sale or rental of personal data to anyone.
 
-The App offers the in-app purchase of a Premium version that includes the following Features:
+## Children
 
-- Custom list creation, you can create an personnalize the product lists displayed. 
-- Share lists with other users
-- Expiry date scan with the camera
-- Unlock app icons variations
-- CSV export of all your lists
-- Better item sorting
+FridgeBuddy is rated 4+ and does not knowingly collect personal information from children.
 
-<br>
+## Changes to this policy
 
-## User Account
-If you are an owner of an account on this website, you are solely responsible for maintaining the confidentiality of your private user details (username and password). You are responsible for all activities that occur under your account or password.
+If the app's data practices change, this page will be updated and the "Last updated" date revised. Significant changes will be highlighted in the app's release notes.
 
-We reserve all rights to terminate accounts, edit or remove content and cancel orders in their sole discretion.
+## Contact
+
+For any privacy question or request, contact [feedback@cafournier.com](mailto:feedback@cafournier.com).

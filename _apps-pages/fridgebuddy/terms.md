@@ -14,6 +14,7 @@ breadcrumbs:
     url: /fridgebuddy/
   - name: Terms
     url: /fridgebuddy/terms
+date_modified: 2023-08-13
 ---
 
 **Last Updated:** August 13, 2023
