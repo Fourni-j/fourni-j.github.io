@@ -13,6 +13,10 @@
     <meta name="description" content="{{ meta_description | strip_html | strip_newlines | escape }}">
     <meta name="robots" content="{{ page.robots | default: 'index,follow,max-image-preview:large' }}">
     <link rel="canonical" href="{{ canonical_url }}">
+    {% if page.hreflang %}
+    {% for pair in page.hreflang %}<link rel="alternate" hreflang="{{ pair[0] }}" href="{{ pair[1] | absolute_url }}">
+    {% endfor %}<link rel="alternate" hreflang="x-default" href="{{ page.hreflang.en | absolute_url }}">
+    {% endif %}
 
     <meta property="og:site_name" content="FridgeBuddy">
     <meta property="og:type" content="{{ page.og_type | default: 'website' }}">
@@ -23,7 +27,9 @@
     <meta property="og:image:width" content="1200">
     <meta property="og:image:height" content="630">
     <meta property="og:image:alt" content="FridgeBuddy food inventory and expiration tracker for iPhone and iPad">
-    <meta property="og:locale" content="en_US">
+    {% if page.lang contains 'fr' %}<meta property="og:locale" content="fr_FR">
+    <meta property="og:locale:alternate" content="en_US">{% else %}<meta property="og:locale" content="en_US">{% if page.hreflang.fr %}
+    <meta property="og:locale:alternate" content="fr_FR">{% endif %}{% endif %}
 
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="{{ meta_title | escape }}">

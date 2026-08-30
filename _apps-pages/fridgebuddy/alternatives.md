@@ -30,6 +30,9 @@ related_links:
 date_published: 2026-08-30
 date_modified: 2026-08-30
 competitor_itemlist: true
+hreflang:
+  en: /fridgebuddy/alternatives/
+  fr: /fridgebuddy/fr/comparatif/
 ---
 
 ## The short answer

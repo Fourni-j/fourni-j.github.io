@@ -31,6 +31,9 @@ related_links:
     url: /fridgebuddy/alternatives/
 date_published: 2026-08-30
 date_modified: 2026-08-30
+hreflang:
+  en: /fridgebuddy/food-waste-calculator/
+  fr: /fridgebuddy/fr/calculateur-gaspillage-alimentaire/
 ---
 
 <div class="fb-calculator" id="food-waste-calculator">

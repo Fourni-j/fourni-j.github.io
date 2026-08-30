@@ -36,6 +36,9 @@ faq:
     answer: "You can enter it manually once. FridgeBuddy saves the product details on your device so the next time you add the same item, its information can be reused."
   - question: "Does FridgeBuddy tell me whether food is still safe to eat?"
     answer: "No. FridgeBuddy tracks the dates you provide and reminds you in time, but food-safety decisions should always follow the product label and official local guidance."
+hreflang:
+  en: /fridgebuddy/food-expiration-tracker/
+  fr: /fridgebuddy/fr/suivi-date-peremption/
 ---
 
 ## The useful reminder starts when you add the item

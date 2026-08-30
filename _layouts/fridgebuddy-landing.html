@@ -1,27 +1,28 @@
 <!DOCTYPE html>
 <html lang="{{ page.lang | default: 'en-US' }}">
 {% include fridgebuddy-head.html %}
+{% assign fb_lang = 'en' %}{% if page.lang contains 'fr' %}{% assign fb_lang = 'fr' %}{% endif %}
+{% assign t = site.data.fridgebuddy_i18n[fb_lang] %}
 
 <body class="modern-layout">
     <header class="modern-header">
         <div class="modern-container">
             <nav class="modern-nav">
                 <div class="modern-nav-left">
-                    <a class="modern-app-branding" href="/fridgebuddy/" aria-label="FridgeBuddy home">
+                    <a class="modern-app-branding" href="{{ t.home_url }}" aria-label="FridgeBuddy home">
                         <img class="modern-header-app-icon" src="{{ page.app_icon }}" width="32" height="32" alt="">
                         <span class="modern-header-app-name">{{ page.app_name }}</span>
                     </a>
                 </div>
                 <div class="modern-nav-right">
                     <div class="modern-nav-links">
-                        <a href="/fridgebuddy/#features" class="modern-nav-link">Features</a>
-                        <a href="/fridgebuddy/pantry-inventory-app/" class="modern-nav-link">Pantry guide</a>
-                        <a href="/fridgebuddy/alternatives/" class="modern-nav-link">Compare apps</a>
-                        <a href="/fridgebuddy/food-waste-calculator/" class="modern-nav-link">Calculator</a>
+                        {% for link in t.nav %}
+                        <a href="{{ link.url }}" class="modern-nav-link">{{ link.text }}</a>
+                        {% endfor %}
                     </div>
                     <div class="modern-nav-cta">
-                        <a class="modern-appstore-header-btn" href="{{ page.app_store_url }}" target="_blank" rel="noopener noreferrer">
-                            <img src="/assets/app-pages/appstore-header.svg" alt="Download FridgeBuddy on the App Store">
+                        <a class="modern-appstore-header-btn" href="{{ page.app_store_url | default: t.app_store_url }}" target="_blank" rel="noopener noreferrer">
+                            <img src="/assets/app-pages/appstore-header.svg" alt="{{ t.download_alt }}">
                         </a>
                     </div>
                 </div>
@@ -41,21 +42,23 @@
                         <p class="modern-hero-subtitle">{{ page.hero_subtitle }}</p>
 
                         <div class="modern-download-buttons">
-                            <a class="modern-download-btn" href="{{ page.app_store_url }}" target="_blank" rel="noopener noreferrer">
-                                <img src="/assets/app-pages/appstore.svg" alt="Download FridgeBuddy on the App Store">
+                            <a class="modern-download-btn" href="{{ page.app_store_url | default: t.app_store_url }}" target="_blank" rel="noopener noreferrer">
+                                <img src="/assets/app-pages/appstore.svg" alt="{{ t.download_alt }}">
                             </a>
                         </div>
 
                         {% if page.rating_value %}
+                        {% assign rating_str = page.rating_value | append: '' %}
+                        {% assign count_str = page.rating_count | append: '' %}
                         <div class="modern-app-rating-container">
-                            <a class="modern-app-rating" href="{{ page.app_store_url }}" target="_blank" rel="noopener noreferrer" aria-label="FridgeBuddy has a {{ page.rating_value }} out of 5 rating from {{ page.rating_count }} App Store ratings">
+                            <a class="modern-app-rating" href="{{ page.app_store_url | default: t.app_store_url }}" target="_blank" rel="noopener noreferrer" aria-label="{{ t.rating_aria | replace: '%RATING%', rating_str | replace: '%COUNT%', count_str }}">
                                 <div class="modern-rating-stars" aria-hidden="true">
                                     {% assign rating_floor = page.rating_value | floor %}
                                     {% assign rating_half = page.rating_value | minus: rating_floor %}
                                     {% assign half_star_index = rating_floor | plus: 1 %}
                                     {% for i in (1..5) %}{% if i <= rating_floor %}<i class="fas fa-star"></i>{% elsif rating_half >= 0.5 and i == half_star_index %}<i class="fas fa-star-half-alt"></i>{% else %}<i class="far fa-star"></i>{% endif %}{% endfor %}
                                 </div>
-                                <span class="modern-rating-text">{{ page.rating_value }} ({{ page.rating_count }} reviews)</span>
+                                <span class="modern-rating-text">{{ page.rating_value }} ({{ page.rating_count }} {{ t.reviews_label }})</span>
                             </a>
                             {% if page.featured_note %}
                             <p class="fb-featured-note"><i class="fas fa-award" aria-hidden="true"></i> {{ page.featured_note }}</p>

@@ -93,4 +93,7 @@ faq:
     answer: "Yes. FridgeBuddy is designed for iPhone and iPad and uses iCloud to keep your inventory up to date across your Apple devices."
   - question: "Is FridgeBuddy free?"
     answer: "FridgeBuddy is free to download and includes in-app purchases for optional premium access. Current offers and local pricing are shown on the App Store."
+hreflang:
+  en: /fridgebuddy/
+  fr: /fridgebuddy/fr/
 ---

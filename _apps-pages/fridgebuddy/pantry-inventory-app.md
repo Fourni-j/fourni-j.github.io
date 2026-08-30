@@ -36,6 +36,9 @@ faq:
     answer: "Yes. FridgeBuddy supports the refrigerator, freezer, pantry, and any custom storage locations you create, with smart lists that work across all of them."
   - question: "Does the inventory work offline?"
     answer: "Yes. Your inventory is stored on your device and works offline; iCloud syncs changes across your devices when you are back online."
+hreflang:
+  en: /fridgebuddy/pantry-inventory-app/
+  fr: /fridgebuddy/fr/inventaire-cuisine/
 ---
 
 ## Inventory is useful when it answers a real question

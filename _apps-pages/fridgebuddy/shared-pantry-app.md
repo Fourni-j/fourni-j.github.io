@@ -34,6 +34,9 @@ faq:
     answer: "Send a household invite from FridgeBuddy. Once accepted, the shared storage locations and shopping lists stay in sync for everyone through iCloud."
   - question: "Do household members need to pay for the app?"
     answer: "FridgeBuddy is free to download for everyone. Optional in-app purchases may also be shareable with your family group when Apple Family Sharing is enabled."
+hreflang:
+  en: /fridgebuddy/shared-pantry-app/
+  fr: /fridgebuddy/fr/inventaire-partage/
 ---
 
 ## The problem is not the list—it is keeping everyone on the same list

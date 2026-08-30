@@ -1,27 +1,28 @@
 <!DOCTYPE html>
 <html lang="{{ page.lang | default: 'en-US' }}">
 {% include fridgebuddy-head.html %}
+{% assign fb_lang = 'en' %}{% if page.lang contains 'fr' %}{% assign fb_lang = 'fr' %}{% endif %}
+{% assign t = site.data.fridgebuddy_i18n[fb_lang] %}
 
 <body class="modern-layout modern-subpage">
     <header class="modern-header">
         <div class="modern-container">
             <nav class="modern-nav">
                 <div class="modern-nav-left">
-                    <a class="modern-app-branding" href="/fridgebuddy/" aria-label="FridgeBuddy home">
+                    <a class="modern-app-branding" href="{{ t.home_url }}" aria-label="FridgeBuddy home">
                         <img class="modern-header-app-icon" src="{{ page.app_icon }}" width="32" height="32" alt="">
                         <span class="modern-header-app-name">{{ page.app_name }}</span>
                     </a>
                 </div>
                 <div class="modern-nav-right">
                     <div class="modern-nav-links">
-                        <a href="/fridgebuddy/#features" class="modern-nav-link">Features</a>
-                        <a href="/fridgebuddy/pantry-inventory-app/" class="modern-nav-link">Pantry guide</a>
-                        <a href="/fridgebuddy/alternatives/" class="modern-nav-link">Compare apps</a>
-                        <a href="/fridgebuddy/food-waste-calculator/" class="modern-nav-link">Calculator</a>
+                        {% for link in t.nav %}
+                        <a href="{{ link.url }}" class="modern-nav-link">{{ link.text }}</a>
+                        {% endfor %}
                     </div>
                     <div class="modern-nav-cta">
-                        <a class="modern-appstore-header-btn" href="https://apps.apple.com/app/id{{ page.ios_app_id | default: 1500190823 }}" target="_blank" rel="noopener noreferrer">
-                            <img src="/assets/app-pages/appstore-header.svg" alt="Download FridgeBuddy on the App Store">
+                        <a class="modern-appstore-header-btn" href="{{ t.app_store_url }}" target="_blank" rel="noopener noreferrer">
+                            <img src="/assets/app-pages/appstore-header.svg" alt="{{ t.download_alt }}">
                         </a>
                     </div>
                 </div>
@@ -40,14 +41,14 @@
                     {% endif %}
                     <h1 class="modern-page-title">{{ page.title }}</h1>
                     {% if page.date_modified %}
-                    <p class="fb-page-byline">By <a href="https://cafournier.com">Charles-Adrien Fournier</a>, iOS developer and creator of FridgeBuddy · Updated <time datetime="{{ page.date_modified }}">{{ page.date_modified | date: "%B %-d, %Y" }}</time></p>
+                    <p class="fb-page-byline">{{ t.byline_prefix }} <a href="https://cafournier.com">Charles-Adrien Fournier</a>, {{ t.byline_role }} · {{ t.byline_updated }} <time datetime="{{ page.date_modified }}">{{ page.date_modified_display | default: page.date_modified | date: "%B %-d, %Y" }}</time></p>
                     {% endif %}
                     <div class="modern-content">
                         {% if page.intro %}<p class="fb-page-intro">{{ page.intro }}</p>{% endif %}
                         {{ content }}
 
                         {% if page.faq %}
-                        <h2>Frequently asked questions</h2>
+                        <h2>{{ t.faq_title }}</h2>
                         {% for item in page.faq %}
                         <h3>{{ item.question }}</h3>
                         <p>{{ item.answer }}</p>
@@ -55,7 +56,7 @@
                         {% endif %}
 
                         {% if page.related_links %}
-                        <h2>Related FridgeBuddy guides</h2>
+                        <h2>{{ t.related_title }}</h2>
                         <ul>
                             {% for related in page.related_links %}
                             <li><a href="{{ related.url }}">{{ related.title }}</a> — {{ related.description }}</li>
@@ -66,9 +67,9 @@
 
                     {% unless page.hide_hero_cta %}
                     <div class="fb-page-cta">
-                        <p>Use your food before it becomes waste.</p>
-                        <a class="modern-download-btn" href="https://apps.apple.com/app/id{{ page.ios_app_id | default: 1500190823 }}" target="_blank" rel="noopener noreferrer">
-                            <img src="/assets/app-pages/appstore.svg" alt="Download FridgeBuddy on the App Store">
+                        <p>{{ t.cta_text }}</p>
+                        <a class="modern-download-btn" href="{{ t.app_store_url }}" target="_blank" rel="noopener noreferrer">
+                            <img src="/assets/app-pages/appstore.svg" alt="{{ t.download_alt }}">
                         </a>
                     </div>
                     {% endunless %}

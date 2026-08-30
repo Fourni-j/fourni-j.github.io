@@ -1,17 +1,18 @@
 <footer class="app-footer">
 	<div class="app-footer-content">
 		<div class="app-footer-left">
-			<a href="/fridgebuddy/privacypolicy" class="app-footer-link">Privacy Policy</a>
-			<a href="/fridgebuddy/terms" class="app-footer-link">Terms</a>
+			<a href="{{ t.footer_privacy_url }}" class="app-footer-link">{{ t.footer_privacy }}</a>
+			<a href="{{ t.footer_terms_url }}" class="app-footer-link">{{ t.footer_terms }}</a>
 		</div>
 
 		<div class="app-footer-center">
-			<p class="app-footer-text">Made by <a href="https://cafournier.com" class="app-footer-author-link" target="_blank" rel="noopener">Charles-Adrien Fournier</a></p>
+			<p class="app-footer-text">{{ t.footer_made_by }} <a href="https://cafournier.com" class="app-footer-author-link" target="_blank" rel="noopener">Charles-Adrien Fournier</a></p>
 		</div>
 
 		<div class="app-footer-right">
-			<a href="/fridgebuddy/alternatives/" class="app-footer-link">Compare apps</a>
-			<a href="mailto:feedback@cafournier.com" class="app-footer-link">Support</a>
+			{% if page.hreflang %}{% if fb_lang == 'fr' %}<a href="{{ page.hreflang.en }}" class="app-footer-link" hreflang="en" lang="en">English version</a>{% else %}<a href="{{ page.hreflang.fr }}" class="app-footer-link" hreflang="fr" lang="fr">Version française</a>{% endif %}{% endif %}
+			<a href="{{ t.footer_compare_url }}" class="app-footer-link">{{ t.footer_compare }}</a>
+			<a href="mailto:feedback@cafournier.com" class="app-footer-link">{{ t.footer_support }}</a>
 		</div>
 	</div>
 </footer>

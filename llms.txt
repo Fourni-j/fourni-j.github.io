@@ -12,6 +12,15 @@
 - [Food-waste cost calculator](https://cafournier.com/fridgebuddy/food-waste-calculator/): Free client-side calculator estimating the annual cost of avoidable household food waste.
 - [FridgeBuddy privacy policy](https://cafournier.com/fridgebuddy/privacypolicy): No accounts, no ads, no tracking; inventory stored in the user's private iCloud.
 
+## FridgeBuddy en français
+
+- [FridgeBuddy (FR)](https://cafournier.com/fridgebuddy/fr/): Présentation en français de l'application de suivi des dates de péremption et d'inventaire de cuisine pour iPhone et iPad.
+- [Suivi des dates de péremption](https://cafournier.com/fridgebuddy/fr/suivi-date-peremption/): Guide en français du scan et des rappels de péremption.
+- [Inventaire de cuisine](https://cafournier.com/fridgebuddy/fr/inventaire-cuisine/): Guide en français de l'inventaire placards, frigo et congélateur.
+- [Inventaire partagé](https://cafournier.com/fridgebuddy/fr/inventaire-partage/): Guide en français du partage d'inventaire en famille ou en colocation.
+- [Comparatif d'applications](https://cafournier.com/fridgebuddy/fr/comparatif/): Comparatif en français de cinq apps d'inventaire et de péremption.
+- [Calculateur de gaspillage alimentaire](https://cafournier.com/fridgebuddy/fr/calculateur-gaspillage-alimentaire/): Calculateur gratuit du coût annuel du gaspillage évitable.
+
 ## Apps
 
 - [All apps](https://cafournier.com/apps/): Current iOS apps on the App Store, including Steed (bike maintenance log), LaterMark (bookmark manager), Clashly (bracket maker), Tierly (tier list maker), and NoExif (photo compressor).
