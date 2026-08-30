@@ -96,4 +96,5 @@ faq:
 hreflang:
   en: /fridgebuddy/
   fr: /fridgebuddy/fr/
+  de: /fridgebuddy/de/
 ---

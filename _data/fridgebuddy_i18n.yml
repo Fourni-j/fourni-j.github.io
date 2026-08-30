@@ -27,6 +27,35 @@ en:
   footer_compare_url: /fridgebuddy/alternatives/
   footer_support: "Support"
   footer_made_by: "Made by"
+de:
+  home_url: /fridgebuddy/de/
+  app_store_url: "https://apps.apple.com/de/app/id1500190823"
+  nav:
+    - text: Funktionen
+      url: /fridgebuddy/de/#features
+    - text: Vorrats-Guide
+      url: /fridgebuddy/de/vorratsverwaltung/
+    - text: Vergleich
+      url: /fridgebuddy/de/vergleich/
+    - text: Rechner
+      url: /fridgebuddy/de/lebensmittelverschwendung-rechner/
+  download_alt: "FridgeBuddy im App Store laden"
+  reviews_label: Bewertungen
+  rating_aria: "FridgeBuddy hat eine Bewertung von %RATING% von 5 aus %COUNT% App-Store-Bewertungen"
+  byline_prefix: "Von"
+  byline_role: "iOS-Entwickler und Entwickler von FridgeBuddy"
+  byline_updated: "Aktualisiert am"
+  faq_title: "Häufige Fragen"
+  related_title: "Weitere FridgeBuddy-Guides"
+  cta_text: "Verbrauchen Sie Ihre Lebensmittel, bevor sie zu Abfall werden."
+  footer_privacy: "Datenschutzerklärung"
+  footer_privacy_url: /fridgebuddy/privacypolicy
+  footer_terms: "Nutzungsbedingungen"
+  footer_terms_url: /fridgebuddy/terms
+  footer_compare: "App-Vergleich"
+  footer_compare_url: /fridgebuddy/de/vergleich/
+  footer_support: "Support"
+  footer_made_by: "Entwickelt von"
 fr:
   home_url: /fridgebuddy/fr/
   app_store_url: "https://apps.apple.com/fr/app/id1500190823"

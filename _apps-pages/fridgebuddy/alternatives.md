@@ -33,6 +33,7 @@ competitor_itemlist: true
 hreflang:
   en: /fridgebuddy/alternatives/
   fr: /fridgebuddy/fr/comparatif/
+  de: /fridgebuddy/de/vergleich/
 ---
 
 ## The short answer

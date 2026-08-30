@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="{{ page.lang | default: 'en-US' }}">
 {% include fridgebuddy-head.html %}
-{% assign fb_lang = 'en' %}{% if page.lang contains 'fr' %}{% assign fb_lang = 'fr' %}{% endif %}
+{% assign fb_lang = 'en' %}{% if page.lang contains 'fr' %}{% assign fb_lang = 'fr' %}{% elsif page.lang contains 'de' %}{% assign fb_lang = 'de' %}{% endif %}
 {% assign t = site.data.fridgebuddy_i18n[fb_lang] %}
 
 <body class="modern-layout modern-subpage">

@@ -9,6 +9,7 @@ canonical_path: /fridgebuddy/fr/suivi-date-peremption/
 hreflang:
   en: /fridgebuddy/food-expiration-tracker/
   fr: /fridgebuddy/fr/suivi-date-peremption/
+  de: /fridgebuddy/de/mhd-tracker/
 eyebrow: "Suivi des dates de péremption sur iPhone et iPad"
 intro: "Un traqueur de péremption n'est utile que si ajouter un aliment est rapide et si les rappels arrivent assez tôt pour agir. FridgeBuddy combine scan de code-barres et de date avec un inventaire clair, trié par urgence."
 schema_type: web_page

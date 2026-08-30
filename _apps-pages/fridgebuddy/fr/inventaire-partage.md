@@ -9,6 +9,7 @@ canonical_path: /fridgebuddy/fr/inventaire-partage/
 hreflang:
   en: /fridgebuddy/shared-pantry-app/
   fr: /fridgebuddy/fr/inventaire-partage/
+  de: /fridgebuddy/de/geteilter-vorrat/
 eyebrow: "Inventaire alimentaire du foyer"
 intro: "Quand plusieurs personnes achètent et consomment les mêmes aliments, une liste individuelle devient vite fausse. FridgeBuddy donne au foyer une vue commune du stockage et des courses."
 schema_type: web_page

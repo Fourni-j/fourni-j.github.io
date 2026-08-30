@@ -1,4 +1,4 @@
-{% assign fb_home = '/fridgebuddy/' %}{% if page.lang contains 'fr' %}{% assign fb_home = '/fridgebuddy/fr/' %}{% endif %}{
+{% assign fb_home = '/fridgebuddy/' %}{% if page.lang contains 'fr' %}{% assign fb_home = '/fridgebuddy/fr/' %}{% elsif page.lang contains 'de' %}{% assign fb_home = '/fridgebuddy/de/' %}{% endif %}{
   "@type": "WebPage",
   "@id": "{{ include.canonical_url }}#webpage",
   "url": "{{ include.canonical_url }}",

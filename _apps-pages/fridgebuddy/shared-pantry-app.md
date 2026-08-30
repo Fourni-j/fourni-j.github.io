@@ -37,6 +37,7 @@ faq:
 hreflang:
   en: /fridgebuddy/shared-pantry-app/
   fr: /fridgebuddy/fr/inventaire-partage/
+  de: /fridgebuddy/de/geteilter-vorrat/
 ---
 
 ## The problem is not the list—it is keeping everyone on the same list

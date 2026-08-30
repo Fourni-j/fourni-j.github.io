@@ -40,10 +40,14 @@
         annualSpendOutput.textContent = formatCurrency(annualSpend, currency);
         annualWasteOutput.textContent = formatCurrency(annualWaste, currency);
         annualSavingsOutput.textContent = formatCurrency(annualSavings, currency);
-        const isFrench = (document.documentElement.lang || "").toLowerCase().startsWith("fr");
-        summaryOutput.textContent = isFrench
-            ? `Réduire votre gaspillage estimé de ${Math.round(reductionPercentage)} % pourrait garder environ ${formatCurrency(monthlySavings, currency)} par mois dans votre budget.`
-            : `Reducing your estimated waste by ${Math.round(reductionPercentage)}% could keep about ${formatCurrency(monthlySavings, currency)} per month in your budget.`;
+        const pageLang = (document.documentElement.lang || "").toLowerCase();
+        if (pageLang.startsWith("fr")) {
+            summaryOutput.textContent = `Réduire votre gaspillage estimé de ${Math.round(reductionPercentage)} % pourrait garder environ ${formatCurrency(monthlySavings, currency)} par mois dans votre budget.`;
+        } else if (pageLang.startsWith("de")) {
+            summaryOutput.textContent = `Wenn Sie Ihre geschätzte Verschwendung um ${Math.round(reductionPercentage)} % reduzieren, könnten etwa ${formatCurrency(monthlySavings, currency)} pro Monat in Ihrem Budget bleiben.`;
+        } else {
+            summaryOutput.textContent = `Reducing your estimated waste by ${Math.round(reductionPercentage)}% could keep about ${formatCurrency(monthlySavings, currency)} per month in your budget.`;
+        }
     }
 
     [currencyInput, weeklySpendInput, wastePercentageInput, reductionPercentageInput].forEach((input) => {

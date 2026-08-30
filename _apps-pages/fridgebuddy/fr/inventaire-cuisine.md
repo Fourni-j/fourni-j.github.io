@@ -9,6 +9,7 @@ canonical_path: /fridgebuddy/fr/inventaire-cuisine/
 hreflang:
   en: /fridgebuddy/pantry-inventory-app/
   fr: /fridgebuddy/fr/inventaire-cuisine/
+  de: /fridgebuddy/de/vorratsverwaltung/
 eyebrow: "Inventaire placards, frigo et congélateur"
 intro: "FridgeBuddy donne à chaque lieu de stockage un seul et même inventaire consultable : voyez ce que vous possédez déjà avant d'acheter, et ce qu'il faut consommer en premier."
 schema_type: web_page

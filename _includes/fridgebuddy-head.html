@@ -27,9 +27,10 @@
     <meta property="og:image:width" content="1200">
     <meta property="og:image:height" content="630">
     <meta property="og:image:alt" content="FridgeBuddy food inventory and expiration tracker for iPhone and iPad">
-    {% if page.lang contains 'fr' %}<meta property="og:locale" content="fr_FR">
-    <meta property="og:locale:alternate" content="en_US">{% else %}<meta property="og:locale" content="en_US">{% if page.hreflang.fr %}
-    <meta property="og:locale:alternate" content="fr_FR">{% endif %}{% endif %}
+    {% assign og_locale = 'en_US' %}{% if page.lang contains 'fr' %}{% assign og_locale = 'fr_FR' %}{% elsif page.lang contains 'de' %}{% assign og_locale = 'de_DE' %}{% endif %}
+    <meta property="og:locale" content="{{ og_locale }}">
+    {% if page.hreflang %}{% for pair in page.hreflang %}{% assign alt_locale = 'en_US' %}{% if pair[0] == 'fr' %}{% assign alt_locale = 'fr_FR' %}{% elsif pair[0] == 'de' %}{% assign alt_locale = 'de_DE' %}{% endif %}{% unless alt_locale == og_locale %}<meta property="og:locale:alternate" content="{{ alt_locale }}">
+    {% endunless %}{% endfor %}{% endif %}
 
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="{{ meta_title | escape }}">

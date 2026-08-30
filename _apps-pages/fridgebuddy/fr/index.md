@@ -8,6 +8,7 @@ canonical_path: /fridgebuddy/fr/
 hreflang:
   en: /fridgebuddy/
   fr: /fridgebuddy/fr/
+  de: /fridgebuddy/de/
 social_image: /assets/app-pages/fridgebuddy-og.png
 schema_type: app
 ios_app_id: 1500190823

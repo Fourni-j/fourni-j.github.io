@@ -21,6 +21,15 @@
 - [Comparatif d'applications](https://cafournier.com/fridgebuddy/fr/comparatif/): Comparatif en français de cinq apps d'inventaire et de péremption.
 - [Calculateur de gaspillage alimentaire](https://cafournier.com/fridgebuddy/fr/calculateur-gaspillage-alimentaire/): Calculateur gratuit du coût annuel du gaspillage évitable.
 
+## FridgeBuddy auf Deutsch
+
+- [FridgeBuddy (DE)](https://cafournier.com/fridgebuddy/de/): Deutsche Übersicht der MHD- und Vorratsverwaltungs-App für iPhone und iPad.
+- [MHD-Tracker](https://cafournier.com/fridgebuddy/de/mhd-tracker/): Deutscher Guide zum Scannen von Mindesthaltbarkeitsdaten und zu Erinnerungen.
+- [Vorratsverwaltung](https://cafournier.com/fridgebuddy/de/vorratsverwaltung/): Deutscher Guide zur Verwaltung von Vorrat, Kühlschrank und Gefrierschrank.
+- [Geteilter Vorrat](https://cafournier.com/fridgebuddy/de/geteilter-vorrat/): Deutscher Guide zum geteilten Haushaltsvorrat für Familie und WG.
+- [App-Vergleich](https://cafournier.com/fridgebuddy/de/vergleich/): Deutscher Vergleich von fünf Vorrats- und MHD-Apps.
+- [Lebensmittelverschwendung-Rechner](https://cafournier.com/fridgebuddy/de/lebensmittelverschwendung-rechner/): Kostenloser Rechner für die jährlichen Kosten vermeidbarer Verschwendung.
+
 ## Apps
 
 - [All apps](https://cafournier.com/apps/): Current iOS apps on the App Store, including Steed (bike maintenance log), LaterMark (bookmark manager), Clashly (bracket maker), Tierly (tier list maker), and NoExif (photo compressor).

@@ -9,6 +9,7 @@ canonical_path: /fridgebuddy/fr/calculateur-gaspillage-alimentaire/
 hreflang:
   en: /fridgebuddy/food-waste-calculator/
   fr: /fridgebuddy/fr/calculateur-gaspillage-alimentaire/
+  de: /fridgebuddy/de/lebensmittelverschwendung-rechner/
 eyebrow: "Calculateur gratuit, privé, 100 % dans votre navigateur"
 intro: "Saisissez vos dépenses de courses et votre propre estimation de ce qui part à la poubelle. Le calculateur affiche le coût annuel possible et ce qu'une réduction réaliste garderait dans votre budget."
 schema_type: calculator

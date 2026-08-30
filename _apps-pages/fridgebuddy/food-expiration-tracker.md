@@ -39,6 +39,7 @@ faq:
 hreflang:
   en: /fridgebuddy/food-expiration-tracker/
   fr: /fridgebuddy/fr/suivi-date-peremption/
+  de: /fridgebuddy/de/mhd-tracker/
 ---
 
 ## The useful reminder starts when you add the item

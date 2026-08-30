@@ -39,6 +39,7 @@ faq:
 hreflang:
   en: /fridgebuddy/pantry-inventory-app/
   fr: /fridgebuddy/fr/inventaire-cuisine/
+  de: /fridgebuddy/de/vorratsverwaltung/
 ---
 
 ## Inventory is useful when it answers a real question

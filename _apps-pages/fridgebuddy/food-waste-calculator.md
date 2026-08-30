@@ -34,6 +34,7 @@ date_modified: 2026-08-30
 hreflang:
   en: /fridgebuddy/food-waste-calculator/
   fr: /fridgebuddy/fr/calculateur-gaspillage-alimentaire/
+  de: /fridgebuddy/de/lebensmittelverschwendung-rechner/
 ---
 
 <div class="fb-calculator" id="food-waste-calculator">

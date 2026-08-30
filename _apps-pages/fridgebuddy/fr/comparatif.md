@@ -9,6 +9,7 @@ canonical_path: /fridgebuddy/fr/comparatif/
 hreflang:
   en: /fridgebuddy/alternatives/
   fr: /fridgebuddy/fr/comparatif/
+  de: /fridgebuddy/de/vergleich/
 eyebrow: "Comparatif d'apps · Mis à jour en août 2026"
 intro: "La meilleure app d'inventaire dépend de la routine que vous saurez tenir : un inventaire Apple partagé, une planification de repas multiplateforme, une saisie rapide par ticket, ou une liste de péremption privée et hors ligne."
 schema_type: web_page
