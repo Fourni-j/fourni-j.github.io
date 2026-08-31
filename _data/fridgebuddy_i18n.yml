@@ -49,9 +49,9 @@ de:
   related_title: "Weitere FridgeBuddy-Guides"
   cta_text: "Verbrauchen Sie Ihre Lebensmittel, bevor sie zu Abfall werden."
   footer_privacy: "Datenschutzerklärung"
-  footer_privacy_url: /fridgebuddy/privacypolicy
+  footer_privacy_url: /fridgebuddy/de/datenschutz/
   footer_terms: "Nutzungsbedingungen"
-  footer_terms_url: /fridgebuddy/terms
+  footer_terms_url: /fridgebuddy/de/nutzungsbedingungen/
   footer_compare: "App-Vergleich"
   footer_compare_url: /fridgebuddy/de/vergleich/
   footer_support: "Support"
@@ -78,9 +78,9 @@ fr:
   related_title: "Guides FridgeBuddy associés"
   cta_text: "Utilisez vos aliments avant qu'ils ne deviennent du gaspillage."
   footer_privacy: "Politique de confidentialité"
-  footer_privacy_url: /fridgebuddy/privacypolicy
+  footer_privacy_url: /fridgebuddy/fr/confidentialite/
   footer_terms: "Conditions d'utilisation"
-  footer_terms_url: /fridgebuddy/terms
+  footer_terms_url: /fridgebuddy/fr/conditions/
   footer_compare: "Comparatif d'apps"
   footer_compare_url: /fridgebuddy/fr/comparatif/
   footer_support: "Support"

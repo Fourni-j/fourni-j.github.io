@@ -1,5 +1,6 @@
 ---
 layout: fridgebuddy-page
+lang: en-US
 title: Privacy Policy
 page_title: "FridgeBuddy Privacy Policy"
 meta_description: "How FridgeBuddy handles your data: inventory stored in your private iCloud, no account required, no ads, no tracking, and no sale of personal data."
@@ -10,6 +11,10 @@ app_name: FridgeBuddy
 app_icon: /assets/app-pages/fridgebuddy-icon.png
 hide_hero_cta: true
 date_modified: 2026-08-30
+hreflang:
+  en: /fridgebuddy/privacypolicy
+  fr: /fridgebuddy/fr/confidentialite/
+  de: /fridgebuddy/de/datenschutz/
 breadcrumbs:
   - name: FridgeBuddy
     url: /fridgebuddy/

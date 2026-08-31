@@ -102,4 +102,4 @@ Si votre foyer a besoin d'Android ou d'un accès navigateur, comparez les option
 
 FridgeBuddy s'appuie sur l'infrastructure de partage iCloud d'Apple pour les données du foyer. Chacun rejoint depuis son appareil Apple ; il n'y a aucun tableau de bord web FridgeBuddy à entretenir.
 
-Pour la politique complète et à jour, consultez la [politique de confidentialité de FridgeBuddy](/fridgebuddy/privacypolicy).
+Pour la politique complète et à jour, consultez la [politique de confidentialité de FridgeBuddy](/fridgebuddy/fr/confidentialite/).

@@ -102,4 +102,4 @@ Braucht Ihr Haushalt Android- oder Browser-Zugriff, vergleichen Sie die plattfor
 
 FridgeBuddy nutzt Apples iCloud-Freigabe für die Haushaltsdaten. Jede Person tritt von ihrem Apple-Gerät aus bei; es gibt kein separates FridgeBuddy-Webkonto zu pflegen.
 
-Die vollständige, aktuelle Richtlinie finden Sie in der [FridgeBuddy-Datenschutzerklärung](/fridgebuddy/privacypolicy).
+Die vollständige, aktuelle Richtlinie finden Sie in der [FridgeBuddy-Datenschutzerklärung](/fridgebuddy/de/datenschutz/).
