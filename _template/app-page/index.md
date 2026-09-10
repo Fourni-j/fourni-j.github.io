@@ -5,8 +5,11 @@ terms: false
 changelog: false
 ios_app_id: 
 include_in_header: false
-preview_file: /assets/app-pages/screenshots/
+preview_file: ""
 app_name: 
+page_title: ""
+app_description: ""
+app_icon: ""
 show_rating: true
 show_support_link: true
 
@@ -14,7 +17,7 @@ show_support_link: true
 show_hero: true
 hero_title: ""
 hero_subtitle: ""
-show_preview: true
+show_preview: false
 
 # Features section
 show_features: true

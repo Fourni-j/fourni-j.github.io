@@ -5,8 +5,11 @@ terms: true
 changelog: false
 ios_app_id: 6757079584
 include_in_header: false
-preview_file: /assets/app-pages/screenshots/
+preview_file: /assets/app-pages/screenshots/latermark-discover.png
 app_name: LaterMark
+app_icon: /assets/app-pages/latermark-icon.jpg
+page_title: "LaterMark — Bookmark Manager for iPhone and iPad"
+app_description: "Save links from any app, organize bookmarks with tags and collections, and find your next read with LaterMark for iPhone and iPad."
 show_rating: true
 show_support_link: true
 nav_links:

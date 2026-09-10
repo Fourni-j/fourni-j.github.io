@@ -12,8 +12,8 @@ layout_style: modern
             <nav class="modern-nav">
                 <div class="modern-nav-left">
                     <div class="modern-app-branding">
-                        <img class="modern-header-app-icon" src="{{ page.app_icon }}" alt="{{ page.app_name }}">
-                        <span class="modern-header-app-name">{{ page.app_name }}</span>
+                        <img class="modern-header-app-icon" src="{{ app_icon | default: site.favicon | relative_url }}" alt="{{ app_name | escape }}">
+                        <span class="modern-header-app-name">{{ app_name }}</span>
                     </div>
                 </div>
                 <div class="modern-nav-right">
@@ -24,7 +24,7 @@ layout_style: modern
                         {% endfor %}
                         {% endif %}
                         {% if page.show_blog_link %}
-                        <a href="/blog" class="modern-nav-link">Blog</a>
+                        <a href="{{ '/' | relative_url }}" class="modern-nav-link">Blog</a>
                         {% endif %}
                     </div>
                     <div class="modern-nav-cta">
@@ -46,13 +46,13 @@ layout_style: modern
                         {% if page.hero_title %}
                         <!-- App icon for hero title layout -->
                         <div class="modern-app-badge-hero">
-                            <img class="modern-app-icon" src="{{ page.app_icon }}" alt="{{ page.app_name }}">
+                            <img class="modern-app-icon" src="{{ app_icon | default: site.favicon | relative_url }}" alt="{{ app_name | escape }}">
                         </div>
                         <h1 class="modern-hero-title">{{ page.hero_title }}</h1>
                         {% else %}
                         <div class="modern-app-header">
                             <div class="modern-app-badge">
-                                <img class="modern-app-icon" src="{{ page.app_icon }}" alt="{{ page.app_name }}">
+                                <img class="modern-app-icon" src="{{ app_icon | default: site.favicon | relative_url }}" alt="{{ app_name | escape }}">
                             </div>
                             <div class="modern-app-meta">
                                 <h1 class="modern-app-title">{{ page.app_name }}</h1>
@@ -200,8 +200,6 @@ layout_style: modern
         </section>
         {% endif %}
         
-        {% capture preview_file %}{{ page.preview_file }}{% endcapture %}
-        {% include modern-screencontent.html filepath=preview_file %}
     </main>
 
     <footer class="modern-footer">
@@ -210,6 +208,10 @@ layout_style: modern
         </div>
     </footer>
 
+    {% include jquery.html %}
+    {% if page.show_preview != false and page.preview_file %}
+    {% include modern-screencontent.html filepath=page.preview_file %}
+    {% endif %}
     {% capture app_id %}{{page.ios_app_id}}{% endcapture %}
     {% include app-appstoreimages.html appid=app_id %}
 

@@ -1,9 +1,7 @@
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
-
 {% if include.filepath contains 'assets/app-pages/screenshots/' %}
     <script>
         $(function() {
-            $(".modern-screen-image").attr('src', '{{ site.github.baseurl }}{{ include.filepath }}');
+            $(".modern-screen-image").attr('src', {{ include.filepath | relative_url | jsonify }});
             $(".modern-screen-image").removeClass("hidden");
             console.log("Modern layout screenshot: {{ include.filepath }}");
         });

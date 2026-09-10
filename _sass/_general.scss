@@ -306,24 +306,6 @@ a.button:focus {
     width: 48px;
 }
 
-.gh-subscribe-form .subscribe-email {
-    border-radius: 30px;
-    height: 2.75em;
-    padding-left: 20px;
-    padding-right: 20px;
-    width: 100%;
-}
-
-.gh-subscribe-form .button {
-    height: 2.75em;
-    margin: 1.25em 0 0;
-}
-
-.newsletter-box .subscribe-email,
-.newsletter-box .button {
-    font-size: 1rem;
-}
-
 /* Placeholder text color */
 ::-webkit-input-placeholder {
     color: variables.$gray;

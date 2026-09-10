@@ -1,24 +1,25 @@
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
-
 <script>
 
 $(function() {
-    var apiURL = "https://itunes.apple.com/lookup?id={{ include.appid }}&callback=?";
-
-    $.getJSON(apiURL, function(json) {
+    $.ajax({
+        url: "https://itunes.apple.com/lookup",
+        data: { id: {{ include.appid | strip | jsonify }} },
+        dataType: "jsonp",
+        timeout: 10000
+    }).done(function(json) {
 
         if (json.results && json.results.length) {
 
-            console.info("Image strings loaded from Apple API.");
             var appInfo = json.results[0];
 
-            // Set favicon
+            {% unless app_icon %}
             $('link[rel="shortcut icon"]').attr("href", appInfo.artworkUrl512);
+            {% endunless %}
 
             // Set page title using the iOS app ID if it is not set manually in _config.yml
             var $pageTitle = $(".pageTitle");
-            if ($.trim($($pageTitle).text()).length == 0) {
-                $($pageTitle).html(appInfo.trackName);
+            if ($pageTitle.text().trim().length == 0) {
+                $pageTitle.text(appInfo.trackName);
             }
 
             // Set large app icon using the iOS app ID if it is not set manually in _config.yml
@@ -33,36 +34,32 @@ $(function() {
                 $($appIconHeader).attr("src", appInfo.artworkUrl512);
             }
 
-            // Set modern header app icon using the iOS app ID if it is not set manually in _config.yml
-            var $modernAppIconHeader = $(".modern-header-app-icon");
-                $($modernAppIconHeader).attr("src", appInfo.artworkUrl512);
-
-            // Set all modern app icons using the iOS app ID (including hero layout)
-            $(".modern-app-icon").each(function() {
-                $(this).attr("src", appInfo.artworkUrl512);
-            });
+            {% unless app_icon %}
+            $(".modern-header-app-icon, .modern-app-icon").attr("src", appInfo.artworkUrl512);
+            {% endunless %}
 
             // Set app name using the iOS app ID if it is not set manually in _config.yml
             var $appName = $(".appName");
             var $headerName = $(".headerName");
-            if ($.trim($($appName).text()).length == 0) {
-                $($appName).html(appInfo.trackName);
-                $($headerName).html(appInfo.trackName);
+            if ($appName.text().trim().length == 0) {
+                $appName.text(appInfo.trackName);
+                $headerName.text(appInfo.trackName);
             }
 
-            // Set modern layout app names using the fetched title (always override)
-            $(".modern-header-app-name").html(appInfo.trackName);
-            $(".modern-app-title").html(appInfo.trackName);
+            // Keep authored app names; the lookup only fills missing values.
+            $(".modern-header-app-name, .modern-app-title").each(function() {
+                if (!$(this).text().trim()) $(this).text(appInfo.trackName);
+            });
 
             // Set price using the iOS app ID if it is not set manually in _config.yml
             var $appPrice = $(".appPrice");
-            if ($.trim($($appPrice).text()).length == 0) {
-                $($appPrice).html(appInfo.formattedPrice);
+            if ($appPrice.text().trim().length == 0) {
+                $appPrice.text(appInfo.formattedPrice);
             }
 
             // Set App Store link using the iOS app ID if it is not set manually in _config.yml
             var $appStoreLink = $(".appStoreLink");
-            if ($.trim($appStoreLink.attr('href')).length == 0) {
+            if (($appStoreLink.attr('href') || '').trim().length == 0) {
                 $($appStoreLink).attr("href", appInfo.trackViewUrl);
             }
 
@@ -93,10 +90,11 @@ $(function() {
                 $(".modern-app-rating-container").html(ratingHtml);
             }
 
-            console.info(appInfo);
-
         }
-    });  
+    }).fail(function() {
+        // Authored content and App Store links remain usable if the lookup fails.
+        console.warn("App Store details are temporarily unavailable.");
+    });
 });
 
 </script>

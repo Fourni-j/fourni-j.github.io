@@ -1,11 +1,9 @@
-# Site setings
+# Site settings
 name: 'Charles-Adrien Fournier'
-description: 'Charles-adrien Fournier - iOS developer based in Paris'
-meta_description: 'Jekyll template, minimal style, perfect for bloggers.'
+description: 'Charles-Adrien Fournier - iOS developer based in Paris'
 favicon: 'assets/images/favicon.ico'
 production_url: https://cafournier.com/
 url: https://cafournier.com
-convert_kit_id: 7460c819be
 cover_image: bc_1.jpg
 
 # Author
@@ -15,7 +13,7 @@ author:
   greetings: 'Hi there!'
   description: "My name is Charles-Adrien Fournier. I'm an iOS developer based in Paris, France."
 
-# Contact form setings
+# Contact form settings
 email: charladfr@me.com
 contact_page_description: "If you want to discuss, don't hesitate to reach me out."
 thankyou_page_description: "Your message has been successfully sent. We will contact you very soon!"
@@ -42,14 +40,6 @@ collections:
     output: true
     permalink: /:path
 
-# Required Plugins
-plugins_dir:
-  - jekyll-paginate
-  - jekyll-tagsgenerator
-  - jekyll-seo-tag
-  - jekyll-sitemap
-  - jekyll-feed
-
 # Pagination
 paginate: 5
 paginate_path: /page:num/
@@ -70,6 +60,8 @@ exclude:
 - vendor/ruby/
 - _template/
 - README.md
+- AGENTS.md
+- CLAUDE.md
 - Makefile
 - notes.md
 - task_plan.md

@@ -52,10 +52,6 @@
         {% endif %}
         {% endif %}
 
-        {% if site.convert_kit_id and page.class == 'tag-template' %}
-        {% include newsletter-box.html %}
-        {% endif %}
-
         <footer id="colophon" class="site-footer outer">
             <div class="site-footer-inside">
                 {% include social-links.html %}
@@ -75,7 +71,7 @@
     <div id="site-overlay" class="site-overlay"></div>
     {% include sidebar.html %}
     <!-- Javascript Assets -->
-    <script src="{{ site.baseurl }}/assets/js/jquery-3.3.1.min.js"></script>
+    {% include jquery.html %}
     <script src="{{ site.baseurl }}/assets/js/custom.js"></script>
     {% for js in page.extra_js %}
     <script src="{{ js | relative_url }}"></script>

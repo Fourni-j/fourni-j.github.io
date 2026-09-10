@@ -1,7 +1,7 @@
 <article class="{{post_class}} post-featured inner">
     <header class="post-header">
         <div class="post-meta">
-            <span class="featured-badge">Featured</span> &sol; {{/if}}
+            <span class="featured-badge">Featured</span> &sol;
             <time class="published" datetime="{{ post.date | date: '%Y-%m-%d' }}">{{ post.date | date: "%B %-d, %Y" }}</time>
         </div><!-- .post-meta -->
         <h2 class="post-title">
@@ -15,13 +15,13 @@
         {% if post.content contains '<!--more-->' %} {{ post.content | split:'<!--more-->' | first }}
         <p class="post-tags">
                 {% if post.tags.size > 0 %} {% for tag in post.tags %} {% if forloop.index == post.tags.size %}
-                <a href='{{ site.baseurl }}/tag/{{ tag | downcase | replace: ' ', '- ' }}/'>{{ tag | camelcase }}</a>
+                <a href='{{ site.baseurl }}/tag/{{ tag | downcase | replace: ' ', '-' }}/'>{{ tag | camelcase }}</a>
                 {% else %}
-                <a href='{{ site.baseurl }}/tag/{{ tag | downcase | replace: ' ', '- ' }}/'>{{ tag | camelcase }}</a>
+                <a href='{{ site.baseurl }}/tag/{{ tag | downcase | replace: ' ', '-' }}/'>{{ tag | camelcase }}</a>
                 {% endif %} {% endfor %} {% endif %}
             </p>
         <p class="read-more">
-            <a class="button" href="{{ site.baseurl }}{{ post.url }}" class="more-link">Continue Reading</a>
+            <a class="button more-link" href="{{ site.baseurl }}{{ post.url }}">Continue Reading</a>
         </p>
         {% else %}
             <p>{{ post.content }}</p>

@@ -42,9 +42,8 @@
     <link rel="icon" type="image/png" sizes="256x256" href="/assets/app-pages/fridgebuddy-icon.png">
     <link rel="apple-touch-icon" href="/assets/app-pages/fridgebuddy-icon.png">
 
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+    {% include app-fonts.html %}
     <link rel="stylesheet" href="{{ '/assets/css/modern-style.css' | relative_url }}">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="{{ '/assets/css/fridgebuddy-components.css' | relative_url }}">
 
     {% include fridgebuddy-schema.html canonical_url=canonical_url meta_title=meta_title meta_description=meta_description social_image_url=social_image_url %}

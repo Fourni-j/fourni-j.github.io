@@ -50,6 +50,7 @@ new-app:
 	else \
 		cp _template/app-page/redirect-index.md "$$app_dir/index.md"; \
 		sed -i '' "s/APP_NAME/$$app_name/g" "$$app_dir/index.md"; \
+		sed -i '' "s/APP_ID/$$app_id/g" "$$app_dir/index.md"; \
 	fi; \
 	if [ "$$create_privacy" = "y" ]; then \
 		cp _template/app-page/privacypolicy.md "$$app_dir/privacypolicy.md"; \

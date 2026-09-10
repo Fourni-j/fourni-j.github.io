@@ -13,8 +13,8 @@ layout_style: modern
             <nav class="modern-nav">
                 <div class="modern-nav-left">
                     <div class="modern-app-branding" onclick="navigateBack()">
-                        <img class="modern-header-app-icon" src="{{ page.app_icon }}" alt="{{ page.app_name }}">
-                        <span class="modern-header-app-name">{{ page.app_name }}</span>
+                        <img class="modern-header-app-icon" src="{{ app_icon | default: site.favicon | relative_url }}" alt="{{ app_name | escape }}">
+                        <span class="modern-header-app-name">{{ app_name }}</span>
                     </div>
                 </div>
                 <div class="modern-nav-right">
@@ -25,7 +25,7 @@ layout_style: modern
                         {% endfor %}
                         {% endif %}
                         {% if page.show_blog_link %}
-                        <a href="/blog" class="modern-nav-link">Blog</a>
+                        <a href="{{ '/' | relative_url }}" class="modern-nav-link">Blog</a>
                         {% endif %}
                     </div>
                     <div class="modern-nav-cta">
@@ -57,6 +57,7 @@ layout_style: modern
         </div>
     </footer>
 
+    {% include jquery.html %}
     {% capture app_id %}{{page.ios_app_id}}{% endcapture %}
     {% include app-appstoreimages.html appid=app_id %}
 
