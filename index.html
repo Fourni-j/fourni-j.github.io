@@ -1,28 +1,78 @@
 ---
 layout: default
-title: Home
+title: "iOS Apps"
+description: "Discover iOS apps by Charles-Adrien Fournier, an independent developer in Paris. FridgeBuddy, Steed, LaterMark, creative tools, and little everyday helpers."
 ---
 
-{% if page.url == "/" %}
-<!-- Featured-->
-<!-- <div class="featured-posts outer">
-    {% for post in site.posts %}
-        {% if post.featured == true %}
-            {% include featuredbox.html %}
-        {% endif %}
-    {% endfor %}
-</div> -->
-{% endif %}
-<!-- Posts Index -->
-<div class="outer">
-    {% if page.url == "/" %}
-    <div class="post-feed-title inner">Latest Articles</div>
-    {% endif %}
-    <div class="post-feed inner-wide">
-        {% for post in paginator.posts %}
-            {% include postbox.html %}
-        {% endfor %}
+{% if paginator.page > 1 %}
+<section class="home-archive home-container">
+    <div class="home-intro">
+        <p class="home-eyebrow">From the blog</p>
+        <h1>Older writing</h1>
+        <p>Notes on building apps, Swift, and side projects.</p>
+        <a class="home-text-link" href="{{ '/blog/' | relative_url }}">Browse the complete archive</a>
     </div>
+    {% include home-post-list.html posts=paginator.posts %}
+    <nav class="home-pagination" aria-label="Blog pagination">
+        {% if paginator.previous_page > 1 %}<a href="{{ paginator.previous_page_path | relative_url }}">Newer posts</a>{% else %}<a href="{{ '/blog/' | relative_url }}">All posts</a>{% endif %}
+        <span>Page {{ paginator.page }} of {{ paginator.total_pages }}</span>
+        {% if paginator.next_page %}<a href="{{ paginator.next_page_path | relative_url }}">Older posts</a>{% endif %}
+    </nav>
+</section>
+{% else %}
+<div class="home-container">
+    <section class="home-featured" id="apps" aria-labelledby="featured-title">
+        <div class="home-section-heading">
+            <h1 id="featured-title">Featured apps</h1>
+        </div>
+        <div class="home-featured-grid">
+        {% for app in site.data.home_apps.featured %}
+            <a class="home-feature-card home-feature-card--{{ app.slug }}" href="{{ app.url | relative_url }}">
+                <div class="home-feature-art">
+                    <p class="home-feature-category">{{ app.category | escape }}</p>
+                    <p class="home-feature-headline">{{ app.headline | escape }}</p>
+                    <div class="home-feature-preview">
+                        <img class="home-feature-image" src="{{ app.preview | relative_url }}" width="{{ app.preview_width }}" height="{{ app.preview_height }}" alt="{{ app.preview_alt | escape }}" {% if forloop.first %}fetchpriority="high"{% else %}loading="lazy"{% endif %} decoding="async">
+                    </div>
+                </div>
+                <div class="home-feature-details">
+                    <img class="home-app-icon" src="{{ app.icon | relative_url }}" width="64" height="64" alt="" decoding="async">
+                    <div class="home-app-copy"><h3>{{ app.name | escape }}</h3><p>{{ app.subtitle | escape }}</p></div>
+                    <span class="home-app-action">View app</span>
+                </div>
+            </a>
+        {% endfor %}
+        </div>
+    </section>
+    <section class="home-catalog" id="more-apps" aria-labelledby="catalog-title">
+        <div class="home-section-heading">
+            <h2 id="catalog-title">More to explore</h2>
+        </div>
+        <div class="home-app-grid">
+        {% assign dated_apps = site.data.home_apps.more | where_exp: 'app', 'app.updated_at != nil' | sort: 'updated_at' | reverse %}
+        {% assign undated_apps = site.data.home_apps.more | where_exp: 'app', 'app.updated_at == nil' %}
+        {% assign more_apps = dated_apps | concat: undated_apps %}
+        {% for app in more_apps %}
+            <a class="home-app-row" href="{{ app.url | escape }}" aria-label="{{ app.name | escape }} — {{ app.subtitle | escape }}. View on the App Store">
+                <img class="home-app-icon" src="{{ app.icon | relative_url }}" width="64" height="64" alt="" loading="lazy" decoding="async">
+                <div class="home-app-copy"><h3>{{ app.name | escape }}</h3><p>{{ app.subtitle | escape }}</p></div>
+                <span class="home-app-action">View<span class="home-sr-only"> on the App Store</span></span>
+            </a>
+        {% endfor %}
+        </div>
+    </section>
+    {% assign latest_post = site.posts.first %}
+    {% if latest_post %}
+    <section class="home-writing" id="writing" aria-labelledby="writing-title">
+        <div class="home-section-heading">
+            <h2 id="writing-title">From the blog</h2>
+            <a class="home-text-link" href="{{ '/blog/' | relative_url }}">All posts</a>
+        </div>
+        <a class="home-latest-post" href="{{ latest_post.url | relative_url }}">
+            <time datetime="{{ latest_post.date | date: '%Y-%m-%d' }}">{{ latest_post.date | date: '%B %-d, %Y' }}</time>
+            <h3>{{ latest_post.title | escape }}</h3>
+        </a>
+    </section>
+    {% endif %}
 </div>
-<!-- Pagination-->
-{% include pagination.html %}
+{% endif %}

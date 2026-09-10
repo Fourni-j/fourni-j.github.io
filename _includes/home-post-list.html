@@ -1,0 +1,15 @@
+<div class="home-post-list">
+    {% for post in include.posts %}
+    <article class="home-archive-post">
+        <time datetime="{{ post.date | date: '%Y-%m-%d' }}">{{ post.date | date: '%B %-d, %Y' }}</time>
+        <div>
+            <h2><a href="{{ post.url | relative_url }}">{{ post.title | escape }}</a></h2>
+            {% if post.tags.size > 0 %}
+            <p class="home-post-tags">
+                {% for tag in post.tags %}<a href="{{ '/tag/' | relative_url }}{{ tag | downcase | replace: ' ', '-' }}/">{{ tag | escape }}</a>{% endfor %}
+            </p>
+            {% endif %}
+        </div>
+    </article>
+    {% endfor %}
+</div>

@@ -2,21 +2,15 @@
 name: 'Charles-Adrien Fournier'
 description: 'Charles-Adrien Fournier - iOS developer based in Paris'
 favicon: 'assets/images/favicon.ico'
-production_url: https://cafournier.com/
 url: https://cafournier.com
-cover_image: bc_1.jpg
 
 # Author
 author:
   name: 'Charles-Adrien Fournier'
-  image: 'authorimage.jpg'
-  greetings: 'Hi there!'
-  description: "My name is Charles-Adrien Fournier. I'm an iOS developer based in Paris, France."
+  url: https://cafournier.com/
 
-# Contact form settings
+# Contact
 email: charladfr@me.com
-contact_page_description: "If you want to discuss, don't hesitate to reach me out."
-thankyou_page_description: "Your message has been successfully sent. We will contact you very soon!"
 
 # Social links
 github: 'fourni-j'
@@ -24,13 +18,6 @@ medium: '@charlesfournier'
 instagram: 'charlesadrienf'
 linkedin: 'charlesadrienfournier'
 producthunt: '@charles_fournier1'
-
-# Navigation
-navigation:
-  - url: '/apps/'
-    text: 'Apps'
-  - url: '/rides/'
-    text: 'Rides'
 
 collections:
   posts:
@@ -67,6 +54,7 @@ exclude:
 - task_plan.md
 - fridgebuddy-seo-deliverable.md
 - tests/
+- scripts/
 
 # Other
 markdown: kramdown

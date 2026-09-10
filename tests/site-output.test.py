@@ -10,7 +10,7 @@ import unittest
 import xml.etree.ElementTree as ET
 from html.parser import HTMLParser
 from pathlib import Path
-from urllib.parse import unquote, urlparse
+from urllib.parse import unquote, urldefrag, urlparse
 
 
 ROOT = Path(sys.argv.pop(1) if len(sys.argv) > 1 else "_site").resolve()
@@ -152,10 +152,11 @@ class SiteOutputTests(unittest.TestCase):
             with self.subTest(page=page.path.relative_to(ROOT)):
                 self.assertIn("noindex", page.robots)
                 self.assertEqual(len(page.canonicals), 1)
-                destination = page.canonicals[0]
-                self.assertTrue(destination.startswith("https://apps.apple.com/app/id") or destination == ORIGIN + "/apps/")
+                self.assertTrue(page.refresh.startswith("0; url="))
+                destination = page.refresh.removeprefix("0; url=")
+                self.assertTrue(destination.startswith("https://apps.apple.com/app/id") or destination == ORIGIN + "/#apps")
+                self.assertEqual(page.canonicals[0], urldefrag(destination).url)
                 self.assertIn(destination, page.references)
-                self.assertEqual(page.refresh, "0; url=" + destination)
                 source_url = ORIGIN + "/" + page.path.relative_to(ROOT).as_posix().removesuffix("index.html")
                 self.assertNotIn(source_url, self.locations)
 
@@ -168,6 +169,39 @@ class SiteOutputTests(unittest.TestCase):
                     self.assertEqual(src, "/assets/js/jquery-4.0.0.min.js")
                 if page.path.is_relative_to(ROOT / "fridgebuddy"):
                     self.assertEqual(scripts, [])
+
+    def test_personal_pages_share_the_current_theme(self):
+        pages_by_path = {page.path.relative_to(ROOT).as_posix(): page for page in self.pages}
+        for path in ("index.html", "blog/index.html", "rides/index.html", "page2/index.html", "page3/index.html"):
+            self.assertIn("home-layout", pages_by_path[path].classes, path)
+        for page in self.pages:
+            with self.subTest(page=page.path.relative_to(ROOT)):
+                self.assertNotIn("/assets/css/style.css", page.references)
+                self.assertNotIn("/assets/js/custom.js", page.scripts)
+                schemas = [json.loads(schema) for schema in page.schemas]
+                if any(schema.get("@type") == "BlogPosting" for schema in schemas if isinstance(schema, dict)):
+                    self.assertIn("home-layout", page.classes)
+                    self.assertIn("/assets/css/content.css", page.references)
+                if "home-layout" in page.classes:
+                    self.assertEqual(page.h1_count, 1)
+                    self.assertFalse(any("jquery" in script for script in page.scripts))
+                    html = page.path.read_text(encoding="utf-8")
+                    self.assertEqual(html.count('<main id="main"'), 1)
+                    self.assertEqual(html.count('<header class="home-header"'), 1)
+                    self.assertNotIn("site-overlay", html)
+                if page.path.is_relative_to(ROOT / "tag"):
+                    self.assertIn("home-layout", page.classes)
+                    self.assertNotIn("Tag Page", page.titles[0])
+        for path in ("assets/css/style.css", "assets/js/custom.js", "assets/fonts/fontawesome.woff"):
+            self.assertFalse((ROOT / path).exists(), path)
+
+    def test_blog_archives_describe_articles_instead_of_apps(self):
+        for number in (2, 3):
+            page = Page(ROOT / f"page{number}/index.html")
+            self.assertIn("Blog archive", page.titles[0])
+            self.assertIn(f"Page {number}", page.titles[0])
+            self.assertNotIn("Discover iOS apps", page.descriptions[0])
+            self.assertEqual(page.canonicals, [f"{ORIGIN}/page{number}/"])
 
 
 if __name__ == "__main__":

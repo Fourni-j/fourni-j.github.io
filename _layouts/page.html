@@ -1,19 +1,14 @@
 ---
 layout: default
 ---
-
-<div id="content" class="site-content fadeInDown delay_075s">
-    <main id="main" class="site-main outer">
-        <article class="post-full inner">
-            <header class="post-header">
-                <h1 class="post-title">{{ page.title }}</h1>
-            </header><!-- .post-header -->
-            {% if page.featured_image %}
-            <div class="post-thumbnail"><img src="{{ site.baseurl }}{{ page.featured_image }}" alt="{% if page.featured_image_alt %}{{ page.featured_image_alt }}{% else %}{{ page.title }}{% endif %}" /></div>
-            {% endif %}
-            <div class="post-content">
-                {{content}}
-            </div>
-        </article>
-    </main>
-</div>
+<article class="home-article home-container">
+    <header class="home-article-header">
+        <h1>{{ page.title | escape }}</h1>
+    </header>
+    {% if page.featured_image and page.featured_image != '' %}
+    <figure class="home-article-cover">
+        <img src="{{ page.featured_image | relative_url }}" alt="{{ page.featured_image_alt | default: page.title | escape }}" fetchpriority="high" decoding="async">
+    </figure>
+    {% endif %}
+    <div class="home-prose">{{ content }}</div>
+</article>

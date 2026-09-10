@@ -1,0 +1,94 @@
+# Featured app order is curated; More to explore is sorted by updated_at.
+# Release dates come from Apple's US lookup API; artwork is saved locally.
+---
+featured:
+- name: FridgeBuddy
+  slug: fridgebuddy
+  subtitle: Pantry & fridge organizer
+  category: A little less food waste
+  headline: Know what’s in your kitchen.
+  url: "/fridgebuddy/"
+  icon: "/assets/home/fridgebuddy.webp"
+  preview: "/assets/app-pages/screenshots/fridgebuddy-inventory.webp"
+  preview_width: 765
+  preview_height: 1518
+  preview_alt: FridgeBuddy inventory showing food organized by storage location and
+    expiration date
+- name: Steed
+  slug: steed
+  subtitle: Bike maintenance log
+  category: For the miles ahead
+  headline: Your bike, serviced on time.
+  url: "/Steed/index"
+  icon: "/assets/home/steed.webp"
+  preview: "/assets/home/steed-feature.webp"
+  preview_width: 320
+  preview_height: 320
+  preview_alt: Steed’s bicycle brake rotor app icon
+- name: LaterMark
+  slug: latermark
+  subtitle: Your bookmarks, organized
+  category: Keep the good finds
+  headline: Save now. Read later.
+  url: "/LaterMark/index"
+  icon: "/assets/home/latermark.webp"
+  preview: "/assets/home/latermark-preview.webp"
+  preview_width: 600
+  preview_height: 1191
+  preview_alt: LaterMark Discover screen with saved articles and reading collections
+more:
+- name: Clashly
+  subtitle: Brackets & tournaments
+  icon: "/assets/home/clashly.webp"
+  url: https://apps.apple.com/app/id6478199601
+  updated_at: '2026-09-07T19:42:20Z'
+- name: Tierly
+  subtitle: Make & share tier lists
+  icon: "/assets/home/tierly.webp"
+  url: https://apps.apple.com/app/id6742540298
+  updated_at: '2025-04-21T16:21:33Z'
+- name: NoExif
+  subtitle: Photo compressor
+  icon: "/assets/home/noexif.webp"
+  url: https://apps.apple.com/app/id6751533983
+  updated_at: '2026-08-20T21:53:48Z'
+- name: Fitness Stats
+  subtitle: Your activity recap
+  icon: "/assets/home/fitness-stats.webp"
+  url: https://apps.apple.com/app/id6445907634
+  updated_at: '2026-08-24T18:10:26Z'
+- name: Reverse Audio
+  subtitle: Record. Reverse. Sing.
+  icon: "/assets/home/reverse-audio.webp"
+  url: https://apps.apple.com/app/id6751974055
+  updated_at: '2025-09-14T16:05:48Z'
+- name: Starter Pack Creator
+  subtitle: Your own collectible figure
+  icon: "/assets/home/starter-pack.webp"
+  url: https://apps.apple.com/app/id6744979777
+  updated_at: '2025-05-12T00:19:05Z'
+- name: Sketch’Art
+  subtitle: Your doodle buddy
+  icon: "/assets/home/sketch-art.webp"
+  url: https://apps.apple.com/app/id6473704013
+  updated_at: '2024-03-04T09:41:04Z'
+- name: Printable Coloring Fun
+  subtitle: Coloring pages to print
+  icon: "/assets/home/coloring.webp"
+  url: https://apps.apple.com/app/id6657988450
+  updated_at: '2024-09-10T16:52:42Z'
+- name: Findr
+  subtitle: Find text with your camera
+  icon: "/assets/home/findr.webp"
+  url: https://apps.apple.com/app/id1524857800
+  updated_at: '2023-11-13T08:33:12Z'
+- name: Pick Finger
+  subtitle: A fun way to choose
+  icon: "/assets/home/pick-finger.webp"
+  url: https://apps.apple.com/app/id6459477182
+  updated_at: '2024-03-18T06:39:01Z'
+- name: ShowcaseMe
+  subtitle: A minimalist portfolio
+  icon: "/assets/home/showcaseme.webp"
+  url: https://apps.apple.com/app/id1355919671
+  updated_at: '2023-08-30T09:51:43Z'

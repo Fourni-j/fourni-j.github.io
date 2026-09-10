@@ -1,82 +1,49 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html lang="{{ page.lang | default: 'en' }}">
 <head>
     <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-
+    <meta name="color-scheme" content="light dark">
     {% include head-seo.html %}
-   
-    <!-- Site Favicon -->
-    <link rel="shortcut icon" href="{{ site.url }}/{{ site.baseurl }}{{ site.favicon }}" type="image/png" />
-
-    <!-- Font Embed Code -->
-    <link href="https://fonts.googleapis.com/css?family=Karla:400,400i,700,700i" rel="stylesheet" />
-
-    <!-- CSS Styles -->
-    <link href="{{ site.baseurl }}/assets/css/style.css" rel="stylesheet">
+    <link rel="icon" href="{{ site.favicon | relative_url }}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{{ '/assets/css/modern-style.css' | relative_url }}">
+    <link rel="stylesheet" href="{{ '/assets/css/home.css' | relative_url }}">
+    {% if page.layout == 'post' or page.layout == 'page' %}
+    <link rel="stylesheet" href="{{ '/assets/css/content.css' | relative_url }}">
+    {% endif %}
     {% for css in page.extra_css %}
-    <link href="{{ css | relative_url }}" rel="stylesheet">
+    <link rel="stylesheet" href="{{ css | relative_url }}">
     {% endfor %}
+    <script src="{{ '/assets/js/home-header.js' | relative_url }}" defer></script>
 </head>
-
-{% capture layout %}{% if page.layout %}layout-{{ page.layout }}{% endif %}{% endcapture %}
-
-<body class="{{ layout }}">
-    <div id="page" class="site">
-
-        {% if page.url == "/" %}
-
-        <div class="hero-wrap">
-            {% if site.cover_image %}
-            <div class="hero-wrap-bg" style="background-image: url({{ site.baseurl }}/assets/images/{{ site.cover_image }})"></div>
-            {% endif %}
-            {% include header.html %}
-            <section class="hero outer fadeInDown delay_075s">
-                <div class="inner">
-                    {% include author.html %}
-                </div><!-- .inner -->
-            </section><!-- .hero -->
-        </div><!-- .hero-wrap -->
-
-        {% else %}
-        {% include header.html %}
-        {% endif %}
-
-        {{ content }}
-
-        {% if paginator.total_posts > site.paginate %}
-        {% if page.class == 'tag-template' %}
-        {% include tag-pagination.html %}
-        {% endif %}
-        {% endif %}
-
-        <footer id="colophon" class="site-footer outer">
-            <div class="site-footer-inside">
-                {% include social-links.html %}
-                <p class="site-info">
-                    <a href="#">{{ site.name }}</a> &copy; {{ site.time | date: '%Y' }}.<br />
-                    Powered by <a target="_blank" href="https://jekyllrb.com/">Jekyll</a>.
-                </p>
-                <p class="back-to-top">
-                    <a id="top-button" class="top-button" href="#page">
-                        <span class="icon-arrow-up" aria-hidden="true"></span>
-                        <span class="screen-reader-text">Back to top</span>
-                    </a>
-                </p>
-            </div><!-- .site-footer-inside -->
-        </footer><!-- .site-footer -->
-    </div><!-- .site -->
-    <div id="site-overlay" class="site-overlay"></div>
-    {% include sidebar.html %}
-    <!-- Javascript Assets -->
-    {% include jquery.html %}
-    <script src="{{ site.baseurl }}/assets/js/custom.js"></script>
+<body class="modern-layout home-layout">
+    <a class="home-skip-link" href="#main">Skip to content</a>
+    <header class="home-header">
+        <div class="home-container home-header-inner">
+            <a class="home-brand" href="{{ '/' | relative_url }}" aria-label="Charles-Adrien Fournier home">
+                <img src="{{ '/assets/home/author.webp' | relative_url }}" width="48" height="48" alt="" decoding="async">
+                <span class="home-brand-copy">
+                    <span class="home-brand-name">Charles-Adrien Fournier</span>
+                    <span class="home-brand-role">Independent iOS developer · Paris</span>
+                </span>
+            </a>
+        </div>
+    </header>
+    <main id="main" tabindex="-1">{{ content }}</main>
+    <footer class="home-footer home-container">
+        <p>&copy; {{ site.time | date: '%Y' }} cafournier.com</p>
+        <nav aria-label="Footer navigation">
+            <a href="{{ '/rides/' | relative_url }}">Rides</a>
+            <a href="https://github.com/{{ site.github | escape }}">GitHub</a>
+            <a href="https://www.linkedin.com/in/{{ site.linkedin | escape }}/">LinkedIn</a>
+            <a href="https://www.instagram.com/{{ site.instagram | escape }}/">Instagram</a>
+        </nav>
+    </footer>
     {% for js in page.extra_js %}
-    <script src="{{ js | relative_url }}"></script>
+    <script src="{{ js | relative_url }}" defer></script>
     {% endfor %}
-
 </body>
-
 </html>

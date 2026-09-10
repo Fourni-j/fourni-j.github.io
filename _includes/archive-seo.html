@@ -1,0 +1,25 @@
+{%- assign archive_title = 'Blog archive' -%}
+{%- assign archive_description = 'Older articles by Charles-Adrien Fournier on Swift, iOS development, and independent app projects.' -%}
+{%- if page.tag -%}
+    {%- capture archive_title -%}{{ page.tag }} articles{%- endcapture -%}
+    {%- capture archive_description -%}Articles about {{ page.tag }} by Charles-Adrien Fournier, independent iOS developer in Paris.{%- endcapture -%}
+{%- endif -%}
+{%- if paginator.page > 1 -%}
+    {%- capture archive_title -%}{{ archive_title }} — Page {{ paginator.page }}{%- endcapture -%}
+    {%- capture archive_description -%}{{ archive_description }} Page {{ paginator.page }} of {{ paginator.total_pages }}.{%- endcapture -%}
+{%- endif -%}
+{%- assign archive_url = page.url | replace: 'index.html', '' | absolute_url -%}
+<title>{{ archive_title | escape }} | {{ site.name | escape }}</title>
+<meta name="description" content="{{ archive_description | escape }}">
+<link rel="canonical" href="{{ archive_url | escape }}">
+<meta property="og:type" content="website">
+<meta property="og:title" content="{{ archive_title | escape }}">
+<meta property="og:description" content="{{ archive_description | escape }}">
+<meta property="og:url" content="{{ archive_url | escape }}">
+<meta property="og:site_name" content="{{ site.name | escape }}">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="{{ archive_title | escape }}">
+<meta name="twitter:description" content="{{ archive_description | escape }}">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"CollectionPage","name":{{ archive_title | jsonify }},"description":{{ archive_description | jsonify }},"url":{{ archive_url | jsonify }},"inLanguage":"en"}
+</script>

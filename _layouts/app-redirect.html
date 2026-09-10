@@ -7,7 +7,7 @@
     <title>{{ page.app_name | escape }}</title>
     <meta name="robots" content="noindex,follow">
     <meta http-equiv="refresh" content="0; url={{ redirect_url | escape }}">
-    <link rel="canonical" href="{{ redirect_url | escape }}">
+    <link rel="canonical" href="{{ redirect_url | split: '#' | first | escape }}">
 </head>
 <body>
     <main>

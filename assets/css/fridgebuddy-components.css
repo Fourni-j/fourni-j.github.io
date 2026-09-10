@@ -1,7 +1,25 @@
 /* FridgeBuddy content components, styled to match modern-style.css */
 
+.modern-subpage .modern-article {
+    overflow-wrap: anywhere;
+    hyphens: auto;
+}
+
+.app-footer-content > div {
+    min-width: 0;
+    overflow-wrap: anywhere;
+}
+
+.app-footer-left,
+.app-footer-right {
+    flex-wrap: wrap;
+}
+
 /* --- Comparison table (alternatives page) --- */
 .modern-content table {
+    display: block;
+    max-width: 100%;
+    overflow-x: auto;
     width: 100%;
     border-collapse: collapse;
     margin: 24px 0;
@@ -10,6 +28,7 @@
 
 .modern-content th,
 .modern-content td {
+    min-width: 140px;
     padding: 12px 14px;
     text-align: left;
     border-bottom: 1px solid var(--modern-border);

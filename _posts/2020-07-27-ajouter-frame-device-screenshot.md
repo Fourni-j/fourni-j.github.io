@@ -9,15 +9,15 @@ featured_image: '/assets/images/posts/2020/framed-screenshots-cover.jpg'
 
 Comment ajouter la frame d’un device (iPhone / iPad / Android) pour améliorer ses screenshots.
 
-### Pré-requis
+## Pré-requis
 
 Nous allons utiliser [Fastlane](https://fastlane.tools) pour simplifier et automatiser l'ajout des devices sur nos screenshots. Fastlane est un outil qui permet d'automatiser le processus de mise en production d'une application mobile. Parmi toutes ses fonctionnalités, nous allons nous attarder sur *[frameit](https://docs.fastlane.tools/actions/frameit/)*.
 
 Je vous laisse lire [la documentation](https://docs.fastlane.tools/getting-started/ios/setup/) de fastlane pour l'installation de celui-ci. Je vous conseille tout de même de faire une instalation globale afin de pouvoir l'utiliser depuis n'importe quel dossier.
 
-### Comment utiliser Frameit
+## Comment utiliser Frameit
 
-##### Screenshot d'iPhone / iPad
+### Screenshot d'iPhone / iPad
 
 Une seule commande à retenir.
 
@@ -40,7 +40,7 @@ iPad Pro avec TouchID   -> 'iPad Pro (12.9-inch) (2nd generation)'
 iPad Pro avec FaceID    -> 'iPad Pro (12.9-inch) (3rd generation)'
 {% endhighlight %}
 
-##### Screenshot d'un Android
+### Screenshot d'un Android
 
 Il suffit de dire explicitement à fastlane que l'on veut une frame d'android. La logique est la même en fonction de la taille, le device sera différent. 
 
@@ -67,7 +67,7 @@ Il faut maintenant modifier la ligne <mark>Nexus 5x</mark> en <mark>Nexus 5X</ma
 
 Une fois que la modification est faite, vous pouvez relancer fastlane et ça devrait fonctionner. 
 
-### Conclusion
+## Conclusion
 
 Vous pouvez maintenant facilement ajouter la frame d'un device autour de vos screenshots. Cela permet de mettre en valeur vos screenshots rapidement.
 

@@ -183,13 +183,13 @@
                 <div class="modern-faq-list">
                     {% for item in page.faq %}
                     <div class="modern-faq-item">
-                        <button class="modern-faq-question" type="button">
+                        <button class="modern-faq-question" type="button" aria-expanded="false" aria-controls="faq-answer-{{ forloop.index }}">
                             <span class="modern-faq-question-text">{{ item.question }}</span>
                             <span class="modern-faq-icon">
                                 <i class="fas fa-chevron-down" aria-hidden="true"></i>
                             </span>
                         </button>
-                        <div class="modern-faq-answer">
+                        <div class="modern-faq-answer" id="faq-answer-{{ forloop.index }}">
                             <div class="modern-faq-answer-content">
                                 <p>{{ item.answer }}</p>
                             </div>
@@ -296,10 +296,12 @@
 
                 question.addEventListener('click', function() {
                     const isOpen = item.classList.contains('modern-faq-open');
+                    question.setAttribute('aria-expanded', String(!isOpen));
 
                     faqItems.forEach(function(otherItem) {
                         if (otherItem !== item) {
                             otherItem.classList.remove('modern-faq-open');
+                            otherItem.querySelector('.modern-faq-question').setAttribute('aria-expanded', 'false');
                             otherItem.querySelector('.modern-faq-answer').style.maxHeight = '0px';
                             otherItem.querySelector('.modern-faq-icon i').style.transform = 'rotate(0deg)';
                         }

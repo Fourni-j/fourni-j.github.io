@@ -8,7 +8,7 @@ featured_image:
 
 When you are developing an iOS application you will often have to fetch images from a CDN and this can take time depends on the size of the image, the server speed and the network connection of the device. During this fetch time your UI will already be rendered and you want to display a visual indicator of the image fetching progress. On iOS you have the default UIActivityIndicatorView. It works, but you can easily create a new one more personalised.
 
-### Requirements
+## Requirements
 
 * Xcode
 
@@ -18,7 +18,7 @@ When you are developing an iOS application you will often have to fetch images f
 
 * Swift Playground
 
-### Let’s dive into the code
+## Let’s dive into the code
 
 First, we need to create the shape of our loader. For this example, we want a circular loader.
 
@@ -104,7 +104,7 @@ If you play your playground you will see the loader animating during 2 seconds.
 
 ![Animated progress loader](https://cdn-images-1.medium.com/max/3964/1*MaybUrgi8W3LC0URU-KgrQ.gif)*Animated progress loader*
 
-### What’s next ?
+## What’s next ?
 
 If you want to use this loader inside your application you can put all this code inside a separate view with a progress property that will update the layer according to the value.
 

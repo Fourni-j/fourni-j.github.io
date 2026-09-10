@@ -1,19 +1,26 @@
 ---
 layout: default
-current: tag
-title: Tag Page
-class: 'tag-template'
 ---
-
-<div id="content" class="site-content fadeInDown delay_075s">
-    <main id="main" class="site-main outer">
-        <header class="page-header inner">
-            <h1 class="page-title">{{ page.tag }}</h1>
-            <p class="page-description">A collection of {{ paginator.total_posts }} {% if paginator.total_posts == 1 %}post{% else %}posts{% endif %}</p>
-            
-        </header>
-        <div class="post-feed inner-wide">
-            {% for post in paginator.posts %}{% include postbox.html %}{% endfor %}
-        </div>
-    </main><!-- .site-main -->
-</div><!-- .site-content -->
+{% assign tag_path = page.tag | downcase | replace: ' ', '-' | prepend: '/tag/' | append: '/' %}
+<section class="home-archive home-container">
+    <header class="home-intro">
+        <p class="home-eyebrow">From the blog</p>
+        <h1>{{ page.tag | escape }}</h1>
+        <p>{{ paginator.total_posts }} {% if paginator.total_posts == 1 %}article{% else %}articles{% endif %} on this topic.</p>
+        <a class="home-text-link" href="{{ '/blog/' | relative_url }}">All posts</a>
+    </header>
+    {% include home-post-list.html posts=paginator.posts %}
+    {% if paginator.total_pages > 1 %}
+    <nav class="home-pagination" aria-label="Topic pagination">
+        {% if paginator.previous_page %}
+            {% if paginator.previous_page == 1 %}
+            <a href="{{ tag_path | relative_url }}">Newer posts</a>
+            {% else %}
+            <a href="{{ tag_path | relative_url }}page{{ paginator.previous_page }}/">Newer posts</a>
+            {% endif %}
+        {% endif %}
+        <span>Page {{ paginator.page }} of {{ paginator.total_pages }}</span>
+        {% if paginator.next_page %}<a href="{{ tag_path | relative_url }}page{{ paginator.next_page }}/">Older posts</a>{% endif %}
+    </nav>
+    {% endif %}
+</section>

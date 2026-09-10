@@ -1,19 +1,13 @@
 ---
 ---
-@use "variables";
 
-.rides-page {
-  .rides-intro {
-    color: variables.$gray-dark;
-    margin-top: 0.5em;
-  }
-}
+.rides-page .home-intro { padding-top: 12px; }
 
 .rides-map {
   width: 100%;
   height: 520px;
-  border-radius: 8px;
-  background: variables.$gray-lighter;
+  border-radius: 20px;
+  background: var(--modern-bg-secondary);
   margin-bottom: 1.5em;
   z-index: 0;
 
@@ -28,45 +22,45 @@
   margin-bottom: 1.5em;
 
   button {
-    background: #fff;
-    border: 1px solid variables.$gray-light;
+    background: var(--modern-bg);
+    border: 1px solid var(--modern-border);
     border-radius: 999px;
-    color: variables.$gray-dark;
+    color: var(--modern-text-secondary);
     cursor: pointer;
     font: inherit;
     font-size: 0.85em;
     padding: 0.35em 1em;
     transition: all 0.15s ease;
 
-    &:hover { border-color: variables.$gray; }
+    &:hover { border-color: var(--modern-text-tertiary); }
     &.is-active {
-      background: variables.$gray-darkest;
-      border-color: variables.$gray-darkest;
-      color: #fff;
+      background: var(--modern-text-primary);
+      border-color: var(--modern-text-primary);
+      color: var(--modern-bg);
     }
   }
 }
 
 .rides-list {
-  border-top: 1px solid variables.$gray-lighter;
+  border-top: 1px solid var(--modern-border);
   list-style: none;
   margin: 0;
   padding: 0;
 }
 
 .ride-row {
-  border-bottom: 1px solid variables.$gray-lighter;
+  border-bottom: 1px solid var(--modern-border);
   cursor: pointer;
   margin: 0;
   padding: 1em 1em;
   transition: background-color 0.15s ease;
 
   &:hover,
-  &.is-hover { background: variables.$gray-lightest; }
+  &.is-hover { background: var(--modern-bg-secondary); }
 
   &.is-active {
-    background: variables.$gray-lightest;
-    box-shadow: inset 3px 0 0 var(--ride-color, variables.$color-accent);
+    background: var(--modern-bg-secondary);
+    box-shadow: inset 3px 0 0 var(--ride-color, var(--home-link));
   }
 
   &.is-hidden { display: none; }
@@ -124,7 +118,7 @@
 
 .ride-facts {
   align-items: center;
-  color: variables.$gray-dark;
+  color: var(--modern-text-secondary);
   display: flex;
   flex: none;
   flex-wrap: wrap;
@@ -140,7 +134,7 @@
 }
 
 .ride-rating-value {
-  color: variables.$gray;
+  color: var(--modern-text-tertiary);
   font-size: 0.9em;
   min-width: 2em;
 }
@@ -150,14 +144,14 @@
   min-width: 4.75em;
   text-align: right;
 
-  strong { color: variables.$gray-darkest; }
+  strong { color: var(--modern-text-primary); }
 }
 
 .ride-gpx {
   align-items: center;
-  border: 1px solid variables.$gray-light;
+  border: 1px solid var(--modern-border);
   border-radius: 999px;
-  color: variables.$gray-dark;
+  color: var(--modern-text-secondary);
   display: inline-flex;
   font-size: 0.75em;
   font-weight: 700;
@@ -169,9 +163,9 @@
   transition: all 0.15s ease;
 
   &:hover {
-    background: #fff;
-    border-color: variables.$gray-dark;
-    color: variables.$gray-darkest;
+    background: var(--modern-bg);
+    border-color: var(--modern-text-secondary);
+    color: var(--modern-text-primary);
   }
 }
 
@@ -184,7 +178,7 @@
   position: relative;
 
   &::before {
-    color: variables.$gray-light;
+    color: var(--modern-border);
     content: "★★★★★";
     letter-spacing: 2px;
   }
@@ -213,7 +207,7 @@
 }
 
 .ride-description {
-  color: variables.$gray-dark;
+  color: var(--modern-text-secondary);
   flex: 1 1 400px;
   font-size: 0.95em;
   line-height: 1.5;
@@ -228,4 +222,13 @@
   .ride-facts { width: 100%; justify-content: flex-start; }
   .ride-stat { min-width: 0; text-align: left; }
   .ride-row-details { padding-left: 0; }
+}
+
+.rides-page button:focus-visible { outline: 3px solid var(--home-link); outline-offset: 4px; }
+.rides-filters button { min-height: 44px; }
+.ride-row, .rides-map { scroll-margin-top: var(--home-header-offset, 120px); }
+.rides-page .ride-links a { color: var(--home-link); }
+.rides-map .leaflet-control a { color: #222; }
+@media (prefers-reduced-motion: reduce) {
+  .rides-filters button, .ride-row, .ride-gpx { transition: none; }
 }

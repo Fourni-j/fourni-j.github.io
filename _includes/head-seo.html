@@ -1,1 +1,5 @@
-{% seo %}
+{% if page.tag or paginator.page > 1 %}
+    {% include archive-seo.html %}
+{% else %}
+    {% seo %}
+{% endif %}

@@ -32,8 +32,8 @@
 
 ## Apps
 
-- [All apps](https://cafournier.com/apps/): Current iOS apps on the App Store, including Steed (bike maintenance log), LaterMark (bookmark manager), Clashly (bracket maker), Tierly (tier list maker), and NoExif (photo compressor).
+- [All apps](https://cafournier.com/#apps): Current iOS apps on the App Store, including Steed (bike maintenance log), LaterMark (bookmark manager), Clashly (bracket maker), Tierly (tier list maker), and NoExif (photo compressor).
 
 ## Articles
 
-- [Blog](https://cafournier.com/): Articles about iOS development, Swift, and indie app projects.
+- [Blog](https://cafournier.com/blog/): Articles about iOS development, Swift, and indie app projects.

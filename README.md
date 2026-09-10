@@ -29,12 +29,17 @@ The output is `_site/`. GitHub Actions deploys it to GitHub Pages on pushes to `
 
 ## Project structure
 
-- `_posts/` and the default layouts serve the personal blog.
-- `_apps-pages/` contains app landing pages, guides, and legal pages; `apps.md` is the app directory.
+- `index.html` serves the apps-first homepage. `_layouts/default.html` and `assets/css/home.css` provide the shared personal-site header, footer, colors, and typography. Curate featured cards in `_data/home_apps.yml`; More to explore sorts by `updated_at` (newest App Store release first), with undated apps last. Optimized artwork is stored in `assets/home/`.
+- `blog.html` provides the full writing archive at `/blog/`. Existing post URLs and `/page:num/` archive pages are preserved; the homepage automatically shows only the newest post beneath the apps.
+- `_posts/`, `_layouts/post.html`, and `assets/css/content.css` serve the articles with responsive reading layouts and syntax highlighting. The blog, tag archives, and rides use the same theme as the homepage; the former Horace layouts, sidebar, CSS, JavaScript, and icon font have been removed.
+- `_includes/head-seo.html` uses Jekyll SEO Tag for ordinary pages and articles, and `_includes/archive-seo.html` supplies metadata for generated topic and paginated archives.
+- `_apps-pages/` contains app landing pages, guides, and legal pages. `apps.md` redirects the legacy `/apps/` URL to `/#apps`; the homepage is the only app catalog to maintain.
 - `_layouts/modern-app-*` and `_includes/app-head.html` share the modern app design and static metadata.
 - FridgeBuddy has dedicated layouts, SEO includes, and English/French/German content under `_apps-pages/fridgebuddy/`. Shared translations and comparison data live in `_data/`.
 - `_data/rides.yml` and `assets/rides/` supply the Leaflet bike-rides map.
 - `teletravail/` is the standalone telework planner. Run `node tests/teletravail-core.test.js` when changing its logic.
+
+Deployment builds refresh the app release dates from Apple's public US lookup API using `bundle exec ruby scripts/update-app-dates.rb`. Run that command before a local build to refresh the saved dates too. The script preserves authored names, descriptions, icons, and featured order, and keeps the saved dates if the API is unavailable. Updates appear on the next site deployment; there is no scheduled refresh or visitor-side lookup.
 
 ## Dependency maintenance
 
