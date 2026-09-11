@@ -11,7 +11,7 @@ schema_type: web_page
 ios_app_id: 1500190823
 app_name: FridgeBuddy
 app_icon: /assets/app-pages/fridgebuddy-icon.png
-social_image: /assets/app-pages/fridgebuddy-og.png
+social_image: /assets/app-pages/fridgebuddy-icon.png
 breadcrumbs:
   - name: FridgeBuddy
     url: /fridgebuddy/

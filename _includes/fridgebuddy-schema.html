@@ -14,13 +14,10 @@
       "downloadUrl": "{{ app_store_url }}",
       "installUrl": "{{ app_store_url }}",
       "image": "{{ '/assets/app-pages/fridgebuddy-icon.png' | absolute_url }}",
-      "screenshot": [
-        "{{ '/assets/app-pages/screenshots/fridgebuddy-inventory.webp' | absolute_url }}",
-        "{{ '/assets/app-pages/screenshots/fridgebuddy-product.webp' | absolute_url }}",
-        "{{ '/assets/app-pages/screenshots/fridgebuddy-insights.webp' | absolute_url }}"
-      ],
+      "screenshot": [{{ page.preview_file | absolute_url | jsonify }}{% for screenshot in page.screenshots %}, {{ screenshot.image | absolute_url | jsonify }}{% endfor %}],
+      "softwareVersion": {{ site.data.fridgebuddy.version | jsonify }},
       "applicationCategory": "LifestyleApplication",
-      "operatingSystem": "iOS 18.0 or later; iPadOS 18.0 or later",
+      "operatingSystem": "iOS {{ site.data.fridgebuddy.minimum_os }} or later; iPadOS {{ site.data.fridgebuddy.minimum_os }} or later",
       "author": {
         "@type": "Person",
         "name": "Charles-Adrien Fournier",
@@ -34,8 +31,8 @@
       },
       "aggregateRating": {
         "@type": "AggregateRating",
-        "ratingValue": {{ page.rating_value | default: 4.5 }},
-        "ratingCount": {{ page.rating_count | default: 203 }},
+        "ratingValue": {{ site.data.fridgebuddy.rating_value }},
+        "ratingCount": {{ site.data.fridgebuddy.rating_count }},
         "bestRating": 5,
         "worstRating": 1
       }

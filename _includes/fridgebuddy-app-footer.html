@@ -10,9 +10,12 @@
 		</div>
 
 		<div class="app-footer-right">
-			{% if page.hreflang %}{% for pair in page.hreflang %}{% unless pair[0] == fb_lang %}{% case pair[0] %}{% when 'en' %}<a href="{{ pair[1] }}" class="app-footer-link" hreflang="en" lang="en">English version</a>{% when 'fr' %}<a href="{{ pair[1] }}" class="app-footer-link" hreflang="fr" lang="fr">Version française</a>{% when 'de' %}<a href="{{ pair[1] }}" class="app-footer-link" hreflang="de" lang="de">Deutsche Version</a>{% endcase %}{% endunless %}{% endfor %}{% endif %}
-			<a href="{{ t.footer_compare_url }}" class="app-footer-link">{{ t.footer_compare }}</a>
 			<a href="mailto:feedback@cafournier.com" class="app-footer-link">{{ t.footer_support }}</a>
 		</div>
 	</div>
+    {% if page.hreflang %}
+    <nav class="fb-language-links" aria-label="{{ t.language_label | escape }}">
+        {% for pair in page.hreflang %}<a href="{{ pair[1] | relative_url }}" lang="{{ pair[0] }}" hreflang="{{ pair[0] }}"{% if pair[0] == fb_lang %} aria-current="page"{% endif %}>{{ pair[0] | upcase }}</a>{% endfor %}
+    </nav>
+    {% endif %}
 </footer>

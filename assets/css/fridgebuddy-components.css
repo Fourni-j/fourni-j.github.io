@@ -160,3 +160,289 @@
     font-weight: 600;
     color: var(--modern-primary);
 }
+
+/* FridgeBuddy landing page; shared app layouts keep their existing styles. */
+.fb-landing *, .fb-landing *::before, .fb-landing *::after {
+    box-sizing: border-box;
+}
+.fb-landing {
+    overflow-wrap: break-word;
+}
+.fb-landing.dark-theme {
+    --modern-primary: #8ab4ff;
+}
+@media (prefers-color-scheme: dark) {
+    .fb-landing:not(.light-theme) {
+        --modern-primary: #8ab4ff;
+    }
+}
+.fb-landing :is(a, button, summary):focus-visible {
+    outline: 3px solid var(--modern-primary);
+    outline-offset: 5px;
+}
+/* One header for landing, guide, calculator, comparison, and legal pages. */
+.fb-header, .fb-header * {
+    box-sizing: border-box;
+}
+.fb-header .modern-app-branding {
+    flex-shrink: 0;
+}
+.fb-header .modern-nav-links {
+    display: flex;
+    margin-left: auto;
+}
+.fb-header .modern-nav-link {
+    white-space: nowrap;
+}
+.fb-header .modern-appstore-header-btn img {
+    display: block;
+}
+.fb-header a:focus-visible, .fb-language-links a:focus-visible {
+    outline: 3px solid var(--modern-primary);
+    outline-offset: 5px;
+}
+.fb-language-links {
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+    margin-top: 24px;
+}
+.fb-language-links a {
+    padding: 8px;
+    font-size: 13px;
+    font-weight: 650;
+    color: var(--modern-text-secondary);
+    text-decoration: none;
+    border-radius: 6px;
+}
+.fb-language-links a[aria-current] {
+    background: var(--modern-bg-secondary);
+    color: var(--modern-text-primary);
+}
+.fb-landing .modern-hero {
+    position: relative;
+    isolation: isolate;
+    padding: 40px 0 64px;
+    background: transparent;
+}
+.fb-landing .modern-hero::before {
+    content: "";
+    position: absolute;
+    /* Bleed behind the transparent header, including its two-row tablet layout. */
+    inset: -12rem 0 0;
+    z-index: -1;
+    pointer-events: none;
+    background: radial-gradient(ellipse at 90% 25%, rgba(255, 184, 43, .13), transparent 55%), var(--modern-hero-bg);
+}
+.fb-landing .modern-app-showcase {
+    grid-template-columns: minmax(0, 1.25fr) minmax(0, .75fr);
+    gap: 64px;
+}
+.fb-landing .modern-app-info {
+    order: 0;
+    padding: 0;
+    min-width: 0;
+    text-align: left;
+}
+.fb-landing :is(.modern-hero-title, .modern-hero-subtitle) {
+    text-align: left !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+}
+.fb-landing .modern-hero-title {
+    font-size: clamp(40px, 4.6vw, 62px);
+    letter-spacing: -.045em;
+    line-height: 1.06;
+    margin-bottom: 24px;
+    text-wrap: balance;
+}
+.fb-landing .modern-hero-subtitle {
+    font-size: 18px;
+    line-height: 1.75;
+    max-width: 530px;
+    margin: 0 0 28px;
+}
+.fb-hero-actions {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 18px;
+}
+.fb-hero-preview {
+    flex-direction: column;
+    margin: 0;
+    gap: 16px;
+}
+.fb-store-image {
+    width: min(100%, 280px);
+    height: auto;
+    border-radius: 24px;
+    box-shadow: 0 20px 60px rgba(90, 64, 9, .12);
+    border: 1px solid var(--modern-border);
+}
+.fb-hero-preview figcaption {
+    max-width: 300px;
+    text-align: center;
+    font-size: 13px;
+    color: var(--modern-text-secondary);
+}
+.fb-landing :is(.modern-features, .modern-testimonials, .modern-screenshots, .fb-faq-section) {
+    padding: 72px 0;
+    scroll-margin-top: 90px;
+}
+.fb-landing .modern-section-title {
+    text-align: left;
+    font-size: clamp(28px, 3vw, 38px);
+    letter-spacing: -.035em;
+    margin: 0 0 36px;
+    text-wrap: balance;
+}
+.fb-landing .modern-screenshot {
+    margin: 0;
+    min-width: 0;
+}
+.fb-faq-section {
+    background: var(--modern-bg-secondary);
+}
+.fb-landing .fb-faq-section .modern-section-title {
+    text-align: center;
+}
+.fb-faq-list {
+    max-width: 840px;
+    margin-inline: auto;
+}
+.fb-faq-item {
+    border-bottom: 1px solid var(--modern-border-medium);
+}
+.fb-faq-item summary {
+    cursor: pointer;
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    padding: 22px 0;
+    font-weight: 600;
+}
+.fb-faq-item summary::-webkit-details-marker {
+    display: none;
+}
+.fb-faq-item summary span {
+    flex-shrink: 0;
+    font-size: 24px;
+    font-weight: 400;
+    color: var(--modern-primary);
+}
+.fb-faq-item[open] summary span {
+    transform: rotate(45deg);
+}
+.fb-faq-item p {
+    color: var(--modern-text-secondary);
+    margin: 0;
+    padding: 0 30px 24px 0;
+    line-height: 1.8;
+}
+.fb-final-cta {
+    text-align: center;
+    padding: 64px 0;
+    background: radial-gradient(ellipse at 50% 100%, rgba(255, 184, 43, .12), transparent 70%), var(--modern-bg-secondary);
+}
+.fb-final-cta .modern-section-title {
+    text-align: center;
+    margin: 24px auto 16px;
+    max-width: 700px;
+}
+.fb-final-cta p {
+    color: var(--modern-text-secondary);
+    margin-bottom: 24px;
+}
+.fb-theme-toggle {
+    position: fixed;
+    bottom: 16px;
+    right: 16px;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: 1px solid var(--modern-border-medium);
+    background: var(--modern-bg);
+    color: var(--modern-text-primary);
+    cursor: pointer;
+    z-index: 60;
+    font-size: 20px;
+}
+@media (max-width: 1049px) {
+    .fb-header .modern-nav {
+        display: grid;
+        grid-template-columns: auto auto;
+        gap: 16px;
+    }
+    .fb-header .modern-nav-cta {
+        grid-column: 2;
+        grid-row: 1;
+        justify-self: end;
+    }
+    .fb-header .modern-nav-links {
+        grid-column: 1 / -1;
+        grid-row: 2;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 8px 20px;
+        margin: 0;
+    }
+    .fb-header.modern-header-scrolled .modern-nav {
+        margin: 0;
+        border-radius: 24px;
+    }
+    .fb-landing :is(#features, #how-it-works) {
+        scroll-margin-top: 160px;
+    }
+}
+@media (max-width: 900px) {
+    .fb-landing .modern-app-showcase {
+        gap: 32px;
+    }
+}
+@media (max-width: 767px) {
+    .fb-header .modern-nav-links {
+        display: none;
+    }
+    .fb-landing :is(#features, #how-it-works) {
+        scroll-margin-top: 90px;
+    }
+}
+@media (max-width: 639px) {
+    .fb-header .modern-nav {
+        gap: 12px;
+    }
+    .fb-header.modern-header-scrolled .modern-nav {
+        padding: 10px 12px;
+    }
+    .fb-landing .modern-hero {
+        padding: 24px 0 40px;
+    }
+    .fb-landing .modern-app-showcase {
+        grid-template-columns: minmax(0, 1fr);
+        gap: 36px;
+    }
+    .fb-landing .modern-hero-title {
+        font-size: 40px;
+    }
+    .fb-landing .modern-hero-subtitle {
+        font-size: 17px;
+    }
+    .fb-store-image {
+        width: min(100%, 260px);
+    }
+    .fb-landing :is(.modern-features, .modern-testimonials, .modern-screenshots, .fb-faq-section) {
+        padding: 48px 0;
+    }
+    .fb-final-cta {
+        padding: 48px 0;
+    }
+}
+@media (prefers-reduced-motion: reduce) {
+    .fb-landing *, .fb-landing *::before, .fb-landing *::after {
+        transition: none !important;
+        scroll-behavior: auto !important;
+    }
+}

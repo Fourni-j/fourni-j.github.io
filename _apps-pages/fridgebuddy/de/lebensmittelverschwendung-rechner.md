@@ -16,7 +16,7 @@ schema_type: calculator
 ios_app_id: 1500190823
 app_name: FridgeBuddy
 app_icon: /assets/app-pages/fridgebuddy-icon.png
-social_image: /assets/app-pages/fridgebuddy-og.png
+social_image: /assets/app-pages/fridgebuddy-icon.png
 calculator_script: /assets/js/food-waste-calculator.js
 hide_hero_cta: true
 date_published: 2026-08-30

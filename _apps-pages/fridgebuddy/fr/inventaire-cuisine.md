@@ -16,7 +16,7 @@ schema_type: web_page
 ios_app_id: 1500190823
 app_name: FridgeBuddy
 app_icon: /assets/app-pages/fridgebuddy-icon.png
-social_image: /assets/app-pages/fridgebuddy-og.png
+social_image: /assets/app-pages/fridgebuddy-icon.png
 date_published: 2026-08-30
 date_modified: 2026-08-30
 date_modified_display: "30 août 2026"

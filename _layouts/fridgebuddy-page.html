@@ -5,30 +5,7 @@
 {% assign t = site.data.fridgebuddy_i18n[fb_lang] %}
 
 <body class="modern-layout modern-subpage">
-    <header class="modern-header">
-        <div class="modern-container">
-            <nav class="modern-nav">
-                <div class="modern-nav-left">
-                    <a class="modern-app-branding" href="{{ t.home_url }}" aria-label="FridgeBuddy home">
-                        <img class="modern-header-app-icon" src="{{ page.app_icon }}" width="32" height="32" alt="">
-                        <span class="modern-header-app-name">{{ page.app_name }}</span>
-                    </a>
-                </div>
-                <div class="modern-nav-right">
-                    <div class="modern-nav-links">
-                        {% for link in t.nav %}
-                        <a href="{{ link.url }}" class="modern-nav-link">{{ link.text }}</a>
-                        {% endfor %}
-                    </div>
-                    <div class="modern-nav-cta">
-                        <a class="modern-appstore-header-btn" href="{{ t.app_store_url }}" target="_blank" rel="noopener noreferrer">
-                            <img src="/assets/app-pages/appstore-header.svg" alt="{{ t.download_alt }}">
-                        </a>
-                    </div>
-                </div>
-            </nav>
-        </div>
-    </header>
+    {% include fridgebuddy-header.html %}
 
     <main class="modern-main">
         <div class="modern-page-content">

@@ -1,0 +1,18 @@
+<header class="modern-header fb-header">
+    <div class="modern-container">
+        <nav class="modern-nav">
+            <a class="modern-app-branding" href="{{ t.home_url | relative_url }}" aria-label="{{ t.home_aria | escape }}">
+                <img class="modern-header-app-icon" src="{{ site.data.fridgebuddy.icon | relative_url }}" width="32" height="32" alt="">
+                <span class="modern-header-app-name">FridgeBuddy</span>
+            </a>
+            <div class="modern-nav-links">
+                {% for link in t.nav %}<a href="{{ link.url | relative_url }}" class="modern-nav-link">{{ link.text }}</a>{% endfor %}
+            </div>
+            <div class="modern-nav-cta">
+                <a class="modern-appstore-header-btn" href="{{ t.app_store_url }}" target="_blank" rel="noopener noreferrer">
+                    <img src="{{ '/assets/app-pages/appstore-header.svg' | relative_url }}" alt="{{ t.download_alt | escape }}" width="120" height="40">
+                </a>
+            </div>
+        </nav>
+    </div>
+</header>

@@ -1,8 +1,10 @@
+{% assign fb_lang = 'en' %}{% if page.lang contains 'fr' %}{% assign fb_lang = 'fr' %}{% elsif page.lang contains 'de' %}{% assign fb_lang = 'de' %}{% endif %}
+{% assign t = site.data.fridgebuddy_i18n[fb_lang] %}
 {% assign meta_title = page.page_title | default: page.title | default: "FridgeBuddy — Pantry inventory and food expiration tracker" %}
 {% assign meta_description = page.meta_description | default: page.hero_subtitle | default: "Track pantry, fridge, and freezer inventory, scan expiration dates, and get reminders before food goes to waste." %}
 {% assign canonical_path = page.canonical_path | default: page.url %}
 {% assign canonical_url = canonical_path | absolute_url %}
-{% assign social_image_path = page.social_image | default: "/assets/app-pages/fridgebuddy-og.png" %}
+{% assign social_image_path = page.social_image | default: "/assets/app-pages/fridgebuddy-icon.png" %}
 {% assign social_image_url = social_image_path | absolute_url %}
 <head>
     <meta charset="utf-8">
@@ -24,27 +26,27 @@
     <meta property="og:description" content="{{ meta_description | strip_html | strip_newlines | escape }}">
     <meta property="og:url" content="{{ canonical_url }}">
     <meta property="og:image" content="{{ social_image_url }}">
-    <meta property="og:image:width" content="1200">
-    <meta property="og:image:height" content="630">
-    <meta property="og:image:alt" content="FridgeBuddy food inventory and expiration tracker for iPhone and iPad">
+    <meta property="og:image:width" content="512">
+    <meta property="og:image:height" content="512">
+    <meta property="og:image:alt" content="{{ t.icon_alt | escape }}">
     {% assign og_locale = 'en_US' %}{% if page.lang contains 'fr' %}{% assign og_locale = 'fr_FR' %}{% elsif page.lang contains 'de' %}{% assign og_locale = 'de_DE' %}{% endif %}
     <meta property="og:locale" content="{{ og_locale }}">
     {% if page.hreflang %}{% for pair in page.hreflang %}{% assign alt_locale = 'en_US' %}{% if pair[0] == 'fr' %}{% assign alt_locale = 'fr_FR' %}{% elsif pair[0] == 'de' %}{% assign alt_locale = 'de_DE' %}{% endif %}{% unless alt_locale == og_locale %}<meta property="og:locale:alternate" content="{{ alt_locale }}">
     {% endunless %}{% endfor %}{% endif %}
 
-    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:card" content="summary">
     <meta name="twitter:title" content="{{ meta_title | escape }}">
     <meta name="twitter:description" content="{{ meta_description | strip_html | strip_newlines | escape }}">
     <meta name="twitter:image" content="{{ social_image_url }}">
-    <meta name="twitter:image:alt" content="FridgeBuddy food inventory and expiration tracker for iPhone and iPad">
+    <meta name="twitter:image:alt" content="{{ t.icon_alt | escape }}">
 
     <meta name="apple-itunes-app" content="app-id={{ page.ios_app_id | default: 1500190823 }}">
-    <link rel="icon" type="image/png" sizes="256x256" href="/assets/app-pages/fridgebuddy-icon.png">
-    <link rel="apple-touch-icon" href="/assets/app-pages/fridgebuddy-icon.png">
+    <link rel="icon" type="image/png" sizes="512x512" href="{{ site.data.fridgebuddy.icon | relative_url }}">
+    <link rel="apple-touch-icon" href="{{ site.data.fridgebuddy.icon | relative_url }}">
 
     {% include app-fonts.html %}
     <link rel="stylesheet" href="{{ '/assets/css/modern-style.css' | relative_url }}">
-    <link rel="stylesheet" href="{{ '/assets/css/fridgebuddy-components.css' | relative_url }}">
+    <link rel="stylesheet" href="{{ '/assets/css/fridgebuddy-components.css' | relative_url }}?v={{ site.time | date: '%s' }}">
 
     {% include fridgebuddy-schema.html canonical_url=canonical_url meta_title=meta_title meta_description=meta_description social_image_url=social_image_url %}
 </head>

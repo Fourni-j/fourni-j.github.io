@@ -1,87 +1,78 @@
 en:
-  home_url: /fridgebuddy/
-  app_store_url: "https://apps.apple.com/app/id1500190823"
+  home_url: "/fridgebuddy/"
+  app_store_url: https://apps.apple.com/app/id1500190823
   nav:
-    - text: Features
-      url: /fridgebuddy/#features
-    - text: Pantry guide
-      url: /fridgebuddy/pantry-inventory-app/
-    - text: Compare apps
-      url: /fridgebuddy/alternatives/
-    - text: Calculator
-      url: /fridgebuddy/food-waste-calculator/
-  download_alt: "Download FridgeBuddy on the App Store"
-  reviews_label: reviews
-  rating_aria: "FridgeBuddy has a %RATING% out of 5 rating from %COUNT% App Store ratings"
-  byline_prefix: "By"
-  byline_role: "iOS developer and creator of FridgeBuddy"
-  byline_updated: "Updated"
-  faq_title: "Frequently asked questions"
-  related_title: "Related FridgeBuddy guides"
-  cta_text: "Use your food before it becomes waste."
-  footer_privacy: "Privacy Policy"
-  footer_privacy_url: /fridgebuddy/privacypolicy
-  footer_terms: "Terms"
-  footer_terms_url: /fridgebuddy/terms
-  footer_compare: "Compare apps"
-  footer_compare_url: /fridgebuddy/alternatives/
-  footer_support: "Support"
-  footer_made_by: "Made by"
+  - text: Pantry guide
+    url: "/fridgebuddy/pantry-inventory-app/"
+  - text: Compare apps
+    url: "/fridgebuddy/alternatives/"
+  - text: Calculator
+    url: "/fridgebuddy/food-waste-calculator/"
+  download_alt: Download FridgeBuddy on the App Store
+  byline_prefix: By
+  byline_role: iOS developer and creator of FridgeBuddy
+  byline_updated: Updated
+  faq_title: Frequently asked questions
+  related_title: Related FridgeBuddy guides
+  cta_text: Use your food before it becomes waste.
+  footer_privacy: Privacy Policy
+  footer_privacy_url: "/fridgebuddy/privacypolicy"
+  footer_terms: Terms
+  footer_terms_url: "/fridgebuddy/terms"
+  footer_support: Support
+  footer_made_by: Made by
+  home_aria: FridgeBuddy home
+  icon_alt: FridgeBuddy app icon
+  language_label: Language
 de:
-  home_url: /fridgebuddy/de/
-  app_store_url: "https://apps.apple.com/de/app/id1500190823"
+  home_url: "/fridgebuddy/de/"
+  app_store_url: https://apps.apple.com/de/app/id1500190823
   nav:
-    - text: Funktionen
-      url: /fridgebuddy/de/#features
-    - text: Vorrats-Guide
-      url: /fridgebuddy/de/vorratsverwaltung/
-    - text: Vergleich
-      url: /fridgebuddy/de/vergleich/
-    - text: Rechner
-      url: /fridgebuddy/de/lebensmittelverschwendung-rechner/
-  download_alt: "FridgeBuddy im App Store laden"
-  reviews_label: Bewertungen
-  rating_aria: "FridgeBuddy hat eine Bewertung von %RATING% von 5 aus %COUNT% App-Store-Bewertungen"
-  byline_prefix: "Von"
-  byline_role: "iOS-Entwickler und Entwickler von FridgeBuddy"
-  byline_updated: "Aktualisiert am"
-  faq_title: "Häufige Fragen"
-  related_title: "Weitere FridgeBuddy-Guides"
-  cta_text: "Verbrauchen Sie Ihre Lebensmittel, bevor sie zu Abfall werden."
-  footer_privacy: "Datenschutzerklärung"
-  footer_privacy_url: /fridgebuddy/de/datenschutz/
-  footer_terms: "Nutzungsbedingungen"
-  footer_terms_url: /fridgebuddy/de/nutzungsbedingungen/
-  footer_compare: "App-Vergleich"
-  footer_compare_url: /fridgebuddy/de/vergleich/
-  footer_support: "Support"
-  footer_made_by: "Entwickelt von"
+  - text: Vorrats-Guide
+    url: "/fridgebuddy/de/vorratsverwaltung/"
+  - text: Vergleich
+    url: "/fridgebuddy/de/vergleich/"
+  - text: Rechner
+    url: "/fridgebuddy/de/lebensmittelverschwendung-rechner/"
+  download_alt: FridgeBuddy im App Store laden
+  byline_prefix: Von
+  byline_role: iOS-Entwickler und Entwickler von FridgeBuddy
+  byline_updated: Aktualisiert am
+  faq_title: Häufige Fragen
+  related_title: Weitere FridgeBuddy-Guides
+  cta_text: Verbrauchen Sie Ihre Lebensmittel, bevor sie zu Abfall werden.
+  footer_privacy: Datenschutzerklärung
+  footer_privacy_url: "/fridgebuddy/de/datenschutz/"
+  footer_terms: Nutzungsbedingungen
+  footer_terms_url: "/fridgebuddy/de/nutzungsbedingungen/"
+  footer_support: Support
+  footer_made_by: Entwickelt von
+  home_aria: FridgeBuddy-Startseite
+  icon_alt: FridgeBuddy-App-Symbol
+  language_label: Sprache
 fr:
-  home_url: /fridgebuddy/fr/
-  app_store_url: "https://apps.apple.com/fr/app/id1500190823"
+  home_url: "/fridgebuddy/fr/"
+  app_store_url: https://apps.apple.com/fr/app/id1500190823
   nav:
-    - text: Fonctionnalités
-      url: /fridgebuddy/fr/#features
-    - text: Guide inventaire
-      url: /fridgebuddy/fr/inventaire-cuisine/
-    - text: Comparatif
-      url: /fridgebuddy/fr/comparatif/
-    - text: Calculateur
-      url: /fridgebuddy/fr/calculateur-gaspillage-alimentaire/
-  download_alt: "Télécharger FridgeBuddy sur l'App Store"
-  reviews_label: notes
-  rating_aria: "FridgeBuddy a une note de %RATING% sur 5 basée sur %COUNT% notes App Store"
-  byline_prefix: "Par"
-  byline_role: "développeur iOS et créateur de FridgeBuddy"
-  byline_updated: "Mis à jour le"
-  faq_title: "Questions fréquentes"
-  related_title: "Guides FridgeBuddy associés"
-  cta_text: "Utilisez vos aliments avant qu'ils ne deviennent du gaspillage."
-  footer_privacy: "Politique de confidentialité"
-  footer_privacy_url: /fridgebuddy/fr/confidentialite/
-  footer_terms: "Conditions d'utilisation"
-  footer_terms_url: /fridgebuddy/fr/conditions/
-  footer_compare: "Comparatif d'apps"
-  footer_compare_url: /fridgebuddy/fr/comparatif/
-  footer_support: "Support"
-  footer_made_by: "Créé par"
+  - text: Guide inventaire
+    url: "/fridgebuddy/fr/inventaire-cuisine/"
+  - text: Comparatif
+    url: "/fridgebuddy/fr/comparatif/"
+  - text: Calculateur
+    url: "/fridgebuddy/fr/calculateur-gaspillage-alimentaire/"
+  download_alt: Télécharger FridgeBuddy sur l'App Store
+  byline_prefix: Par
+  byline_role: développeur iOS et créateur de FridgeBuddy
+  byline_updated: Mis à jour le
+  faq_title: Questions fréquentes
+  related_title: Guides FridgeBuddy associés
+  cta_text: Utilisez vos aliments avant qu'ils ne deviennent du gaspillage.
+  footer_privacy: Politique de confidentialité
+  footer_privacy_url: "/fridgebuddy/fr/confidentialite/"
+  footer_terms: Conditions d'utilisation
+  footer_terms_url: "/fridgebuddy/fr/conditions/"
+  footer_support: Support
+  footer_made_by: Créé par
+  home_aria: Accueil FridgeBuddy
+  icon_alt: Icône de l’application FridgeBuddy
+  language_label: Langue
