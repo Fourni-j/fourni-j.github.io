@@ -9,7 +9,7 @@
                 {% for link in t.nav %}<a href="{{ link.url | relative_url }}" class="modern-nav-link">{{ link.text }}</a>{% endfor %}
             </div>
             <div class="modern-nav-cta">
-                <a class="modern-appstore-header-btn" href="{{ t.app_store_url }}" target="_blank" rel="noopener noreferrer">
+                <a class="modern-appstore-header-btn" href="{{ t.app_store_url | escape }}" target="_blank" rel="noopener">
                     <img src="{{ '/assets/app-pages/appstore-header.svg' | relative_url }}" alt="{{ t.download_alt | escape }}" width="120" height="40">
                 </a>
             </div>

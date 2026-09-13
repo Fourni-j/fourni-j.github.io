@@ -41,6 +41,8 @@ The output is `_site/`. GitHub Actions deploys it to GitHub Pages on pushes to `
 
 Deployment builds refresh the app release dates from Apple's public US lookup API using `bundle exec ruby scripts/update-app-dates.rb`. Run that command before a local build to refresh the saved dates too. The script preserves authored names, descriptions, icons, and featured order, and keeps the saved dates if the API is unavailable. Updates appear on the next site deployment; there is no scheduled refresh or visitor-side lookup.
 
+FridgeBuddy download links use the App Store Connect campaign `cafournier` (`pt=2162580`, `ct=cafournier`, `mt=8`). Keep the three landing-page `app_store_url` fields, `_data/fridgebuddy_i18n.yml`, and the original FridgeBuddy blog post aligned when changing campaigns. The Safari Smart App Banner derives its `affiliate-data` from the localized App Store URL. Results are available in FridgeBuddy's App Store Connect Analytics under Acquisition → Campaigns.
+
 ## Dependency maintenance
 
 Ruby dependencies are locked in `Gemfile.lock`; update them with `bundle update --all` and rerun the production checks. Keep macOS and Linux platforms in the lockfile for local development and GitHub Actions.

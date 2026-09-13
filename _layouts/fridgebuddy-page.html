@@ -45,7 +45,7 @@
                     {% unless page.hide_hero_cta %}
                     <div class="fb-page-cta">
                         <p>{{ t.cta_text }}</p>
-                        <a class="modern-download-btn" href="{{ t.app_store_url }}" target="_blank" rel="noopener noreferrer">
+                        <a class="modern-download-btn" href="{{ t.app_store_url | escape }}" target="_blank" rel="noopener">
                             <img src="/assets/app-pages/appstore.svg" alt="{{ t.download_alt }}">
                         </a>
                     </div>

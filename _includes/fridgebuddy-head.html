@@ -40,7 +40,7 @@
     <meta name="twitter:image" content="{{ social_image_url }}">
     <meta name="twitter:image:alt" content="{{ t.icon_alt | escape }}">
 
-    <meta name="apple-itunes-app" content="app-id={{ page.ios_app_id | default: 1500190823 }}">
+    <meta name="apple-itunes-app" content="app-id={{ page.ios_app_id | default: 1500190823 }}, affiliate-data={{ t.app_store_url | split: '?' | last | escape }}">
     <link rel="icon" type="image/png" sizes="512x512" href="{{ site.data.fridgebuddy.icon | relative_url }}">
     <link rel="apple-touch-icon" href="{{ site.data.fridgebuddy.icon | relative_url }}">
 

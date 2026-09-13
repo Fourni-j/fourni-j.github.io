@@ -15,7 +15,7 @@ social_image: "/assets/app-pages/fridgebuddy-icon.png"
 schema_type: app
 ios_app_id: 1500190823
 app_name: FridgeBuddy
-app_store_url: https://apps.apple.com/fr/app/id1500190823
+app_store_url: "https://apps.apple.com/fr/app/id1500190823?pt=2162580&ct=cafournier&mt=8"
 app_icon: "/assets/app-pages/fridgebuddy-icon.png"
 preview_file: "/assets/app-pages/screenshots/fridgebuddy-fr-inventory.webp"
 hero_title: Achetez le nécessaire. Utilisez ce que vous avez.

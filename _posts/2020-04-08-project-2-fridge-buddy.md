@@ -33,6 +33,5 @@ Since the app already got some users, I manage to get some feedback and to get a
 
 [FridgeBuddy website](/fridgebuddy/)
 
-[FridgeBuddy on the iOS AppStore](https://apps.apple.com/us/app/fridge-buddy-expiry-tracker/id1500190823?ign-mpt=uo%3D4)
-
+[FridgeBuddy on the iOS AppStore](https://apps.apple.com/app/apple-store/id1500190823?pt=2162580&ct=cafournier&mt=8)
 

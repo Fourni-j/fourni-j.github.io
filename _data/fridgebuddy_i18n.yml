@@ -1,6 +1,6 @@
 en:
   home_url: "/fridgebuddy/"
-  app_store_url: https://apps.apple.com/app/id1500190823
+  app_store_url: "https://apps.apple.com/app/apple-store/id1500190823?pt=2162580&ct=cafournier&mt=8"
   nav:
   - text: Pantry guide
     url: "/fridgebuddy/pantry-inventory-app/"
@@ -26,7 +26,7 @@ en:
   language_label: Language
 de:
   home_url: "/fridgebuddy/de/"
-  app_store_url: https://apps.apple.com/de/app/id1500190823
+  app_store_url: "https://apps.apple.com/de/app/id1500190823?pt=2162580&ct=cafournier&mt=8"
   nav:
   - text: Vorrats-Guide
     url: "/fridgebuddy/de/vorratsverwaltung/"
@@ -52,7 +52,7 @@ de:
   language_label: Sprache
 fr:
   home_url: "/fridgebuddy/fr/"
-  app_store_url: https://apps.apple.com/fr/app/id1500190823
+  app_store_url: "https://apps.apple.com/fr/app/id1500190823?pt=2162580&ct=cafournier&mt=8"
   nav:
   - text: Guide inventaire
     url: "/fridgebuddy/fr/inventaire-cuisine/"

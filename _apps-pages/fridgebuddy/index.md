@@ -10,7 +10,7 @@ social_image: "/assets/app-pages/fridgebuddy-icon.png"
 schema_type: app
 ios_app_id: 1500190823
 app_name: FridgeBuddy
-app_store_url: https://apps.apple.com/app/id1500190823
+app_store_url: "https://apps.apple.com/app/apple-store/id1500190823?pt=2162580&ct=cafournier&mt=8"
 app_icon: "/assets/app-pages/fridgebuddy-icon.png"
 preview_file: "/assets/app-pages/screenshots/fridgebuddy-en-inventory.webp"
 hero_title: Buy what you need. Use what you have.

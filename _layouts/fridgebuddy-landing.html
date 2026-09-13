@@ -15,7 +15,7 @@
                         <h1 class="modern-hero-title">{{ page.hero_title }}</h1>
                         <p class="modern-hero-subtitle">{{ page.hero_subtitle }}</p>
                         <div class="fb-hero-actions">
-                            <a class="modern-download-btn" href="{{ page.app_store_url }}" target="_blank" rel="noopener noreferrer">
+                            <a class="modern-download-btn" href="{{ page.app_store_url | escape }}" target="_blank" rel="noopener">
                                 <img src="{{ '/assets/app-pages/appstore.svg' | relative_url }}" alt="{{ t.download_alt | escape }}" width="180" height="60">
                             </a>
                         </div>
@@ -94,7 +94,7 @@
             <div class="modern-container">
                 <h2 class="modern-section-title">{{ page.final_title }}</h2>
                 <p>{{ page.final_description }}</p>
-                <a class="modern-download-btn" href="{{ page.app_store_url }}" target="_blank" rel="noopener noreferrer"><img src="{{ '/assets/app-pages/appstore.svg' | relative_url }}" alt="{{ t.download_alt | escape }}" width="180" height="60"></a>
+                <a class="modern-download-btn" href="{{ page.app_store_url | escape }}" target="_blank" rel="noopener"><img src="{{ '/assets/app-pages/appstore.svg' | relative_url }}" alt="{{ t.download_alt | escape }}" width="180" height="60"></a>
             </div>
         </section>
 

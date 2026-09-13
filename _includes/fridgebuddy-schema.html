@@ -1,4 +1,4 @@
-{% assign app_store_url = page.app_store_url | default: "https://apps.apple.com/app/id1500190823" %}
+{% assign app_store_url = page.app_store_url | default: t.app_store_url %}
 {% if page.schema_type == "app" %}
 <script type="application/ld+json">
 {
@@ -11,8 +11,8 @@
       "alternateName": "Pantry & Fridge: FridgeBuddy",
       "description": {{ include.meta_description | strip_html | strip_newlines | jsonify }},
       "url": "{{ include.canonical_url }}",
-      "downloadUrl": "{{ app_store_url }}",
-      "installUrl": "{{ app_store_url }}",
+      "downloadUrl": {{ app_store_url | jsonify }},
+      "installUrl": {{ app_store_url | jsonify }},
       "image": "{{ '/assets/app-pages/fridgebuddy-icon.png' | absolute_url }}",
       "screenshot": [{{ page.preview_file | absolute_url | jsonify }}{% for screenshot in page.screenshots %}, {{ screenshot.image | absolute_url | jsonify }}{% endfor %}],
       "softwareVersion": {{ site.data.fridgebuddy.version | jsonify }},
@@ -25,7 +25,7 @@
       },
       "offers": {
         "@type": "Offer",
-        "url": "{{ app_store_url }}",
+        "url": {{ app_store_url | jsonify }},
         "price": 0,
         "priceCurrency": "USD"
       },
