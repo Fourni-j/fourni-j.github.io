@@ -7,7 +7,12 @@
   if (!mapEl || typeof L === 'undefined') return;
 
   // ---- Map ---------------------------------------------------------------
-  var map = L.map(mapEl, { scrollWheelZoom: false }).setView([48.8566, 2.3522], 11);
+  var map = L.map(mapEl, {
+    scrollWheelZoom: true,
+    zoomSnap: 0.25,
+    zoomDelta: 0.5,
+    wheelPxPerZoomLevel: 120
+  }).setView([48.8566, 2.3522], 11);
   window.ridesMap = map; // handy for debugging in the console
 
   var cartoAttribution = '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors &copy; <a href="https://carto.com/attributions">CARTO</a>';
@@ -132,7 +137,7 @@
     cards.forEach(function (c, i) { c.classList.toggle('is-hover', i === index); });
   }
 
-  function focusRide(index) {
+  function focusRide(index, fitView) {
     activeIndex = index;
     layers.forEach(function (l, i) {
       if (!l) return;
@@ -141,6 +146,7 @@
       if (i === index) { l.line.bringToFront(); l.hit.bringToFront(); }
     });
     cards.forEach(function (c, i) { c.classList.toggle('is-active', i === index); });
+    if (fitView === false) return;
     if (index !== null && layers[index]) {
       map.invalidateSize();
       map.fitBounds(layers[index].line.getBounds(), { padding: [30, 30] });
@@ -193,15 +199,13 @@
 
   Promise.all(rides.map(addRide)).then(fitAll);
 
-  // The container can be measured at 0px wide while the page animates in, so
-  // re-measure whenever its size changes and keep the traces in view.
+  // Re-measure when the layout changes without overriding the user's zoom.
   if (typeof ResizeObserver !== 'undefined') {
     var lastWidth = mapEl.clientWidth;
     new ResizeObserver(function () {
       if (mapEl.clientWidth === lastWidth) return;
       lastWidth = mapEl.clientWidth;
       map.invalidateSize();
-      focusRide(activeIndex);
     }).observe(mapEl);
   }
 
@@ -216,7 +220,7 @@
     });
   });
 
-  map.on('click', function () { focusRide(null); });
+  map.on('click', function () { focusRide(null, false); });
 
   var filterButtons = document.querySelectorAll('.rides-filters button');
   filterButtons.forEach(function (btn) {
