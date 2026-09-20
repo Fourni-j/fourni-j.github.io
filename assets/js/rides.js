@@ -15,21 +15,10 @@
   }).setView([48.8566, 2.3522], 11);
   window.ridesMap = map; // handy for debugging in the console
 
-  var cartoAttribution = '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors &copy; <a href="https://carto.com/attributions">CARTO</a>';
-
-  var voyager = L.tileLayer('https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}{r}.png', {
-    subdomains: 'abcd',
-    maxZoom: 20,
-    attribution: cartoAttribution
+  L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+    maxZoom: 19,
+    attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
   }).addTo(map);
-
-  var positron = L.tileLayer('https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png', {
-    subdomains: 'abcd',
-    maxZoom: 20,
-    attribution: cartoAttribution
-  });
-
-  L.control.layers({ 'Map': voyager, 'Light': positron }, null, { position: 'topright' }).addTo(map);
 
   // ---- GPX parsing -------------------------------------------------------
   function parseGpx(text) {

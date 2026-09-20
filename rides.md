@@ -8,5 +8,5 @@ extra_css:
   - /assets/css/rides.css
 extra_js:
   - https://unpkg.com/leaflet@1.9.4/dist/leaflet.js
-  - /assets/js/rides.js?v=c01b96f7
+  - /assets/js/rides.js?v=355e1d05
 ---
