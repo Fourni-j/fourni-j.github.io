@@ -10,7 +10,7 @@
   var map = L.map(mapEl, {
     scrollWheelZoom: true,
     zoomSnap: 0.25,
-    zoomDelta: 0.5,
+    zoomDelta: 1,
     wheelPxPerZoomLevel: 120
   }).setView([48.8566, 2.3522], 11);
   window.ridesMap = map; // handy for debugging in the console
@@ -169,11 +169,8 @@
         var hit = L.polyline(latlngs, { color: '#000', weight: 16, opacity: 0 }).addTo(map);
         hit.on('mouseover', function () { highlightRide(index); });
         hit.on('mouseout', function () { highlightRide(null); });
-        hit.on('click', function (e) {
-          L.DomEvent.stopPropagation(e);
-          focusRide(index);
-          var card = cards[index];
-          if (card) card.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+        hit.on('click', function () {
+          focusRide(index, false);
         });
 
         var start = L.circleMarker(latlngs[0], {
@@ -220,7 +217,10 @@
     });
   });
 
-  map.on('click', function () { focusRide(null, false); });
+  map.on('click', function (e) {
+    if (e.sourceTarget !== map) return;
+    focusRide(null, false);
+  });
 
   var filterButtons = document.querySelectorAll('.rides-filters button');
   filterButtons.forEach(function (btn) {
