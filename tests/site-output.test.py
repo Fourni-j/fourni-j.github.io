@@ -5,6 +5,7 @@ Uses only Python's standard library; run after a production Jekyll build.
 """
 
 import json
+import math
 import sys
 import unittest
 import xml.etree.ElementTree as ET
@@ -194,6 +195,31 @@ class SiteOutputTests(unittest.TestCase):
                     self.assertNotIn("Tag Page", page.titles[0])
         for path in ("assets/css/style.css", "assets/js/custom.js", "assets/fonts/fontawesome.woff"):
             self.assertFalse((ROOT / path).exists(), path)
+
+    def test_public_ride_traces_start_and_finish_near_mairie_des_lilas(self):
+        # Public metro entrance; never store a private address in this test.
+        station_lat, station_lon = 48.879844, 2.416578
+
+        def metres_from_station(point):
+            latitude = math.radians(float(point.attrib["lat"]))
+            longitude = math.radians(float(point.attrib["lon"]))
+            station_latitude = math.radians(station_lat)
+            station_longitude = math.radians(station_lon)
+            value = (math.sin((latitude - station_latitude) / 2) ** 2 +
+                     math.cos(latitude) * math.cos(station_latitude) *
+                     math.sin((longitude - station_longitude) / 2) ** 2)
+            return 12742000 * math.asin(math.sqrt(value))
+
+        traces = sorted((ROOT / "assets/rides").glob("*.gpx"))
+        self.assertTrue(traces)
+        for trace in traces:
+            with self.subTest(trace=trace.name):
+                root = ET.parse(trace).getroot()
+                points = [element for element in root.iter()
+                          if element.tag.rsplit("}", 1)[-1] in ("trkpt", "rtept")]
+                self.assertGreater(len(points), 1)
+                self.assertLess(metres_from_station(points[0]), 30)
+                self.assertLess(metres_from_station(points[-1]), 30)
 
     def test_blog_archives_describe_articles_instead_of_apps(self):
         for number in (2, 3):

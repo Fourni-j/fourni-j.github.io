@@ -1,9 +1,5 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<gpx creator="Garmin Connect" version="1.1"
-  xsi:schemaLocation="http://www.topografix.com/GPX/1/1 http://www.topografix.com/GPX/11.xsd"
-  xmlns:ns3="http://www.garmin.com/xmlschemas/TrackPointExtension/v1"
-  xmlns="http://www.topografix.com/GPX/1/1"
-  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ns2="http://www.garmin.com/xmlschemas/GpxExtensions/v3">
+<?xml version='1.0' encoding='utf-8'?>
+<gpx xmlns="http://www.topografix.com/GPX/1/1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" creator="Garmin Connect" version="1.1" xsi:schemaLocation="http://www.topografix.com/GPX/1/1 http://www.topografix.com/GPX/11.xsd">
   <metadata>
     <name>Lake Daumesnil – Chelles dam loop from Bel-Air</name>
     <link href="connect.garmin.com">
@@ -59,72 +55,6 @@
   <trk>
     <name>Lake Daumesnil – Chelles dam loop from Bel-Air</name>
     <trkseg>
-      <trkpt lat="48.87990293093026" lon="2.421995932236314">
-        <ele>120.65</ele>
-      </trkpt>
-      <trkpt lat="48.88017190620303" lon="2.4219629913568497">
-        <ele>120.91</ele>
-      </trkpt>
-      <trkpt lat="48.88044096529484" lon="2.421929966658354">
-        <ele>121.4</ele>
-      </trkpt>
-      <trkpt lat="48.88048195280135" lon="2.4219239316880703">
-        <ele>121.88</ele>
-      </trkpt>
-      <trkpt lat="48.88044892810285" lon="2.421679934486747">
-        <ele>122.48</ele>
-      </trkpt>
-      <trkpt lat="48.88040986843407" lon="2.421407774090767">
-        <ele>123.17</ele>
-      </trkpt>
-      <trkpt lat="48.880370976403356" lon="2.4211369547992945">
-        <ele>123.87</ele>
-      </trkpt>
-      <trkpt lat="48.880314314737916" lon="2.420737389475107">
-        <ele>124.37</ele>
-      </trkpt>
-      <trkpt lat="48.8802579883486" lon="2.420339919626713">
-        <ele>124.7</ele>
-      </trkpt>
-      <trkpt lat="48.880242984741926" lon="2.4202439468353987">
-        <ele>124.96</ele>
-      </trkpt>
-      <trkpt lat="48.88019151985645" lon="2.41987363435328">
-        <ele>125.19</ele>
-      </trkpt>
-      <trkpt lat="48.88014005497098" lon="2.4195033218711615">
-        <ele>125.36</ele>
-      </trkpt>
-      <trkpt lat="48.88008892536163" lon="2.419135943055153">
-        <ele>125.52</ele>
-      </trkpt>
-      <trkpt lat="48.880073921754956" lon="2.4190179258584976">
-        <ele>125.54</ele>
-      </trkpt>
-      <trkpt lat="48.880031844601035" lon="2.4186760280281305">
-        <ele>125.51</ele>
-      </trkpt>
-      <trkpt lat="48.87998993508518" lon="2.418335974216461">
-        <ele>125.54</ele>
-      </trkpt>
-      <trkpt lat="48.87994115240872" lon="2.418016456067562">
-        <ele>125.45</ele>
-      </trkpt>
-      <trkpt lat="48.87989236973226" lon="2.417696937918663">
-        <ele>125.21</ele>
-      </trkpt>
-      <trkpt lat="48.87984392233193" lon="2.4173799343407154">
-        <ele>124.98</ele>
-      </trkpt>
-      <trkpt lat="48.87980695813894" lon="2.417160999029875">
-        <ele>124.75</ele>
-      </trkpt>
-      <trkpt lat="48.87978793121874" lon="2.417041976004839">
-        <ele>124.54</ele>
-      </trkpt>
-      <trkpt lat="48.87975641526282" lon="2.4167887587100267">
-        <ele>124.34</ele>
-      </trkpt>
       <trkpt lat="48.879724983125925" lon="2.4165369663387537">
         <ele>124.14</ele>
       </trkpt>
@@ -8192,66 +8122,6 @@
       <trkpt lat="48.87969799339771" lon="2.4165519699454308">
         <ele>124.29</ele>
       </trkpt>
-      <trkpt lat="48.87972950935364" lon="2.41680258885026">
-        <ele>124.44</ele>
-      </trkpt>
-      <trkpt lat="48.87976094149053" lon="2.417051950469613">
-        <ele>124.57</ele>
-      </trkpt>
-      <trkpt lat="48.87978097423911" lon="2.4171739909797907">
-        <ele>124.73</ele>
-      </trkpt>
-      <trkpt lat="48.879814920946956" lon="2.4173929262906313">
-        <ele>124.91</ele>
-      </trkpt>
-      <trkpt lat="48.87987082824111" lon="2.4178030528128147">
-        <ele>125.09</ele>
-      </trkpt>
-      <trkpt lat="48.879926735535264" lon="2.4182130955159664">
-        <ele>125.25</ele>
-      </trkpt>
-      <trkpt lat="48.87998264282942" lon="2.418623138219118">
-        <ele>125.22</ele>
-      </trkpt>
-      <trkpt lat="48.88003796339035" lon="2.419028989970684">
-        <ele>125.23</ele>
-      </trkpt>
-      <trkpt lat="48.88005296699703" lon="2.4191439896821976">
-        <ele>125.15</ele>
-      </trkpt>
-      <trkpt lat="48.880106108263135" lon="2.4195086024701595">
-        <ele>124.97</ele>
-      </trkpt>
-      <trkpt lat="48.88015924952924" lon="2.4198732152581215">
-        <ele>124.79</ele>
-      </trkpt>
-      <trkpt lat="48.88021197170019" lon="2.420234978199005">
-        <ele>124.55</ele>
-      </trkpt>
-      <trkpt lat="48.88022798113525" lon="2.420348972082138">
-        <ele>124.27</ele>
-      </trkpt>
-      <trkpt lat="48.88028112240136" lon="2.4207455199211836">
-        <ele>123.92</ele>
-      </trkpt>
-      <trkpt lat="48.88033392839134" lon="2.4211399722844362">
-        <ele>123.4</ele>
-      </trkpt>
-      <trkpt lat="48.88037156313658" lon="2.421417161822319">
-        <ele>122.68</ele>
-      </trkpt>
-      <trkpt lat="48.88040894642472" lon="2.4216929264366627">
-        <ele>122.0</ele>
-      </trkpt>
-      <trkpt lat="48.88044096529484" lon="2.421929966658354">
-        <ele>121.4</ele>
-      </trkpt>
-      <trkpt lat="48.88017199002206" lon="2.4219629913568497">
-        <ele>120.94</ele>
-      </trkpt>
-      <trkpt lat="48.87990293093026" lon="2.421995932236314">
-        <ele>120.65</ele>
-      </trkpt>
-    </trkseg>
+      </trkseg>
   </trk>
 </gpx>

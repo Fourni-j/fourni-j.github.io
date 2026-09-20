@@ -2,6 +2,8 @@
 #
 # To add a ride:
 #   1. Drop the GPX file in assets/rides/ (e.g. assets/rides/2026-09-01-my-ride.gpx)
+#      Trim public start/end points near Métro Mairie des Lilas and check waypoints
+#      so the download does not reveal a private address.
 #   2. Add an entry below. Distance and elevation gain are computed from the GPX
 #      in the browser, so you only need to fill the fields here.
 #
