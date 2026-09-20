@@ -84,6 +84,22 @@
   var layers = [];
   var cards = Array.prototype.slice.call(document.querySelectorAll('.ride-row'));
   var activeIndex = null;
+  var activeFilter = 'all';
+  var activeTag = null;
+
+  function matchesFilter(ride) {
+    if (activeFilter === 'all') return true;
+    return (ride.tags || []).indexOf(activeTag) !== -1;
+  }
+
+  function updateLayerVisibility(index) {
+    var layer = layers[index];
+    if (!layer) return;
+    [layer.line, layer.hit, layer.start].forEach(function (part) {
+      if (matchesFilter(rides[index])) part.addTo(map);
+      else map.removeLayer(part);
+    });
+  }
 
   function setText(root, attr, value) {
     var el = root.querySelector('[data-' + attr.split('=')[0] + '="' + attr.split('=')[1] + '"]');
@@ -159,6 +175,7 @@
         }).addTo(map);
 
         layers[index] = { line: line, hit: hit, start: start };
+        updateLayerVisibility(index);
 
         var s = stats(pts);
         var card = cards[index];
@@ -204,15 +221,16 @@
   var filterButtons = document.querySelectorAll('.rides-filters button');
   filterButtons.forEach(function (btn) {
     btn.addEventListener('click', function () {
-      var type = btn.getAttribute('data-filter');
-      filterButtons.forEach(function (b) { b.classList.toggle('is-active', b === btn); });
+      activeFilter = btn.getAttribute('data-filter');
+      activeTag = btn.getAttribute('data-tag');
+      filterButtons.forEach(function (b) {
+        b.classList.toggle('is-active', b === btn);
+        b.setAttribute('aria-pressed', b === btn ? 'true' : 'false');
+      });
       cards.forEach(function (card, i) {
-        var show = type === 'all' || card.getAttribute('data-type') === type;
+        var show = matchesFilter(rides[i]);
         card.classList.toggle('is-hidden', !show);
-        var l = layers[i];
-        if (!l) return;
-        if (show) { l.line.addTo(map); l.hit.addTo(map); l.start.addTo(map); }
-        else { map.removeLayer(l.line); map.removeLayer(l.hit); map.removeLayer(l.start); }
+        updateLayerVisibility(i);
       });
       focusRide(null);
     });
