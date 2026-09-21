@@ -5,8 +5,8 @@ description: "Bike rides around Paris that I'd happily ride again, with GPX trac
 permalink: /rides/
 extra_css:
   - https://unpkg.com/leaflet@1.9.4/dist/leaflet.css
-  - /assets/css/rides.css
+  - /assets/css/rides.css?v=26912697
 extra_js:
   - https://unpkg.com/leaflet@1.9.4/dist/leaflet.js
-  - /assets/js/rides.js?v=25ec0ba8
+  - /assets/js/rides.js?v=f8cbaf63
 ---

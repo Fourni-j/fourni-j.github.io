@@ -205,7 +205,6 @@
     card.addEventListener('click', function (e) {
       if (e.target.closest('a')) return; // let links work normally
       focusRide(activeIndex === i ? null : i, false);
-      mapEl.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
     });
   });
 
