@@ -12,7 +12,7 @@
     zoomSnap: 0,
     zoomDelta: 1,
     wheelDebounceTime: 16,
-    wheelPxPerZoomLevel: 60
+    wheelPxPerZoomLevel: 30
   }).setView([48.8566, 2.3522], 11);
   window.ridesMap = map; // handy for debugging in the console
 
@@ -155,13 +155,11 @@
 
         var line = L.polyline(latlngs, { color: ride.color, weight: 4, opacity: 0.9, interactive: false }).addTo(map);
 
-        // Wide invisible line on top so the trace is easy to hover/click.
+        // Wide invisible line on top so the trace is easy to hover.
         var hit = L.polyline(latlngs, { color: '#000', weight: 16, opacity: 0 }).addTo(map);
+        hit.getElement().style.cursor = 'grab';
         hit.on('mouseover', function () { highlightRide(index); });
         hit.on('mouseout', function () { highlightRide(null); });
-        hit.on('click', function () {
-          focusRide(index, false);
-        });
 
         var start = L.circleMarker(latlngs[0], {
           radius: 5, color: '#fff', weight: 2, fillColor: ride.color, fillOpacity: 1
@@ -202,14 +200,9 @@
     card.addEventListener('mouseleave', function () { highlightRide(null); });
     card.addEventListener('click', function (e) {
       if (e.target.closest('a')) return; // let links work normally
-      focusRide(activeIndex === i ? null : i);
+      focusRide(activeIndex === i ? null : i, false);
       mapEl.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
     });
-  });
-
-  map.on('click', function (e) {
-    if (e.sourceTarget !== map) return;
-    focusRide(null, false);
   });
 
   var filterButtons = document.querySelectorAll('.rides-filters button');
