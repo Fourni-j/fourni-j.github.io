@@ -56,8 +56,7 @@
   padding: 1em 1em;
   transition: background-color 0.15s ease;
 
-  &:hover,
-  &.is-hover { background: var(--modern-bg-secondary); }
+  &:hover { background: var(--modern-bg-secondary); }
 
   &.is-active {
     background: var(--modern-bg-secondary);

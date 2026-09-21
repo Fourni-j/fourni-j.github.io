@@ -8,11 +8,9 @@
 
   // ---- Map ---------------------------------------------------------------
   var map = L.map(mapEl, {
-    scrollWheelZoom: true,
+    scrollWheelZoom: false,
     zoomSnap: 0,
-    zoomDelta: 1,
-    wheelDebounceTime: 16,
-    wheelPxPerZoomLevel: 30
+    zoomDelta: 1
   }).setView([48.8566, 2.3522], 11);
   window.ridesMap = map; // handy for debugging in the console
 
@@ -20,6 +18,35 @@
     maxZoom: 19,
     attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
   }).addTo(map);
+
+  // Leaflet rounds wheel gestures into zoom steps. Apply the raw wheel
+  // distance instead so trackpads stay smooth and faster gestures travel
+  // farther, while double-click and the controls still use one full level.
+  var wheelDelta = 0;
+  var wheelPoint = null;
+  var wheelFrame = null;
+
+  function applyWheelZoom() {
+    var delta = wheelDelta;
+    wheelDelta = 0;
+    wheelFrame = null;
+    if (!delta || !wheelPoint) return;
+
+    var targetZoom = map.getZoom() - delta / 120;
+    targetZoom = Math.max(map.getMinZoom(), Math.min(map.getMaxZoom(), targetZoom));
+    map.setZoomAround(wheelPoint, targetZoom, { animate: false });
+  }
+
+  mapEl.addEventListener('wheel', function (event) {
+    event.preventDefault();
+    var delta = event.deltaY;
+    if (event.deltaMode === 1) delta *= 18;
+    else if (event.deltaMode === 2) delta *= mapEl.clientHeight;
+
+    wheelDelta += delta;
+    wheelPoint = map.mouseEventToContainerPoint(event);
+    if (wheelFrame === null) wheelFrame = window.requestAnimationFrame(applyWheelZoom);
+  }, { passive: false });
 
   // ---- GPX parsing -------------------------------------------------------
   function parseGpx(text) {
@@ -90,7 +117,7 @@
   function updateLayerVisibility(index) {
     var layer = layers[index];
     if (!layer) return;
-    [layer.line, layer.hit, layer.start].forEach(function (part) {
+    [layer.line, layer.start].forEach(function (part) {
       if (matchesFilter(rides[index])) part.addTo(map);
       else map.removeLayer(part);
     });
@@ -112,28 +139,13 @@
     map.fitBounds(bounds, { padding: [30, 30] });
   }
 
-  // Temporary emphasis (hover) — does not change the zoom.
-  function highlightRide(index) {
-    layers.forEach(function (l, i) {
-      if (!l) return;
-      var isTarget = i === index;
-      var dimmed = activeIndex !== null && i !== activeIndex;
-      l.line.setStyle({
-        opacity: index === null ? (dimmed ? 0.25 : 0.9) : (isTarget ? 1 : 0.2),
-        weight: isTarget || i === activeIndex ? 6 : 4
-      });
-      if (isTarget) { l.line.bringToFront(); l.hit.bringToFront(); }
-    });
-    cards.forEach(function (c, i) { c.classList.toggle('is-hover', i === index); });
-  }
-
   function focusRide(index, fitView) {
     activeIndex = index;
     layers.forEach(function (l, i) {
       if (!l) return;
       var dim = index !== null && i !== index;
       l.line.setStyle({ opacity: dim ? 0.25 : 0.9, weight: i === index ? 5 : 4 });
-      if (i === index) { l.line.bringToFront(); l.hit.bringToFront(); }
+      if (i === index) l.line.bringToFront();
     });
     cards.forEach(function (c, i) { c.classList.toggle('is-active', i === index); });
     if (fitView === false) return;
@@ -155,17 +167,11 @@
 
         var line = L.polyline(latlngs, { color: ride.color, weight: 4, opacity: 0.9, interactive: false }).addTo(map);
 
-        // Wide invisible line on top so the trace is easy to hover.
-        var hit = L.polyline(latlngs, { color: '#000', weight: 16, opacity: 0 }).addTo(map);
-        hit.getElement().style.cursor = 'grab';
-        hit.on('mouseover', function () { highlightRide(index); });
-        hit.on('mouseout', function () { highlightRide(null); });
-
         var start = L.circleMarker(latlngs[0], {
           radius: 5, color: '#fff', weight: 2, fillColor: ride.color, fillOpacity: 1
         }).addTo(map);
 
-        layers[index] = { line: line, hit: hit, start: start };
+        layers[index] = { line: line, start: start };
         updateLayerVisibility(index);
 
         var s = stats(pts);
@@ -196,8 +202,6 @@
 
   // ---- Interactions ------------------------------------------------------
   cards.forEach(function (card, i) {
-    card.addEventListener('mouseenter', function () { highlightRide(i); });
-    card.addEventListener('mouseleave', function () { highlightRide(null); });
     card.addEventListener('click', function (e) {
       if (e.target.closest('a')) return; // let links work normally
       focusRide(activeIndex === i ? null : i, false);
