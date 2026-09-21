@@ -9,9 +9,10 @@
   // ---- Map ---------------------------------------------------------------
   var map = L.map(mapEl, {
     scrollWheelZoom: true,
-    zoomSnap: 0.25,
+    zoomSnap: 0,
     zoomDelta: 1,
-    wheelPxPerZoomLevel: 120
+    wheelDebounceTime: 16,
+    wheelPxPerZoomLevel: 60
   }).setView([48.8566, 2.3522], 11);
   window.ridesMap = map; // handy for debugging in the console
 
