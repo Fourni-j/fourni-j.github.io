@@ -1,0 +1,65 @@
+/* App demos inside articles: phones playing short loops beside the text. */
+.post-phone-figure { --post-phone-bezel: #1c1c1e; --post-phone-edge: rgb(0 0 0 / 12%); --post-accent: #f4a20f; }
+@media (prefers-color-scheme: dark) { .post-phone-figure { --post-phone-bezel: #48484a; --post-phone-edge: rgb(255 255 255 / 16%); } }
+.light-theme .post-phone-figure { --post-phone-bezel: #1c1c1e; --post-phone-edge: rgb(0 0 0 / 12%); }
+.dark-theme .post-phone-figure { --post-phone-bezel: #48484a; --post-phone-edge: rgb(255 255 255 / 16%); }
+
+.post-feature { display: grid; grid-template-columns: minmax(0, 1fr) 248px; gap: 48px; align-items: center; margin: 3em 0; }
+.post-feature-flip { grid-template-columns: 248px minmax(0, 1fr); }
+.post-feature-flip .post-phone-figure { order: -1; }
+.post-feature-copy > :first-child { margin-top: 0; }
+.post-feature-copy > :last-child { margin-bottom: 0; }
+.post-note { color: var(--modern-text-tertiary); font-size: 0.9375rem; }
+
+.home-prose .post-phone-figure { margin: 0; }
+.home-prose .post-phone-figure figcaption { margin-top: 16px; }
+.post-phone { position: relative; padding: 8px; border-radius: 38px; background: var(--post-phone-bezel); box-shadow: 0 0 0 1px var(--post-phone-edge), 0 18px 40px -18px rgb(0 0 0 / 45%); }
+.post-phone-screen { position: relative; overflow: hidden; aspect-ratio: 600 / 1304; border-radius: 30px; background: #f0f0f4; container-type: inline-size; }
+.home-prose .post-phone-screen video, .home-prose .post-phone-screen img { display: block; width: 100%; max-width: none; height: auto; margin: 0; border-radius: 0; }
+
+.post-demo-toggle { position: absolute; right: -10px; bottom: -10px; display: grid; place-items: center; width: 36px; height: 36px; padding: 0; border: 1px solid var(--modern-border); border-radius: 50%; background: var(--modern-bg); color: var(--modern-text-primary); box-shadow: var(--modern-shadow-md); cursor: pointer; }
+.post-demo-toggle[hidden] { display: none; }
+.post-demo-toggle:focus-visible { outline: 3px solid var(--home-link); outline-offset: 3px; }
+.post-demo-toggle svg { width: 14px; height: 14px; fill: currentColor; }
+.post-demo-toggle .post-icon-play, .post-demo-toggle[aria-pressed="true"] .post-icon-pause { display: none; }
+.post-demo-toggle[aria-pressed="true"] .post-icon-play { display: block; }
+
+/* A FridgeBuddy item's details, drawn at the scale of the screen recordings. */
+.fb-note-screen { position: absolute; inset: 0; font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", Inter, system-ui, sans-serif; color: #000; font-size: 3.86cqw; line-height: 1.25; letter-spacing: -0.01em; }
+.home-prose .fb-note-screen .fb-bar { position: absolute; left: 0; width: 100%; }
+.home-prose .fb-note-screen .fb-status { top: 0; }
+.home-prose .fb-note-screen .fb-tabbar { bottom: 0; }
+.home-prose .fb-note-screen .fb-nav { position: absolute; top: 13.33cqw; width: 22.73cqw; }
+.home-prose .fb-note-screen .fb-nav-back { left: 0; }
+.home-prose .fb-note-screen .fb-nav-more { right: 0; }
+.fb-note-title { position: absolute; top: 29cqw; left: 9.1cqw; margin: 0; font-size: 6.36cqw; font-weight: 700; letter-spacing: -0.02em; }
+.fb-note-card { position: absolute; left: 4.55cqw; right: 4.55cqw; border-radius: 5.2cqw; background: #fff; }
+.fb-note-fields { top: 41cqw; }
+.fb-note-text { top: 81cqw; }
+.fb-note-row { position: relative; display: flex; align-items: center; justify-content: space-between; gap: 3cqw; min-height: 11.82cqw; padding: 2.6cqw 4.55cqw; }
+.fb-note-row + .fb-note-row::before { content: ""; position: absolute; top: 0; left: 4.55cqw; right: 4.55cqw; border-top: 1px solid rgb(60 60 67 / 18%); }
+.fb-note-fields .fb-note-row span:last-child { color: rgb(60 60 67 / 60%); }
+.fb-note-add { color: var(--post-accent); }
+.fb-note-caret { display: inline-block; width: 0.45cqw; height: 4.5cqw; margin-left: 0.25cqw; border-radius: 1cqw; background: var(--post-accent); vertical-align: -0.9cqw; }
+.fb-note-typed { transition: opacity 500ms ease-out; }
+.fb-note-screen [hidden] { display: none; }
+
+/* The app's card at the end of a release article. */
+.post-app-cta { display: flex; align-items: center; gap: 18px; margin: 2.5em 0 0; padding: 20px 22px; border: 1px solid var(--modern-border); border-radius: 24px; background: var(--modern-bg-secondary); }
+.home-prose .post-app-cta img { margin: 0; }
+.home-prose .post-app-cta > img { flex: none; width: 64px; height: 64px; border-radius: 15px; box-shadow: 0 0 0 1px rgb(0 0 0 / 8%); }
+.post-app-cta-copy { display: flex; flex-direction: column; gap: 2px; min-width: 0; margin-right: auto; line-height: 1.4; }
+.post-app-cta-copy strong { font-size: 1.0625rem; }
+.home-prose .post-app-cta-copy a { font-size: 0.9375rem; }
+.home-prose .post-app-cta-badge { flex: none; text-decoration: none; }
+.home-prose .post-app-cta-badge img { width: 120px; height: 40px; border-radius: 0; }
+
+@media (max-width: 760px) {
+    .post-feature, .post-feature-flip { grid-template-columns: 1fr; gap: 28px; }
+    .post-feature-flip .post-phone-figure { order: 0; }
+    .post-phone-figure { width: min(100%, 240px); justify-self: center; }
+}
+@media (max-width: 480px) {
+    .post-app-cta { flex-wrap: wrap; }
+    .post-app-cta-badge { width: 100%; }
+}
