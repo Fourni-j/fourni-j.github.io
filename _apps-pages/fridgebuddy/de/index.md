@@ -91,8 +91,8 @@ faq:
     scannen, gespeicherte Produktdaten wiederverwenden oder einen Artikel manuell
     eintragen.
 - question: Auf welchen Geräten funktioniert FridgeBuddy?
-  answer: FridgeBuddy funktioniert auf dem iPhone ab iOS 18 und auf dem iPad ab iPadOS
-    18. iCloud hält Ihren Vorrat auf diesen Geräten synchron.
+  answer: FridgeBuddy funktioniert auf dem iPhone ab iOS 26 und auf dem iPad ab iPadOS
+    26. iCloud hält Ihren Vorrat auf diesen Geräten synchron.
 - question: Ist FridgeBuddy kostenlos?
   answer: FridgeBuddy ist kostenlos im Download und bietet optionale In-App-Käufe
     für den Premium-Zugang. Aktuelle Angebote und Preise finden Sie im App Store.

@@ -91,8 +91,8 @@ faq:
     réutiliser une fiche produit enregistrée sur votre appareil ou saisir un article
     manuellement.
 - question: Sur quels appareils puis-je utiliser FridgeBuddy ?
-  answer: FridgeBuddy fonctionne sur iPhone à partir d’iOS 18 et sur iPad à partir
-    d’iPadOS 18. iCloud garde votre inventaire synchronisé entre ces appareils.
+  answer: FridgeBuddy fonctionne sur iPhone à partir d’iOS 26 et sur iPad à partir
+    d’iPadOS 26. iCloud garde votre inventaire synchronisé entre ces appareils.
 - question: FridgeBuddy est-il gratuit ?
   answer: FridgeBuddy est gratuit au téléchargement et propose des achats intégrés
     optionnels pour l'accès premium. Les offres et prix en vigueur sont affichés sur

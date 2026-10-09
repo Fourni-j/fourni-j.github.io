@@ -8,7 +8,7 @@ products:
     strongest_for: "Les foyers Apple qui veulent réunir scan de code-barres et de dates, inventaire partagé, listes de courses, widgets et statistiques de gaspillage dans une seule app."
     notable_input: "Scan de code-barres, scan de date de péremption, fiches produit réutilisables ou saisie manuelle."
     sharing: "Un foyer iCloud unique pour les lieux de stockage et les listes de courses."
-    tradeoff: "Uniquement Apple, et nécessite iOS ou iPadOS 18 minimum."
+    tradeoff: "Uniquement Apple, et nécessite iOS ou iPadOS 26 minimum."
   - id: nowaste
     name: "NoWaste"
     website: "https://www.nowasteapp.com/"

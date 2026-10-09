@@ -112,7 +112,7 @@ Its differentiators include:
 - Nutri-Score and Green-Score product information when available
 - CSV export for backup or personal analysis
 
-The honest limitation is platform reach: FridgeBuddy requires iOS or iPadOS 18 or later. A mixed iPhone/Android household should choose a cross-platform option.
+The honest limitation is platform reach: FridgeBuddy requires iOS or iPadOS 26 or later. A mixed iPhone/Android household should choose a cross-platform option.
 
 ## Research methodology
 

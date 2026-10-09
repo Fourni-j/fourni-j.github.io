@@ -116,7 +116,7 @@ Die wichtigsten Unterschiede:
 - Nutri-Score- und Green-Score-Informationen, sofern verfügbar
 - CSV-Export für Sicherung oder eigene Auswertungen
 
-Die ehrliche Einschränkung ist die Plattformabdeckung: FridgeBuddy erfordert iOS oder iPadOS 18 oder neuer. Ein gemischter iPhone/Android-Haushalt sollte eine plattformübergreifende Option wählen.
+Die ehrliche Einschränkung ist die Plattformabdeckung: FridgeBuddy erfordert iOS oder iPadOS 26 oder neuer. Ein gemischter iPhone/Android-Haushalt sollte eine plattformübergreifende Option wählen.
 
 ## Methodik
 

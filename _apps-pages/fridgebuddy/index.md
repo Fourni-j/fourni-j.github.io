@@ -84,7 +84,7 @@ faq:
   answer: You can scan a barcode, scan a printed expiration date, reuse product details
     stored on your device, or enter an item manually.
 - question: Which devices can I use?
-  answer: FridgeBuddy works on iPhone with iOS 18 or later and iPad with iPadOS 18
+  answer: FridgeBuddy works on iPhone with iOS 26 or later and iPad with iPadOS 26
     or later. iCloud keeps your inventory in sync across those devices.
 - question: Is FridgeBuddy free?
   answer: FridgeBuddy is free to download and includes in-app purchases for optional

@@ -116,7 +116,7 @@ Ses points différenciants :
 - Informations Nutri-Score et Green-Score quand elles sont disponibles
 - Export CSV pour sauvegarde ou analyse personnelle
 
-Sa limite, en toute honnêteté : la portée des plateformes. FridgeBuddy nécessite iOS ou iPadOS 18 minimum. Un foyer mixte iPhone/Android devrait choisir une option multiplateforme.
+Sa limite, en toute honnêteté : la portée des plateformes. FridgeBuddy nécessite iOS ou iPadOS 26 minimum. Un foyer mixte iPhone/Android devrait choisir une option multiplateforme.
 
 ## Méthodologie
 

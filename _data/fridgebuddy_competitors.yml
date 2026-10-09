@@ -8,7 +8,7 @@ products:
     strongest_for: "Apple households that want barcode and date scanning, shared inventory, shopping lists, widgets, and waste insights in one app."
     notable_input: "Barcode scan, expiration-date scan, saved product details, or manual entry."
     sharing: "One iCloud household across storage locations and shopping lists."
-    tradeoff: "Apple-only and requires iOS or iPadOS 18 or later."
+    tradeoff: "Apple-only and requires iOS or iPadOS 26 or later."
   - id: nowaste
     name: "NoWaste"
     website: "https://www.nowasteapp.com/"

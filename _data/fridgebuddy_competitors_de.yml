@@ -8,7 +8,7 @@ products:
     strongest_for: "Apple-Haushalte, die Barcode- und Datumsscan, geteilten Vorrat, Einkaufslisten, Widgets und Abfall-Statistiken in einer App vereinen möchten."
     notable_input: "Barcode-Scan, MHD-Scan, wiederverwendbare Produktdaten oder manuelle Eingabe."
     sharing: "Ein gemeinsamer iCloud-Haushalt für Lagerorte und Einkaufslisten."
-    tradeoff: "Nur für Apple-Geräte, erfordert iOS bzw. iPadOS 18 oder neuer."
+    tradeoff: "Nur für Apple-Geräte, erfordert iOS bzw. iPadOS 26 oder neuer."
   - id: nowaste
     name: "NoWaste"
     website: "https://www.nowasteapp.com/"
