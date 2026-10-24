@@ -11,6 +11,7 @@
 - [Pantry app comparison](https://cafournier.com/fridgebuddy/alternatives/): FridgeBuddy, NoWaste, Pantry, What The Fridge?!, and ExpiresBy compared by platform, input method, sharing, and ideal use case, with a stated research date.
 - [Food-waste cost calculator](https://cafournier.com/fridgebuddy/food-waste-calculator/): Free client-side calculator estimating the annual cost of avoidable household food waste.
 - [FridgeBuddy 2.34: Fruits and vegetables](https://cafournier.com/fridgebuddy-2-34): October 2026 release article with short screen recordings: suggested expiration dates for fruits and vegetables based on USDA FoodKeeper storage times, notes on items, and quicker shopping lists.
+- [FridgeBuddy 2.35: Undo](https://cafournier.com/fridgebuddy-2-35): October 2026 release article with short screen recordings: undo a consume, throw away or delete in one tap (or by shaking the iPhone), reopening on the last tab and shopping list after iOS closes the app in the background, and a region-independent CSV export.
 - [FridgeBuddy privacy policy](https://cafournier.com/fridgebuddy/privacypolicy): No accounts, no ads, no tracking; inventory stored in the user's private iCloud.
 
 ## FridgeBuddy en français
