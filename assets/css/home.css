@@ -66,7 +66,9 @@
 .home-app-row { display: flex; align-items: center; gap: 14px; min-width: 0; padding: 20px 0; border-bottom: 1px solid var(--modern-border); }
 .home-app-row:hover h3 { color: var(--home-link); }
 .home-writing { margin-top: 56px; }
-.home-latest-post { display: grid; grid-template-columns: 155px 1fr; gap: 24px; align-items: baseline; padding: 8px 0 18px; }
+.home-latest-post { display: grid; grid-template-columns: 155px 1fr; gap: 24px; align-items: baseline; padding: 14px 0; border-bottom: 1px solid var(--modern-border); }
+.home-latest-post:first-of-type { padding-top: 8px; }
+.home-latest-post:last-child { border-bottom: 0; }
 .home-latest-post time, .home-archive-post time { color: var(--modern-text-tertiary); font-size: 0.875rem; }
 .home-latest-post h3 { font-size: 1rem; font-weight: 500; letter-spacing: -0.02em; }
 .home-latest-post:hover h3 { text-decoration: underline; text-underline-offset: 4px; }

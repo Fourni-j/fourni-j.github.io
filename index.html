@@ -61,17 +61,18 @@ description: "Discover iOS apps by Charles-Adrien Fournier, an independent devel
         {% endfor %}
         </div>
     </section>
-    {% assign latest_post = site.posts.first %}
-    {% if latest_post %}
+    {% if site.posts.size > 0 %}
     <section class="home-writing" id="writing" aria-labelledby="writing-title">
         <div class="home-section-heading">
             <h2 id="writing-title">From the blog</h2>
             <a class="home-text-link" href="{{ '/blog/' | relative_url }}">All posts</a>
         </div>
+        {% for latest_post in site.posts limit: site.paginate %}
         <a class="home-latest-post" href="{{ latest_post.url | relative_url }}">
             <time datetime="{{ latest_post.date | date: '%Y-%m-%d' }}">{{ latest_post.date | date: '%B %-d, %Y' }}</time>
             <h3>{{ latest_post.title | escape }}</h3>
         </a>
+        {% endfor %}
     </section>
     {% endif %}
 </div>
