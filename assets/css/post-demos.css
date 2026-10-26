@@ -50,7 +50,8 @@
 .home-prose .post-app-cta > img { flex: none; width: 64px; height: 64px; border-radius: 15px; box-shadow: 0 0 0 1px rgb(0 0 0 / 8%); }
 .post-app-cta-copy { display: flex; flex-direction: column; gap: 2px; min-width: 0; margin-right: auto; line-height: 1.4; }
 .post-app-cta-copy strong { font-size: 1.0625rem; }
-.home-prose .post-app-cta-copy a { font-size: 0.9375rem; }
+.home-prose .post-app-cta-copy a, .post-app-cta-copy span { font-size: 0.9375rem; }
+.post-app-cta-copy span { color: var(--modern-text-tertiary); }
 .home-prose .post-app-cta-badge { flex: none; text-decoration: none; }
 .home-prose .post-app-cta-badge img { width: 120px; height: 40px; border-radius: 0; }
 

@@ -39,3 +39,4 @@
 ## Articles
 
 - [Blog](https://cafournier.com/blog/): Articles about iOS development, Swift, and indie app projects.
+- [FitnessStats 2.8: Share your workouts](https://cafournier.com/fitnessstats-2-8): October 2026 release article with short screen recordings for FitnessStats, the Apple Health workout statistics app: a share editor that turns any workout into an image or a video where the route draws itself (triathlon legs included), and Export to AI, which copies a private summary of the user's training for ChatGPT, Claude or Gemini.
