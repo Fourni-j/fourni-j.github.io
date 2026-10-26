@@ -19,7 +19,7 @@ featured:
   subtitle: Bike maintenance log
   category: For the miles ahead
   headline: Your bike, serviced on time.
-  url: "/Steed/index"
+  url: "/Steed/"
   icon: "/assets/home/steed.webp"
   preview: "/assets/home/steed-feature.webp"
   preview_width: 320
@@ -30,7 +30,7 @@ featured:
   subtitle: Your bookmarks, organized
   category: Keep the good finds
   headline: Save now. Read later.
-  url: "/LaterMark/index"
+  url: "/LaterMark/"
   icon: "/assets/home/latermark.webp"
   preview: "/assets/home/latermark-preview.webp"
   preview_width: 600

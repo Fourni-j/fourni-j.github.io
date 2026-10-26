@@ -1,5 +1,6 @@
 ---
 layout: modern-app-default
+permalink: /Steed/
 privacypolicy: true
 terms: true
 changelog: false

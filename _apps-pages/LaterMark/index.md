@@ -1,5 +1,6 @@
 ---
 layout: modern-app-default
+permalink: /LaterMark/
 privacypolicy: true
 terms: true
 changelog: false
