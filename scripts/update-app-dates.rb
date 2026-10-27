@@ -35,7 +35,8 @@ end
 
 if changed
   header = "# Featured app order is curated; More to explore is sorted by updated_at.\n" \
-           "# Release dates come from Apple's US lookup API; artwork is saved locally.\n"
+           "# Release dates come from Apple's US lookup API; artwork is saved locally.\n" \
+           "# An optional page links the row to the app's page on this site instead of the App Store.\n"
   File.write(catalog_path, header + YAML.dump(catalog))
 end
 puts "Verified App Store release dates for #{apps.length} apps#{changed ? '; saved updates' : '; no changes'}."
