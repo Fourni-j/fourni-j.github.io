@@ -32,6 +32,10 @@
 - [App-Vergleich](https://cafournier.com/fridgebuddy/de/vergleich/): Deutscher Vergleich von fünf Vorrats- und MHD-Apps.
 - [Lebensmittelverschwendung-Rechner](https://cafournier.com/fridgebuddy/de/lebensmittelverschwendung-rechner/): Kostenloser Rechner für die jährlichen Kosten vermeidbarer Verschwendung.
 
+## FitnessStats — workout statistics for Apple Health
+
+- [FitnessStats overview](https://cafournier.com/fitnessstats/): Features, screenshots, and FAQ for the iPhone app that turns Apple Health workouts into statistics, route heatmaps, distance trophies, heart rate zones, and monthly and yearly Recaps, shares any workout as an image or a route video, and exports a private training summary for ChatGPT, Claude, or Gemini. Free with an optional one-time Premium purchase, requires iOS 26+.
+
 ## Apps
 
 - [All apps](https://cafournier.com/#apps): Current iOS apps on the App Store, including Steed (bike maintenance log), LaterMark (bookmark manager), Clashly (bracket maker), Tierly (tier list maker), and NoExif (photo compressor).

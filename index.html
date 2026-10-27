@@ -53,10 +53,14 @@ description: "Discover iOS apps by Charles-Adrien Fournier, an independent devel
         {% assign undated_apps = site.data.home_apps.more | where_exp: 'app', 'app.updated_at == nil' %}
         {% assign more_apps = dated_apps | concat: undated_apps %}
         {% for app in more_apps %}
+            {% if app.page %}
+            <a class="home-app-row" href="{{ app.page | relative_url }}" aria-label="{{ app.name | escape }} — {{ app.subtitle | escape }}. View app">
+            {% else %}
             <a class="home-app-row" href="{{ app.url | escape }}" aria-label="{{ app.name | escape }} — {{ app.subtitle | escape }}. View on the App Store">
+            {% endif %}
                 <img class="home-app-icon" src="{{ app.icon | relative_url }}" width="64" height="64" alt="" loading="lazy" decoding="async">
                 <div class="home-app-copy"><h3>{{ app.name | escape }}</h3><p>{{ app.subtitle | escape }}</p></div>
-                <span class="home-app-action">View<span class="home-sr-only"> on the App Store</span></span>
+                <span class="home-app-action">View{% unless app.page %}<span class="home-sr-only"> on the App Store</span>{% endunless %}</span>
             </a>
         {% endfor %}
         </div>

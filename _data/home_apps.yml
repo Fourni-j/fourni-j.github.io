@@ -1,5 +1,6 @@
 # Featured app order is curated; More to explore is sorted by updated_at.
 # Release dates come from Apple's US lookup API; artwork is saved locally.
+# An optional page links the row to the app's page on this site instead of the App Store.
 ---
 featured:
 - name: FridgeBuddy
@@ -56,6 +57,7 @@ more:
   subtitle: Your activity recap
   icon: "/assets/home/fitness-stats.webp"
   url: https://apps.apple.com/app/id6445907634
+  page: "/fitnessstats/"
   updated_at: '2026-08-24T18:10:26Z'
 - name: Reverse Audio
   subtitle: Record. Reverse. Sing.

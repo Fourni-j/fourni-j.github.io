@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en-US">
+{% assign app = site.data.fitnessstats %}
+{% assign canonical_url = page.canonical_path | default: page.url | absolute_url %}
+{% assign icon_url = app.icon | absolute_url %}
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="color-scheme" content="light dark">
+
+    <title>{{ page.page_title | escape }}</title>
+    <meta name="description" content="{{ page.meta_description | strip_newlines | escape }}">
+    <meta name="robots" content="index,follow,max-image-preview:large">
+    <link rel="canonical" href="{{ canonical_url }}">
+
+    <meta property="og:site_name" content="FitnessStats">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="{{ page.page_title | escape }}">
+    <meta property="og:description" content="{{ page.meta_description | strip_newlines | escape }}">
+    <meta property="og:url" content="{{ canonical_url }}">
+    <meta property="og:image" content="{{ icon_url }}">
+    <meta property="og:image:width" content="512">
+    <meta property="og:image:height" content="512">
+    <meta property="og:image:alt" content="FitnessStats app icon">
+    <meta property="og:locale" content="en_US">
+
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="{{ page.page_title | escape }}">
+    <meta name="twitter:description" content="{{ page.meta_description | strip_newlines | escape }}">
+    <meta name="twitter:image" content="{{ icon_url }}">
+    <meta name="twitter:image:alt" content="FitnessStats app icon">
+
+    <meta name="apple-itunes-app" content="app-id={{ page.ios_app_id }}, affiliate-data={{ page.app_store_url | split: '?' | last | escape }}">
+    <link rel="icon" type="image/png" sizes="512x512" href="{{ app.icon | relative_url }}">
+    <link rel="apple-touch-icon" href="{{ app.icon | relative_url }}">
+
+    {% include app-fonts.html %}
+    <link rel="stylesheet" href="{{ '/assets/css/modern-style.css' | relative_url }}">
+    <link rel="stylesheet" href="{{ '/assets/css/fridgebuddy-components.css' | relative_url }}?v={{ site.time | date: '%s' }}">
+    <style>
+        /* FitnessStats accent on the shared landing styles: the app's crimson, teal and lime. */
+        .fs-landing { --modern-primary: #d81f45; }
+        .fs-landing.dark-theme { --modern-primary: #ff6b81; }
+        @media (prefers-color-scheme: dark) {
+            .fs-landing:not(.light-theme) { --modern-primary: #ff6b81; }
+        }
+        .fs-landing .modern-hero::before {
+            background: radial-gradient(ellipse at 92% 18%, rgba(245, 51, 79, .14), transparent 50%), radial-gradient(ellipse at 70% 90%, rgba(22, 213, 180, .12), transparent 55%), var(--modern-hero-bg);
+        }
+        .fs-landing .fb-final-cta {
+            background: radial-gradient(ellipse at 50% 100%, rgba(245, 51, 79, .12), transparent 70%), var(--modern-bg-secondary);
+        }
+        /* The hero shows a real capture in an Apple device frame, so no card border. */
+        .fs-hero-phone {
+            width: min(100%, 300px);
+            height: auto;
+            filter: drop-shadow(0 24px 40px rgba(17, 17, 20, .18));
+        }
+        @media (max-width: 639px) {
+            .fs-hero-phone { width: min(100%, 260px); }
+        }
+    </style>
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "MobileApplication",
+          "@id": "{{ canonical_url }}#app",
+          "name": "FitnessStats",
+          "alternateName": "Fitness Stats: Activity Recap",
+          "description": {{ page.meta_description | strip_newlines | jsonify }},
+          "url": "{{ canonical_url }}",
+          "downloadUrl": {{ page.app_store_url | jsonify }},
+          "installUrl": {{ page.app_store_url | jsonify }},
+          "image": "{{ icon_url }}",
+          "screenshot": [{{ page.preview_file | absolute_url | jsonify }}{% for screenshot in page.screenshots %}, {{ screenshot.image | absolute_url | jsonify }}{% endfor %}],
+          "softwareVersion": {{ app.version | jsonify }},
+          "applicationCategory": "HealthApplication",
+          "operatingSystem": "iOS {{ app.minimum_os }} or later",
+          "author": {
+            "@type": "Person",
+            "name": "Charles-Adrien Fournier",
+            "url": "{{ '/' | absolute_url }}"
+          },
+          "offers": {
+            "@type": "Offer",
+            "url": {{ page.app_store_url | jsonify }},
+            "price": 0,
+            "priceCurrency": "USD"
+          },
+          "aggregateRating": {
+            "@type": "AggregateRating",
+            "ratingValue": {{ app.rating_value }},
+            "ratingCount": {{ app.rating_count }},
+            "bestRating": 5,
+            "worstRating": 1
+          }
+        },
+        {
+          "@type": "FAQPage",
+          "@id": "{{ canonical_url }}#faq",
+          "mainEntity": [
+            {% for item in page.faq %}{
+              "@type": "Question",
+              "name": {{ item.question | jsonify }},
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": {{ item.answer | strip_html | jsonify }}
+              }
+            }{% unless forloop.last %},{% endunless %}{% endfor %}
+          ]
+        }
+      ]
+    }
+    </script>
+</head>
+<body class="modern-layout fb-landing fs-landing">
+    <header class="modern-header fb-header">
+        <div class="modern-container">
+            <nav class="modern-nav">
+                <a class="modern-app-branding" href="{{ page.url | relative_url }}" aria-label="FitnessStats home">
+                    <img class="modern-header-app-icon" src="{{ app.icon | relative_url }}" width="32" height="32" alt="">
+                    <span class="modern-header-app-name">FitnessStats</span>
+                </a>
+                <div class="modern-nav-links">
+                    {% for link in page.nav_links %}<a href="{{ link.url | relative_url }}" class="modern-nav-link">{{ link.text }}</a>{% endfor %}
+                </div>
+                <div class="modern-nav-cta">
+                    <a class="modern-appstore-header-btn" href="{{ page.app_store_url | escape }}" target="_blank" rel="noopener">
+                        <img src="{{ '/assets/app-pages/appstore-header.svg' | relative_url }}" alt="Download FitnessStats on the App Store" width="120" height="40">
+                    </a>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <main class="modern-main">
+        <section class="modern-hero">
+            <div class="modern-container">
+                <div class="modern-app-showcase">
+                    <div class="modern-app-info">
+                        <h1 class="modern-hero-title">{{ page.hero_title }}</h1>
+                        <p class="modern-hero-subtitle">{{ page.hero_subtitle }}</p>
+                        <div class="fb-hero-actions">
+                            <a class="modern-download-btn" href="{{ page.app_store_url | escape }}" target="_blank" rel="noopener">
+                                <img src="{{ '/assets/app-pages/appstore.svg' | relative_url }}" alt="Download FitnessStats on the App Store" width="180" height="60">
+                            </a>
+                        </div>
+                    </div>
+                    <figure class="modern-app-preview fb-hero-preview">
+                        <img class="fs-hero-phone" src="{{ page.preview_file | relative_url }}" width="600" height="1227" fetchpriority="high" decoding="async" alt="{{ page.preview_alt | escape }}">
+                        <figcaption>{{ page.preview_caption }}</figcaption>
+                    </figure>
+                </div>
+            </div>
+        </section>
+
+        <section class="modern-features" id="features">
+            <div class="modern-container">
+                <h2 class="modern-section-title">{{ page.features_title }}</h2>
+                <div class="modern-features-grid">
+                    {% for feature in page.features %}
+                    <div class="modern-feature">
+                        <div class="modern-feature-icon"><i class="fas fa-{{ feature.fontawesome_icon_name }}" aria-hidden="true"></i></div>
+                        <div class="modern-feature-content">
+                            <h3 class="modern-feature-title">{{ feature.title }}</h3>
+                            <p class="modern-feature-description">{{ feature.description }}</p>
+                        </div>
+                    </div>
+                    {% endfor %}
+                </div>
+            </div>
+        </section>
+
+        <section class="modern-screenshots" id="how-it-works">
+            <div class="modern-container">
+                <h2 class="modern-section-title">{{ page.screenshots_title }}</h2>
+                <div class="modern-screenshots-grid">
+                    {% for screenshot in page.screenshots %}
+                    <figure class="modern-screenshot">
+                        <img class="modern-screenshot-image" src="{{ screenshot.image | relative_url }}" width="{{ screenshot.width }}" height="{{ screenshot.height }}" loading="lazy" decoding="async" alt="{{ screenshot.alt | escape }}">
+                        <figcaption class="modern-screenshot-caption">{{ screenshot.caption }}</figcaption>
+                    </figure>
+                    {% endfor %}
+                </div>
+            </div>
+        </section>
+
+        <section class="fb-faq-section" id="faq">
+            <div class="modern-container">
+                <h2 class="modern-section-title">{{ page.faq_title }}</h2>
+                <div class="fb-faq-list">
+                    {% for item in page.faq %}
+                    <details class="fb-faq-item">
+                        <summary>{{ item.question }}<span aria-hidden="true">+</span></summary>
+                        <p>{{ item.answer }}</p>
+                    </details>
+                    {% endfor %}
+                </div>
+            </div>
+        </section>
+
+        <section class="fb-final-cta">
+            <div class="modern-container">
+                <h2 class="modern-section-title">{{ page.final_title }}</h2>
+                <p>{{ page.final_description }}</p>
+                <a class="modern-download-btn" href="{{ page.app_store_url | escape }}" target="_blank" rel="noopener"><img src="{{ '/assets/app-pages/appstore.svg' | relative_url }}" alt="Download FitnessStats on the App Store" width="180" height="60"></a>
+            </div>
+        </section>
+    </main>
+
+    <div class="modern-footer">
+        <div class="modern-container">
+            <footer class="app-footer">
+                <div class="app-footer-content">
+                    <div class="app-footer-left">
+                        <a href="{{ '/fitnessstats/privacypolicy' | relative_url }}" class="app-footer-link">Privacy Policy</a>
+                    </div>
+                    <div class="app-footer-center">
+                        <p class="app-footer-text">Made by <a href="https://cafournier.com" class="app-footer-author-link" target="_blank" rel="noopener">Charles-Adrien Fournier</a></p>
+                    </div>
+                    <div class="app-footer-right">
+                        <a href="mailto:feedback@cafournier.com" class="app-footer-link">Support</a>
+                    </div>
+                </div>
+            </footer>
+        </div>
+    </div>
+    <script>
+        (function () {
+            const header = document.querySelector('.modern-header');
+            function updateHeader() { header.classList.toggle('modern-header-scrolled', window.scrollY > 20); }
+            window.addEventListener('scroll', updateHeader, { passive: true });
+            updateHeader();
+            if (['localhost', '127.0.0.1'].includes(window.location.hostname)) {
+                const toggle = document.createElement('button');
+                const themes = ['system', 'light', 'dark'];
+                let index = 0;
+                toggle.className = 'fb-theme-toggle';
+                toggle.type = 'button';
+                function updateTheme() {
+                    document.body.classList.remove('light-theme', 'dark-theme');
+                    if (index) document.body.classList.add(themes[index] + '-theme');
+                    toggle.textContent = ['◐', '☀', '☾'][index];
+                    toggle.setAttribute('aria-label', 'Preview theme: ' + themes[index] + '. Change theme');
+                }
+                toggle.addEventListener('click', function () { index = (index + 1) % themes.length; updateTheme(); });
+                updateTheme();
+                document.body.appendChild(toggle);
+            }
+        })();
+    </script>
+</body>
+</html>
