@@ -5,27 +5,27 @@ ios_app_id: 6657988450
 include_in_header: false
 ---
 
-**Last Updated:** August 13, 2023
+**Last Updated:** October 31, 2026
 
 ## Introduction
 
-Welcome to the Coloring App ("app", "we", "our", or "us"). By downloading, accessing, or using our app, you agree to abide by the following terms and conditions. If you do not agree with any part of these terms, please refrain from using the app.
-
-## Acceptance of Terms
-
-By using our app, you confirm that you have read, understood, and agreed to be bound by these terms. We may modify these terms at any time, and such modifications will be effective immediately upon posting the modified terms within the app or on our website. Your continued use of the app signifies your acceptance of the updated terms.
+Welcome to Coloring Book Maker (the "app", "we", "our", or "us"). By downloading, accessing, or using the app, you agree to these terms. If you do not agree with any part of them, please don't use the app.
 
 ## Use of the App
 
-This app is designed to generate random for personal, non-commercial use. You agree not to misuse the app or use it for any illegal or unauthorized purposes.
+The app turns your photos and ideas into coloring pages and offers a library of printable coloring pages, for personal, non-commercial use. You agree not to misuse the app or use it for illegal or unauthorized purposes.
 
-## Subscription & Payments
+## Your Photos and Coloring Pages
 
-While the basic version of the app is free, additional features and customization options can be unlocked through a subscription model. All payments, subscriptions, and related transactions are handled by the Apple App Store, not by us. 
+Only use photos you own or have permission to use, and respect the privacy of the people in them. Don't submit content that is illegal, hateful, sexual, violent or that infringes someone else's rights. Coloring pages are drawn by an AI service; results can vary and some requests may be refused. You may print, share and gift the pages you create for personal use. See our [Privacy Policy](privacypolicy) for how photos are handled.
+
+## Coloring Pass Subscription
+
+The first coloring page is free. The Coloring Pass is an auto-renewable subscription that lets you create up to 10 new coloring pages a day and use the whole printable library without limits. Payment is charged to your Apple Account when you confirm the purchase. The subscription renews automatically at the end of each period unless you turn off auto-renew at least 24 hours before the period ends. You can manage or cancel it in your Apple Account settings. All payments are handled by Apple.
 
 ## Termination
 
-We reserve the right to terminate or suspend access to our app for any reason, including breaches of these terms. If you wish to terminate your account or usage, simply uninstall the app from your device.
+We may suspend access to the app's online features in case of abuse or breach of these terms.
 
 ## Limitation of Liability
 
@@ -33,10 +33,8 @@ To the extent permitted by law, we will not be liable for any direct, indirect, 
 
 ## Changes to Terms
 
-We reserve the right to update or modify these terms at any time without prior notice. Any changes will be effective immediately upon posting the updated terms within the app or on our official channels. Your continued use of the app after any such changes constitutes your acceptance of the new terms.
+We may update these terms when the app changes. The date at the top shows the latest version. Your continued use of the app after changes means you accept the updated terms.
 
 ## Contact Us
 
-For questions or concerns regarding these terms, please contact us through the support section within the app or by email at [feedback@cafournier.com](mailto:feedback@cafournier.com).
-
-Thank you for choosing Coloring.
+For questions about these terms, contact us from the app's Settings or by email at [feedback@cafournier.com](mailto:feedback@cafournier.com).
