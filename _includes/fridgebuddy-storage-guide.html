@@ -1,0 +1,42 @@
+{% assign fb_lang = 'en' %}{% if page.lang contains 'fr' %}{% assign fb_lang = 'fr' %}{% elsif page.lang contains 'de' %}{% assign fb_lang = 'de' %}{% endif %}
+{% assign sx = site.data.fridgebuddy_storage.text[fb_lang] %}
+{% if page.storage_groups %}
+{% for group in page.storage_groups %}
+<h2>{{ group.name }}</h2>
+<table class="fb-storage-table">
+    <thead><tr><th scope="col">{{ sx.col_food }}</th><th scope="col">{{ sx.col_fridge }}</th><th scope="col">{{ sx.col_freezer }}</th></tr></thead>
+    <tbody>
+        {% for food in group.foods %}<tr><th scope="row"><a href="{{ food.url }}">{{ food.label }}</a></th><td>{{ food.fridge }}</td><td>{{ food.freezer }}</td></tr>
+        {% endfor %}
+    </tbody>
+</table>
+{% endfor %}
+{% else %}
+<h2>{{ sx.times_heading }}</h2>
+<table class="fb-storage-table">
+    <thead><tr><th scope="col">{{ sx.col_variant }}</th><th scope="col">{{ sx.col_fridge }}</th><th scope="col">{{ sx.col_freezer }}</th></tr></thead>
+    <tbody>
+        {% for row in page.storage_rows %}<tr><th scope="row">{{ row.variant }}</th><td>{{ row.fridge }}</td><td>{{ row.freezer }}</td></tr>
+        {% endfor %}
+    </tbody>
+</table>
+
+{% assign category = sx.categories[page.storage_category] %}
+<h2>{{ category.heading }}</h2>
+<ul>
+    {% for tip in category.tips %}<li>{{ tip }}</li>
+    {% endfor %}
+</ul>
+{% endif %}
+
+<h2>{{ sx.freezer_heading }}</h2>
+<p>{{ sx.freezer_body }}</p>
+<p>{{ sx.refreeze_body }}</p>
+
+<h2>{{ sx.doubt_heading }}</h2>
+<p>{{ sx.doubt_body }}</p>
+
+<h2>{{ sx.track_heading }}</h2>
+{{ page.storage_track | markdownify }}
+
+<div class="fb-storage-source">{{ page.storage_source | markdownify }}</div>

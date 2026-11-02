@@ -19,6 +19,8 @@ en:
   footer_privacy_url: "/fridgebuddy/privacypolicy"
   footer_terms: Terms
   footer_terms_url: "/fridgebuddy/terms"
+  footer_storage: Food storage guide
+  footer_storage_url: "/fridgebuddy/food-storage/"
   footer_support: Support
   footer_made_by: Made by
   home_aria: FridgeBuddy home
@@ -45,6 +47,8 @@ de:
   footer_privacy_url: "/fridgebuddy/de/datenschutz/"
   footer_terms: Nutzungsbedingungen
   footer_terms_url: "/fridgebuddy/de/nutzungsbedingungen/"
+  footer_storage: Haltbarkeits-Guide
+  footer_storage_url: "/fridgebuddy/de/haltbarkeit/"
   footer_support: Support
   footer_made_by: Entwickelt von
   home_aria: FridgeBuddy-Startseite
@@ -71,6 +75,8 @@ fr:
   footer_privacy_url: "/fridgebuddy/fr/confidentialite/"
   footer_terms: Conditions d'utilisation
   footer_terms_url: "/fridgebuddy/fr/conditions/"
+  footer_storage: Guide de conservation
+  footer_storage_url: "/fridgebuddy/fr/conservation-aliments/"
   footer_support: Support
   footer_made_by: Créé par
   home_aria: Accueil FridgeBuddy

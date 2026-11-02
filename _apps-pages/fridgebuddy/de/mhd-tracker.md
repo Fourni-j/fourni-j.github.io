@@ -26,6 +26,9 @@ breadcrumbs:
   - name: MHD-Tracker
     url: /fridgebuddy/de/mhd-tracker/
 related_links:
+  - title: "Haltbarkeitstabelle"
+    description: "Wie lange Fleisch, Fisch, Eier und Essensreste im Kühlschrank und Gefrierschrank halten."
+    url: /fridgebuddy/de/haltbarkeit/
   - title: "Vorratsverwaltung"
     description: "Organisieren Sie Kühlschrank, Gefrierschrank und Vorratsschrank."
     url: /fridgebuddy/de/vorratsverwaltung/

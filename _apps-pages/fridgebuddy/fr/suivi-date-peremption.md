@@ -26,6 +26,9 @@ breadcrumbs:
   - name: Suivi des dates de péremption
     url: /fridgebuddy/fr/suivi-date-peremption/
 related_links:
+  - title: "Durées de conservation"
+    description: "Combien de temps viande, poisson, œufs et restes se gardent au frigo et au congélateur."
+    url: /fridgebuddy/fr/conservation-aliments/
   - title: "Inventaire de cuisine"
     description: "Organisez la nourriture de votre frigo, congélateur et placards."
     url: /fridgebuddy/fr/inventaire-cuisine/
