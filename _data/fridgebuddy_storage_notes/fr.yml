@@ -1,0 +1,193 @@
+# Sections propres à chaque aliment pour les guides de conservation, indexées par
+# l'identifiant de l'aliment dans _data/fridgebuddy_storage.yml. Les durées s'en tiennent au tableau de l'USDA.
+raw-chicken:
+  - heading: "Comment savoir si le poulet cru n'est plus bon"
+    body: "Un poulet cru frais est rose, avec une graisse blanche ou jaunâtre, et n'a presque pas d'odeur. Jetez-le s'il sent l'aigre ou l'ammoniaque, s'il reste gluant ou collant même une fois le jus de l'emballage égoutté, ou s'il a viré au gris ou au vert. Comme 1 à 2 jours, c'est court, fiez-vous à la date d'achat plutôt qu'à la date imprimée pour prévoir vos repas."
+  - heading: "Congeler et décongeler le poulet"
+    body: "Si vous ne le cuisinez pas dans les deux jours, congelez le poulet le jour même de l'achat. Étalez les morceaux à plat dans un sac congélation : ils congèleront et décongèleront plus vite. Il faut une journée entière au réfrigérateur pour décongeler 500 g de blancs désossés, alors qu'un paquet fermé plongé dans l'eau froide décongèle en général en une heure ou moins. Vous pouvez aussi cuire le poulet directement congelé ; comptez environ 50 % de temps de cuisson en plus."
+  - heading: "Ne rincez pas le poulet cru"
+    body: "Laver le poulet cru dans l'évier n'élimine pas les bactéries : cela les projette sur le plan de travail, l'évier et les aliments voisins. Séchez-le avec du papier absorbant si besoin, puis lavez-vous les mains et tout ce qui a touché le poulet cru. C'est la cuisson à 74 °C à cœur qui le rend sûr."
+
+whole-turkey:
+  - heading: "Combien de temps pour décongeler une dinde"
+    body: "Une dinde entière demande environ une journée au réfrigérateur par tranche de 2 kg : une dinde de 7 kg demande donc trois à quatre jours. Une fois décongelée, elle se garde encore 1 à 2 jours au frigo. Si vous êtes pressé, plongez la dinde emballée dans de l'eau froide, changez l'eau toutes les 30 minutes et comptez environ 1 heure par kilo ; faites-la cuire dès qu'elle est décongelée."
+  - heading: "Acheter une dinde fraîche"
+    body: "La dinde crue ne se gardant que 1 à 2 jours au réfrigérateur, achetez une dinde fraîche au plus deux jours avant de la cuisiner, ou achetez-la surgelée et calculez la décongélation à rebours à partir du repas. Laissez-la dans son emballage, sur un plateau posé sur l'étagère du bas, pour que le jus ne coule pas sur les autres aliments."
+  - heading: "Cuisson et restes"
+    body: "Faites cuire la dinde jusqu'à ce que la partie la plus épaisse de la cuisse, l'aile et le blanc atteignent 74 °C à cœur. Pour plus de sécurité, faites cuire la farce dans un plat à part plutôt qu'à l'intérieur de la volaille. Détachez la viande des os et mettez les restes au réfrigérateur dans les 2 heures ; ils se gardent 3 à 4 jours au frigo."
+
+ground-beef:
+  - heading: "Pourquoi la viande hachée s'abîme plus vite qu'un steak"
+    body: "Le hachage répartit dans toute la viande les bactéries présentes à sa surface. C'est pourquoi la viande hachée ne se garde que 1 à 2 jours au réfrigérateur, contre 3 à 5 pour un steak. C'est aussi pourquoi un steak haché doit être cuit à cœur jusqu'à 71 °C, alors qu'un steak peut être servi plus saignant."
+  - heading: "Un cœur gris, c'est normal"
+    body: "La viande hachée est rouge vif en surface parce qu'elle est exposée à l'oxygène. L'intérieur de la barquette, qui ne l'est pas, est souvent violacé ou gris, et cela ne signifie pas à lui seul que la viande est abîmée. Jetez-la si elle sent l'aigre, si elle est collante ou gluante, ou si toute la barquette a viré au brun ou au gris."
+  - heading: "Congelez-la à plat"
+    body: "Avant de congeler la viande hachée, aplatissez-la en une couche fine dans un sac congélation. Elle s'empile facilement, congèle vite et décongèle en une journée environ au réfrigérateur, ou en moins d'une heure dans l'eau froide. La viande hachée crue décongelée au réfrigérateur peut être cuite puis recongelée."
+
+steak:
+  - heading: "Couleur, odeur et emballages sous vide"
+    body: "Le bœuf frais est rouge cerise au contact de l'air et plus violacé dans un emballage sous vide. Cette couleur plus sombre, tout comme une légère odeur de renfermé à l'ouverture, est normale et s'estompe après quelques minutes à l'air. Une odeur aigre qui persiste, une surface collante ou une teinte brune ou verte signifient que la viande doit être jetée."
+  - heading: "Congeler steaks et rôtis"
+    body: "Emballez chaque steak bien serré dans du film alimentaire ou du papier de congélation, puis placez-le dans un sac congélation en chassant l'air. Vous éviterez ainsi les brûlures de congélation, ces taches grises et sèches sans danger mais qui durcissent la viande. Décongelez les steaks au réfrigérateur pendant la nuit ; un gros rôti peut demander plusieurs jours, alors anticipez."
+  - heading: "Cuire à une température sûre"
+    body: "Les pièces entières de bœuf, de veau, d'agneau et de porc sont sûres à 63 °C à cœur suivies de trois minutes de repos, car les bactéries se trouvent surtout en surface, et la saisie les détruit. Les restes de steak ou de rôti cuits se gardent 3 à 4 jours au réfrigérateur."
+
+pork-chops:
+  - heading: "À quoi ressemblent des côtes de porc fraîches"
+    body: "Le porc frais est d'un rose grisé, avec une graisse blanche et ferme. Jetez les côtes si elles sentent l'aigre, si elles sont gluantes ou si elles ont viré au gris ou au vert. Un peu de jus dans la barquette est normal ; une pellicule trouble et collante ne l'est pas."
+  - heading: "Mariner en toute sécurité"
+    body: "Faites toujours mariner les côtes de porc au réfrigérateur, jamais sur le plan de travail, et comptez le temps de marinade dans les 3 à 5 jours. Ne réutilisez pas une marinade qui a été en contact avec le porc cru sans l'avoir d'abord portée à ébullition. Les côtes marinées dans une sauce acide peuvent être congelées dans le sac avec leur marinade."
+  - heading: "Légèrement rosé, c'est sûr"
+    body: "Les côtes de porc sont sûres à 63 °C à cœur suivies de trois minutes de repos, même si le centre est encore légèrement rosé. C'est en les cuisant bien au-delà de cette température qu'on les dessèche. Les côtes cuites se gardent 3 à 4 jours au réfrigérateur."
+
+sausage:
+  - heading: "Crues ou entièrement cuites : lisez l'étiquette"
+    body: "Les saucisses fraîches, comme les chipolatas, les saucisses italiennes ou les bratwursts, sont crues et ne se gardent que 1 à 2 jours au réfrigérateur, comme toute viande hachée. Les saucisses fumées ou précuites portent la mention « entièrement cuites » et se gardent environ une semaine. Si l'étiquette ne précise pas qu'elles sont entièrement cuites, considérez-les comme crues."
+  - heading: "Les signes que des saucisses sont abîmées"
+    body: "Jetez les saucisses si elles sentent l'aigre, si elles sont recouvertes d'une pellicule gluante ou si leur boyau colle, ou si elles ont viré au gris ou au vert. Pour les saucisses entièrement cuites, un liquide trouble ou visqueux dans un paquet ouvert est un autre signal d'alerte."
+  - heading: "Congeler et cuire les saucisses"
+    body: "Congelez les saucisses en portions correspondant à ce que vous cuisinerez, bien emballées pour éviter les brûlures de congélation ; crues comme cuites, elles gardent leur meilleure qualité 1 à 2 mois. Faites cuire les saucisses crues de porc ou de bœuf jusqu'à 71 °C à cœur, et celles de poulet ou de dinde jusqu'à 74 °C. Réchauffez les saucisses entièrement cuites jusqu'à ce qu'elles soient bien chaudes et fumantes."
+
+bacon:
+  - heading: "Pourquoi le bacon se garde peu au congélateur"
+    body: "Le bacon ne se garde qu'un mois environ au congélateur, car le sel utilisé pour le saler accélère le rancissement du gras, même à la température du congélateur. Il reste sûr au-delà, mais son goût s'affadit. Congelez le bacon en petites piles séparées par du papier sulfurisé pour ne sortir que ce dont vous avez besoin."
+  - heading: "Les signes que le bacon n'est plus bon"
+    body: "Le bacon frais est rose, avec un gras blanc ou crème. Jetez-le s'il sent l'aigre ou le rance, s'il est gluant ou s'il présente des taches grises, vertes ou bleues. Une fois le paquet ouvert, emballez bien le reste ou transférez-le dans une boîte hermétique ; la limite d'une semaine s'applique même si la date du paquet est plus lointaine."
+  - heading: "Cuisez bien le bacon"
+    body: "Même salé, le bacon reste de la viande crue : faites-le cuire jusqu'à ce qu'il soit croustillant. Le bacon cuit peut aussi être congelé en une seule couche et réchauffé directement sorti du congélateur pour un petit-déjeuner rapide."
+
+hot-dogs:
+  - heading: "Paquet fermé ou paquet ouvert"
+    body: "Un paquet fermé de saucisses de Francfort se garde 2 semaines au réfrigérateur. Une fois ouvert, la durée tombe à 1 semaine : refermez le paquet ou transférez aussitôt le reste dans une boîte hermétique."
+  - heading: "Les signes que des saucisses de Francfort sont abîmées"
+    body: "Jetez les saucisses de Francfort si le liquide du paquet est devenu trouble ou laiteux, si leur surface est gluante ou si elles sentent l'aigre. Une décoloration, notamment des taches grises ou vertes, indique aussi qu'elles ont passé leur meilleure qualité."
+  - heading: "Réchauffez-les jusqu'à ce qu'elles fument"
+    body: "Les saucisses de Francfort sont entièrement cuites, mais elles peuvent contenir de la listeria, une bactérie qui continue de se multiplier à la température du réfrigérateur. Les femmes enceintes, les personnes âgées et les personnes immunodéprimées ne devraient en manger qu'après les avoir réchauffées jusqu'à ce qu'elles fument, et non froides à la sortie du paquet."
+
+deli-meat:
+  - heading: "Le compte à rebours démarre à la découpe"
+    body: "La charcuterie tranchée au rayon traiteur ou à la coupe se garde 3 à 5 jours, à compter du jour de la découpe et non de la date figurant sur la pièce d'origine. Un paquet industriel scellé se garde 2 semaines tant qu'il n'est pas ouvert, mais une fois ouvert, c'est la limite de 3 à 5 jours qui s'applique."
+  - heading: "Les signes que la charcuterie tranchée est abîmée"
+    body: "Une charcuterie tranchée qui a tourné est généralement gluante, collante ou brillante, recouverte d'une pellicule, et elle peut sentir l'aigre ou le vinaigre. Jetez-la au premier de ces signes ; n'essayez pas de la rincer pour enlever la pellicule."
+  - heading: "Congeler la charcuterie tranchée"
+    body: "La plupart des charcuteries tranchées se congèlent bien pendant 1 à 2 mois, même si leur texture peut devenir un peu aqueuse. Congelez-les en portions d'un sandwich, entre des feuilles de papier sulfurisé. Une fois décongelée, la charcuterie est idéale dans les croque-monsieur, les omelettes ou les pâtes, où le changement de texture ne se remarque pas."
+
+cooked-ham:
+  - heading: "Quel jambon avez-vous ?"
+    body: "Le jambon cuit emballé en magasin se garde 3 à 5 jours s'il est tranché, coupé en deux ou en spirale, et environ une semaine s'il est entier. Le jambon mis sous vide en usine se garde 2 semaines non ouvert, ou jusqu'à sa date limite de consommation. Une fois ouvert, traitez-le comme du jambon tranché."
+  - heading: "Réchauffer un jambon en spirale ou un jambon de fête"
+    body: "Un jambon entièrement cuit en usine peut se manger froid ou être réchauffé jusqu'à 60 °C à cœur. Un jambon reconditionné ou un reste de repas doit être réchauffé jusqu'à 74 °C. Couvrez un jambon en spirale de papier aluminium pendant qu'il chauffe pour que les tranches ne se dessèchent pas."
+  - heading: "Congeler les restes de jambon"
+    body: "Le jambon se congèle 1 à 2 mois. Tranchez-le ou coupez-le en dés d'abord, et congelez-le en portions pour les soupes, les quiches et les pâtes, qui masquent sa texture un peu plus molle après décongélation. L'os du jambon se congèle bien pour préparer un bouillon."
+
+prosciutto:
+  - heading: "Pourquoi le jambon cru se garde si longtemps"
+    body: "Le prosciutto, le jambon de Parme et le jambon Serrano sont salés à sec puis affinés pendant des mois, ce qui laisse peu d'eau aux bactéries. C'est pourquoi le jambon cru tranché se garde 2 à 3 mois au réfrigérateur, bien plus longtemps que le jambon cuit. Il se dessèche toutefois vite une fois tranché : emballez-le bien serré dans du papier sulfurisé, puis dans du film alimentaire."
+  - heading: "Les signes qu'il n'est plus bon"
+    body: "Jetez le jambon cru s'il se couvre d'une moisissure duveteuse, si sa surface devient gluante ou s'il dégage une odeur aigre ou anormale. Des tranches très fines simplement desséchées et assombries sur les bords ne sont pas abîmées, mais elles seront dures et salées."
+  - heading: "Congeler le jambon cru"
+    body: "Le jambon cru peut être congelé environ un mois, mais la congélation ramollit sa texture délicate. Les tranches congelées sont meilleures dans des plats cuisinés, comme les pâtes, la pizza ou enroulées autour de légumes. Pour le servir cru avec le meilleur goût, laissez les tranches environ 15 minutes à température ambiante avant de les déguster."
+
+salmon:
+  - heading: "Comment savoir si le saumon est frais"
+    body: "Le saumon frais a une odeur légère, d'embruns, et une chair humide, ferme, qui reprend sa forme quand on appuie dessus. Une forte odeur de poisson ou d'ammoniaque, une surface laiteuse ou gluante, ou une chair qui garde la trace du doigt signifient qu'il faut le jeter. Rangez-le dans la zone la plus froide du réfrigérateur et cuisinez-le sous 1 à 3 jours."
+  - heading: "Pourquoi les poissons gras se gardent moins longtemps au congélateur"
+    body: "Le saumon, le thon et le maquereau ne gardent leur meilleure qualité que 2 à 3 mois au congélateur, contre 6 à 8 mois pour les poissons maigres comme le cabillaud. Leurs huiles s'oxydent lentement, même congelées, ce qui donne un goût de rance. Emballez les filets bien serrés, idéalement sous vide, pour ralentir ce phénomène."
+  - heading: "Décongeler un poisson emballé sous vide"
+    body: "Sortez le poisson congelé de son emballage sous vide, ou ouvrez au moins celui-ci, avant de le décongeler au réfrigérateur : certaines bactéries susceptibles de se développer dans le poisson prolifèrent en l'absence d'oxygène. Le poisson décongèle en une nuit au frigo ; faites-le cuire jusqu'à 63 °C à cœur, quand la chair devient opaque et se détache facilement."
+
+white-fish:
+  - heading: "Les poissons maigres se congèlent mieux"
+    body: "Le cabillaud, l'églefin, le flétan, la sole et les autres poissons blancs maigres gardent leur qualité au congélateur bien plus longtemps que les poissons gras : 6 à 8 mois pour les poissons de type cabillaud, et 4 à 8 mois pour le lieu ou le sébaste. Leur faible teneur en graisse laisse peu de place au rancissement. Emballez les filets bien serrés pour éviter les brûlures de congélation, qui se traduisent par des taches blanches et sèches."
+  - heading: "Les signes qu'un poisson blanc est abîmé"
+    body: "Un poisson blanc frais a une chair brillante et translucide, et une odeur propre et légère. Jetez-le s'il sent fortement le poisson ou l'ammoniaque, s'il paraît terne ou laiteux, ou si sa chair est molle et gluante. Cuisinez-le sous 1 à 3 jours après l'achat."
+  - heading: "Cuire le poisson sans le décongeler"
+    body: "Les filets fins de poisson blanc peuvent être cuits directement congelés, au four, pochés ou à la vapeur ; ajoutez quelques minutes au temps de cuisson. Sinon, décongelez-les au réfrigérateur pendant la nuit. Le poisson est cuit à 63 °C à cœur, quand la chair devient opaque et se détache facilement."
+
+shrimp:
+  - heading: "La plupart des crevettes « fraîches » ont d'abord été congelées"
+    body: "Une grande partie des crevettes vendues au rayon poissonnerie ont été congelées puis décongelées pour l'étal. Demandez si elles ont été congelées : des crevettes décongelées doivent être cuisinées dans les 3 à 5 jours et il vaut mieux ne pas les recongeler crues. Les acheter surgelées et les décongeler vous-même vous laisse plus de souplesse."
+  - heading: "Comment décongeler des crevettes"
+    body: "Décongelez les crevettes surgelées au réfrigérateur pendant la nuit, ou placez-les dans un sachet fermé sous l'eau froide pendant environ 30 minutes pour un dîner rapide. Bien emballées, les crevettes gardent leur meilleure qualité 6 à 18 mois au congélateur."
+  - heading: "Les signes que des crevettes ne sont plus bonnes"
+    body: "Jetez les crevettes si elles sentent l'ammoniaque ou l'eau de Javel, si elles sont gluantes ou si leur chair est molle. Faites cuire les crevettes crues jusqu'à ce qu'elles deviennent roses et que leur chair soit opaque, ce qui ne prend en général que quelques minutes."
+
+crab:
+  - heading: "Crabe et homard vivants : à cuire le jour même"
+    body: "Les crabes et homards vivants doivent être cuits le jour de l'achat. Gardez-les au réfrigérateur dans un récipient ouvert couvert d'un linge humide ; ne les conservez jamais dans de l'eau douce ni dans un sac hermétique, qui les tuent. Ne faites cuire que des crustacés vivants et qui bougent."
+  - heading: "Chair de crabe fraîche et homard"
+    body: "La chair de crabe fraîche et le homard frais se gardent 2 à 4 jours au réfrigérateur. Gardez-les sur de la glace ou dans la zone la plus froide du frigo, et jetez-les s'ils sentent l'ammoniaque ou l'aigre, ou si leur chair est gluante."
+  - heading: "Congeler le crabe et le homard"
+    body: "La chair de crabe et le homard se congèlent 2 à 4 mois ; congelez la chair décortiquée dans des boîtes hermétiques. Il est déconseillé de congeler un crabe ou un homard vivant, car la chair se dégrade rapidement après la mort de l'animal."
+
+mussels:
+  - heading: "Les coquillages vivants doivent respirer"
+    body: "Les moules, palourdes et huîtres vivantes ont besoin d'air. Conservez-les au réfrigérateur dans un saladier ouvert couvert d'un linge humide ou de papier absorbant humide, jamais dans un sac fermé ni dans l'eau, qui les étouffent. Conservés ainsi, ils tiennent 5 à 10 jours, mais ils sont meilleurs dans les un ou deux jours."
+  - heading: "Le test du tapotement"
+    body: "Avant la cuisson, jetez tous les coquillages dont la coquille est fêlée ou cassée. Si une moule ou une palourde est ouverte, tapotez-la : vivante, elle se referme. Jetez celles qui restent ouvertes. Après la cuisson, jetez celles qui ne se sont pas ouvertes."
+  - heading: "Coquillages décoquillés et congélation"
+    body: "Les moules, palourdes, huîtres et Saint-Jacques décoquillées se gardent 3 à 10 jours au réfrigérateur et se congèlent 3 à 4 mois dans leur jus. Il est déconseillé de congeler des coquillages vivants dans leur coquille. Les personnes immunodéprimées doivent éviter de manger des huîtres crues."
+
+eggs:
+  - heading: "Rangez les œufs dans leur boîte, pas dans la porte"
+    body: "Gardez les œufs dans leur boîte d'origine, sur une étagère à l'intérieur du réfrigérateur. La porte est la zone la plus chaude du frigo, et la boîte empêche les œufs d'absorber les odeurs. Si vous avez acheté des œufs au rayon frais, gardez-les au réfrigérateur : un œuf froid laissé à température ambiante peut se couvrir de condensation, ce qui aide les bactéries à traverser la coquille."
+  - heading: "Le test de l'eau indique l'âge, pas la sécurité"
+    body: "Un œuf qui flotte dans l'eau est vieux, car sa chambre à air s'est agrandie, mais cela ne dit pas s'il est sûr. Cassez les œufs dans un bol à part avant de les utiliser et jetez ceux dont l'odeur ou l'aspect est inhabituel. Les œufs restent utilisables 3 à 5 semaines après leur mise au réfrigérateur, même si la date de consommation recommandée est dépassée."
+  - heading: "Comment congeler des œufs"
+    body: "Ne congelez jamais les œufs dans leur coquille : ils gonflent et se fendent. Battez plutôt blancs et jaunes ensemble, versez-les dans une boîte et notez dessus le nombre d'œufs. Les blancs peuvent être congelés seuls. Décongelez les œufs au réfrigérateur et utilisez-les uniquement dans des plats bien cuits."
+
+hard-boiled-eggs:
+  - heading: "Une semaine, écalés ou non"
+    body: "Les œufs durs se gardent une semaine au réfrigérateur. La cuisson élimine la couche protectrice naturelle de l'œuf, c'est pourquoi ils se conservent bien moins longtemps que les œufs crus. Mettez-les au réfrigérateur dans les 2 heures suivant la cuisson, et n'oubliez pas que les œufs cachés pour une chasse aux œufs de Pâques entrent dans ce délai."
+  - heading: "Le cercle vert autour du jaune est-il dangereux ?"
+    body: "Un cercle gris-vert autour du jaune est sans danger. Il se forme quand les œufs sont trop cuits ou refroidis lentement. Pour l'éviter, faites cuire les œufs juste le temps nécessaire et refroidissez-les aussitôt dans de l'eau glacée."
+  - heading: "Pourquoi il ne faut pas les congeler"
+    body: "Au congélateur, le blanc des œufs durs devient caoutchouteux et aqueux. Si vous en avez trop, utilisez-les dans la semaine en salade, en œufs mimosa ou sur vos salades composées. Les jaunes seuls peuvent être congelés pour être émiettés sur vos plats, même si leur texture change."
+
+cooked-chicken:
+  - heading: "Le poulet rôti du commerce compte comme un reste"
+    body: "Un poulet rôti acheté tout cuit se garde 3 à 4 jours au réfrigérateur, comme un poulet cuisiné à la maison. Mettez-le au réfrigérateur dans les 2 heures suivant l'achat, en détachant d'abord la viande des os pour qu'elle refroidisse vite dans un récipient peu profond."
+  - heading: "Effilocher et congeler"
+    body: "Le poulet cuit se congèle 2 à 6 mois. Effilochez-le ou coupez-le en dés, congelez-le à plat dans des sacs étiquetés et ajoutez-le directement congelé aux soupes, gratins et sautés. Un peu de bouillon dans le sac garde la viande moelleuse."
+  - heading: "Réchauffez bien à cœur"
+    body: "Réchauffez le poulet cuit jusqu'à 74 °C à cœur, jusqu'à ce qu'il soit fumant dans toute son épaisseur. Si vous ne savez plus quand il a été cuit, ou s'il sent l'aigre ou est gluant, jetez-le."
+
+leftovers:
+  - heading: "La règle des 3 à 4 jours"
+    body: "La plupart des restes cuisinés, plats à emporter compris, se gardent 3 à 4 jours au réfrigérateur. Comptez à partir du jour de la cuisson, et non du dernier réchauffage, et ne réchauffez que la portion que vous allez manger."
+  - heading: "Refroidissez-les vite"
+    body: "Mettez les restes au réfrigérateur dans les 2 heures, ou dans l'heure par forte chaleur. Répartissez les grandes quantités dans des récipients peu profonds pour qu'elles refroidissent vite : au centre d'une grande marmite, la nourriture peut rester tiède assez longtemps pour que les bactéries se multiplient. Vous pouvez mettre un plat encore chaud directement au réfrigérateur."
+  - heading: "Congelez ce que vous ne finirez pas"
+    body: "Si vous ne mangerez pas vos restes dans les 3 à 4 jours, congelez-les tout de suite en portions individuelles, en notant la date. La plupart des plats de viande cuisinés gardent leur qualité 2 à 6 mois, les soupes et ragoûts 2 à 3 mois. Décongelez-les au réfrigérateur ou réchauffez-les directement sortis du congélateur."
+
+pizza:
+  - heading: "Une pizza restée dehors toute la nuit"
+    body: "Une pizza restée toute la nuit sur le plan de travail ou dans son carton doit être jetée. Comme tout aliment périssable, elle ne doit pas rester plus de 2 heures à température ambiante, ou 1 heure par forte chaleur. Les garnitures comme la viande, le fromage et les légumes peuvent laisser les bactéries se développer à température ambiante."
+  - heading: "Conserver les restes de pizza"
+    body: "Emballez les parts dans du papier aluminium ou du film alimentaire, ou mettez-les dans une boîte hermétique plutôt que de les laisser dans le carton de livraison. Elles se gardent 3 à 4 jours au réfrigérateur. Pour les congeler, emballez les parts une par une ; elles gardent leur meilleure qualité 1 à 2 mois."
+  - heading: "Réchauffer pour une pâte croustillante"
+    body: "Réchauffez les parts dans une poêle bien chaude ou au four plutôt qu'au micro-ondes pour garder une pâte croustillante. Les parts congelées peuvent aller directement dans un four chaud. Assurez-vous que la garniture est bien chaude et fumante avant de manger."
+
+soup:
+  - heading: "Refroidissez vite les grandes marmites"
+    body: "Une grande marmite de soupe refroidit lentement et peut rester tiède au centre pendant des heures. Répartissez-la dans des récipients peu profonds avant de la mettre au réfrigérateur, ou remuez-la d'abord dans un évier rempli d'eau glacée. Mettez-la au réfrigérateur dans les 2 heures suivant la cuisson ; elle se garde ensuite 3 à 4 jours."
+  - heading: "Congeler soupes et ragoûts"
+    body: "La plupart des soupes et ragoûts se congèlent bien pendant 2 à 3 mois. Laissez un peu d'espace en haut du récipient, car le liquide gonfle en congelant. Les soupes liées à la crème ou contenant des pommes de terre peuvent devenir granuleuses : congelez-les avant d'ajouter la crème et remuez bien en les réchauffant."
+  - heading: "Réchauffez jusqu'à ébullition"
+    body: "Portez soupes, ragoûts et sauces à franche ébullition pour les réchauffer, et ne réchauffez que ce que vous comptez manger. Si une soupe sent l'aigre, ou présente des bulles ou de la mousse alors qu'elle est encore froide, jetez-la."
+
+salads:
+  - heading: "Ce n'est pas la faute de la mayonnaise"
+    body: "La mayonnaise du commerce est acide et pose rarement problème. Dans les salades de thon, de poulet, d'œuf ou de pâtes, le risque vient des autres ingrédients, beaucoup manipulés pendant la préparation. Préparez-les avec des ingrédients bien froids, mettez-les aussitôt au réfrigérateur et consommez-les sous 3 à 4 jours."
+  - heading: "Pique-niques et buffets"
+    body: "Ne laissez pas ces salades dehors plus de 2 heures, ou plus d'1 heure au-dessus de 32 °C. En pique-nique, posez le saladier dans un plus grand récipient rempli de glace, et jetez tout ce qui est resté dehors au-delà de cette limite."
+  - heading: "Pourquoi elles se congèlent mal"
+    body: "À la congélation, les salades à base de mayonnaise se séparent et rendent de l'eau, et le céleri comme la laitue ramollissent. Préparez plutôt de plus petites quantités. Vous pouvez congeler séparément le poulet cuit ou les jaunes d'œufs durs, et assembler la salade au dernier moment."
+
+quiche:
+  - heading: "Mettez la quiche au frigo après cuisson"
+    body: "La quiche est un plat à base d'œufs : elle doit être mise au réfrigérateur dans les 2 heures suivant la cuisson. Laissez-la tiédir brièvement, puis couvrez-la et rangez-la au réfrigérateur, où elle se garde 3 à 5 jours."
+  - heading: "Congeler une quiche"
+    body: "Une quiche cuite se congèle bien pendant 2 à 3 mois. Laissez-la refroidir complètement, emballez-la bien serrée dans du film alimentaire puis du papier aluminium, et congelez-la entière ou en parts. Décongelez-la au réfrigérateur pendant la nuit."
+  - heading: "La réchauffer"
+    body: "Réchauffez la quiche au four jusqu'à 74 °C à cœur pour garder une pâte croustillante ; les parts sorties du congélateur peuvent être réchauffées directement. La quiche se mange aussi froide, sans risque, à la sortie du réfrigérateur."

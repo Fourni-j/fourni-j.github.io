@@ -1,0 +1,193 @@
+# Lebensmittelspezifische Abschnitte für die Haltbarkeits-Guides, nach der
+# Lebensmittel-ID in _data/fridgebuddy_storage.yml. Lagerzeiten nur gemäß der USDA-Tabelle angeben.
+raw-chicken:
+  - heading: "Woran Sie erkennen, dass rohes Hähnchen verdorben ist"
+    body: "Frisches rohes Hähnchen ist rosa, hat weißes oder gelbliches Fett und riecht kaum. Werfen Sie es weg, wenn es säuerlich oder nach Ammoniak riecht, sich schmierig oder klebrig anfühlt, auch nachdem die Flüssigkeit aus der Verpackung abgelaufen ist, oder grau bzw. grünlich geworden ist. Da 1 bis 2 Tage nicht lang sind, orientieren Sie sich bei der Essensplanung am Einkaufsdatum statt am aufgedruckten Datum."
+  - heading: "Hähnchen einfrieren und auftauen"
+    body: "Wenn Sie Hähnchen nicht innerhalb von zwei Tagen zubereiten, frieren Sie es noch am Einkaufstag ein. Legen Sie die Stücke flach in einen Gefrierbeutel, damit sie schneller gefrieren und auftauen. 500 g Hähnchenbrustfilet brauchen im Kühlschrank einen ganzen Tag zum Auftauen, eine verschlossene Packung in kaltem Wasser meist eine Stunde oder weniger. Sie können Hähnchen auch direkt gefroren garen; das dauert etwa 50 % länger."
+  - heading: "Rohes Hähnchen nicht abwaschen"
+    body: "Abwaschen im Spülbecken entfernt keine Bakterien, sondern verspritzt sie auf Arbeitsfläche, Spüle und Lebensmittel in der Nähe. Tupfen Sie das Fleisch bei Bedarf mit Küchenpapier trocken und waschen Sie danach Ihre Hände und alles, was mit dem rohen Hähnchen in Berührung kam. Sicher wird es erst durch Garen auf eine Kerntemperatur von 74 °C."
+
+whole-turkey:
+  - heading: "Wie lange eine gefrorene Pute zum Auftauen braucht"
+    body: "Eine ganze Pute braucht im Kühlschrank etwa einen Tag pro 2 kg, eine 7 kg schwere Pute also drei bis vier Tage. Aufgetaut hält sie sich danach noch 1 bis 2 Tage im Kühlschrank. Wenn es schnell gehen muss, legen Sie die verpackte Pute in kaltes Wasser, wechseln das Wasser alle 30 Minuten und rechnen mit etwa 1 Stunde pro Kilo; garen Sie sie sofort nach dem Auftauen."
+  - heading: "Eine frische Pute kaufen"
+    body: "Da rohe Pute nur 1 bis 2 Tage im Kühlschrank haltbar ist, kaufen Sie eine frische Pute höchstens zwei Tage vor dem Zubereiten, oder kaufen Sie sie gefroren und planen Sie das Auftauen vom Festessen aus rückwärts. Lagern Sie sie in der Verpackung auf einem Tablett im untersten Fach, damit kein Fleischsaft auf andere Lebensmittel tropfen kann."
+  - heading: "Braten und Reste"
+    body: "Garen Sie die Pute, bis die dickste Stelle der Keule, der Flügel und die Brust eine Kerntemperatur von 74 °C erreichen. Am sichersten ist es, die Füllung in einer separaten Form zu backen statt im Vogel. Lösen Sie das Fleisch vom Knochen und kühlen Sie Reste innerhalb von 2 Stunden; im Kühlschrank halten sie sich 3 bis 4 Tage."
+
+ground-beef:
+  - heading: "Warum Hackfleisch schneller verdirbt als Steak"
+    body: "Beim Wolfen werden Bakterien von der Oberfläche des Fleisches durch die gesamte Masse verteilt. Deshalb hält sich Hackfleisch nur 1 bis 2 Tage im Kühlschrank, ein Steak dagegen 3 bis 5. Aus demselben Grund müssen Burger auf eine Kerntemperatur von 71 °C durchgegart werden, während ein Steak weniger durch serviert werden kann."
+  - heading: "Grau in der Mitte ist normal"
+    body: "Rinderhack ist an der Oberfläche leuchtend rot, weil das Fleisch dort mit Sauerstoff in Berührung kommt. Innen in der Packung ist es oft violett oder grau, weil das nicht der Fall ist, und das allein bedeutet nicht, dass es verdorben ist. Werfen Sie es weg, wenn es säuerlich riecht, sich klebrig oder schmierig anfühlt oder die ganze Packung braun oder grau geworden ist."
+  - heading: "Flach einfrieren"
+    body: "Drücken Sie Hackfleisch vor dem Einfrieren im Gefrierbeutel zu einer dünnen, flachen Schicht. So lässt es sich gut stapeln, gefriert schnell und taut im Kühlschrank in etwa einem Tag oder in kaltem Wasser in unter einer Stunde auf. Rohes Hackfleisch, das im Kühlschrank aufgetaut wurde, darf gegart und dann wieder eingefroren werden."
+
+steak:
+  - heading: "Farbe, Geruch und Vakuumverpackung"
+    body: "Frisches Rindfleisch ist dort, wo es mit Luft in Kontakt kommt, kirschrot, in der Vakuumverpackung dunkler und violett. Diese dunklere Farbe und ein leicht muffiger Geruch beim Öffnen der Packung sind normal und verschwinden nach einigen Minuten an der Luft. Ein säuerlicher Geruch, der bleibt, eine klebrige Oberfläche oder ein brauner oder grünlicher Schimmer bedeuten dagegen, dass das Fleisch weggeworfen werden sollte."
+  - heading: "Steaks und Braten einfrieren"
+    body: "Wickeln Sie jedes Steak fest in Frischhaltefolie oder Gefrierpapier und legen Sie es in einen Gefrierbeutel, aus dem Sie die Luft herausdrücken. So vermeiden Sie Gefrierbrand, trockene graue Stellen, die zwar unbedenklich, aber zäh sind. Tauen Sie Steaks über Nacht im Kühlschrank auf; ein großer Braten kann einige Tage brauchen, planen Sie also vor."
+  - heading: "Auf die richtige Kerntemperatur garen"
+    body: "Ganze Stücke von Rind, Kalb, Lamm und Schwein sind bei einer Kerntemperatur von 63 °C mit drei Minuten Ruhezeit sicher, weil Bakterien vor allem auf der Oberfläche sitzen und beim scharfen Anbraten abgetötet werden. Reste von gegartem Steak oder Braten halten sich 3 bis 4 Tage im Kühlschrank."
+
+pork-chops:
+  - heading: "So sehen frische Schweinekoteletts aus"
+    body: "Frisches Schweinefleisch ist gräulich-rosa mit festem, weißem Fett. Werfen Sie Koteletts weg, wenn sie säuerlich riechen, sich schmierig anfühlen oder grau bzw. grünlich geworden sind. Etwas Flüssigkeit in der Schale ist normal, ein trüber, klebriger Film nicht."
+  - heading: "Sicher marinieren"
+    body: "Marinieren Sie Schweinekoteletts immer im Kühlschrank, nie auf der Arbeitsfläche, und rechnen Sie die Marinierzeit zu den 3 bis 5 Tagen dazu. Verwenden Sie Marinade, die mit rohem Schweinefleisch in Berührung kam, nur dann erneut, wenn Sie sie vorher aufkochen. In säurehaltigen Saucen marinierte Koteletts können zusammen mit der Marinade im Beutel eingefroren werden."
+  - heading: "Leicht rosa ist unbedenklich"
+    body: "Schweinekoteletts sind bei einer Kerntemperatur von 63 °C mit drei Minuten Ruhezeit sicher, auch wenn sie in der Mitte noch leicht rosa sind. Erst wenn sie deutlich darüber hinaus gegart werden, werden sie trocken. Gegarte Koteletts halten sich 3 bis 4 Tage im Kühlschrank."
+
+sausage:
+  - heading: "Roh oder vorgegart: Achten Sie auf das Etikett"
+    body: "Frische Würste wie Frühstückswürstchen, italienische Salsiccia oder rohe Bratwurst sind roh und halten sich wie jedes Hackfleisch nur 1 bis 2 Tage im Kühlschrank. Geräucherte oder vorgegarte Würste sind als durchgegart gekennzeichnet und halten sich etwa eine Woche. Steht auf dem Etikett nicht, dass die Wurst durchgegart ist, behandeln Sie sie als roh."
+  - heading: "Woran Sie verdorbene Würstchen erkennen"
+    body: "Werfen Sie Würste weg, wenn sie säuerlich riechen, einen schmierigen Belag oder eine klebrige Haut haben oder grau bzw. grünlich geworden sind. Bei durchgegarten Würsten ist trübe oder schleimige Flüssigkeit in einer geöffneten Packung ein weiteres Warnzeichen."
+  - heading: "Bratwurst und Würstchen einfrieren und garen"
+    body: "Frieren Sie Würste in den Portionen ein, die Sie auf einmal zubereiten, und verpacken Sie sie fest, um Gefrierbrand zu vermeiden; rohe wie gegarte Würste behalten 1 bis 2 Monate ihre beste Qualität. Garen Sie rohe Schweine- oder Rinderwurst auf eine Kerntemperatur von 71 °C, Hähnchen- oder Putenwurst auf 74 °C. Durchgegarte Würste erhitzen Sie, bis sie dampfend heiß sind."
+
+bacon:
+  - heading: "Warum Bacon im Gefrierschrank nicht lange hält"
+    body: "Bacon hält sich im Gefrierschrank nur etwa einen Monat, weil das Pökelsalz das Ranzigwerden des Fetts beschleunigt, selbst bei Gefriertemperaturen. Danach ist er noch sicher, verliert aber an Geschmack. Frieren Sie Bacon in kleinen Stapeln ein, getrennt durch Backpapier, damit Sie nur entnehmen, was Sie brauchen."
+  - heading: "Woran Sie verdorbenen Bacon erkennen"
+    body: "Frischer Bacon ist rosa mit weißem oder cremefarbenem Fett. Werfen Sie ihn weg, wenn er säuerlich oder ranzig riecht, sich schmierig anfühlt oder graue, grüne oder bläuliche Flecken hat. Wickeln Sie den Rest nach dem Öffnen der Packung fest ein oder füllen Sie ihn in eine verschlossene Dose um; die Grenze von 1 Woche gilt auch dann, wenn das Datum auf der Packung später liegt."
+  - heading: "Bacon vollständig durchbraten"
+    body: "Bacon ist trotz Pökelung rohes Fleisch, braten Sie ihn also knusprig. Gebratener Bacon lässt sich auch in einer einzelnen Lage einfrieren und für ein schnelles Frühstück direkt aus dem Gefrierschrank aufwärmen."
+
+hot-dogs:
+  - heading: "Ungeöffnet oder geöffnet"
+    body: "Eine ungeöffnete Packung Wiener Würstchen hält sich 2 Wochen im Kühlschrank. Nach dem Öffnen verkürzt sich die Zeit auf 1 Woche, verschließen Sie die Packung also wieder oder füllen Sie den Rest sofort in eine luftdichte Dose um."
+  - heading: "Woran Sie verdorbene Wiener Würstchen erkennen"
+    body: "Werfen Sie Wiener Würstchen weg, wenn die Flüssigkeit in der Packung trüb oder milchig geworden ist, die Oberfläche sich schmierig anfühlt oder sie säuerlich riechen. Verfärbungen, vor allem graue oder grünliche Stellen, sind ein weiteres Zeichen, dass sie nicht mehr gut sind."
+  - heading: "Bis zum Dampfen erhitzen"
+    body: "Wiener Würstchen sind durchgegart, können aber Listerien enthalten, Bakterien, die sich auch bei Kühlschranktemperatur weiter vermehren. Schwangere, ältere Menschen und alle mit geschwächtem Immunsystem sollten Wiener Würstchen nur essen, nachdem sie sie bis zum Dampfen erhitzt haben, nicht kalt aus der Packung."
+
+deli-meat:
+  - heading: "Die Uhr läuft ab dem Aufschneiden"
+    body: "An der Frischetheke aufgeschnittener Aufschnitt hält sich 3 bis 5 Tage, gerechnet ab dem Tag des Aufschneidens, nicht ab dem Datum auf dem ursprünglichen Stück. Eine verschlossene, industriell verpackte Packung hält sich ungeöffnet 2 Wochen, nach dem Öffnen gilt jedoch die Grenze von 3 bis 5 Tagen."
+  - heading: "Woran Sie verdorbenen Aufschnitt erkennen"
+    body: "Verdorbener Aufschnitt ist meist schmierig, klebrig oder glänzt mit einem Film und kann säuerlich oder nach Essig riechen. Werfen Sie ihn beim ersten Anzeichen dieser Veränderungen weg; versuchen Sie nicht, den Schmier abzuwaschen."
+  - heading: "Aufschnitt einfrieren"
+    body: "Die meisten Aufschnittsorten lassen sich 1 bis 2 Monate gut einfrieren, auch wenn die Konsistenz etwas wässrig werden kann. Frieren Sie ihn in Portionen für ein Sandwich zwischen Lagen Backpapier ein. Aufgetauter Aufschnitt eignet sich ideal für Toasts, Omeletts oder Pasta, bei denen die veränderte Konsistenz keine Rolle spielt."
+
+cooked-ham:
+  - heading: "Welchen Schinken haben Sie?"
+    body: "Im Geschäft verpackter Kochschinken hält sich in Scheiben, als halber Schinken oder spiralförmig geschnitten 3 bis 5 Tage, am Stück etwa eine Woche. Vom Hersteller vakuumverpackter Schinken hält sich ungeöffnet 2 Wochen oder bis zum Verbrauchsdatum. Nach dem Öffnen behandeln Sie ihn wie Schinken in Scheiben."
+  - heading: "Spiralschinken und Festtagsschinken aufwärmen"
+    body: "Ein vom Hersteller vollständig gegarter Schinken kann kalt gegessen oder auf 60 °C erwärmt werden. Umverpackter Schinken oder Reste von einer Mahlzeit sollten auf 74 °C erhitzt werden. Decken Sie einen Spiralschinken beim Aufwärmen mit Alufolie ab, damit die Scheiben nicht austrocknen."
+  - heading: "Schinkenreste einfrieren"
+    body: "Schinken lässt sich 1 bis 2 Monate einfrieren. Schneiden oder würfeln Sie ihn vorher und frieren Sie ihn portionsweise für Suppen, Quiche und Pasta ein, in denen die nach dem Auftauen etwas weichere Konsistenz nicht auffällt. Schinkenknochen lassen sich gut einfrieren, um später Brühe daraus zu kochen."
+
+prosciutto:
+  - heading: "Warum Rohschinken so lange hält"
+    body: "Prosciutto, Parma- und Serranoschinken werden mit Salz trocken gepökelt und monatelang gereift, sodass Bakterien kaum Wasser bleibt. Deshalb hält sich angeschnittener Rohschinken 2 bis 3 Monate im Kühlschrank, viel länger als Kochschinken. In Scheiben trocknet er trotzdem schnell aus, wickeln Sie ihn also fest in Backpapier und dann in Folie."
+  - heading: "Woran Sie verdorbenen Rohschinken erkennen"
+    body: "Werfen Sie luftgetrockneten Schinken weg, wenn sich pelziger Schimmel bildet, die Oberfläche schmierig wird oder er unangenehm säuerlich riecht. Sehr dünne Scheiben, die am Rand lediglich ausgetrocknet und dunkler geworden sind, sind nicht verdorben, aber zäh und salzig."
+  - heading: "Rohschinken einfrieren"
+    body: "Rohschinken lässt sich etwa einen Monat einfrieren, verliert dabei aber seine zarte Konsistenz. Gefrorene Scheiben verwenden Sie am besten in gegarten Gerichten, etwa in Pasta, auf Pizza oder um Gemüse gewickelt. Für den besten Geschmack, wenn Sie ihn roh servieren, lassen Sie die Scheiben vor dem Essen etwa 15 Minuten bei Raumtemperatur liegen."
+
+salmon:
+  - heading: "Woran Sie frischen Lachs erkennen"
+    body: "Frischer Lachs riecht mild, nach Meer, und das Fleisch ist feucht, fest und federt auf Druck zurück. Ein starker Fisch- oder Ammoniakgeruch, eine milchige oder schmierige Oberfläche oder Fleisch, in dem eine Delle zurückbleibt, bedeuten, dass er weggeworfen werden sollte. Lagern Sie ihn im kältesten Bereich des Kühlschranks und bereiten Sie ihn innerhalb von 1 bis 3 Tagen zu."
+  - heading: "Warum fetter Fisch im Gefrierschrank kürzer hält"
+    body: "Lachs, Thunfisch und Makrele behalten im Gefrierschrank nur 2 bis 3 Monate ihre beste Qualität, magerer Fisch wie Kabeljau dagegen 6 bis 8 Monate. Ihre Öle oxidieren auch im gefrorenen Zustand langsam, was zu einem abgestandenen Geschmack führt. Verpacken Sie Filets fest, am besten vakuumiert, um das zu verlangsamen."
+  - heading: "Vakuumverpackten Fisch auftauen"
+    body: "Nehmen Sie gefrorenen Fisch aus der Vakuumverpackung oder öffnen Sie diese zumindest, bevor Sie ihn im Kühlschrank auftauen. Manche Bakterien, die sich in Fisch vermehren können, gedeihen ohne Sauerstoff besonders gut. Fisch taut über Nacht im Kühlschrank auf; garen Sie ihn auf eine Kerntemperatur von 63 °C, bis das Fleisch undurchsichtig ist und sich leicht teilen lässt."
+
+white-fish:
+  - heading: "Magerer Fisch lässt sich besser einfrieren"
+    body: "Kabeljau, Schellfisch, Heilbutt, Seezunge und anderer magerer Weißfisch behalten ihre Qualität im Gefrierschrank deutlich länger als fetter Fisch: 6 bis 8 Monate bei Kabeljau und ähnlichen Fischen, 4 bis 8 Monate bei Seelachs oder Rotbarsch. Durch den geringen Fettgehalt kann kaum etwas ranzig werden. Verpacken Sie Filets fest, um Gefrierbrand zu vermeiden, der sich als trockene weiße Stellen zeigt."
+  - heading: "Woran Sie verdorbenen Weißfisch erkennen"
+    body: "Frischer Weißfisch hat glasiges, glänzendes Fleisch und riecht sauber und mild. Werfen Sie ihn weg, wenn er stark nach Fisch oder Ammoniak riecht, matt oder milchig aussieht oder sich matschig und schmierig anfühlt. Bereiten Sie ihn innerhalb von 1 bis 3 Tagen nach dem Kauf zu."
+  - heading: "Direkt aus dem Gefrierschrank garen"
+    body: "Dünne Weißfischfilets können direkt gefroren gebacken, pochiert oder gedämpft werden; rechnen Sie ein paar Minuten mehr Garzeit ein. Ansonsten tauen Sie sie über Nacht im Kühlschrank auf. Fisch ist bei einer Kerntemperatur von 63 °C gar, wenn das Fleisch undurchsichtig ist und sich leicht teilen lässt."
+
+shrimp:
+  - heading: "Die meisten frischen Garnelen waren schon gefroren"
+    body: "Viele Garnelen an der Fischtheke wurden gefroren und für die Auslage aufgetaut. Fragen Sie nach, ob sie bereits gefroren waren: Aufgetaute Garnelen sollten innerhalb der 3 bis 5 Tage zubereitet und roh möglichst nicht wieder eingefroren werden. Wenn Sie sie gefroren kaufen und selbst auftauen, sind Sie flexibler."
+  - heading: "Garnelen auftauen"
+    body: "Tauen Sie gefrorene Garnelen über Nacht im Kühlschrank auf oder legen Sie sie für ein schnelles Abendessen in einem verschlossenen Beutel etwa 30 Minuten unter kaltes Wasser. Gut verschlossen behalten Garnelen im Gefrierschrank 6 bis 18 Monate ihre beste Qualität."
+  - heading: "Woran Sie verdorbene Garnelen erkennen"
+    body: "Werfen Sie Garnelen weg, wenn sie nach Ammoniak oder Chlor riechen, sich schmierig anfühlen oder das Fleisch matschig ist. Garen Sie rohe Garnelen, bis sie rosa werden und das Fleisch undurchsichtig ist, was meist nur wenige Minuten dauert."
+
+crab:
+  - heading: "Lebende Krabben und Hummer: am selben Tag garen"
+    body: "Lebende Krabben und Hummer sollten am Tag des Kaufs gegart werden. Bewahren Sie sie im Kühlschrank in einem offenen Behälter unter einem feuchten Tuch auf; lagern Sie sie nie in Süßwasser oder in einem luftdichten Beutel, das tötet sie. Garen Sie nur Schalentiere, die leben und sich bewegen."
+  - heading: "Frisches und gegartes Krabbenfleisch"
+    body: "Frisches Krabbenfleisch und frischer Hummer halten sich 2 bis 4 Tage im Kühlschrank. Lagern Sie sie auf Eis oder im kältesten Bereich des Kühlschranks und werfen Sie sie weg, wenn sie nach Ammoniak oder säuerlich riechen oder sich das Fleisch schmierig anfühlt."
+  - heading: "Krabben und Hummer einfrieren"
+    body: "Krabbenfleisch und Hummer lassen sich 2 bis 4 Monate einfrieren; frieren Sie das ausgelöste Fleisch in luftdichten Behältern ein. Lebende Krabben oder Hummer einzufrieren wird nicht empfohlen, weil das Fleisch nach dem Tod schnell an Qualität verliert."
+
+mussels:
+  - heading: "Lebende Muscheln brauchen Luft"
+    body: "Lebende Miesmuscheln, Venusmuscheln und Austern brauchen Luft. Lagern Sie sie im Kühlschrank in einer offenen Schüssel unter einem feuchten Tuch oder Küchenpapier, nie in einem verschlossenen Beutel oder in Wasser, darin ersticken sie. So aufbewahrt halten sie sich 5 bis 10 Tage, schmecken aber in den ersten ein bis zwei Tagen am besten."
+  - heading: "Der Klopftest"
+    body: "Werfen Sie vor dem Garen alle Muscheln mit gesprungener oder zerbrochener Schale weg. Ist eine Miesmuschel oder Venusmuschel geöffnet, klopfen Sie darauf: Eine lebende Muschel schließt sich. Werfen Sie alle weg, die offen bleiben. Sortieren Sie nach dem Garen alle aus, die sich nicht geöffnet haben."
+  - heading: "Ausgelöste Muscheln und Einfrieren"
+    body: "Ausgelöste Miesmuscheln, Venusmuscheln, Austern und Jakobsmuscheln halten sich 3 bis 10 Tage im Kühlschrank und lassen sich in ihrem Saft 3 bis 4 Monate einfrieren. Lebende Muscheln in der Schale einzufrieren wird nicht empfohlen. Menschen mit geschwächtem Immunsystem sollten keine rohen Austern essen."
+
+eggs:
+  - heading: "Eier im Karton lagern, nicht in der Tür"
+    body: "Bewahren Sie Eier im Originalkarton auf einem Fach im Kühlschrank auf. Die Tür ist der wärmste Bereich des Kühlschranks, und der Karton schützt die Eier davor, Gerüche anzunehmen. Wenn Sie die Eier gekühlt gekauft haben, lagern Sie sie auch weiter gekühlt: Ein kaltes Ei, das draußen liegt, kann beschlagen, und das hilft Bakterien, durch die Schale zu dringen."
+  - heading: "Der Schwimmtest zeigt das Alter, nicht die Sicherheit"
+    body: "Ein Ei, das im Wasser schwimmt, ist alt, weil seine Luftkammer gewachsen ist, aber das sagt nichts darüber aus, ob es sicher ist. Schlagen Sie Eier vor der Verwendung in eine separate Schüssel auf und werfen Sie alle weg, die ungewöhnlich riechen oder aussehen. Eier bleiben 3 bis 5 Wochen, nachdem Sie sie in den Kühlschrank gelegt haben, verwendbar, auch wenn das Mindesthaltbarkeitsdatum überschritten ist."
+  - heading: "Eier einfrieren"
+    body: "Frieren Sie Eier nie in der Schale ein; sie dehnen sich aus und platzen. Verquirlen Sie stattdessen Eigelb und Eiweiß, füllen Sie die Masse in einen Behälter und notieren Sie darauf die Anzahl der Eier. Eiweiß lässt sich auch allein einfrieren. Tauen Sie gefrorene Eier im Kühlschrank auf und verwenden Sie sie nur in Gerichten, die vollständig durchgegart werden."
+
+hard-boiled-eggs:
+  - heading: "Eine Woche, geschält oder ungeschält"
+    body: "Hartgekochte Eier halten sich eine Woche im Kühlschrank. Beim Kochen geht die natürliche Schutzschicht des Eis verloren, deshalb halten sie sich viel kürzer als rohe Eier. Kühlen Sie sie innerhalb von 2 Stunden nach dem Kochen, und denken Sie daran, dass Eier, die bei der Ostereiersuche draußen lagen, auf diese Zeit angerechnet werden."
+  - heading: "Ist der grüne Rand um das Eigelb bedenklich?"
+    body: "Ein graugrüner Rand um das Eigelb ist harmlos. Er entsteht, wenn Eier zu lange gekocht oder langsam abgekühlt werden. Um das zu vermeiden, kochen Sie die Eier nur so lange wie nötig und schrecken Sie sie sofort in Eiswasser ab."
+  - heading: "Warum Sie sie nicht einfrieren sollten"
+    body: "Das Eiweiß hartgekochter Eier wird im Gefrierschrank zäh und wässrig. Wenn Sie zu viele haben, verbrauchen Sie sie innerhalb der Woche als Eiersalat, gefüllte Eier oder im Salat. Das Eigelb allein lässt sich einfrieren, um es über Gerichte zu streuen, auch wenn sich die Konsistenz verändert."
+
+cooked-chicken:
+  - heading: "Grillhähnchen zählt als Essensrest"
+    body: "Ein gekauftes Grillhähnchen hält sich wie selbst gegartes Hähnchen 3 bis 4 Tage im Kühlschrank. Kühlen Sie es innerhalb von 2 Stunden nach dem Kauf, und lösen Sie das Fleisch vorher vom Knochen, damit es in einem flachen Behälter schnell abkühlt."
+  - heading: "Zerpflücken und einfrieren"
+    body: "Gegartes Hähnchen lässt sich 2 bis 6 Monate einfrieren. Zerpflücken oder würfeln Sie es, frieren Sie es flach in beschrifteten Beuteln ein und geben Sie es direkt gefroren in Suppen, Aufläufe und Pfannengerichte. Etwas Brühe im Beutel hält das Fleisch saftig."
+  - heading: "Gründlich erhitzen"
+    body: "Erhitzen Sie gegartes Hähnchen auf 74 °C, bis es durch und durch dampfend heiß ist. Wenn Sie nicht sicher sind, wann es gegart wurde, oder es säuerlich riecht bzw. sich schmierig anfühlt, werfen Sie es weg."
+
+leftovers:
+  - heading: "Die Regel von 3 bis 4 Tagen"
+    body: "Die meisten gekochten Essensreste, auch Essen zum Mitnehmen und Lieferessen, halten sich 3 bis 4 Tage im Kühlschrank. Rechnen Sie ab dem Tag, an dem das Essen gekocht wurde, nicht ab dem letzten Aufwärmen, und wärmen Sie nur die Portion auf, die Sie auch essen."
+  - heading: "Schnell abkühlen lassen"
+    body: "Kühlen Sie Essensreste innerhalb von 2 Stunden, an heißen Tagen innerhalb von 1 Stunde. Verteilen Sie große Mengen auf flache Behälter, damit sie schnell abkühlen; in einem tiefen Topf kann das Essen in der Mitte lange genug warm bleiben, dass sich Bakterien vermehren. Warmes Essen darf direkt in den Kühlschrank."
+  - heading: "Einfrieren, was Sie nicht aufessen"
+    body: "Wenn Sie Essensreste nicht innerhalb von 3 bis 4 Tagen essen, frieren Sie sie sofort in Einzelportionen ein und beschriften Sie sie mit dem Datum. Die meisten gegarten Fleischgerichte behalten 2 bis 6 Monate ihre Qualität, Suppen und Eintöpfe 2 bis 3 Monate. Tauen Sie sie im Kühlschrank auf oder erhitzen Sie sie direkt aus dem Gefrierschrank."
+
+pizza:
+  - heading: "Pizza, die über Nacht draußen stand"
+    body: "Pizza, die über Nacht auf der Arbeitsfläche oder im Karton stand, sollte weggeworfen werden. Wie jedes leicht verderbliche Lebensmittel sollte sie nicht länger als 2 Stunden bei Raumtemperatur stehen, an heißen Tagen nicht länger als 1 Stunde. In Belägen wie Fleisch, Käse und Gemüse können sich bei Raumtemperatur Bakterien vermehren."
+  - heading: "Pizzareste aufbewahren"
+    body: "Wickeln Sie Stücke in Alu- oder Frischhaltefolie oder legen Sie sie in eine luftdichte Dose, statt sie im Pizzakarton zu lassen. Im Kühlschrank halten sie sich 3 bis 4 Tage. Zum Einfrieren wickeln Sie die Stücke einzeln ein; so behalten sie 1 bis 2 Monate ihre beste Qualität."
+  - heading: "Aufwärmen für einen knusprigen Boden"
+    body: "Wärmen Sie Pizzastücke in einer heißen Pfanne oder im Ofen auf statt in der Mikrowelle, damit der Boden knusprig bleibt. Gefrorene Stücke können direkt in den heißen Ofen. Achten Sie darauf, dass der Belag vor dem Essen dampfend heiß ist."
+
+soup:
+  - heading: "Große Töpfe schnell abkühlen"
+    body: "Ein großer Topf Suppe kühlt langsam ab und kann in der Mitte stundenlang warm bleiben. Verteilen Sie die Suppe vor dem Kühlen auf flache Behälter oder rühren Sie sie zuerst in einem Spülbecken mit Eiswasser um. Kühlen Sie sie innerhalb von 2 Stunden nach dem Kochen; dann hält sie sich 3 bis 4 Tage."
+  - heading: "Suppen und Eintöpfe einfrieren"
+    body: "Die meisten Suppen und Eintöpfe lassen sich 2 bis 3 Monate gut einfrieren. Lassen Sie oben im Behälter etwas Platz, weil sich Flüssigkeit beim Gefrieren ausdehnt. Mit Sahne gebundene oder kartoffelhaltige Suppen können grieselig werden; frieren Sie sie deshalb ein, bevor Sie die Sahne zugeben, und rühren Sie beim Aufwärmen gut um."
+  - heading: "Zum Aufwärmen aufkochen"
+    body: "Bringen Sie Suppen, Eintöpfe und Soßen beim Aufwärmen wieder sprudelnd zum Kochen und wärmen Sie nur auf, was Sie essen möchten. Riecht eine Suppe säuerlich oder zeigt sie im kalten Zustand Bläschen oder Schaum, werfen Sie sie weg."
+
+salads:
+  - heading: "Es liegt nicht an der Mayonnaise"
+    body: "Gekaufte Mayonnaise ist sauer und nur selten das Problem. Das Risiko bei Thunfisch-, Hähnchen-, Ei- und Nudelsalat geht von den anderen Zutaten aus, die bei der Zubereitung viel angefasst werden. Bereiten Sie die Salate mit gekühlten Zutaten zu, stellen Sie sie sofort in den Kühlschrank und essen Sie sie innerhalb von 3 bis 4 Tagen."
+  - heading: "Picknick und Buffet"
+    body: "Lassen Sie diese Salate nicht länger als 2 Stunden ungekühlt stehen, bei über 32 °C nicht länger als 1 Stunde. Stellen Sie die Schüssel beim Picknick in eine größere Schüssel mit Eis und werfen Sie alles weg, was länger draußen stand."
+  - heading: "Warum sie sich schlecht einfrieren lassen"
+    body: "Salate mit Mayonnaise trennen sich beim Einfrieren und werden wässrig, Sellerie und Blattsalat werden schlaff. Bereiten Sie lieber kleinere Mengen zu. Gegartes Hähnchen oder hartgekochtes Eigelb können Sie getrennt einfrieren und den Salat dann frisch anmachen."
+
+quiche:
+  - heading: "Quiche nach dem Backen kühlen"
+    body: "Quiche ist ein Eiergericht und sollte deshalb innerhalb von 2 Stunden nach dem Backen in den Kühlschrank. Lassen Sie sie kurz abkühlen, decken Sie sie dann ab und lagern Sie sie im Kühlschrank, wo sie sich 3 bis 5 Tage hält."
+  - heading: "Quiche einfrieren"
+    body: "Gebackene Quiche lässt sich 2 bis 3 Monate gut einfrieren. Lassen Sie sie vollständig abkühlen, wickeln Sie sie fest in Frischhalte- und Alufolie und frieren Sie sie im Ganzen oder in Stücken ein. Tauen Sie sie über Nacht im Kühlschrank auf."
+  - heading: "Aufwärmen"
+    body: "Wärmen Sie Quiche im Ofen auf 74 °C auf, damit der Boden knusprig bleibt; Stücke aus dem Gefrierschrank können direkt aufgewärmt werden. Quiche kann auch kalt direkt aus dem Kühlschrank gegessen werden."

@@ -1,0 +1,193 @@
+# Food-specific sections for the storage guides, keyed by food id in
+# _data/fridgebuddy_storage.yml. Keep durations limited to the USDA chart.
+raw-chicken:
+  - heading: "How to tell if raw chicken has gone bad"
+    body: "Fresh raw chicken is pink with white or yellowish fat and has almost no smell. Throw it out if it smells sour or like ammonia, feels slimy or sticky even after the packaging liquid drains away, or has turned gray or green. Because 1 to 2 days is short, check the purchase date rather than the sell-by date when you plan meals."
+  - heading: "Freezing and thawing chicken"
+    body: "If you will not cook chicken within two days, freeze it on the day you buy it. Spread pieces flat in a freezer bag so they freeze and thaw faster. A pound (about 450 g) of boneless breasts needs a full day to thaw in the refrigerator, while a sealed package in cold water usually thaws in an hour or less. You can also cook chicken straight from frozen; it takes about 50% longer."
+  - heading: "Do not rinse raw chicken"
+    body: "Washing raw chicken in the sink does not remove bacteria; it splashes them onto the counter, the sink and nearby food. Pat it dry with a paper towel if needed, then wash your hands and anything the raw chicken touched. Cooking to 165°F (74°C) is what makes it safe."
+
+whole-turkey:
+  - heading: "How long a frozen turkey takes to thaw"
+    body: "A whole turkey needs about one day in the refrigerator for every 4 to 5 pounds (roughly 2 kg), so a 16-pound (7 kg) bird needs three to four days. Once thawed, it keeps another 1 to 2 days in the fridge. In a hurry, submerge the wrapped turkey in cold water, change the water every 30 minutes and allow about 30 minutes per pound; cook it as soon as it is thawed."
+  - heading: "Buying a fresh turkey"
+    body: "Because raw turkey only keeps 1 to 2 days in the refrigerator, buy a fresh turkey no more than two days before you cook it, or buy it frozen and plan the thaw backward from the meal. Keep it in its wrapping on a tray on the bottom shelf, where any juices cannot drip onto other food."
+  - heading: "Roasting and leftovers"
+    body: "Cook the turkey until the thickest part of the thigh, the wing and the breast reach 165°F (74°C). For the safest results, bake stuffing in a separate dish rather than inside the bird. Carve the meat off the bone and refrigerate leftovers within 2 hours; they keep 3 to 4 days in the fridge."
+
+ground-beef:
+  - heading: "Why ground meat spoils faster than steak"
+    body: "Grinding spreads bacteria from the surface of the meat all the way through it, which is why ground meat only keeps 1 to 2 days in the refrigerator while a steak keeps 3 to 5. It is also why burgers need to be cooked through to 160°F (71°C), while a steak can be served rarer."
+  - heading: "Gray in the middle is normal"
+    body: "Ground beef is bright red on the surface because the meat is exposed to oxygen. The inside of the package is often purplish or gray because it is not, and that alone does not mean it has spoiled. Throw it out if it smells sour, feels tacky or slimy, or the whole package has turned brown or gray."
+  - heading: "Freeze it flat"
+    body: "Press ground meat into a thin, flat layer in a freezer bag before freezing. It stacks easily, freezes quickly and thaws in about a day in the refrigerator or in under an hour in cold water. Raw ground meat thawed in the refrigerator can be cooked and then frozen again."
+
+steak:
+  - heading: "Color, smell and vacuum packs"
+    body: "Fresh beef is cherry red where it meets the air and darker purple inside a vacuum pack. That darker color, and a slightly stale smell when the pack is first opened, are normal and fade after a few minutes in the air. A sour smell that lingers, a sticky surface or a brown or green tint all mean the meat should be thrown out."
+  - heading: "Freezing steaks and roasts"
+    body: "Wrap each steak tightly in plastic wrap or freezer paper, then place it in a freezer bag with the air pressed out. This prevents freezer burn, the dry gray patches that are safe but tough. Thaw steaks in the refrigerator overnight; a large roast can take a few days, so plan ahead."
+  - heading: "Cooking to a safe temperature"
+    body: "Whole cuts of beef, veal, lamb and pork are safe at 145°F (63°C) followed by a three-minute rest, because bacteria are mostly on the surface, which searing kills. Leftover cooked steak or roast keeps 3 to 4 days in the refrigerator."
+
+pork-chops:
+  - heading: "What fresh pork chops look like"
+    body: "Fresh pork is grayish-pink with firm, white fat. Throw chops out if they smell sour, feel slimy, or have turned gray or green. A little liquid in the tray is normal; a cloudy, sticky film is not."
+  - heading: "Marinating safely"
+    body: "Always marinate pork chops in the refrigerator, never on the counter, and count the marinating time as part of the 3 to 5 days. Do not reuse marinade that touched raw pork unless you bring it to a boil first. Chops marinated in acidic sauces can be frozen in the bag with their marinade."
+  - heading: "Slightly pink is safe"
+    body: "Pork chops are safe at 145°F (63°C) followed by a three-minute rest, even if the center is still slightly pink. Cooking them well past that temperature is what makes them dry. Cooked chops keep 3 to 4 days in the refrigerator."
+
+sausage:
+  - heading: "Raw or fully cooked: check the label"
+    body: "Fresh sausages such as breakfast links, Italian sausage or bratwurst are raw and keep only 1 to 2 days in the refrigerator, like any ground meat. Smoked or precooked sausages are labeled fully cooked and keep about a week. If the label does not say fully cooked, treat the sausage as raw."
+  - heading: "Signs sausage has spoiled"
+    body: "Throw sausage out if it smells sour, has a slimy coating or sticky casing, or has turned gray or green. For fully cooked sausages, a cloudy or slimy liquid in an opened package is another warning sign."
+  - heading: "Freezing and cooking sausage"
+    body: "Freeze sausage in the portions you will cook, wrapped tightly to avoid freezer burn; both raw and cooked sausage keep their best quality for 1 to 2 months. Cook raw pork or beef sausage to 160°F (71°C), and chicken or turkey sausage to 165°F (74°C). Reheat fully cooked sausage until steaming hot."
+
+bacon:
+  - heading: "Why bacon has a short freezer life"
+    body: "Bacon keeps only about a month in the freezer because the salt used to cure it speeds up the fat turning rancid, even at freezer temperatures. It is still safe after that, but the flavor fades. Freeze bacon in small stacks separated by parchment so you can take out only what you need."
+  - heading: "Signs bacon has gone bad"
+    body: "Fresh bacon is pink with white or cream fat. Throw it out if it smells sour or rancid, feels slimy, or has gray, green or blue spots. Once the package is opened, wrap the rest tightly or move it to a sealed container; the 1-week limit applies even if the package date is later."
+  - heading: "Cook bacon fully"
+    body: "Bacon is raw meat even though it is cured, so cook it until crisp. Cooked bacon can also be frozen in a single layer and reheated straight from the freezer for a quick breakfast."
+
+hot-dogs:
+  - heading: "Unopened versus opened"
+    body: "An unopened package of hot dogs keeps 2 weeks in the refrigerator. Once you open it, the clock drops to 1 week, so reseal the package or move the rest into an airtight container right away."
+  - heading: "Signs hot dogs have spoiled"
+    body: "Throw hot dogs out if the liquid in the package has turned cloudy or milky, the surface feels slimy, or they smell sour. Discoloration, especially gray or green patches, is another sign they are past their best."
+  - heading: "Heat them until steaming"
+    body: "Hot dogs are fully cooked, but they can carry Listeria, a bacteria that keeps growing at refrigerator temperatures. People who are pregnant, older adults and anyone with a weakened immune system should eat hot dogs only after reheating them until steaming hot, not cold from the package."
+
+deli-meat:
+  - heading: "The clock starts when the meat is sliced"
+    body: "Meat sliced at the deli counter keeps 3 to 5 days, counting from the day it was sliced, not from the date on the original log. A sealed, factory-packaged pack keeps 2 weeks unopened, but once you open it, the 3- to 5-day limit applies."
+  - heading: "Signs deli meat has spoiled"
+    body: "Deli meat that has turned is usually slimy, sticky or shiny with a film, and it may smell sour or vinegary. Throw it out at the first sign of these changes; do not try to rinse the slime off."
+  - heading: "Freezing deli meat"
+    body: "Most cold cuts freeze well for 1 to 2 months, although the texture can turn a little watery. Freeze them in sandwich-sized portions between sheets of parchment. Thawed deli meat is ideal for grilled sandwiches, omelets or pasta, where the change in texture does not matter."
+
+cooked-ham:
+  - heading: "Which ham do you have?"
+    body: "Store-wrapped cooked ham keeps 3 to 5 days when it is sliced, half or spiral cut, and about a week when it is whole. Ham vacuum-sealed at the plant keeps 2 weeks unopened, or until its use-by date. After you open it, treat it like sliced ham."
+  - heading: "Reheating spiral and holiday hams"
+    body: "A fully cooked ham from a USDA-inspected plant can be eaten cold or reheated to 140°F (60°C). Ham that has been repackaged or is left over from a meal should be reheated to 165°F (74°C). Cover a spiral ham with foil while it warms so the slices do not dry out."
+  - heading: "Freezing leftover ham"
+    body: "Ham freezes for 1 to 2 months. Slice or dice it first and freeze it in portions for soups, quiche and pasta, which hide the slightly softer texture after thawing. Ham bones freeze well for making stock."
+
+prosciutto:
+  - heading: "Why prosciutto keeps so long"
+    body: "Prosciutto, Parma and Serrano ham are dry-cured with salt and aged for months, which leaves little water for bacteria. That is why cut prosciutto keeps 2 to 3 months in the refrigerator, much longer than cooked ham. It still dries out quickly once sliced, so wrap it tightly in parchment and then plastic."
+  - heading: "Signs it has gone bad"
+    body: "Throw dry-cured ham out if it develops fuzzy mold, a slimy surface or an off, sour smell. Very thin slices that have simply dried and darkened at the edges are not spoiled, but they will be tough and salty."
+  - heading: "Freezing prosciutto"
+    body: "Prosciutto can be frozen for about a month, but freezing softens its delicate texture. Frozen slices are best used in cooked dishes such as pasta, pizza or wrapped around vegetables. For the best flavor when serving it raw, let slices sit out for about 15 minutes before eating."
+
+salmon:
+  - heading: "How to tell if salmon is fresh"
+    body: "Fresh salmon smells mild, like the sea, and the flesh is moist, firm and springs back when pressed. A strong fishy or ammonia smell, a milky or slimy surface, or flesh that stays dented when pressed all mean it should be thrown out. Store it in the coldest part of the refrigerator and cook it within 1 to 3 days."
+  - heading: "Why fatty fish has a shorter freezer life"
+    body: "Salmon, tuna and mackerel keep their best quality for only 2 to 3 months in the freezer, against 6 to 8 months for lean fish like cod. Their oils slowly oxidize even when frozen, which causes stale flavors. Wrap fillets tightly, ideally vacuum-sealed, to slow this down."
+  - heading: "Thawing vacuum-packed fish"
+    body: "Take frozen fish out of its vacuum packaging, or at least open it, before thawing it in the refrigerator. Some bacteria that can grow in fish thrive without oxygen. Fish thaws overnight in the fridge; cook it to 145°F (63°C), until the flesh is opaque and flakes easily."
+
+white-fish:
+  - heading: "Lean fish freezes better"
+    body: "Cod, haddock, halibut, sole and other lean white fish keep their quality in the freezer much longer than oily fish: 6 to 8 months for cod-type fish and 4 to 8 months for pollock or rockfish. Their low fat content leaves little to turn rancid. Wrap fillets tightly to prevent freezer burn, which shows as dry white patches."
+  - heading: "Signs white fish has spoiled"
+    body: "Fresh white fish has translucent, bright flesh and a clean, mild smell. Throw it out if it smells strongly fishy or of ammonia, looks dull or milky, or feels mushy and slimy. Cook it within 1 to 3 days of buying it."
+  - heading: "Cooking from frozen"
+    body: "Thin white fish fillets can be cooked straight from frozen by baking, poaching or steaming; add a few minutes to the cooking time. Otherwise, thaw them in the refrigerator overnight. Fish is done at 145°F (63°C), when the flesh is opaque and flakes easily."
+
+shrimp:
+  - heading: "Most fresh shrimp was frozen first"
+    body: "Much of the shrimp sold at the fish counter was frozen and thawed for display. Ask whether it was previously frozen: thawed shrimp should be cooked within the 3 to 5 days and is best not refrozen raw. Buying it frozen and thawing it yourself gives you more flexibility."
+  - heading: "How to thaw shrimp"
+    body: "Thaw frozen shrimp overnight in the refrigerator, or put them in a sealed bag under cold water for about 30 minutes for a quick dinner. Shrimp keeps its best quality in the freezer for 6 to 18 months when it is tightly sealed."
+  - heading: "Signs shrimp has gone bad"
+    body: "Throw shrimp out if they smell of ammonia or bleach, feel slimy, or the flesh is mushy. Cook raw shrimp until they turn pink and the flesh is opaque, which usually takes only a few minutes."
+
+crab:
+  - heading: "Live crab and lobster: cook the same day"
+    body: "Live crabs and lobsters should be cooked the day you buy them. Keep them in the refrigerator in an open container covered with a damp cloth; never store them in fresh water or in an airtight bag, which kills them. Cook only shellfish that are alive and moving."
+  - heading: "Fresh and cooked crab meat"
+    body: "Fresh crab meat and fresh lobster keep 2 to 4 days in the refrigerator. Keep them on ice or in the coldest part of the fridge and throw them out if they smell of ammonia or sour, or if the meat feels slimy."
+  - heading: "Freezing crab and lobster"
+    body: "Crab meat and lobster freeze for 2 to 4 months; freeze the meat out of the shell in airtight containers. Freezing live crab or lobster is not recommended, because the meat deteriorates quickly once they die."
+
+mussels:
+  - heading: "Keep live shellfish breathing"
+    body: "Live mussels, clams and oysters need air. Store them in the refrigerator in an open bowl covered with a damp cloth or paper towel, never in a sealed bag or in water, which suffocates them. Kept this way they last 5 to 10 days, but they taste best within a day or two."
+  - heading: "The tap test"
+    body: "Before cooking, throw out any shellfish with cracked or broken shells. If a mussel or clam is open, tap it: a live one closes. Throw away any that stay open. After cooking, discard any that did not open."
+  - heading: "Shucked shellfish and freezing"
+    body: "Shucked mussels, clams, oysters and scallops keep 3 to 10 days in the refrigerator and freeze for 3 to 4 months in their liquid. Freezing live shellfish in the shell is not recommended. People with weakened immune systems should avoid eating raw oysters."
+
+eggs:
+  - heading: "Store eggs in the carton, not the door"
+    body: "Keep eggs in their original carton on a shelf inside the refrigerator. The door is the warmest part of the fridge and the carton protects the eggs from absorbing odors. If you bought eggs from a refrigerated case, keep them refrigerated: a cold egg left out can sweat, which helps bacteria get through the shell."
+  - heading: "The float test shows age, not safety"
+    body: "An egg that floats in water is old because its air cell has grown, but that does not tell you whether it is safe. Crack eggs into a separate bowl before using them and throw out any with an unusual smell or appearance. Eggs remain usable for 3 to 5 weeks after you put them in the refrigerator, even if the sell-by date passes."
+  - heading: "How to freeze eggs"
+    body: "Never freeze eggs in the shell; they expand and crack. Instead, beat the yolks and whites together, pour them into a container and label it with the number of eggs. Whites can be frozen on their own. Thaw frozen eggs in the refrigerator and use them only in dishes that will be fully cooked."
+
+hard-boiled-eggs:
+  - heading: "One week, peeled or not"
+    body: "Hard-boiled eggs keep one week in the refrigerator. Cooking removes the egg's natural protective coating, which is why they keep much less time than raw eggs. Refrigerate them within 2 hours of cooking, and remember that eggs left out for an Easter egg hunt count toward that limit."
+  - heading: "Is the green ring around the yolk safe?"
+    body: "A gray-green ring around the yolk is harmless. It forms when eggs are overcooked or cooled slowly. To avoid it, cook eggs just until done and cool them right away in ice water."
+  - heading: "Why you should not freeze them"
+    body: "Hard-boiled egg whites turn tough and watery in the freezer. If you have too many, use them up in egg salad, deviled eggs or on salads within the week. The yolks alone can be frozen for sprinkling on dishes, although the texture changes."
+
+cooked-chicken:
+  - heading: "Rotisserie chicken counts as leftovers"
+    body: "A store-bought rotisserie chicken keeps 3 to 4 days in the refrigerator, like home-cooked chicken. Refrigerate it within 2 hours of buying it, and take the meat off the bone first so it cools quickly in a shallow container."
+  - heading: "Shred and freeze"
+    body: "Cooked chicken freezes for 2 to 6 months. Shred or dice it, freeze it flat in labeled bags and add it straight from frozen to soups, casseroles and stir-fries. Adding a little broth to the bag keeps the meat moist."
+  - heading: "Reheat thoroughly"
+    body: "Reheat cooked chicken to 165°F (74°C), until steaming hot all the way through. If you are not sure when it was cooked, or it smells sour or feels slimy, throw it out."
+
+leftovers:
+  - heading: "The 3- to 4-day rule"
+    body: "Most cooked leftovers, including takeout, keep 3 to 4 days in the refrigerator. Count from the day the food was cooked, not the day you last reheated it, and reheat only the portion you are going to eat."
+  - heading: "Cool them fast"
+    body: "Refrigerate leftovers within 2 hours, or within 1 hour on a hot day. Divide large amounts into shallow containers so they cool quickly; a deep pot of food can stay warm in the middle long enough for bacteria to grow. It is fine to put warm food straight into the refrigerator."
+  - heading: "Freeze what you will not finish"
+    body: "If you will not eat leftovers within 3 to 4 days, freeze them right away in single portions labeled with the date. Most cooked meat dishes keep their quality for 2 to 6 months, soups and stews for 2 to 3 months. Thaw them in the refrigerator or reheat them straight from frozen."
+
+pizza:
+  - heading: "Pizza left out overnight"
+    body: "Pizza that sat out on the counter or in the box overnight should be thrown away. Like any perishable food, it should not stay at room temperature for more than 2 hours, or 1 hour on a hot day. Toppings such as meat, cheese and vegetables can grow bacteria at room temperature."
+  - heading: "Storing leftover pizza"
+    body: "Wrap slices in foil or plastic wrap or put them in an airtight container rather than leaving them in the delivery box. They keep 3 to 4 days in the refrigerator. To freeze, wrap slices individually; they keep their best quality for 1 to 2 months."
+  - heading: "Reheating for a crisp crust"
+    body: "Reheat slices in a hot skillet or oven rather than the microwave to keep the crust crisp. Frozen slices can go straight into a hot oven. Make sure the toppings are steaming hot before eating."
+
+soup:
+  - heading: "Cool large pots quickly"
+    body: "A big pot of soup cools slowly and can stay warm in the middle for hours. Divide it into shallow containers before refrigerating, or stir it in a sink of ice water first. Refrigerate it within 2 hours of cooking; it then keeps 3 to 4 days."
+  - heading: "Freezing soups and stews"
+    body: "Most soups and stews freeze well for 2 to 3 months. Leave some space at the top of the container because liquid expands as it freezes. Soups thickened with cream or containing potatoes can turn grainy, so freeze them before adding cream and stir well when reheating."
+  - heading: "Reheat to a boil"
+    body: "Bring soups, stews and sauces back to a rolling boil when reheating, and reheat only what you plan to eat. If a soup smells sour or shows bubbles or foam while it is still cold, throw it out."
+
+salads:
+  - heading: "It is not the mayonnaise"
+    body: "Commercial mayonnaise is acidic and rarely the problem. The risk in tuna, chicken, egg and macaroni salads comes from the other ingredients, which are handled a lot during preparation. Make them with chilled ingredients, refrigerate them right away and eat them within 3 to 4 days."
+  - heading: "Picnics and buffets"
+    body: "Do not leave these salads out for more than 2 hours, or 1 hour above 90°F (32°C). At a picnic, keep the bowl nested in a larger bowl of ice, and throw out anything that stayed out longer than that limit."
+  - heading: "Why they do not freeze well"
+    body: "Mayonnaise-based salads separate and turn watery when frozen, and celery and lettuce go limp. Make smaller batches instead. You can freeze cooked chicken or hard-cooked egg yolks separately and mix the salad fresh."
+
+quiche:
+  - heading: "Refrigerate quiche after baking"
+    body: "Quiche is an egg dish, so it should be refrigerated within 2 hours of baking. Let it cool briefly, then cover it and store it in the refrigerator, where it keeps 3 to 5 days."
+  - heading: "Freezing quiche"
+    body: "Baked quiche freezes well for 2 to 3 months. Cool it completely, wrap it tightly in plastic wrap and foil, and freeze whole or in slices. Thaw it overnight in the refrigerator."
+  - heading: "Reheating"
+    body: "Reheat quiche in the oven to 165°F (74°C) to keep the crust crisp; slices from the freezer can be reheated directly. Quiche is also safe to eat cold straight from the refrigerator."

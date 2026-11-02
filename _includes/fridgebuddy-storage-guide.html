@@ -21,6 +21,12 @@
     </tbody>
 </table>
 
+{% assign notes = site.data.fridgebuddy_storage_notes[fb_lang][page.storage_guide] %}
+{% for note in notes %}
+<h2>{{ note.heading }}</h2>
+<p>{{ note.body }}</p>
+{% endfor %}
+
 {% assign category = sx.categories[page.storage_category] %}
 <h2>{{ category.heading }}</h2>
 <ul>

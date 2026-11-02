@@ -55,13 +55,15 @@ foods:
   - id: steak
     category: meat
     slug: { en: steak, fr: steak-boeuf, de: steak }
-    label: { en: Raw steak, fr: Steak de bœuf cru, de: Rohes Steak }
-    name: { en: raw steak, fr: le steak de bœuf cru, de: rohes Steak }
+    label: { en: Raw steak and roasts, fr: Steak et rôti crus, de: Rohes Steak und roher Braten }
+    name: { en: raw steak, fr: le steak cru, de: rohes Steak }
     rows:
       - variant: { en: "Beef, veal, lamb or pork steaks", fr: "Steaks de bœuf, veau, agneau ou porc", de: "Steaks von Rind, Kalb, Lamm oder Schwein" }
         fridge: 3-5 day
         freezer: 4-12 month
-
+      - variant: { en: "Beef, veal, lamb or pork roasts", fr: "Rôtis de bœuf, veau, agneau ou porc", de: "Braten von Rind, Kalb, Lamm oder Schwein" }
+        fridge: 3-5 day
+        freezer: 4-12 month
   - id: pork-chops
     category: meat
     slug: { en: pork-chops, fr: cotes-de-porc, de: schweinekoteletts }
@@ -73,17 +75,20 @@ foods:
         fridge: 3-5 day
         freezer: 4-12 month
 
-  - id: roast
-    category: meat
-    slug: { en: raw-roast, fr: roti-cru, de: roher-braten }
-    label: { en: Raw roast, fr: Rôti cru, de: Roher Braten }
-    name: { en: a raw roast, fr: un rôti cru, de: roher Braten }
-    name_acc: { de: rohen Braten }
-    rows:
-      - variant: { en: "Beef, veal, lamb or pork roast", fr: "Rôti de bœuf, veau, agneau ou porc", de: "Braten von Rind, Kalb, Lamm oder Schwein" }
-        fridge: 3-5 day
-        freezer: 4-12 month
 
+  - id: sausage
+    category: meat
+    slug: { en: sausage, fr: saucisses, de: bratwurst }
+    label: { en: Sausage, fr: Saucisses, de: Bratwurst und Würstchen }
+    name: { en: sausage, fr: les saucisses, de: Würstchen }
+    plural: { fr: true, de: true }
+    rows:
+      - variant: { en: "Raw sausage (chicken, turkey, pork or beef)", fr: "Saucisses crues (poulet, dinde, porc ou bœuf)", de: "Rohe Bratwurst (Hähnchen, Pute, Schwein oder Rind)" }
+        fridge: 1-2 day
+        freezer: 1-2 month
+      - variant: { en: "Fully cooked sausage", fr: "Saucisses entièrement cuites", de: "Vollständig gegarte Würstchen" }
+        fridge: 1 week
+        freezer: 1-2 month
   - id: bacon
     category: deli
     slug: { en: bacon, fr: bacon, de: bacon }
@@ -93,28 +98,6 @@ foods:
       - variant: { en: Bacon, fr: Bacon, de: Bacon }
         fridge: 1 week
         freezer: 1 month
-
-  - id: raw-sausage
-    category: meat
-    slug: { en: raw-sausage, fr: saucisses-crues, de: rohe-bratwurst }
-    label: { en: Raw sausage, fr: Saucisses crues, de: Rohe Bratwürste }
-    name: { en: raw sausage, fr: les saucisses crues, de: rohe Bratwürste }
-    plural: { fr: true, de: true }
-    rows:
-      - variant: { en: "Raw sausage (chicken, turkey, pork or beef)", fr: "Saucisses crues (poulet, dinde, porc ou bœuf)", de: "Rohe Würste (Hähnchen, Pute, Schwein oder Rind)" }
-        fridge: 1-2 day
-        freezer: 1-2 month
-
-  - id: cooked-sausage
-    category: deli
-    slug: { en: cooked-sausage, fr: saucisses-cuites, de: bruehwurst }
-    label: { en: Fully cooked sausage, fr: Saucisses précuites, de: Vorgegarte Würstchen }
-    name: { en: fully cooked sausage, fr: les saucisses précuites, de: vorgegarte Würstchen }
-    plural: { fr: true, de: true }
-    rows:
-      - variant: { en: "Fully cooked sausage (chicken, turkey, pork or beef)", fr: "Saucisses entièrement cuites (poulet, dinde, porc ou bœuf)", de: "Vollständig gegarte Würstchen (Hähnchen, Pute, Schwein oder Rind)" }
-        fridge: 1 week
-        freezer: 1-2 month
 
   - id: hot-dogs
     category: deli
@@ -365,7 +348,7 @@ text:
     units: { day: [day, days], week: [week, weeks], month: [month, months], year: [year, years] }
     times_heading: "Storage times at a glance"
     freezer_heading: "Freezer times are about quality, not safety"
-    freezer_body: "Food kept continuously frozen at 0°F (−18°C) stays safe indefinitely because bacteria cannot grow. The freezer times above tell you how long the texture and flavor stay at their best. Label packages with the date you froze them so you know what to use first."
+    freezer_body: "Food kept continuously frozen at 0°F (−18°C) stays safe indefinitely; the freezer times above are about flavor and texture. Label packages with the date you froze them."
     refreeze_body: "Avoid freezing, thawing and refreezing the same food. Every cycle damages texture and flavor, and food that thawed outside the refrigerator gives bacteria a chance to grow. Raw food thawed in the refrigerator can be refrozen, with some loss of quality. Food thawed in cold water or in the microwave must be cooked before it goes back in the freezer. Never refreeze food that thawed on the counter or stayed out more than 2 hours. Freeze in small portions so you only thaw what you need."
     doubt_heading: "When in doubt, throw it out"
     doubt_body: "These times assume food was handled safely and refrigerated promptly. If the package shows a use-by date that comes sooner, follow the label. Trust your nose too: if food smells sour, rancid or simply off, or looks slimy or moldy, throw it out, even within these times. The reverse is not true: the bacteria that cause food poisoning usually do not change the smell or appearance, so food that smells fine past these times is not safe either. Never taste food to check whether it is still good."
@@ -471,7 +454,7 @@ text:
     units: { day: [jour, jours], week: [semaine, semaines], month: [mois, mois], year: [an, ans] }
     times_heading: "Les durées en un coup d'œil"
     freezer_heading: "Au congélateur, la durée concerne la qualité, pas la sécurité"
-    freezer_body: "Un aliment maintenu en continu à −18 °C reste sûr indéfiniment, car les bactéries ne s'y développent pas. Les durées ci-dessus indiquent combien de temps la texture et le goût restent optimaux. Notez la date de congélation sur chaque sachet pour savoir quoi utiliser en premier."
+    freezer_body: "Un aliment maintenu en continu à −18 °C reste sûr indéfiniment ; les durées ci-dessus concernent le goût et la texture. Notez la date de congélation sur chaque sachet."
     refreeze_body: "Évitez de congeler, décongeler puis recongeler un même aliment. Chaque cycle abîme la texture et le goût, et un aliment décongelé hors du réfrigérateur laisse aux bactéries le temps de se multiplier. Un aliment cru décongelé au réfrigérateur peut être recongelé, au prix d'une perte de qualité. Un aliment décongelé dans l'eau froide ou au micro-ondes doit être cuit avant de retourner au congélateur. Ne recongelez jamais un aliment décongelé sur le plan de travail ou resté plus de 2 heures à température ambiante. Congelez en petites portions pour ne décongeler que ce dont vous avez besoin."
     doubt_heading: "Dans le doute, jetez"
     doubt_body: "Ces durées supposent un aliment manipulé correctement et réfrigéré rapidement. Si l'emballage indique une date limite de consommation (DLC) plus proche, c'est elle qui compte. Fiez-vous aussi à votre nez : si un aliment sent l'aigre, le rance ou simplement mauvais, ou s'il est gluant ou moisi, jetez-le, même avant la fin de ces durées. L'inverse n'est pas vrai : les bactéries responsables des intoxications ne changent généralement ni l'odeur ni l'aspect, donc un aliment qui sent bon après ces délais n'est pas sûr pour autant. Ne goûtez jamais un aliment pour vérifier s'il est encore bon."
@@ -577,7 +560,7 @@ text:
     units: { day: [Tag, Tage], week: [Woche, Wochen], month: [Monat, Monate], year: [Jahr, Jahre] }
     times_heading: "Lagerzeiten auf einen Blick"
     freezer_heading: "Im Gefrierschrank geht es um Qualität, nicht um Sicherheit"
-    freezer_body: "Lebensmittel, die durchgehend bei −18 °C gelagert werden, bleiben unbegrenzt sicher, weil sich Bakterien nicht vermehren. Die Zeiten oben geben an, wie lange Konsistenz und Geschmack optimal bleiben. Beschriften Sie Gefrierbeutel mit dem Einfrierdatum, damit Sie wissen, was zuerst verbraucht werden sollte."
+    freezer_body: "Durchgehend bei −18 °C gelagerte Lebensmittel bleiben unbegrenzt sicher; die Zeiten oben betreffen Geschmack und Konsistenz. Beschriften Sie Gefrierbeutel mit dem Einfrierdatum."
     refreeze_body: "Vermeiden Sie es, dasselbe Lebensmittel einzufrieren, aufzutauen und wieder einzufrieren. Jeder Durchgang schadet Konsistenz und Geschmack, und außerhalb des Kühlschranks aufgetaute Lebensmittel geben Bakterien Zeit, sich zu vermehren. Rohe Lebensmittel, die im Kühlschrank aufgetaut wurden, dürfen mit etwas Qualitätsverlust wieder eingefroren werden. In kaltem Wasser oder in der Mikrowelle Aufgetautes muss vor dem erneuten Einfrieren gegart werden. Frieren Sie nie Lebensmittel wieder ein, die bei Raumtemperatur aufgetaut sind oder länger als 2 Stunden ungekühlt waren. Frieren Sie in kleinen Portionen ein, damit Sie nur auftauen, was Sie brauchen."
     doubt_heading: "Im Zweifel wegwerfen"
     doubt_body: "Diese Zeiten setzen voraus, dass das Lebensmittel hygienisch behandelt und rasch gekühlt wurde. Steht auf der Packung ein früheres Verbrauchsdatum, gilt dieses. Verlassen Sie sich auch auf Ihre Nase: Riecht ein Lebensmittel sauer, ranzig oder einfach unangenehm, oder ist es schmierig oder verschimmelt, werfen Sie es weg, auch innerhalb dieser Zeiten. Umgekehrt gilt das nicht: Krankmachende Bakterien verändern Geruch und Aussehen meist nicht, ein unauffälliges Lebensmittel ist nach Ablauf dieser Zeiten also trotzdem nicht sicher. Probieren Sie nie, ob etwas noch gut ist."
