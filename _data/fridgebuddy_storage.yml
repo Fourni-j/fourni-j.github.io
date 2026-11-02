@@ -340,6 +340,7 @@ text:
     does: { singular: does, plural: do }
     keeps: { singular: keeps, plural: keep }
     page_title: "How long %{does} %{name} last? Fridge and freezer times"
+    page_title_short: "How long %{does} %{name} last?"
     meta: "%{label}: %{fridge} in the fridge and %{freezer_short} in the freezer, according to USDA guidance. Storage, freezing and thawing tips."
     meta_nofreeze: "%{label}: %{fridge} in the fridge; %{freezer_short}, according to USDA guidance. Storage and safety tips."
     intro: "In short: %{name} %{keeps} %{fridge} in the refrigerator at 40°F (4°C) or below. %{freezer_sentence}"
@@ -445,7 +446,8 @@ text:
     does: { singular: se conserve, plural: se conservent }
     keeps: { singular: se conserve, plural: se conservent }
     page_title: "Combien de temps %{does} %{name} ? Frigo et congélateur"
-    meta: "%{label} : %{fridge} au réfrigérateur et %{freezer_short} au congélateur selon l'USDA. Conseils de stockage, de congélation et de décongélation."
+    page_title_short: "Combien de temps %{does} %{name} ?"
+    meta: "%{label} : %{fridge} au réfrigérateur et %{freezer_short} au congélateur selon l'USDA. Conseils de stockage et de décongélation."
     meta_nofreeze: "%{label} : %{fridge} au réfrigérateur ; %{freezer_short}, selon l'USDA. Conseils de stockage et de sécurité."
     intro: "En bref : %{name} %{keeps} %{fridge} au réfrigérateur à 4 °C ou moins. %{freezer_sentence}"
     freezer_sentence: "Congelé à −18 °C, l'aliment reste sûr indéfiniment et garde sa meilleure qualité pendant %{freezer}."
@@ -550,6 +552,7 @@ text:
     does: { singular: ist, plural: sind }
     keeps: { singular: ist, plural: sind }
     page_title: "Wie lange %{does} %{name} haltbar? Kühlschrank und Gefrierschrank"
+    page_title_short: "Wie lange %{does} %{name} haltbar?"
     meta: "%{label}: %{fridge} im Kühlschrank und %{freezer_short} im Gefrierschrank laut USDA. Tipps zu Lagerung, Einfrieren und Auftauen."
     meta_nofreeze: "%{label}: %{fridge} im Kühlschrank; %{freezer_short}, laut USDA. Tipps zu Lagerung und Lebensmittelsicherheit."
     intro: "Kurz gesagt: %{name_cap} %{keeps} im Kühlschrank bei höchstens 4 °C %{fridge} haltbar. %{freezer_sentence}"

@@ -31,7 +31,7 @@ module FridgeBuddy
 
       build(site, food_url(food, lang), lang, food.fetch("id"),
         "title" => fill(t["title"], vars),
-        "page_title" => fill(t["page_title"], vars),
+        "page_title" => page_title(t, vars),
         "meta_description" => fill(t[meta_key], vars),
         "intro" => fill(t["intro"], vars.merge("freezer_sentence" => intro_freezer)),
         "storage_rows" => rows,
@@ -89,12 +89,19 @@ module FridgeBuddy
         "social_image" => "/assets/app-pages/fridgebuddy-icon.png",
         "date_published" => @data["date_published"],
         "date_modified" => @data["date_modified"],
+        "last_modified_at" => Date.iso8601(@data["date_modified"]),
         "date_modified_display" => display_date(@data["date_modified"], lang),
         "storage_track" => fill(t["track_body"], "tracker_url" => t["tracker_url"]),
         "storage_source" => fill(t["source"], "url" => @data["source"]["url"], "date" => t["source_date"])
       )
       page.data.merge!(data)
       page
+    end
+
+    # Drop the "fridge and freezer" suffix when it would push the title past what search results show.
+    def page_title(t, vars)
+      full = fill(t["page_title"], vars)
+      full.length > 62 ? fill(t["page_title_short"], vars) : full
     end
 
     def crumbs(lang, t)

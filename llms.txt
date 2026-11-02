@@ -10,6 +10,7 @@
 - [Shared pantry app guide](https://cafournier.com/fridgebuddy/shared-pantry-app/): One shared household inventory and shopping lists for families and roommates.
 - [Pantry app comparison](https://cafournier.com/fridgebuddy/alternatives/): FridgeBuddy, NoWaste, Pantry, What The Fridge?!, and ExpiresBy compared by platform, input method, sharing, and ideal use case, with a stated research date.
 - [Food-waste cost calculator](https://cafournier.com/fridgebuddy/food-waste-calculator/): Free client-side calculator estimating the annual cost of avoidable household food waste.
+- [Food storage chart](https://cafournier.com/fridgebuddy/food-storage/): How long raw meat, poultry, fish, eggs, deli meat and leftovers keep in the fridge and freezer, from the USDA cold food storage chart, with one guide per food.
 - [FridgeBuddy 2.34: Fruits and vegetables](https://cafournier.com/fridgebuddy-2-34): October 2026 release article with short screen recordings: suggested expiration dates for fruits and vegetables based on USDA FoodKeeper storage times, notes on items, and quicker shopping lists.
 - [FridgeBuddy 2.35: Undo](https://cafournier.com/fridgebuddy-2-35): October 2026 release article with short screen recordings: undo a consume, throw away or delete in one tap (or by shaking the iPhone), reopening on the last tab and shopping list after iOS closes the app in the background, and a region-independent CSV export.
 - [FridgeBuddy privacy policy](https://cafournier.com/fridgebuddy/privacypolicy): No accounts, no ads, no tracking; inventory stored in the user's private iCloud.
@@ -22,6 +23,7 @@
 - [Inventaire partagé](https://cafournier.com/fridgebuddy/fr/inventaire-partage/): Guide en français du partage d'inventaire en famille ou en colocation.
 - [Comparatif d'applications](https://cafournier.com/fridgebuddy/fr/comparatif/): Comparatif en français de cinq apps d'inventaire et de péremption.
 - [Calculateur de gaspillage alimentaire](https://cafournier.com/fridgebuddy/fr/calculateur-gaspillage-alimentaire/): Calculateur gratuit du coût annuel du gaspillage évitable.
+- [Durées de conservation](https://cafournier.com/fridgebuddy/fr/conservation-aliments/): Combien de temps se conservent viande, volaille, poisson, œufs, charcuterie et restes au frigo et au congélateur, avec un guide par aliment.
 
 ## FridgeBuddy auf Deutsch
 
@@ -31,6 +33,7 @@
 - [Geteilter Vorrat](https://cafournier.com/fridgebuddy/de/geteilter-vorrat/): Deutscher Guide zum geteilten Haushaltsvorrat für Familie und WG.
 - [App-Vergleich](https://cafournier.com/fridgebuddy/de/vergleich/): Deutscher Vergleich von fünf Vorrats- und MHD-Apps.
 - [Lebensmittelverschwendung-Rechner](https://cafournier.com/fridgebuddy/de/lebensmittelverschwendung-rechner/): Kostenloser Rechner für die jährlichen Kosten vermeidbarer Verschwendung.
+- [Haltbarkeitstabelle](https://cafournier.com/fridgebuddy/de/haltbarkeit/): Wie lange Fleisch, Geflügel, Fisch, Eier, Aufschnitt und Essensreste im Kühlschrank und Gefrierschrank haltbar sind, mit einem Guide pro Lebensmittel.
 
 ## FitnessStats — workout statistics for Apple Health
 

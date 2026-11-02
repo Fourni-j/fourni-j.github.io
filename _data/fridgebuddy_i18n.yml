@@ -8,6 +8,8 @@ en:
     url: "/fridgebuddy/alternatives/"
   - text: Calculator
     url: "/fridgebuddy/food-waste-calculator/"
+  - text: Storage times
+    url: "/fridgebuddy/food-storage/"
   download_alt: Download FridgeBuddy on the App Store
   byline_prefix: By
   byline_role: iOS developer and creator of FridgeBuddy
@@ -36,6 +38,8 @@ de:
     url: "/fridgebuddy/de/vergleich/"
   - text: Rechner
     url: "/fridgebuddy/de/lebensmittelverschwendung-rechner/"
+  - text: Haltbarkeit
+    url: "/fridgebuddy/de/haltbarkeit/"
   download_alt: FridgeBuddy im App Store laden
   byline_prefix: Von
   byline_role: iOS-Entwickler und Entwickler von FridgeBuddy
@@ -64,6 +68,8 @@ fr:
     url: "/fridgebuddy/fr/comparatif/"
   - text: Calculateur
     url: "/fridgebuddy/fr/calculateur-gaspillage-alimentaire/"
+  - text: Conservation
+    url: "/fridgebuddy/fr/conservation-aliments/"
   download_alt: Télécharger FridgeBuddy sur l'App Store
   byline_prefix: Par
   byline_role: développeur iOS et créateur de FridgeBuddy
