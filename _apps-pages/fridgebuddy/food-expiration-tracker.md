@@ -18,6 +18,9 @@ breadcrumbs:
   - name: Food expiration tracker
     url: /fridgebuddy/food-expiration-tracker/
 related_links:
+  - title: "Food storage chart"
+    description: "How long meat, fish, eggs and leftovers keep in the fridge and freezer."
+    url: /fridgebuddy/food-storage/
   - title: "Pantry inventory app"
     description: "Organize food across your fridge, freezer, and pantry."
     url: /fridgebuddy/pantry-inventory-app/

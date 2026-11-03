@@ -8,6 +8,8 @@ en:
     url: "/fridgebuddy/alternatives/"
   - text: Calculator
     url: "/fridgebuddy/food-waste-calculator/"
+  - text: Storage times
+    url: "/fridgebuddy/food-storage/"
   download_alt: Download FridgeBuddy on the App Store
   byline_prefix: By
   byline_role: iOS developer and creator of FridgeBuddy
@@ -19,6 +21,8 @@ en:
   footer_privacy_url: "/fridgebuddy/privacypolicy"
   footer_terms: Terms
   footer_terms_url: "/fridgebuddy/terms"
+  footer_storage: Food storage guide
+  footer_storage_url: "/fridgebuddy/food-storage/"
   footer_support: Support
   footer_made_by: Made by
   home_aria: FridgeBuddy home
@@ -34,6 +38,8 @@ de:
     url: "/fridgebuddy/de/vergleich/"
   - text: Rechner
     url: "/fridgebuddy/de/lebensmittelverschwendung-rechner/"
+  - text: Haltbarkeit
+    url: "/fridgebuddy/de/haltbarkeit/"
   download_alt: FridgeBuddy im App Store laden
   byline_prefix: Von
   byline_role: iOS-Entwickler und Entwickler von FridgeBuddy
@@ -45,6 +51,8 @@ de:
   footer_privacy_url: "/fridgebuddy/de/datenschutz/"
   footer_terms: Nutzungsbedingungen
   footer_terms_url: "/fridgebuddy/de/nutzungsbedingungen/"
+  footer_storage: Haltbarkeits-Guide
+  footer_storage_url: "/fridgebuddy/de/haltbarkeit/"
   footer_support: Support
   footer_made_by: Entwickelt von
   home_aria: FridgeBuddy-Startseite
@@ -60,6 +68,8 @@ fr:
     url: "/fridgebuddy/fr/comparatif/"
   - text: Calculateur
     url: "/fridgebuddy/fr/calculateur-gaspillage-alimentaire/"
+  - text: Conservation
+    url: "/fridgebuddy/fr/conservation-aliments/"
   download_alt: Télécharger FridgeBuddy sur l'App Store
   byline_prefix: Par
   byline_role: développeur iOS et créateur de FridgeBuddy
@@ -71,6 +81,8 @@ fr:
   footer_privacy_url: "/fridgebuddy/fr/confidentialite/"
   footer_terms: Conditions d'utilisation
   footer_terms_url: "/fridgebuddy/fr/conditions/"
+  footer_storage: Guide de conservation
+  footer_storage_url: "/fridgebuddy/fr/conservation-aliments/"
   footer_support: Support
   footer_made_by: Créé par
   home_aria: Accueil FridgeBuddy

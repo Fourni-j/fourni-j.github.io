@@ -18,7 +18,7 @@
                     {% endif %}
                     <h1 class="modern-page-title">{{ page.title }}</h1>
                     {% if page.date_modified %}
-                    <p class="fb-page-byline">{{ t.byline_prefix }} <a href="https://cafournier.com">Charles-Adrien Fournier</a>, {{ t.byline_role }} · {{ t.byline_updated }} <time datetime="{{ page.date_modified }}">{{ page.date_modified_display | default: page.date_modified | date: "%B %-d, %Y" }}</time></p>
+                    <p class="fb-page-byline">{{ t.byline_prefix }} <a href="https://cafournier.com">Charles-Adrien Fournier</a>, {{ t.byline_role }} · {{ t.byline_updated }} <time datetime="{{ page.date_modified }}">{% if page.date_modified_display %}{{ page.date_modified_display }}{% else %}{{ page.date_modified | date: "%B %-d, %Y" }}{% endif %}</time></p>
                     {% endif %}
                     <div class="modern-content">
                         {% if page.intro %}<p class="fb-page-intro">{{ page.intro }}</p>{% endif %}
