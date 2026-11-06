@@ -13,6 +13,7 @@
 - [Food storage chart](https://cafournier.com/fridgebuddy/food-storage/): How long raw meat, poultry, fish, eggs, deli meat and leftovers keep in the fridge and freezer, from the USDA cold food storage chart, with one guide per food.
 - [FridgeBuddy 2.34: Fruits and vegetables](https://cafournier.com/fridgebuddy-2-34): October 2026 release article with short screen recordings: suggested expiration dates for fruits and vegetables based on USDA FoodKeeper storage times, notes on items, and quicker shopping lists.
 - [FridgeBuddy 2.35: Undo](https://cafournier.com/fridgebuddy-2-35): October 2026 release article with short screen recordings: undo a consume, throw away or delete in one tap (or by shaking the iPhone), reopening on the last tab and shopping list after iOS closes the app in the background, and a region-independent CSV export.
+- [FridgeBuddy 2.36: Reminders and opened food](https://cafournier.com/fridgebuddy-2-36): November 2026 release article with short screen recordings: choosing when expiry reminders arrive (an Alert, an optional Second Alert and a time, app-wide or per storage), and a Use Within time for opened items that brings the expiration date forward without ever extending it, plus food emoji for items without a photo.
 - [FridgeBuddy privacy policy](https://cafournier.com/fridgebuddy/privacypolicy): No accounts, no ads, no tracking; inventory stored in the user's private iCloud.
 
 ## FridgeBuddy en français
