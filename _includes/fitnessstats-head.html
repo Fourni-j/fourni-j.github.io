@@ -1,0 +1,126 @@
+{% assign fs_lang = 'en' %}{% if page.lang contains 'fr' %}{% assign fs_lang = 'fr' %}{% elsif page.lang contains 'de' %}{% assign fs_lang = 'de' %}{% endif %}
+{% assign t = site.data.fitnessstats_i18n[fs_lang] %}
+{% assign app = site.data.fitnessstats %}
+{% assign meta_title = page.page_title | default: page.title %}
+{% assign meta_description = page.meta_description | default: page.intro %}
+{% assign canonical_path = page.canonical_path | default: page.url %}
+{% assign canonical_url = canonical_path | absolute_url %}
+{% assign social_image_path = page.social_image | default: app.icon %}
+{% assign social_image_url = social_image_path | absolute_url %}
+{% assign app_home_url = '/fitnessstats/' | absolute_url %}
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="color-scheme" content="light dark">
+
+    <title>{{ meta_title | escape }}</title>
+    <meta name="description" content="{{ meta_description | strip_html | strip_newlines | escape }}">
+    <meta name="robots" content="{{ page.robots | default: 'index,follow,max-image-preview:large' }}">
+    <link rel="canonical" href="{{ canonical_url }}">
+    {% if page.hreflang %}
+    {% for pair in page.hreflang %}<link rel="alternate" hreflang="{{ pair[0] }}" href="{{ pair[1] | absolute_url }}">
+    {% endfor %}<link rel="alternate" hreflang="x-default" href="{{ page.hreflang.en | absolute_url }}">
+    {% endif %}
+
+    <meta property="og:site_name" content="FitnessStats">
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="{{ meta_title | escape }}">
+    <meta property="og:description" content="{{ meta_description | strip_html | strip_newlines | escape }}">
+    <meta property="og:url" content="{{ canonical_url }}">
+    <meta property="og:image" content="{{ social_image_url }}">
+    <meta property="og:image:width" content="512">
+    <meta property="og:image:height" content="512">
+    <meta property="og:image:alt" content="{{ t.icon_alt | escape }}">
+    {% assign og_locale = 'en_US' %}{% if fs_lang == 'fr' %}{% assign og_locale = 'fr_FR' %}{% elsif fs_lang == 'de' %}{% assign og_locale = 'de_DE' %}{% endif %}
+    <meta property="og:locale" content="{{ og_locale }}">
+    {% if page.hreflang %}{% for pair in page.hreflang %}{% assign alt_locale = 'en_US' %}{% if pair[0] == 'fr' %}{% assign alt_locale = 'fr_FR' %}{% elsif pair[0] == 'de' %}{% assign alt_locale = 'de_DE' %}{% endif %}{% unless alt_locale == og_locale %}<meta property="og:locale:alternate" content="{{ alt_locale }}">
+    {% endunless %}{% endfor %}{% endif %}
+    {% if page.date_published %}<meta property="article:published_time" content="{{ page.date_published | date: '%Y-%m-%d' }}">{% endif %}
+    {% if page.date_modified %}<meta property="article:modified_time" content="{{ page.date_modified | date: '%Y-%m-%d' }}">{% endif %}
+
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="{{ meta_title | escape }}">
+    <meta name="twitter:description" content="{{ meta_description | strip_html | strip_newlines | escape }}">
+    <meta name="twitter:image" content="{{ social_image_url }}">
+    <meta name="twitter:image:alt" content="{{ t.icon_alt | escape }}">
+
+    <meta name="apple-itunes-app" content="app-id={{ page.ios_app_id | default: 6445907634 }}, affiliate-data={{ t.app_store_url | split: '?' | last | escape }}">
+    <link rel="icon" type="image/png" sizes="512x512" href="{{ app.icon | relative_url }}">
+    <link rel="apple-touch-icon" href="{{ app.icon | relative_url }}">
+
+    {% include app-fonts.html %}
+    <link rel="stylesheet" href="{{ '/assets/css/modern-style.css' | relative_url }}">
+    <link rel="stylesheet" href="{{ '/assets/css/fridgebuddy-components.css' | relative_url }}?v={{ site.time | date: '%s' }}">
+    {% for stylesheet in page.extra_css %}<link rel="stylesheet" href="{{ stylesheet | relative_url }}">
+    {% endfor %}
+    <style>
+        /* FitnessStats accent on the shared app styles, as on the landing page. */
+        .fs-page { --modern-primary: #d81f45; }
+        .fs-page.dark-theme { --modern-primary: #ff6b81; }
+        @media (prefers-color-scheme: dark) {
+            .fs-page:not(.light-theme) { --modern-primary: #ff6b81; }
+        }
+    </style>
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "Article",
+          "@id": "{{ canonical_url }}#article",
+          "mainEntityOfPage": "{{ canonical_url }}",
+          "url": "{{ canonical_url }}",
+          "headline": {{ page.title | jsonify }},
+          "description": {{ meta_description | strip_html | strip_newlines | jsonify }},
+          "inLanguage": "{{ page.lang | default: 'en-US' }}",
+          "image": "{{ social_image_url }}",
+          {% if page.date_published %}"datePublished": "{{ page.date_published | date: '%Y-%m-%d' }}",{% endif %}
+          {% if page.date_modified %}"dateModified": "{{ page.date_modified | date: '%Y-%m-%d' }}",{% endif %}
+          "author": {
+            "@type": "Person",
+            "name": "Charles-Adrien Fournier",
+            "url": "{{ '/' | absolute_url }}",
+            "jobTitle": "iOS developer",
+            "sameAs": [
+              "https://github.com/fourni-j",
+              "https://www.linkedin.com/in/charlesadrienfournier"
+            ]
+          },
+          "isPartOf": {
+            "@id": "{{ app_home_url }}"
+          },
+          "about": {
+            "@id": "{{ app_home_url }}#app"
+          }
+        }{% if page.breadcrumbs %},
+        {
+          "@type": "BreadcrumbList",
+          "@id": "{{ canonical_url }}#breadcrumbs",
+          "itemListElement": [
+            {% for crumb in page.breadcrumbs %}{
+              "@type": "ListItem",
+              "position": {{ forloop.index }},
+              "name": {{ crumb.name | jsonify }},
+              "item": "{{ crumb.url | absolute_url }}"
+            }{% unless forloop.last %},{% endunless %}{% endfor %}
+          ]
+        }{% endif %}{% if page.faq %},
+        {
+          "@type": "FAQPage",
+          "@id": "{{ canonical_url }}#faq",
+          "mainEntity": [
+            {% for item in page.faq %}{
+              "@type": "Question",
+              "name": {{ item.question | jsonify }},
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": {{ item.answer | strip_html | jsonify }}
+              }
+            }{% unless forloop.last %},{% endunless %}{% endfor %}
+          ]
+        }{% endif %}
+      ]
+    }
+    </script>
+</head>

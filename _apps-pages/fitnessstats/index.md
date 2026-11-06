@@ -9,15 +9,6 @@ ios_app_id: 6445907634
 app_name: FitnessStats
 app_icon: "/assets/app-pages/fitnessstats-icon.png"
 app_store_url: "https://apps.apple.com/app/apple-store/id6445907634?pt=2162580&ct=cafournier&mt=8"
-nav_links:
-- text: Features
-  url: "/fitnessstats/#features"
-- text: Screenshots
-  url: "/fitnessstats/#how-it-works"
-- text: FAQ
-  url: "/fitnessstats/#faq"
-- text: What's new
-  url: "/fitnessstats-2-8"
 hero_title: See how far you’ve come.
 hero_subtitle: FitnessStats turns the workouts in Apple Health into clear statistics,
   route maps, trophies, and yearly Recaps. Share any workout as an image or a video,

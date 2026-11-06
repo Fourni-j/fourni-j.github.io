@@ -38,6 +38,9 @@
 ## FitnessStats — workout statistics for Apple Health
 
 - [FitnessStats overview](https://cafournier.com/fitnessstats/): Features, screenshots, and FAQ for the iPhone app that turns Apple Health workouts into statistics, route heatmaps, distance trophies, heart rate zones, and monthly and yearly Recaps, shares any workout as an image or a route video, and exports a private training summary for ChatGPT, Claude, or Gemini. Free with an optional one-time Premium purchase, requires iOS 26+.
+- [Apple Watch year in review](https://cafournier.com/fitnessstats/apple-watch-year-in-review/): How to see a whole year of Apple Watch workouts when Apple offers no year in review: what the Health and Fitness apps show, then the FitnessStats Recap (workouts, time, distance, calories, elevation, top activities, longest streak, standout sessions and a shareable summary), free for the current year and, in January, for the year that just ended.
+- [Bilan annuel Apple Watch (FR)](https://cafournier.com/fitnessstats/fr/bilan-annuel-apple-watch/): Le même guide en français : voir son année sportive Apple Watch avec le récap FitnessStats.
+- [Apple Watch Jahresrückblick (DE)](https://cafournier.com/fitnessstats/de/apple-watch-jahresrueckblick/): Derselbe Guide auf Deutsch: das Sportjahr der Apple Watch mit dem FitnessStats-Rückblick sehen.
 
 ## Apps
 
