@@ -125,7 +125,7 @@
                     <span class="modern-header-app-name">FitnessStats</span>
                 </a>
                 <div class="modern-nav-links">
-                    {% for link in page.nav_links %}<a href="{{ link.url | relative_url }}" class="modern-nav-link">{{ link.text }}</a>{% endfor %}
+                    {% for link in site.data.fitnessstats_i18n.en.nav %}<a href="{{ link.url | relative_url }}" class="modern-nav-link">{{ link.text }}</a>{% endfor %}
                 </div>
                 <div class="modern-nav-cta">
                     <a class="modern-appstore-header-btn" href="{{ page.app_store_url | escape }}" target="_blank" rel="noopener">
