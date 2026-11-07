@@ -1,6 +1,6 @@
 # Shared strings for the FitnessStats guide pages (_layouts/fitnessstats-page.html).
 # Download links use the App Store Connect campaign `cafournier`, like the landing page.
-# The landing page and the privacy policy exist in English only, so every language links to them.
+# The landing page, the privacy policy and the terms of use exist in English only, so every language links to them.
 # `nav` is the header of every FitnessStats page, the landing page included: pages only, no anchors.
 en:
   home_url: "/fitnessstats/"
@@ -19,6 +19,8 @@ en:
   cta_text: Every workout you've logged, added up.
   footer_privacy: Privacy Policy
   footer_privacy_url: "/fitnessstats/privacypolicy"
+  footer_terms: Terms of Use
+  footer_terms_url: "/fitnessstats/terms"
   footer_support: Support
   footer_made_by: Made by
   home_aria: FitnessStats home
@@ -41,6 +43,8 @@ fr:
   cta_text: Tous vos entraînements, enfin additionnés.
   footer_privacy: Politique de confidentialité
   footer_privacy_url: "/fitnessstats/privacypolicy"
+  footer_terms: Conditions d'utilisation
+  footer_terms_url: "/fitnessstats/terms"
   footer_support: Support
   footer_made_by: Créé par
   home_aria: Accueil FitnessStats
@@ -63,6 +67,8 @@ de:
   cta_text: Alle deine Trainings, endlich zusammengezählt.
   footer_privacy: Datenschutzerklärung
   footer_privacy_url: "/fitnessstats/privacypolicy"
+  footer_terms: Nutzungsbedingungen
+  footer_terms_url: "/fitnessstats/terms"
   footer_support: Support
   footer_made_by: Entwickelt von
   home_aria: FitnessStats-Startseite
