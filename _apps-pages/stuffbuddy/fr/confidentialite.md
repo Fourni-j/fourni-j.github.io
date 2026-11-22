@@ -34,10 +34,6 @@ Vous pouvez arrêter de partager votre maison, ou quitter une maison partagée a
 
 Quand vous ajoutez des objets depuis une photo d'étagère, ou faites lire un ticket, la photo ou le document est analysé par Apple Intelligence sur le [Private Cloud Compute](https://security.apple.com/blog/private-cloud-compute/) d'Apple, conçu par Apple pour que vos données servent uniquement à répondre à la demande, sans être conservées ni rendues accessibles à Apple. L'image est traitée par Apple, n'est jamais envoyée ni à moi ni à un autre service, et je ne la conserve pas. La photo et le ticket eux-mêmes sont ensuite gardés avec votre inventaire, comme décrit plus haut.
 
-## Recherche par code-barres
-
-Quand vous scannez un code-barres, l'app envoie son numéro à [Open Products Facts](https://world.openproductsfacts.org), une base de produits ouverte, pour trouver le nom, la marque et la catégorie du produit. Seul le numéro du code-barres est envoyé, et StuffBuddy ne le relie pas à votre identité.
-
 ## Notices et liens web
 
 Une notice est gardée sous forme de lien. Quand vous l'ouvrez, ou utilisez « La chercher en ligne », la page s'ouvre dans votre navigateur, avec le moteur de recherche choisi sur votre appareil, et le site visité reçoit votre requête selon sa propre politique de confidentialité. StuffBuddy n'envoie elle-même rien à ces sites.
@@ -73,13 +69,12 @@ Supprimer un objet, un contenant ou une pièce le retire de votre appareil et d'
 ## Qui reçoit des données
 
 - **Apple** (iCloud, App Store, Private Cloud Compute), selon la [politique de confidentialité d'Apple](https://www.apple.com/fr/legal/privacy/).
-- **Open Products Facts** (France) : numéros de codes-barres.
 - **RevenueCat, Inc.** (États-Unis) : historique d'achats, identifiant anonyme et informations techniques, stockés aux États-Unis. Ces transferts reposent sur les clauses contractuelles types de la Commission européenne.
 - **Les personnes avec qui vous partagez votre maison**, par le partage iCloud, comme décrit plus haut.
 
 ## Bases légales et conservation
 
-Au titre du Règlement général sur la protection des données (RGPD), les fonctions que vous utilisez (synchronisation, partage, analyse des photos et des tickets, recherche par code-barres, achats) reposent sur la fourniture du service que vous demandez (article 6, paragraphe 1, point b). Les e-mails au support reposent sur mon intérêt légitime à répondre à ce que vous choisissez de m'envoyer (article 6, paragraphe 1, point f).
+Au titre du Règlement général sur la protection des données (RGPD), les fonctions que vous utilisez (synchronisation, partage, analyse des photos et des tickets, achats) reposent sur la fourniture du service que vous demandez (article 6, paragraphe 1, point b). Les e-mails au support reposent sur mon intérêt légitime à répondre à ce que vous choisissez de m'envoyer (article 6, paragraphe 1, point f).
 
 Votre inventaire reste sur votre appareil et dans iCloud jusqu'à ce que vous le supprimiez. Les données d'achat sont conservées le temps nécessaire pour fournir vos achats et respecter les obligations comptables. Les e-mails au support sont conservés le temps nécessaire pour traiter votre demande et ses suites. Toutes ces données sont supprimées sur demande, dans les limites des obligations légales.
 

@@ -39,7 +39,7 @@ StuffBuddy organizes the information **you** provide and reminds you about it. W
 
 ## StuffBuddy Pro
 
-StuffBuddy is free to download. The free plan holds up to 20 items in your home, added by hand or by barcode, with warranty and loan reminders, and lets you try one photo analysis and one receipt reading. **StuffBuddy Pro** adds unlimited items, photo and receipt analysis, and sharing your home. Joining a home someone shares with you does not require Pro. Pro is available as:
+StuffBuddy is free to download. The free plan holds up to 20 items in your home, added by hand, with warranty and loan reminders, and lets you try one photo analysis and one receipt reading. **StuffBuddy Pro** adds unlimited items, photo and receipt analysis, and sharing your home. Joining a home someone shares with you does not require Pro. Pro is available as:
 
 - **Weekly subscription:** €2.99 per week, with a 3-day free trial for eligible new subscribers.
 - **Yearly subscription:** €29.99 per year.
@@ -56,9 +56,9 @@ These are the prices in euro countries. The price in your country and currency i
 
 If you go back to the free plan, the items you already added stay in your inventory.
 
-## Other services
+## Web links
 
-Barcode lookups use the [Open Products Facts](https://world.openproductsfacts.org) database, whose information is contributed by its community and may be missing or wrong. Manuals you add are links to web pages; they open in your browser under the terms of the sites that publish them, and they may change or disappear. We are not responsible for these services or sites.
+Manuals you add are links to web pages; they open in your browser under the terms of the sites that publish them, and they may change or disappear. We are not responsible for these sites.
 
 ## Intellectual property
 

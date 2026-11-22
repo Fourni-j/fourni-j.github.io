@@ -39,7 +39,7 @@ StuffBuddy ordnet die Informationen, die **Sie** angeben, und erinnert Sie daran
 
 ## StuffBuddy Pro
 
-StuffBuddy kann kostenlos geladen werden. Die kostenlose Version umfasst bis zu 20 Gegenstände in Ihrem Zuhause, von Hand oder per Barcode hinzugefügt, mit Erinnerungen an Garantien und Verliehenes, und lässt Sie die Fotoanalyse und das Auslesen von Belegen je einmal ausprobieren. **StuffBuddy Pro** bietet unbegrenzt viele Gegenstände, die Analyse von Fotos und Belegen und das Teilen Ihres Zuhauses. Um einem Zuhause beizutreten, das jemand mit Ihnen teilt, brauchen Sie kein Pro. Pro gibt es als:
+StuffBuddy kann kostenlos geladen werden. Die kostenlose Version umfasst bis zu 20 Gegenstände in Ihrem Zuhause, von Hand hinzugefügt, mit Erinnerungen an Garantien und Verliehenes, und lässt Sie die Fotoanalyse und das Auslesen von Belegen je einmal ausprobieren. **StuffBuddy Pro** bietet unbegrenzt viele Gegenstände, die Analyse von Fotos und Belegen und das Teilen Ihres Zuhauses. Um einem Zuhause beizutreten, das jemand mit Ihnen teilt, brauchen Sie kein Pro. Pro gibt es als:
 
 - **Wochenabo:** 2,99 € pro Woche, mit 3 Tagen kostenloser Testphase für berechtigte Neuabonnenten.
 - **Jahresabo:** 29,99 € pro Jahr.
@@ -56,9 +56,9 @@ Dies sind die Preise in Ländern mit Euro. Der Preis in Ihrem Land und Ihrer Wä
 
 Wenn Sie zur kostenlosen Version zurückkehren, bleiben die bereits hinzugefügten Gegenstände in Ihrem Inventar.
 
-## Andere Dienste
+## Weblinks
 
-Die Barcode-Suche nutzt die Datenbank [Open Products Facts](https://world.openproductsfacts.org), deren Angaben von ihrer Community stammen und fehlen oder falsch sein können. Anleitungen, die Sie hinzufügen, sind Links auf Webseiten; sie öffnen sich in Ihrem Browser zu den Bedingungen der Websites, die sie veröffentlichen, und können sich ändern oder verschwinden. Für diese Dienste und Websites sind wir nicht verantwortlich.
+Anleitungen, die Sie hinzufügen, sind Links auf Webseiten; sie öffnen sich in Ihrem Browser zu den Bedingungen der Websites, die sie veröffentlichen, und können sich ändern oder verschwinden. Für diese Websites sind wir nicht verantwortlich.
 
 ## Geistiges Eigentum
 

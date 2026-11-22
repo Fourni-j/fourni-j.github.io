@@ -34,10 +34,6 @@ Sie können die Freigabe Ihres Zuhauses jederzeit beenden oder ein mit Ihnen get
 
 Wenn Sie Gegenstände aus dem Foto eines Regals hinzufügen oder einen Beleg auslesen lassen, wird das Foto oder Dokument von Apple Intelligence auf Apples [Private Cloud Compute](https://security.apple.com/blog/private-cloud-compute/) analysiert, das Apple so entwickelt hat, dass Ihre Daten nur zur Beantwortung der Anfrage verwendet und weder gespeichert noch Apple zugänglich gemacht werden. Das Bild wird von Apple verarbeitet, nie an mich oder einen anderen Dienst gesendet, und ich bewahre es nicht auf. Foto und Beleg selbst werden danach wie oben beschrieben mit Ihrem Inventar gespeichert.
 
-## Barcode-Suche
-
-Wenn Sie einen Barcode scannen, sendet die App die Barcode-Nummer an [Open Products Facts](https://world.openproductsfacts.org), eine offene Produktdatenbank, um Namen, Marke und Kategorie des Produkts zu finden. Nur die Barcode-Nummer wird gesendet, und StuffBuddy verknüpft sie nicht mit Ihrer Identität.
-
 ## Anleitungen und Weblinks
 
 Eine Anleitung wird als Link gespeichert. Wenn Sie sie öffnen oder mit „Online suchen“ nach einer suchen, öffnet sich die Seite in Ihrem Browser, mit der auf Ihrem Gerät gewählten Suchmaschine, und die besuchte Website erhält Ihre Anfrage gemäß ihrer eigenen Datenschutzerklärung. StuffBuddy selbst sendet nichts an diese Websites.
@@ -73,13 +69,12 @@ Das Löschen eines Gegenstands, Behälters oder Raums entfernt ihn von Ihrem Ger
 ## Wer Daten erhält
 
 - **Apple** (iCloud, App Store, Private Cloud Compute), gemäß [Apples Datenschutzrichtlinie](https://www.apple.com/de/legal/privacy/).
-- **Open Products Facts** (Frankreich): Barcode-Nummern.
 - **RevenueCat, Inc.** (USA): Kaufverlauf, anonyme Kennung und technische Angaben, gespeichert in den USA. Diese Übermittlungen stützen sich auf die Standardvertragsklauseln der Europäischen Kommission.
 - **Die Personen, mit denen Sie Ihr Zuhause teilen**, über die iCloud-Freigabe, wie oben beschrieben.
 
 ## Rechtsgrundlagen und Speicherdauer
 
-Nach der Datenschutz-Grundverordnung (DSGVO) beruhen die Funktionen, die Sie nutzen (Synchronisierung, Teilen, Analyse von Fotos und Belegen, Barcode-Suche, Käufe), auf der Erbringung des von Ihnen gewünschten Dienstes (Art. 6 Abs. 1 lit. b). Support-E-Mails beruhen auf meinem berechtigten Interesse, auf das zu antworten, was Sie mir senden (Art. 6 Abs. 1 lit. f).
+Nach der Datenschutz-Grundverordnung (DSGVO) beruhen die Funktionen, die Sie nutzen (Synchronisierung, Teilen, Analyse von Fotos und Belegen, Käufe), auf der Erbringung des von Ihnen gewünschten Dienstes (Art. 6 Abs. 1 lit. b). Support-E-Mails beruhen auf meinem berechtigten Interesse, auf das zu antworten, was Sie mir senden (Art. 6 Abs. 1 lit. f).
 
 Ihr Inventar bleibt auf Ihrem Gerät und in iCloud, bis Sie es löschen. Kaufdaten werden so lange aufbewahrt, wie es für Ihre Käufe und die Buchhaltungspflichten nötig ist. Support-E-Mails werden so lange aufbewahrt, wie es für Ihre Anfrage und deren Nachbearbeitung nötig ist. Alle diese Daten werden auf Anfrage gelöscht, im Rahmen der gesetzlichen Pflichten.
 

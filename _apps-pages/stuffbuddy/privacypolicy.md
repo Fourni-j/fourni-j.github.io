@@ -34,10 +34,6 @@ You can stop sharing your home, or leave a home shared with you, at any time fro
 
 When you add items from a photo of a shelf, or read a receipt, the photo or document is analyzed by Apple Intelligence on Apple's [Private Cloud Compute](https://security.apple.com/blog/private-cloud-compute/), which Apple designed so that your data is used only to answer the request and is neither stored nor made accessible to Apple. The image is processed by Apple, never sent to me or to any other service, and I do not keep it. The photo and receipt themselves are then kept with your inventory as described above.
 
-## Barcode lookups
-
-When you scan a barcode, the app sends the barcode number to [Open Products Facts](https://world.openproductsfacts.org), an open product database, to find the product's name, brand and category. Only the barcode number is sent, and StuffBuddy does not tie it to your identity.
-
 ## Manuals and web links
 
 A manual is kept as a link. When you open it, or use "Find it online" to search for one, the page opens in your browser, with the search engine chosen on your device, and the site you visit receives your request under its own privacy policy. StuffBuddy itself sends nothing to these sites.
@@ -73,13 +69,12 @@ Deleting an item, a container or a room removes it from your device and from iCl
 ## Who receives data
 
 - **Apple** (iCloud, App Store, Private Cloud Compute), under [Apple's privacy policy](https://www.apple.com/legal/privacy/).
-- **Open Products Facts** (France): barcode numbers.
 - **RevenueCat, Inc.** (United States): purchase history, anonymous identifier and technical details, stored in the United States. These transfers rely on the European Commission's Standard Contractual Clauses.
 - **The people you share your home with**, through iCloud sharing, as described above.
 
 ## Legal bases and retention
 
-Under the EU General Data Protection Regulation (GDPR), the features you use (sync, sharing, photo and receipt analysis, barcode lookups, purchases) rely on providing the service you ask for (Article 6(1)(b)). Support emails rely on my legitimate interest in answering what you choose to send me (Article 6(1)(f)).
+Under the EU General Data Protection Regulation (GDPR), the features you use (sync, sharing, photo and receipt analysis, purchases) rely on providing the service you ask for (Article 6(1)(b)). Support emails rely on my legitimate interest in answering what you choose to send me (Article 6(1)(f)).
 
 Your inventory stays in your device and iCloud until you delete it. Purchase records are kept as long as needed to provide your purchases and meet accounting obligations. Support emails are kept as long as needed to handle your request and its follow-ups. Any of this data is deleted on request, within the limits of legal obligations.
 

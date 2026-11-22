@@ -39,7 +39,7 @@ StuffBuddy organise les informations que **vous** fournissez et vous les rappell
 
 ## StuffBuddy Pro
 
-StuffBuddy est gratuite au téléchargement. L'offre gratuite contient jusqu'à 20 objets dans votre maison, ajoutés à la main ou par code-barres, avec les rappels de garantie et de prêt, et permet d'essayer une analyse de photo et une lecture de ticket. **StuffBuddy Pro** ajoute les objets illimités, l'analyse des photos et des tickets, et le partage de votre maison. Rejoindre une maison qu'on partage avec vous ne demande pas Pro. Pro est proposé en :
+StuffBuddy est gratuite au téléchargement. L'offre gratuite contient jusqu'à 20 objets dans votre maison, ajoutés à la main, avec les rappels de garantie et de prêt, et permet d'essayer une analyse de photo et une lecture de ticket. **StuffBuddy Pro** ajoute les objets illimités, l'analyse des photos et des tickets, et le partage de votre maison. Rejoindre une maison qu'on partage avec vous ne demande pas Pro. Pro est proposé en :
 
 - **Abonnement hebdomadaire :** 2,99 € par semaine, avec 3 jours d'essai gratuit pour les nouveaux abonnés éligibles.
 - **Abonnement annuel :** 29,99 € par an.
@@ -56,9 +56,9 @@ Ce sont les prix dans les pays de la zone euro. Le prix dans votre pays et votre
 
 Si vous revenez à l'offre gratuite, les objets déjà ajoutés restent dans votre inventaire.
 
-## Autres services
+## Liens web
 
-La recherche par code-barres utilise la base [Open Products Facts](https://world.openproductsfacts.org), dont les informations sont fournies par sa communauté et peuvent manquer ou être fausses. Les notices que vous ajoutez sont des liens vers des pages web ; elles s'ouvrent dans votre navigateur, selon les conditions des sites qui les publient, et peuvent changer ou disparaître. Nous ne sommes pas responsables de ces services ni de ces sites.
+Les notices que vous ajoutez sont des liens vers des pages web ; elles s'ouvrent dans votre navigateur, selon les conditions des sites qui les publient, et peuvent changer ou disparaître. Nous ne sommes pas responsables de ces sites.
 
 ## Propriété intellectuelle
 
