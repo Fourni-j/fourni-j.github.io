@@ -44,8 +44,6 @@ StuffBuddy kann kostenlos geladen werden und bietet optionale Abonnements und ei
 
 Um zu wissen, auf welche Käufe Sie Anspruch haben, nutzt die App RevenueCat. RevenueCat erhält Ihren Kaufverlauf (Produkte, Daten, Verlängerungen, Kündigungen und Erstattungen), eine anonyme Kennung, die die App beim ersten Start erstellt, sowie technische Angaben wie App-Version, iOS-Version und App-Store-Land. RevenueCat ist der einzige in die App eingebundene Drittanbieterdienst.
 
-Wenn Sie auch FridgeBuddy nutzen, meine andere App, kann diese auf Ihrem Gerät vermerken, dass Sie sie abonniert haben, mit Datum, damit StuffBuddy ihren Abonnenten einen Sonderpreis anbieten kann. StuffBuddy liest diesen Vermerk nur auf Ihrem Gerät; er wird nirgendwohin gesendet.
-
 ## Keine Analyse, keine Werbung, kein Tracking
 
 StuffBuddy sendet keine Nutzungsstatistiken, enthält kein Werbe- oder Tracking-SDK, nutzt keine Werbe-ID und verfolgt Sie nicht über Apps oder Websites hinweg.
