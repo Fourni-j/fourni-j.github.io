@@ -13,7 +13,7 @@ terms: true
 
 **Last updated:** November 22, 2026 · [Version française](/stuffbuddy/fr/confidentialite.html) · [Deutsche Version](/stuffbuddy/de/datenschutz.html)
 
-This privacy policy describes how the StuffBuddy app, with its widget and Siri and Spotlight features ("StuffBuddy", "the app"), handles your information. StuffBuddy is developed by Charles-Adrien Fournier, an independent developer based in Paris, France, who is responsible for the data processing described here. You can reach me at [support@cafournier.com](mailto:support@cafournier.com).
+This privacy policy describes how the StuffBuddy app, with its widget and Siri and Spotlight features ("StuffBuddy", "the app"), handles your information. StuffBuddy is developed by Charles-Adrien Fournier, an independent developer based in Paris, France, who is responsible for the data processing described here. You can reach me at [feedback@cafournier.com](mailto:feedback@cafournier.com).
 
 The short version: your inventory belongs to you. It is stored on your device and in your private iCloud space, where I cannot see it. StuffBuddy has no user accounts and no server of its own, uses no analytics, shows no ads, does not track you across apps and does not sell personal data. To work, it relies on a few services, each listed below with the data it receives.
 
@@ -80,7 +80,7 @@ Your inventory stays in your device and iCloud until you delete it. Purchase rec
 
 ## Your rights
 
-You can ask to access, correct or delete your data, to restrict or object to its processing, and to receive it in a portable format. Write to [support@cafournier.com](mailto:support@cafournier.com); I reply within one month. Your inventory is in your device and your iCloud, under your control: you can change or delete it from the app, or from iOS Settings as described above.
+You can ask to access, correct or delete your data, to restrict or object to its processing, and to receive it in a portable format. Write to [feedback@cafournier.com](mailto:feedback@cafournier.com); I reply within one month. Your inventory is in your device and your iCloud, under your control: you can change or delete it from the app, or from iOS Settings as described above.
 
 You can also lodge a complaint with the French data protection authority, the [CNIL](https://www.cnil.fr), or with the authority of your country.
 
@@ -94,4 +94,4 @@ If the app's data practices change, this page will be updated and the "Last upda
 
 ## Contact
 
-For any privacy question or request, contact [support@cafournier.com](mailto:support@cafournier.com).
+For any privacy question or request, contact [feedback@cafournier.com](mailto:feedback@cafournier.com).

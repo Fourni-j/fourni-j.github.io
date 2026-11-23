@@ -82,4 +82,4 @@ These terms are governed by French law, without prejudice to any mandatory consu
 
 ## Contact
 
-For questions about these terms, contact [support@cafournier.com](mailto:support@cafournier.com).
+For questions about these terms, contact [feedback@cafournier.com](mailto:feedback@cafournier.com).

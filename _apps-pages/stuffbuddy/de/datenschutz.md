@@ -13,7 +13,7 @@ app_icon: /assets/app-pages/stuffbuddy-icon.png
 
 *Diese Übersetzung dient der Information. Bei Abweichungen ist die [englische Fassung](/stuffbuddy/privacypolicy.html) maßgeblich.*
 
-Diese Datenschutzerklärung beschreibt, wie die App StuffBuddy mit ihrem Widget und ihren Siri- und Spotlight-Funktionen („StuffBuddy“, „die App“) mit Ihren Informationen umgeht. StuffBuddy wird von Charles-Adrien Fournier entwickelt, einem unabhängigen Entwickler mit Sitz in Paris, Frankreich, der für die hier beschriebene Datenverarbeitung verantwortlich ist. Sie erreichen mich unter [support@cafournier.com](mailto:support@cafournier.com).
+Diese Datenschutzerklärung beschreibt, wie die App StuffBuddy mit ihrem Widget und ihren Siri- und Spotlight-Funktionen („StuffBuddy“, „die App“) mit Ihren Informationen umgeht. StuffBuddy wird von Charles-Adrien Fournier entwickelt, einem unabhängigen Entwickler mit Sitz in Paris, Frankreich, der für die hier beschriebene Datenverarbeitung verantwortlich ist. Sie erreichen mich unter [feedback@cafournier.com](mailto:feedback@cafournier.com).
 
 Kurz gesagt: Ihr Inventar gehört Ihnen. Es wird auf Ihrem Gerät und in Ihrem privaten iCloud-Speicher gespeichert, wo ich es nicht sehen kann. StuffBuddy hat weder Benutzerkonten noch einen eigenen Server, nutzt keine Analyse-Tools, zeigt keine Werbung, verfolgt Sie nicht über Apps hinweg und verkauft keine personenbezogenen Daten. Um zu funktionieren, nutzt die App einige Dienste, die unten jeweils mit den Daten aufgeführt sind, die sie erhalten.
 
@@ -80,7 +80,7 @@ Ihr Inventar bleibt auf Ihrem Gerät und in iCloud, bis Sie es löschen. Kaufdat
 
 ## Ihre Rechte
 
-Sie können Auskunft, Berichtigung oder Löschung Ihrer Daten verlangen, ihre Verarbeitung einschränken lassen oder ihr widersprechen und sie in einem übertragbaren Format erhalten. Schreiben Sie an [support@cafournier.com](mailto:support@cafournier.com); ich antworte innerhalb eines Monats. Ihr Inventar liegt auf Ihrem Gerät und in Ihrer iCloud, unter Ihrer Kontrolle: Sie können es in der App oder wie oben beschrieben in den iOS-Einstellungen ändern oder löschen.
+Sie können Auskunft, Berichtigung oder Löschung Ihrer Daten verlangen, ihre Verarbeitung einschränken lassen oder ihr widersprechen und sie in einem übertragbaren Format erhalten. Schreiben Sie an [feedback@cafournier.com](mailto:feedback@cafournier.com); ich antworte innerhalb eines Monats. Ihr Inventar liegt auf Ihrem Gerät und in Ihrer iCloud, unter Ihrer Kontrolle: Sie können es in der App oder wie oben beschrieben in den iOS-Einstellungen ändern oder löschen.
 
 Sie können sich außerdem bei der französischen Datenschutzbehörde [CNIL](https://www.cnil.fr) oder bei der Aufsichtsbehörde Ihres Landes beschweren.
 
@@ -94,4 +94,4 @@ Wenn sich der Umgang der App mit Daten ändert, wird diese Seite aktualisiert un
 
 ## Kontakt
 
-Für Fragen oder Anfragen zum Datenschutz schreiben Sie an [support@cafournier.com](mailto:support@cafournier.com).
+Für Fragen oder Anfragen zum Datenschutz schreiben Sie an [feedback@cafournier.com](mailto:feedback@cafournier.com).
