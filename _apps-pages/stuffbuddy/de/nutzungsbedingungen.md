@@ -82,4 +82,4 @@ Diese Bedingungen unterliegen französischem Recht, unbeschadet zwingender Verbr
 
 ## Kontakt
 
-Bei Fragen zu diesen Bedingungen schreiben Sie an [support@cafournier.com](mailto:support@cafournier.com).
+Bei Fragen zu diesen Bedingungen schreiben Sie an [feedback@cafournier.com](mailto:feedback@cafournier.com).

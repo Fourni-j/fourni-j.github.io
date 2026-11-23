@@ -82,4 +82,4 @@ Ces conditions sont régies par le droit français, sans préjudice des protecti
 
 ## Contact
 
-Pour toute question sur ces conditions, écrivez à [support@cafournier.com](mailto:support@cafournier.com).
+Pour toute question sur ces conditions, écrivez à [feedback@cafournier.com](mailto:feedback@cafournier.com).
